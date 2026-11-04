@@ -145,6 +145,13 @@ public class AmberflareStaff : SkylightStaff
     protected override int CastTime => 20;
     protected override int Spell => ModContent.ProjectileType<AmberflareBolt>();
 
+    public override void SetDefaults()
+    {
+        base.SetDefaults();
+        Item.width = 52;
+        Item.height = 54;
+    }
+
     public override void AddRecipes() => CreateRecipe().AddIngredient<EmberAmberBar>(7)
         .AddIngredient<VerdigrisBar>(3).AddIngredient(ItemID.Torch, 8).AddTile(TileID.Anvils).Register();
 }
