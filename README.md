@@ -4,6 +4,10 @@ An early-game content mod for **tModLoader 1.4.5-dev**.
 
 [Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod). Put it in `Documents\My Games\Terraria\tModLoader-dev\Mods`, then enable **Nyuu Terraria** in **Manage Mods**. For multiplayer, everyone should use the same tModLoader build and mod file.
 
+## v0.2.2
+
+- Redrew the Skylight ore, weapons and spells, Nimbus Warden, armor, trinkets, vanity, hairstyles, and chest.
+
 ## v0.2.1
 
 - Fixed loading on the updated 1.4.5-dev build. The **Warden armor** and **Yuuki’s boots** now use the current armor set API.
@@ -24,6 +28,13 @@ An early-game content mod for **tModLoader 1.4.5-dev**.
 | ![Skylight Chest](NyuuTerraria/Content/Skylight/SkylightChest.png) **Skylight Chest** | Craft the brass-trimmed storage chest at a Work Bench with **8 Wood + 2 Skylight Bars**. |
 
 ![Nimbus Warden boss sprite](NyuuTerraria/Content/Skylight/NimbusWarden.png)
+
+### Summoning and fighting Nimbus Warden
+
+1. Craft a **Cloud Idol** at an **Iron or Lead Anvil** with **30 Cloud + 3 Skylight Bars**.
+2. Use it aboveground or in the sky. A long platform with a second level gives you room to run and change height.
+3. **Keep moving sideways during the volleys.** When the Warden lines up for a dive, leave its path and fire into it as it passes. Keep a little distance so you can see the next volley coming.
+4. **Below half health**, it dives faster and fires a wider spread. Save wing flight for dodging those attacks. The **Dawnpetal Staff** works before your first kill, and the **Staff of Democloud** is an upgrade if you already have it. Use the dropped **Warden Cores** to craft Stormweaver gear afterward.
 
 ## v0.1.x
 
