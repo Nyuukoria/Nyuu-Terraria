@@ -71,7 +71,9 @@ public class SkylightGeneration : ModSystem
     private static void GenerateOre(GenerationProgress progress, GameConfiguration configuration)
     {
         progress.Message = "Seeding Skylight veins";
-        int type = ModContent.TileType<SkylightOreTile>();
+        int skylight = ModContent.TileType<SkylightOreTile>();
+        int stormglass = ModContent.TileType<StormglassOreTile>();
+        int frostveil = ModContent.TileType<FrostveilOreTile>();
         int top = (int)Main.worldSurface + 10;
         int bottom = (int)MathHelper.Lerp((float)Main.rockLayer, Main.maxTilesY - 210, 0.50f);
         if (bottom <= top)
@@ -81,7 +83,18 @@ public class SkylightGeneration : ModSystem
         {
             int x = WorldGen.genRand.Next(40, Main.maxTilesX - 40);
             int y = WorldGen.genRand.Next(top, bottom);
-            if (Main.tile[x, y].HasTile && Main.tile[x, y].TileType == TileID.Stone)
+            Tile tile = Main.tile[x, y];
+            if (!tile.HasTile)
+                continue;
+
+            int type = tile.TileType switch
+            {
+                TileID.IceBlock or TileID.SnowBlock => frostveil,
+                TileID.Stone when y >= Main.rockLayer && n % 3 == 0 => stormglass,
+                TileID.Stone => skylight,
+                _ => -1
+            };
+            if (type >= 0)
                 WorldGen.OreRunner(x, y, WorldGen.genRand.Next(4, 8),
                     WorldGen.genRand.Next(4, 8), (ushort)type);
         }

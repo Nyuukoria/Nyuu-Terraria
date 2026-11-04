@@ -1,4 +1,59 @@
 Items: {
+	StormglassOre: {
+		DisplayName: Stormglass Ore
+		Tooltip: Found in cavern stone
+	}
+
+	StormglassBar: {
+		DisplayName: Stormglass Bar
+		Tooltip: A dark alloy with a violet sheen
+	}
+
+	FrostveilOre: {
+		DisplayName: Frostveil Ore
+		Tooltip: Found in underground snow and ice
+	}
+
+	FrostveilBar: {
+		DisplayName: Frostveil Bar
+		Tooltip: A cold blue metal
+	}
+
+	StormglassScepter: {
+		DisplayName: Stormglass Scepter
+		Tooltip: Fires a piercing frost arc and boosts mana regeneration while held
+	}
+
+	FrostveilBlade: {
+		DisplayName: Frostveil Blade
+		Tooltip: Swings an icy blade and casts a piercing frost crescent
+	}
+
+	CloudweaveBelt: {
+		DisplayName: Cloudweave Belt
+		Tooltip: Equip in a normal accessory slot to enable two additional Sky Trinket slots
+	}
+
+	StarfallPendant: {
+		DisplayName: Starfall Pendant
+		Tooltip: Increases maximum mana by 20 and magic critical strike chance by 4%
+	}
+
+	FrostveilSigil: {
+		DisplayName: Frostveil Sigil
+		Tooltip: Grants 2 defense and immunity to Chilled
+	}
+
+	Cloudvault: {
+		DisplayName: Cloudvault
+		Tooltip: A 160-slot chest. Scroll over the slots to reach the lower rows.
+	}
+
+	CloudSatchel: {
+		DisplayName: Cloud Satchel
+		Tooltip: Summons a flying piggy bank for access to your personal storage
+	}
+
 	SkylightOre: {
 		DisplayName: Skylight Ore
 		Tooltip: A pale ore found in shallow underground stone
@@ -119,6 +174,8 @@ Projectiles: {
 	DawnpetalBolt.DisplayName: Dawnpetal Bolt
 	StormweaverBolt.DisplayName: Stormweaver Bolt
 	WardenSpark.DisplayName: Warden Spark
+	StormglassArc.DisplayName: Stormglass Arc
+	FrostveilCrescent.DisplayName: Frostveil Crescent
 }
 
 NPCs.NimbusWarden.DisplayName: Nimbus Warden
@@ -126,4 +183,7 @@ NPCs.NimbusWarden.DisplayName: Nimbus Warden
 Tiles: {
 	SkylightChestTile.MapEntry: Skylight Chest
 	SkylightOreTile.MapEntry: Skylight Ore
+	StormglassOreTile.MapEntry: Stormglass Ore
+	FrostveilOreTile.MapEntry: Frostveil Ore
+	CloudvaultTile.MapEntry: Cloudvault
 }

@@ -4,6 +4,22 @@ An early-game content mod for **tModLoader 1.4.5-dev**.
 
 [Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod). Put it in `Documents\My Games\Terraria\tModLoader-dev\Mods`, then enable **Nyuu Terraria** in **Manage Mods**. For multiplayer, everyone should use the same tModLoader build and mod file.
 
+## v0.2.3
+
+- Retinted the Skylight artwork to match the earlier Democloud gear, with cool violet shadows and pale cloud highlights.
+
+| Added | What it does and how to get it |
+| --- | --- |
+| ![Stormglass Ore](NyuuTerraria/Content/Skylight/StormglassOre.png) **Stormglass** | Mine it in cavern stone in new worlds. At a Furnace, smelt **3 Stormglass Ore**, or combine **1 Skylight Bar + 1 Demonite Bar + 2 Cloud** in an existing world. |
+| ![Frostveil Ore](NyuuTerraria/Content/Skylight/FrostveilOre.png) **Frostveil** | Mine it underground in snow and ice in new worlds. At a Furnace, smelt **3 Frostveil Ore**, or combine **1 Skylight Bar + 6 Ice Blocks** in an existing world. |
+| ![Stormglass Scepter](NyuuTerraria/Content/Skylight/StormglassScepter.png) **Stormglass Scepter** | **34 magic damage** and **4 mana per cast**. Its frost arc pierces up to three enemies, and holding the scepter boosts mana regen. At an anvil, use **8 Stormglass Bars + 12 Cloud + 2 Fallen Stars**. |
+| ![Frostveil Blade](NyuuTerraria/Content/Skylight/FrostveilBlade.png) **Frostveil Blade** | **38 melee damage** and a piercing frost crescent. At an anvil, use **9 Frostveil Bars + 10 Cloud**. |
+| ![Cloudweave Belt](NyuuTerraria/Content/Skylight/CloudweaveBelt.png) **Cloudweave Belt and two trinket slots** | Equip the belt in a normal accessory slot to enable two additional Sky Trinket slots. At an anvil, use **4 Skylight Bars + 12 Cloud + 5 Silk**. |
+| ![Starfall Pendant](NyuuTerraria/Content/Skylight/StarfallPendant.png) **Starfall Pendant and Frostveil Sigil** | At an anvil, make the mana and crit pendant with **3 Stormglass Bars + 2 Fallen Stars**, or the **+2 defense** and Chilled immunity sigil with **3 Frostveil Bars + 8 Snow Blocks**. |
+| ![Cloudvault](NyuuTerraria/Content/Skylight/Cloudvault.png) **Cloudvault** | A **160-slot** chest. Scroll over the chest slots to reach the lower rows. At a Work Bench, use **1 Skylight Chest + 4 Stormglass Bars + 4 Frostveil Bars + 10 Cloud**. |
+| ![Cloud Satchel](NyuuTerraria/Content/Skylight/CloudSatchel.png) **Cloud Satchel** | Summons access to your personal Piggy Bank storage. At a Loom, use **4 Skylight Bars + 8 Cloud + 6 Silk**. |
+| ![Three new hairstyles](docs/images/cloudweave-hair.png) **Three hairstyles** | Choose **Cloudside Ponytail**, **Moonbuns**, or **Lavender Braid** at the Stylist or during character creation. |
+
 ## v0.2.2
 
 - Redrew the Skylight ore, weapons and spells, Nimbus Warden, armor, trinkets, vanity, hairstyles, and chest.
