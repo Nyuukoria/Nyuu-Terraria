@@ -1,1 +1,38 @@
-# Nyuu-Terraria
+# Nyuu Terraria
+
+An early-game content mod for **tModLoader 1.4.5-dev**.
+
+[Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod). Put it in `Documents\My Games\Terraria\tModLoader-dev\Mods`, then enable **Nyuu Terraria** in **Manage Mods**. For multiplayer, everyone should use the same tModLoader build and mod file.
+
+## v0.2.1
+
+- Fixed loading on the updated 1.4.5-dev build. The **Warden armor** and **Yuuki’s boots** now use the current armor set API.
+
+## v0.2.0
+
+| Added | What it does and how to get it |
+| --- | --- |
+| ![Skylight Ore](NyuuTerraria/Content/Skylight/SkylightOre.png) **Skylight Ore and Bars** | Mine Skylight Ore underground in new worlds and smelt **3 Ore** per bar at a Furnace. In existing worlds, smelt **2 Iron or Lead Bars + 3 Cloud** instead. |
+| ![Dawnpetal Staff](NyuuTerraria/Content/Skylight/DawnpetalStaff.png) **Dawnpetal Staff** | Fires ember bolts that ignite enemies. At an anvil, use **5 Skylight Bars + 3 Daybloom + 8 Wood**. |
+| ![Stormweaver Staff](NyuuTerraria/Content/Skylight/StormweaverStaff.png) **Stormweaver Staff** | Fires a fan of three piercing bolts. At an anvil, use **7 Skylight Bars + 4 Warden Cores + 15 Cloud**. |
+| ![Skylight Saber](NyuuTerraria/Content/Skylight/SkylightSaber.png) **Skylight Saber** | Ignites enemies and scatters gold sparks. At an anvil, use **7 Skylight Bars + 1 Fallen Star**. |
+| ![Cloud Idol](NyuuTerraria/Content/Skylight/CloudIdol.png) **Nimbus Warden** | At an anvil, craft a **Cloud Idol** with **30 Cloud + 3 Skylight Bars**. Use it aboveground or in the sky to summon the Warden and fight for Warden Cores. |
+| ![Warden armor](docs/images/warden-armor.png) **Warden armor** | The full set gives **12% lower mana cost** and **+6 percentage points of magic crit**. At an anvil, craft the crown, mantle, and greaves with **5, 8, and 6 Skylight Bars**, respectively, plus **2 Warden Cores per piece**. |
+| ![Sky trinkets](docs/images/sky-trinkets.png) **Trinkets and two slots** | At an anvil, make the **Glowglass Lens** for night vision with **2 Skylight Bars + 1 Lens + 3 Glowsticks**, the **Petal Brooch** for magic damage and mana regen with **3 Skylight Bars + 2 Daybloom**, and the **Nimbus Charm** for movement and jumping with **3 Warden Cores + 8 Cloud**. |
+| ![Cloudtail outfit](docs/images/cloudtail-outfit.png) **Cloudtail outfit** | Craft the **Cloud Beret**, **Cloudtail Coat**, and **Cloudtail Trousers** at a Loom. Each piece takes **5 Silk + 3 Cloud**. |
+| ![Petal Bob and Storm Tuft](docs/images/hairstyles.png) **Two hairstyles** | Choose **Petal Bob** or **Storm Tuft** in character creation or at the Stylist. |
+| ![Skylight Chest](NyuuTerraria/Content/Skylight/SkylightChest.png) **Skylight Chest** | Craft the brass-trimmed storage chest at a Work Bench with **8 Wood + 2 Skylight Bars**. |
+
+![Nimbus Warden boss sprite](NyuuTerraria/Content/Skylight/NimbusWarden.png)
+
+## v0.1.x
+
+| Added | What it does and how to get it |
+| --- | --- |
+| ![Wings of Democloud](NyuuTerraria/Content/Items/Accessories/WingsOfDemocloud.png) **Wings of Democloud** | Early flight, gliding, and **+3 defense**. At an anvil, use **20 Cloud + 10 Demonite Bars**. |
+| ![Staff of Democloud](NyuuTerraria/Content/Items/Weapons/StaffOfDemocloud.png) **Staff of Democloud** | A rapid-fire magic staff with **50 base damage**, **4 mana per cast**, **30% crit** before bonuses, and mana regen while held. Its piercing comets can split on hit. At an anvil, use **25 Demonite Bars + 50 Cloud + 15 Wood**. |
+| ![Yuuki’s boots](NyuuTerraria/Content/Items/Armor/YuukisAntiFallDamageBoots.png) **Yuuki’s Anti Fall Damage Boots** | Prevent fall damage, leave cloud puffs, and count toward the Shadow armor set. At an anvil, use **15 Demonite Bars + 10 Shadow Scales + 10 Cloud**. |
+| ![Cloudy Bomb](NyuuTerraria/Content/Items/Consumables/CloudyBomb.png) **Cloudy Bomb and Sticky Cloudy Bomb** | A **28-tile blast radius** for terrain and enemies, with player immunity. Craft from **1 Bomb + 4 Cloud + 4 Silver Bars**. Combine **1 Cloudy Bomb + 1 Gel** for the sticky version. |
+| **Steam achievement sync** | Launch tModLoader through Steam. The mod forwards completed vanilla Terraria achievements when you enter a world or earn them during play. |
+
+To contribute, copy the `NyuuTerraria` source folder into `tModLoader-dev\ModSources`, then select **Build + Reload** in tModLoader.

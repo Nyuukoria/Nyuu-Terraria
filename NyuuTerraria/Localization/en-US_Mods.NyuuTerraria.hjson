@@ -1,0 +1,129 @@
+Items: {
+	SkylightOre: {
+		DisplayName: Skylight Ore
+		Tooltip: A pale ore found in shallow underground stone
+	}
+
+	SkylightBar: {
+		DisplayName: Skylight Bar
+		Tooltip: A light alloy that holds a cloud charge
+	}
+
+	CloudIdol: {
+		DisplayName: Cloud Idol
+		Tooltip: Summons the Nimbus Warden aboveground
+	}
+
+	WardenCore: {
+		DisplayName: Warden Core
+		Tooltip: A captured eye of the storm
+	}
+
+	DawnpetalStaff: {
+		DisplayName: Dawnpetal Staff
+		Tooltip: Fires a warm petal bolt that sets enemies alight
+	}
+
+	StormweaverStaff: {
+		DisplayName: Stormweaver Staff
+		Tooltip: Fires a fan of three piercing storm bolts
+	}
+
+	SkylightSaber: {
+		DisplayName: Skylight Saber
+		Tooltip: Scatters golden sparks and sets struck enemies alight
+	}
+
+	GlowglassLens: {
+		DisplayName: Glowglass Lens
+		Tooltip: Improves night vision and lights up nearby terrain
+	}
+
+	PetalBrooch: {
+		DisplayName: Petal Brooch
+		Tooltip: Increases magic damage by 7% and boosts mana regeneration
+	}
+
+	NimbusCharm: {
+		DisplayName: Nimbus Charm
+		Tooltip: Increases movement speed and jump height
+	}
+
+	WardenCrown: {
+		DisplayName: Warden Crown
+		Tooltip: Increases maximum mana by 20
+		SetBonus: 12% reduced mana cost and 6% increased magic critical strike chance
+	}
+
+	WardenMantle: {
+		DisplayName: Warden Mantle
+		Tooltip: Increases magic damage by 6%
+	}
+
+	WardenGreaves: {
+		DisplayName: Warden Greaves
+		Tooltip: Increases movement speed by 8%
+	}
+
+	CloudBeret: {
+		DisplayName: Cloud Beret
+		Tooltip: Soft enough to nap in
+	}
+
+	CloudtailCoat: {
+		DisplayName: Cloudtail Coat
+		Tooltip: Cloud-lined vanity clothing
+	}
+
+	CloudtailTrousers: {
+		DisplayName: Cloudtail Trousers
+		Tooltip: Cloud-lined vanity clothing
+	}
+
+	SkylightChest: {
+		DisplayName: Skylight Chest
+		Tooltip: A brass-trimmed storage chest
+	}
+
+	StickyCloudyBomb: {
+		DisplayName: Sticky Cloudy Bomb
+		Tooltip: Sticks to surfaces. Blasts terrain and enemies while sparing players.
+	}
+
+	CloudyBomb: {
+		DisplayName: Cloudy Bomb
+		Tooltip: Blasts a huge hole and damages enemies. Harmless to players.
+	}
+
+	YuukisAntiFallDamageBoots: {
+		DisplayName: Yuuki's Anti Fall Damage Boots
+		Tooltip: Grants immunity to fall damage and leaves a soft cloud trail
+	}
+
+	WingsOfDemocloud: {
+		DisplayName: Wings of Democloud
+		Tooltip: Hold jump to fly and glide
+	}
+
+	StaffOfDemocloud: {
+		DisplayName: Staff of Democloud
+		Tooltip: Fires piercing storm-cloud comets that may split on hit. Boosts mana regeneration while held
+	}
+}
+
+Projectiles: {
+	StickyCloudyBombProjectile.DisplayName: Sticky Cloudy Bomb
+	CloudyBombProjectile.DisplayName: Cloudy Bomb
+	DemocloudComet.DisplayName: Democloud Comet
+	DemocloudShard.DisplayName: Democloud Shard
+	DawnpetalBolt.DisplayName: Dawnpetal Bolt
+	StormweaverBolt.DisplayName: Stormweaver Bolt
+	WardenSpark.DisplayName: Warden Spark
+}
+
+NPCs.NimbusWarden.DisplayName: Nimbus Warden
+
+Tiles: {
+	SkylightChestTile.MapEntry: Skylight Chest
+	SkylightOreTile.MapEntry: Skylight Ore
+}
