@@ -4,6 +4,20 @@ An early-game content mod for **tModLoader 1.4.5-dev**.
 
 [Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod). Put it in `Documents\My Games\Terraria\tModLoader-dev\Mods`, then enable **Nyuu Terraria** in **Manage Mods**. For multiplayer, everyone should use the same tModLoader build and mod file.
 
+## v0.2.4
+
+| Added | What it does and how to get it |
+| --- | --- |
+| ![Amber Grotto](NyuuTerraria/Content/AmberGrotto/AmberGrottoBiome.png) **Amber Grotto** | Look for pockets of mossy green slate around the cavern layer in new worlds. Break **Amber Urns** for a random drop of potions, glowsticks, ore, or coins. |
+| ![Mossback Beetle](NyuuTerraria/Content/AmberGrotto/MossbackBeetle.png) **Mossback Beetle and Lantern Moth** | Fight them near Moss Slate underground. Beetles can drop a **Glowcap Spore** and moths can drop an **Amber Wisp Seed**. Use either to summon its glowing pet. |
+| ![Verdigris Ore](NyuuTerraria/Content/AmberGrotto/VerdigrisOre.png) **Verdigris and Ember Amber** | Mine both ores in the Grotto and smelt **3 ore** per bar at a Furnace. In existing worlds, make a **Verdigris Bar** from **1 Iron or Lead Bar + 1 Copper Bar + 2 Glowing Mushrooms**, or make an **Ember Amber Bar** from **1 Amber + 1 Gold or Platinum Bar**. |
+| ![Verdigris Pickaxe](NyuuTerraria/Content/AmberGrotto/VerdigrisPickaxe.png) **Verdigris Pickaxe** | **60% pickaxe power** and **+1 tile reach**. At an anvil, use **8 Verdigris Bars + 4 Wood**. |
+| ![Grotto Lantern](NyuuTerraria/Content/AmberGrotto/GrottoLantern.png) **Grotto Lantern** | An accessory that lights up nearby caves and improves mining speed. At an anvil, use **4 Verdigris Bars + 6 Glowsticks**. |
+| ![Amberflare Staff](NyuuTerraria/Content/AmberGrotto/AmberflareStaff.png) **Amberflare Staff** | **29 magic damage** and a piercing flame bolt. At an anvil, use **7 Ember Amber Bars + 3 Verdigris Bars + 8 Torches**. |
+| ![Amberheart Pendant](NyuuTerraria/Content/AmberGrotto/AmberheartPendant.png) **Amberheart and Deepheart Pendants** | At an anvil, make Amberheart with **5 Ember Amber Bars + 2 Chains** for regeneration and **+2 defense**. In Hardmode, upgrade it at a Mythril or Orichalcum Anvil with **5 Ember Amber Bars + 8 Souls of Night + 8 Souls of Light** for **+5 defense**, stronger regeneration, and **5% damage reduction**. |
+
+To build a Grotto area in an existing world, craft **10 Moss Slate** at a Work Bench from **10 Stone Blocks + 1 Glowing Mushroom**. Use it for underground floors and add at least **85 nearby Grotto blocks** to activate the biome.
+
 ## v0.2.3
 
 - Retinted the Skylight artwork to match the earlier Democloud gear, with cool violet shadows and pale cloud highlights.

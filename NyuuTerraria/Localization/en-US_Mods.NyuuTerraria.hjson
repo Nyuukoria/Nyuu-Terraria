@@ -1,4 +1,69 @@
 Items: {
+	MossSlate: {
+		DisplayName: Moss Slate
+		Tooltip: The mossy rock found in Amber Grottos
+	}
+
+	AmberUrn: {
+		DisplayName: Amber Urn
+		Tooltip: Break for a chance at supplies and ore
+	}
+
+	VerdigrisOre: {
+		DisplayName: Verdigris Ore
+		Tooltip: Moss-stained ore from Amber Grottos
+	}
+
+	VerdigrisBar: {
+		DisplayName: Verdigris Bar
+		Tooltip: A sturdy early mining alloy
+	}
+
+	EmberAmberOre: {
+		DisplayName: Ember Amber Ore
+		Tooltip: Warm crystal ore from Amber Grottos
+	}
+
+	EmberAmberBar: {
+		DisplayName: Ember Amber Bar
+		Tooltip: A metal that holds the warmth of its ore
+	}
+
+	VerdigrisPickaxe: {
+		DisplayName: Verdigris Pickaxe
+		Tooltip: A 60% pickaxe with one extra tile of reach
+	}
+
+	GrottoLantern: {
+		DisplayName: Grotto Lantern
+		Tooltip: Lights nearby caves and improves mining speed
+	}
+
+	AmberheartPendant: {
+		DisplayName: Amberheart Pendant
+		Tooltip: Improves life regeneration and grants 2 defense
+	}
+
+	DeepheartPendant: {
+		DisplayName: Deepheart Pendant
+		Tooltip: Improves life regeneration, grants 5 defense and reduces damage taken by 5%
+	}
+
+	AmberflareStaff: {
+		DisplayName: Amberflare Staff
+		Tooltip: Fires a piercing flame that sets enemies alight
+	}
+
+	GlowcapSpore: {
+		DisplayName: Glowcap Spore
+		Tooltip: Summons a tiny Glowcap Firefly companion
+	}
+
+	AmberWispSeed: {
+		DisplayName: Amber Wisp Seed
+		Tooltip: Summons a warm, floating Amber Wisp companion
+	}
+
 	StormglassOre: {
 		DisplayName: Stormglass Ore
 		Tooltip: Found in cavern stone
@@ -176,9 +241,16 @@ Projectiles: {
 	WardenSpark.DisplayName: Warden Spark
 	StormglassArc.DisplayName: Stormglass Arc
 	FrostveilCrescent.DisplayName: Frostveil Crescent
+	AmberflareBolt.DisplayName: Amberflare Bolt
+	GlowcapFirefly.DisplayName: Glowcap Firefly
+	AmberWisp.DisplayName: Amber Wisp
 }
 
-NPCs.NimbusWarden.DisplayName: Nimbus Warden
+NPCs: {
+	NimbusWarden.DisplayName: Nimbus Warden
+	MossbackBeetle.DisplayName: Mossback Beetle
+	LanternMoth.DisplayName: Lantern Moth
+}
 
 Tiles: {
 	SkylightChestTile.MapEntry: Skylight Chest
@@ -186,4 +258,32 @@ Tiles: {
 	StormglassOreTile.MapEntry: Stormglass Ore
 	FrostveilOreTile.MapEntry: Frostveil Ore
 	CloudvaultTile.MapEntry: Cloudvault
+	MossSlateTile.MapEntry: Moss Slate
+	AmberUrnTile.MapEntry: Amber Urn
+	VerdigrisOreTile.MapEntry: Verdigris Ore
+	EmberAmberOreTile.MapEntry: Ember Amber Ore
+}
+
+Biomes: {
+	AmberGrottoBiome: {
+		DisplayName: Amber Grotto
+		TownNPCDialogueName: the Amber Grotto Biome
+	}
+}
+
+Bestiary: {
+	MossbackBeetle: The thick moss on its shell hides flecks of Verdigris.
+	LanternMoth: Its warm eyes look like tiny lanterns from across the cave.
+}
+
+Buffs: {
+	GlowcapCompanion: {
+		DisplayName: Glowcap Firefly
+		Description: A little mushroom follows you on teal wings
+	}
+
+	AmberWispCompanion: {
+		DisplayName: Amber Wisp
+		Description: A seed of warm amber lights the way
+	}
 }
