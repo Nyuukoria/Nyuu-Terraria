@@ -1,26 +1,69 @@
 # Nyuu Terraria
 
-An early-game expansion for **tModLoader 1.4.5-dev**. It adds six ores, several underground progression paths, the Nimbus Warden boss, spells, armor, trinkets, pets, and storage.
+**Explore forgotten caverns, fight three bosses, and build your way from early-game tools to enchanted gear.**
 
-[Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Source and sprites](NyuuTerraria/)
+Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three bosses**, pets, armor, weapons, extra trinket slots, and backpacks with up to **100 extra inventory slots**.
 
-- [Install and play](#install-and-play)
-- [Backpacks](#backpacks)
-- [Hollowglass Reach and its bosses](#hollowglass-reach)
-- [Where to find materials](#where-to-find-materials)
-- [Amber Grotto, enemies, pets, and urns](#amber-grotto)
-- [Nimbus Warden](#summoning-and-fighting-nimbus-warden)
-- [Complete crafting guide](#complete-crafting-guide)
-- [Trinket slots, storage, hairstyles, and Steam](#using-the-new-features)
-- [Version notes](#version-notes)
+<p align="center">
+  <img src="NyuuTerraria/Content/Backpacks/DemoniteBackpack.png" alt="Demonite Backpack" height="48">
+  &nbsp;&nbsp;
+  <img src="NyuuTerraria/Content/Skylight/NimbusWarden.png" alt="Nimbus Warden" height="88">
+  &nbsp;&nbsp;
+  <img src="NyuuTerraria/Content/Hollowglass/PrismSentinel.png" alt="Prism Sentinel" height="88">
+  &nbsp;&nbsp;
+  <img src="NyuuTerraria/Content/Hollowglass/MourningBell.png" alt="Mourning Bell" height="88">
+</p>
+
+**Current version — v0.3.0** · **Requires tModLoader 1.4.5-dev**
+
+[**Download the mod**](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Browse the source](NyuuTerraria/) · [Version notes](#version-notes)
+
+## Find what you need
+
+| I want to… | Go here |
+| --- | --- |
+| Install the mod or play with friends | [Install and play](#install-and-play) |
+| Know what to make first | [Getting started](#getting-started) |
+| Equip a backpack and use V | [Backpacks](#backpacks) |
+| Find ores and recipe ingredients | [Where to find materials](#where-to-find-materials) |
+| Explore caves and find pets | [Amber Grotto](#amber-grotto) · [Hollowglass Reach](#hollowglass-reach) |
+| Summon a boss or learn its attacks | [Boss progression](#boss-progression) |
+| Look up a recipe or item effect | [Complete crafting guide](#complete-crafting-guide) · [Reach recipes](#reach-recipes) |
+| Use trinket slots, storage, or hairstyles | [Using the new features](#using-the-new-features) |
+| Build or contribute to the mod | [Building from source](#building-from-source) |
 
 ## Install and play
 
-1. Put `NyuuTerraria.tmod` in `Documents\My Games\Terraria\tModLoader-dev\Mods`.
-2. Open **Workshop → Manage Mods**, enable **Nyuu Terraria**, and reload mods. For multiplayer, use the same tModLoader dev build and mod file on the server and every client.
-3. Start a new world to find natural ore veins and Amber Grottos. In an existing world such as Meow, use the alternate Furnace recipes below and craft Moss Slate to build an underground Grotto.
+1. [Download `NyuuTerraria.tmod`](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod).
+2. Place it in `Documents\My Games\Terraria\tModLoader-dev\Mods`.
+3. Open **Workshop → Manage Mods**, enable **Nyuu Terraria**, then reload mods.
 
-To contribute, copy the [NyuuTerraria source folder](NyuuTerraria/) into `tModLoader-dev\ModSources`, then use **Build + Reload** under **Develop Mods**.
+**Playing with friends?** Use the same tModLoader dev build and mod file on the server and every client.
+
+| Your world | How to access the new content |
+| --- | --- |
+| **New world** | Natural ore veins, Amber Grottos, and Hollowglass ruins generate with the world. Explore the Underground and Cavern layers. |
+| **Existing world, including Meow** | Use the alternate bar recipes and craft biome blocks to build underground areas. The [Amber Grotto](#amber-grotto) and [Hollowglass Reach](#hollowglass-reach) sections give the block counts and recipes. |
+
+## Getting started
+
+1. **Make Skylight Bars.** Smelt 3 Skylight Ore per bar, or use 2 Iron or Lead Bars + 3 Cloud at a Furnace.
+2. **Pick an early upgrade.** Dawnpetal Staff gives a first magic weapon. Glowglass Lens helps you see underground. A Copper Backpack adds 20 storage slots.
+3. **Choose a cave route.** Amber Grotto supplies mining gear, regeneration accessories, and two pet drops. Hollowglass Reach supplies crystal weapons and a two-boss progression.
+4. **Prepare for a boss.** Nimbus Warden opens Warden armor and Stormweaver gear. Prism Sentinel opens Mourning Bell, whose drops craft Hollowchime Staff and a bell pet.
+5. **Upgrade in Hardmode.** Combine Amberheart Pendant with Souls of Light, Souls of Night, and Ember Amber Bars to make Deepheart Pendant.
+
+Follow the ingredient and crafting-station tables below for exact recipes.
+
+## Boss progression
+
+| Boss | Where to summon | Summon item | Main rewards |
+| --- | --- | --- | --- |
+| ![Nimbus Warden](NyuuTerraria/Content/Skylight/NimbusWarden_Head_Boss.png) **Nimbus Warden** | Aboveground or in the sky | **Cloud Idol** — 30 Cloud + 3 Skylight Bars at an anvil | Warden Cores for armor, Stormweaver Staff, and Nimbus Charm. [Fight guide](#summoning-and-fighting-nimbus-warden) |
+| ![Prism Sentinel](NyuuTerraria/Content/Hollowglass/PrismSentinel_Head_Boss.png) **Prism Sentinel** | Hollowglass Reach | **Glassbound Seal** — 4 Hollowglass Bars + 2 Fallen Stars at an anvil, or find one in a Reach chest | Prism Hearts for Resonance Charm and Resonating Bell. [Fight guide](#prism-sentinel) |
+| ![Mourning Bell](NyuuTerraria/Content/Hollowglass/MourningBell_Head_Boss.png) **Mourning Bell** | Hollowglass Reach | **Resonating Bell** — 3 Prism Hearts + 5 Hollowglass Bars + 10 Obsidian at an anvil | Resonant Clappers for Hollowchime Staff and Pocket Chime. [Fight guide](#mourning-bell) |
+
+**Hollowglass route:** Prism Sentinel → Prism Hearts → Resonating Bell → Mourning Bell. Nimbus Warden has its own crafting route. All three are pre-Hardmode encounters.
 
 ## Backpacks
 
@@ -35,9 +78,9 @@ Equip one backpack in the dedicated **Backpack** slot, then press **V** to open 
 | ![Obsidian Backpack](NyuuTerraria/Content/Backpacks/ObsidianBackpack.png) **Obsidian** | **80** | 30 Obsidian |
 | ![Demonite Backpack](NyuuTerraria/Content/Backpacks/DemoniteBackpack.png) **Demonite** | **100** | 20 Demonite Bars |
 
-Each recipe also uses **2 Leather + 4 Silk** at an **Iron or Lead Anvil**. For an early Leather source, craft **1 Leather** from **8 Gel + 1 Silk** at a **Work Bench**.
+**Crafting station — Iron or Lead Anvil.** Add **2 Leather + 4 Silk** to the material listed for your chosen backpack. For an early Leather source, craft **1 Leather** from **8 Gel + 1 Silk** at a **Work Bench**.
 
-Contents belong to your character and carry over between worlds. Changing backpacks changes the usable capacity. If you switch to a smaller pack or remove it, stored items beyond the available capacity appear as withdrawal-only slots. Pick those items up with an empty cursor. They remain saved until you withdraw them.
+**Using it:** equip the pack, press **V**, and move items into its slots. Contents belong to your character and carry over between worlds. Changing backpacks changes the usable capacity. If you switch to a smaller pack or remove it, stored items beyond the available capacity appear as withdrawal-only slots. Pick those items up with an empty cursor. They remain saved until you withdraw them.
 
 ## Hollowglass Reach
 
@@ -66,7 +109,7 @@ The Sentinel has **3,600 base HP**, **28 contact damage**, and **16 defense whil
 
 At an anvil, combine **3 Prism Hearts + 5 Hollowglass Bars + 10 Obsidian** into a **Resonating Bell**. Use it in **Hollowglass Reach**.
 
-The Bell sways before releasing rings of crystal shots, then fires aimed bolts. Keep enough space to see gaps between the ring shots and pass through a gap rather than running straight toward the center. Change direction for the aimed bolts. Below half health the attack cycle speeds up.
+The Bell sways before releasing rings of crystal shots, then fires aimed bolts. Keep enough space to see gaps between the ring shots and move through a gap while keeping your distance from the center. Change direction for the aimed bolts. Below half health the attack cycle speeds up.
 
 It has **5,200 base HP**, **33 contact damage**, and **12 defense**. It drops **7–11 Resonant Clappers** and **12–20 Hollowglass Ore**. Clappers craft the Hollowchime Staff and the Little Glass Bell pet.
 
@@ -92,6 +135,7 @@ Both summons are consumed on use and require the Reach biome. The second summon 
 
 | Material | Where to look |
 | --- | --- |
+| **Hollowglass Ore** | Hollowglass Reach veins, enemies, chests, and vases. See the [Reach recipes](#reach-recipes) for its alternate bar recipe. |
 | **Skylight Ore** | Stone in the Underground and upper Cavern layers of new worlds. |
 | **Stormglass Ore** | Cavern stone in new worlds, deeper than the first Skylight veins. |
 | **Frostveil Ore** | Underground snow and ice in new worlds. |
@@ -106,6 +150,7 @@ Both summons are consumed on use and require the Reach biome. The second summon 
 | **Ice Blocks and Snow Blocks** | Mine in the Snow biome. The Frostveil Bar recipe takes **Ice Blocks**, and the Frostveil Sigil takes **Snow Blocks**. |
 | **Glowing Mushrooms, Amber, and Clay** | Look underground for Glowing Mushroom biomes. Mine Amber in the Underground Desert, or process Silt, Slush, or Desert Fossil in an Extractinator. Clay occurs in reddish deposits. [Amber sources](https://terraria.wiki.gg/wiki/Amber) |
 | **Daybloom, Fallen Stars, Lenses, and Glowsticks** | Gather Daybloom from surface grass, pick up Fallen Stars at night, fight Demon Eyes for Lenses, and look for Glowsticks in pots or buy them from the Merchant at night. |
+| **Leather, Emeralds, and Obsidian** | This mod adds a Work Bench recipe for Leather using **8 Gel + 1 Silk**. Find Emeralds underground. Obsidian forms where water meets lava. |
 | **Silk and Chains** | Make Silk from Cobwebs at a Loom. Make Chains from Iron or Lead Bars at an anvil. |
 | **Souls of Light and Night** | In Hardmode, fight enemies in the Cavern layer of the Hallow for Light and the Corruption or Crimson for Night. |
 
@@ -135,6 +180,10 @@ For an existing world, use a **Work Bench** to turn **10 Stone Blocks + 1 Glowin
 The Warden has **2,800 base HP**, **26 base contact damage**, and **9 defense**. It drops **9–14 Warden Cores** per kill before any difficulty-specific adjustments. The three armor pieces use six cores in total. The staff and charm use another seven.
 
 ## Complete crafting guide
+
+[Bars and Furnace recipes](#furnace) · [Weapons and tools](#anvil-weapons-and-tools) · [Armor](#anvil-armor) · [Accessories](#anvil-accessories-trinkets-and-boss-summon) · [Hardmode upgrade](#mythril-or-orichalcum-anvil) · [Storage, vanity, and bombs](#work-bench-loom-and-hand-crafting)
+
+Backpack recipes are in [Backpacks](#backpacks). Hollowglass equipment and summons are in [Reach recipes](#reach-recipes).
 
 All recipes below produce **one item** unless a quantity is shown. “Anvil” means an **Iron or Lead Anvil**. Weapon values are base stats before reforges and player bonuses.
 
@@ -166,7 +215,6 @@ All recipes below produce **one item** unless a quantity is shown. “Anvil” m
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
-| ![Wings of Democloud](NyuuTerraria/Content/Items/Accessories/WingsOfDemocloud.png) **Wings of Democloud** | 20 Cloud + 10 Demonite Bars | Hold Jump for about one second of powered flight, then glide. **+3 base defense**. Accessory reforges apply. |
 | ![Yuuki’s boots](NyuuTerraria/Content/Items/Armor/YuukisAntiFallDamageBoots.png) **Yuuki’s Anti Fall Damage Boots** | 15 Demonite Bars + 10 Shadow Scales + 10 Cloud | Leg armor with **6 defense**, **+5 percentage points of crit**, fall damage immunity, and a cloud trail. Can replace the greaves in a Shadow armor set. |
 | ![Warden Crown](NyuuTerraria/Content/Skylight/WardenCrown.png) **Warden Crown** | 5 Skylight Bars + 2 Warden Cores | **4 defense**, **+20 maximum mana**. Head armor slot. |
 | ![Warden Mantle](NyuuTerraria/Content/Skylight/WardenMantle.png) **Warden Mantle** | 8 Skylight Bars + 2 Warden Cores | **6 defense**, **+6% magic damage**. Body armor slot. |
@@ -174,10 +222,11 @@ All recipes below produce **one item** unless a quantity is shown. “Anvil” m
 
 The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, and **+6 percentage points of magic crit**, alongside each piece’s individual effect.
 
-### Anvil trinkets and boss summon
+### Anvil accessories, trinkets, and boss summon
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
+| ![Wings of Democloud](NyuuTerraria/Content/Items/Accessories/WingsOfDemocloud.png) **Wings of Democloud** | 20 Cloud + 10 Demonite Bars | Hold Jump for about one second of powered flight, then glide. **+3 base defense**. Accessory slot. Accessory reforges apply. |
 | ![Glowglass Lens](NyuuTerraria/Content/Skylight/GlowglassLens.png) **Glowglass Lens** | 2 Skylight Bars + 1 Lens + 3 Glowsticks | Night vision and a light around the player. |
 | ![Petal Brooch](NyuuTerraria/Content/Skylight/PetalBrooch.png) **Petal Brooch** | 3 Skylight Bars + 2 Daybloom | **+7% magic damage** and faster mana regeneration. |
 | ![Nimbus Charm](NyuuTerraria/Content/Skylight/NimbusCharm.png) **Nimbus Charm** | 3 Warden Cores + 8 Cloud | **+12% movement speed** and stronger jumps. |
@@ -187,8 +236,6 @@ The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, a
 | ![Grotto Lantern](NyuuTerraria/Content/AmberGrotto/GrottoLantern.png) **Grotto Lantern** | 4 Verdigris Bars + 6 Glowsticks | Teal personal light and faster mining. |
 | ![Amberheart Pendant](NyuuTerraria/Content/AmberGrotto/AmberheartPendant.png) **Amberheart Pendant** | 5 Ember Amber Bars + 2 Chains | **+2 defense** and **+2 life regeneration**. |
 | ![Cloud Idol](NyuuTerraria/Content/Skylight/CloudIdol.png) **Cloud Idol** | 30 Cloud + 3 Skylight Bars | Summons Nimbus Warden aboveground or in the sky. |
-
-
 
 ### Mythril or Orichalcum Anvil
 
@@ -228,6 +275,24 @@ The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, a
 ### Steam achievements
 
 Launch tModLoader through Steam. Nyuu Terraria forwards completed **vanilla Terraria** achievements when you enter a world or earn one during play. The mod uses tModLoader’s Steam connection for the handoff.
+
+## Building from source
+
+Copy the [NyuuTerraria source folder](NyuuTerraria/) into `Documents\My Games\Terraria\tModLoader-dev\ModSources`. Open **Develop Mods** in tModLoader and select **Build + Reload**.
+
+The `Content` folders contain the item, enemy, biome, and storage code alongside their sprites. The `Localization` folder contains item names and tooltips.
+
+## Quick fixes
+
+| What you see | What to check |
+| --- | --- |
+| **The mod fails to load after a tModLoader update** | Confirm you are using **1.4.5-dev**. Development builds can change their mod APIs. Include the error text when reporting a loading problem. |
+| **V does not open a backpack** | Equip the pack in the dedicated **Backpack** slot. Check the **Open Backpack** keybind under Controls. |
+| **A boss summon cannot be used** | Cloud Idol requires the surface or sky. Glassbound Seal and Resonating Bell require active Hollowglass Reach, with neither Reach boss already present. |
+| **New ores or ruins are missing from an old world** | Use alternate bar recipes and craft biome blocks, or generate a new world. |
+| **Some Cloudvault slots are hidden** | Hover over the chest inventory and scroll to reach the lower rows. |
+| **A recipe is missing** | Check the exact station and named ingredients. Anvil means Iron or Lead. Deepheart requires a Mythril or Orichalcum Anvil. |
+| **A sprite or held item looks wrong** | Include the item name and a screenshot so the sprite, placement, and animation frame can be checked. |
 
 ## Version notes
 
