@@ -1,4 +1,84 @@
 Items: {
+    CopperBackpack: {
+        DisplayName: Copper Backpack
+        Tooltip: Adds 20 backpack slots. Equip in the Backpack slot and press V.
+    }
+    IronBackpack: {
+        DisplayName: Iron Backpack
+        Tooltip: Adds 30 backpack slots. Equip in the Backpack slot and press V.
+    }
+    GoldBackpack: {
+        DisplayName: Gold Backpack
+        Tooltip: Adds 40 backpack slots. Equip in the Backpack slot and press V.
+    }
+    EmeraldBackpack: {
+        DisplayName: Emerald Backpack
+        Tooltip: Adds 60 backpack slots. Equip in the Backpack slot and press V.
+    }
+    ObsidianBackpack: {
+        DisplayName: Obsidian Backpack
+        Tooltip: Adds 80 backpack slots. Equip in the Backpack slot and press V.
+    }
+    DemoniteBackpack: {
+        DisplayName: Demonite Backpack
+        Tooltip: Adds 100 backpack slots. Equip in the Backpack slot and press V.
+    }
+    GlassSlate: {
+        DisplayName: Glass Slate
+        Tooltip: Place 100 nearby blocks underground to create Hollowglass Reach
+    }
+    HollowglassOre: {
+        DisplayName: Hollowglass Ore
+        Tooltip: Mine in Hollowglass Reach or find in its ruin chests
+    }
+    HollowglassBar: {
+        DisplayName: Hollowglass Bar
+        Tooltip: An alloy that catches echoes of light
+    }
+    GlassVase: {
+        DisplayName: Glass Vase
+        Tooltip: Break for potions, ore, or coins
+    }
+    ReachLantern: {
+        DisplayName: Reach Lantern
+        Tooltip: A placeable lantern with turquoise light
+    }
+    ReachChest: {
+        DisplayName: Reach Chest
+        Tooltip: A 40-slot storage chest. Natural ruin chests contain supplies and a Glassbound Seal.
+    }
+    GlassboundSeal: {
+        DisplayName: Glassbound Seal
+        Tooltip: Summons Prism Sentinel in Hollowglass Reach
+    }
+    ResonatingBell: {
+        DisplayName: Resonating Bell
+        Tooltip: Summons Mourning Bell in Hollowglass Reach
+    }
+    PrismHeart: {
+        DisplayName: Prism Heart
+        Tooltip: Dropped by Prism Sentinel
+    }
+    ResonantClapper: {
+        DisplayName: Resonant Clapper
+        Tooltip: Dropped by Mourning Bell
+    }
+    GlassedgeBlade: {
+        DisplayName: Glassedge Blade
+        Tooltip: Launches a piercing glass blade
+    }
+    HollowchimeStaff: {
+        DisplayName: Hollowchime Staff
+        Tooltip: Fires a gently homing chime that pierces two enemies
+    }
+    ResonanceCharm: {
+        DisplayName: Resonance Charm
+        Tooltip: Grants 2 defense, 20 maximum mana, and 4% magic critical strike chance
+    }
+    PocketChime: {
+        DisplayName: Pocket Chime
+        Tooltip: Summons a Little Glass Bell companion
+    }
 	MossSlate: {
 		DisplayName: Moss Slate
 		Tooltip: The mossy rock found in Amber Grottos
@@ -287,3 +367,23 @@ Buffs: {
 		Description: A seed of warm amber lights the way
 	}
 }
+
+Keybinds.Backpack.DisplayName: Open Backpack
+Biomes.HollowglassReachBiome.DisplayName: Hollowglass Reach
+Tiles.GlassSlateTile.MapEntry: Glass Slate
+Tiles.HollowglassOreTile.MapEntry: Hollowglass Ore
+Tiles.GlassVaseTile.MapEntry: Glass Vase
+Tiles.ReachChestTile.MapEntry: Reach Chest
+Tiles.ReachLanternTile.MapEntry: Reach Lantern
+NPCs.PrismSentinel.DisplayName: Prism Sentinel
+NPCs.MourningBell.DisplayName: Mourning Bell
+NPCs.GlassCrawler.DisplayName: Glass Crawler
+NPCs.GlasswingMoth.DisplayName: Glasswing Moth
+Bestiary.GlassCrawler: Glass plates shield this crawler as it searches the Reach.
+Bestiary.GlasswingMoth: Its wings catch the light of forgotten rune lanterns.
+Projectiles.ReachShard.DisplayName: Reach Shard
+Projectiles.GlassedgeBolt.DisplayName: Glassedge Bolt
+Projectiles.HollowchimeBolt.DisplayName: Hollowchime Bolt
+Projectiles.LittleGlassBell.DisplayName: Little Glass Bell
+Buffs.LittleGlassBellBuff.DisplayName: Little Glass Bell
+Buffs.LittleGlassBellBuff.Description: A little bell follows you through the dark

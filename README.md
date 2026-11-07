@@ -1,10 +1,12 @@
 # Nyuu Terraria
 
-An early-game expansion for **tModLoader 1.4.5-dev**. It adds five ores, two underground progression paths, the Nimbus Warden boss, spells, armor, trinkets, pets, and storage.
+An early-game expansion for **tModLoader 1.4.5-dev**. It adds six ores, several underground progression paths, the Nimbus Warden boss, spells, armor, trinkets, pets, and storage.
 
 [Download NyuuTerraria.tmod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Source and sprites](NyuuTerraria/)
 
 - [Install and play](#install-and-play)
+- [Backpacks](#backpacks)
+- [Hollowglass Reach and its bosses](#hollowglass-reach)
 - [Where to find materials](#where-to-find-materials)
 - [Amber Grotto, enemies, pets, and urns](#amber-grotto)
 - [Nimbus Warden](#summoning-and-fighting-nimbus-warden)
@@ -19,6 +21,72 @@ An early-game expansion for **tModLoader 1.4.5-dev**. It adds five ores, two und
 3. Start a new world to find natural ore veins and Amber Grottos. In an existing world such as Meow, use the alternate Furnace recipes below and craft Moss Slate to build an underground Grotto.
 
 To contribute, copy the [NyuuTerraria source folder](NyuuTerraria/) into `tModLoader-dev\ModSources`, then use **Build + Reload** under **Develop Mods**.
+
+## Backpacks
+
+Equip one backpack in the dedicated **Backpack** slot, then press **V** to open or close its window. You can change the binding under Controls. Use the arrow buttons to change pages when the pack has more than 50 slots.
+
+| Backpack | Extra slots | Material for its recipe |
+| --- | --- | --- |
+| ![Copper Backpack](NyuuTerraria/Content/Backpacks/CopperBackpack.png) **Copper** | **20** | 12 Copper Bars |
+| ![Iron Backpack](NyuuTerraria/Content/Backpacks/IronBackpack.png) **Iron** | **30** | 12 Iron Bars |
+| ![Gold Backpack](NyuuTerraria/Content/Backpacks/GoldBackpack.png) **Gold** | **40** | 12 Gold Bars |
+| ![Emerald Backpack](NyuuTerraria/Content/Backpacks/EmeraldBackpack.png) **Emerald** | **60** | 8 Emeralds |
+| ![Obsidian Backpack](NyuuTerraria/Content/Backpacks/ObsidianBackpack.png) **Obsidian** | **80** | 30 Obsidian |
+| ![Demonite Backpack](NyuuTerraria/Content/Backpacks/DemoniteBackpack.png) **Demonite** | **100** | 20 Demonite Bars |
+
+Each recipe also uses **2 Leather + 4 Silk** at an **Iron or Lead Anvil**. For an early Leather source, craft **1 Leather** from **8 Gel + 1 Silk** at a **Work Bench**.
+
+Contents belong to your character and carry over between worlds. Changing backpacks changes the usable capacity. If you switch to a smaller pack or remove it, stored items beyond the available capacity appear as withdrawal-only slots. Pick those items up with an empty cursor. They remain saved until you withdraw them.
+
+## Hollowglass Reach
+
+![Prism Sentinel](NyuuTerraria/Content/Hollowglass/PrismSentinel.png) ![Mourning Bell](NyuuTerraria/Content/Hollowglass/MourningBell.png)
+
+Explore the **Cavern layer** of a new world for chambers of dark **Glass Slate**, turquoise lanterns, and crystal ore. Ruin chests contain **12–18 Hollowglass Ore**, **1 Glassbound Seal**, **2 Spelunker Potions**, and **3 Healing Potions**.
+
+For an existing world, make **10 Glass Slate** from **10 Stone Blocks + 2 Glass** at a Furnace. Place **100 nearby Glass Slate or Hollowglass ore blocks** underground to activate Hollowglass Reach. Use Glass Slate floors for its enemies to spawn on.
+
+| Find | Where and what it gives |
+| --- | --- |
+| ![Hollowglass Ore](NyuuTerraria/Content/Hollowglass/HollowglassOre.png) **Hollowglass Ore** | Mine veins in the Reach or search its chests and vases. Smelt **3 Ore** per bar at a Furnace. |
+| ![Glass Crawler](NyuuTerraria/Content/Hollowglass/GlassCrawler.png) **Glass Crawler** | Spawns on Glass Slate. **82 base HP, 22 contact damage, 8 defense**. Base **1-in-2** chance to drop **1–3 Hollowglass Ore**. |
+| ![Glasswing Moth](NyuuTerraria/Content/Hollowglass/GlasswingMoth.png) **Glasswing Moth** | Spawns on Glass Slate. **65 base HP, 20 contact damage, 5 defense**. Base **1-in-2** chance to drop **1–2 Hollowglass Ore**. |
+| ![Glass Vase](NyuuTerraria/Content/Hollowglass/GlassVase.png) **Glass Vase** | Break for one of four equally likely drops: **2 Healing Potions**, **3 Hollowglass Ore**, **1 Spelunker Potion**, or **10 Silver Coins**. The vase is consumed. |
+
+### Prism Sentinel
+
+Craft **Glassbound Seal** at an anvil with **4 Hollowglass Bars + 2 Fallen Stars**, or find one in a natural Reach chest. Use it while standing in **Hollowglass Reach** to summon the Sentinel.
+
+It fires three-shot crystal fans while hovering, then pauses and glows amber before charging. Run across a platform during the volleys, and change height when it stops to prepare the charge. Its defense falls during the charge phase, giving you an opening to attack. Below half health its volleys and charges get faster.
+
+The Sentinel has **3,600 base HP**, **28 contact damage**, and **16 defense while hovering**, falling to **5 during the charge phase**. It drops **7–11 Prism Hearts** and **12–20 Hollowglass Ore**. Use the hearts for a Resonance Charm or the second boss summon.
+
+### Mourning Bell
+
+At an anvil, combine **3 Prism Hearts + 5 Hollowglass Bars + 10 Obsidian** into a **Resonating Bell**. Use it in **Hollowglass Reach**.
+
+The Bell sways before releasing rings of crystal shots, then fires aimed bolts. Keep enough space to see gaps between the ring shots and pass through a gap rather than running straight toward the center. Change direction for the aimed bolts. Below half health the attack cycle speeds up.
+
+It has **5,200 base HP**, **33 contact damage**, and **12 defense**. It drops **7–11 Resonant Clappers** and **12–20 Hollowglass Ore**. Clappers craft the Hollowchime Staff and the Little Glass Bell pet.
+
+### Reach recipes
+
+| Result | Station | Ingredients | What it does |
+| --- | --- | --- | --- |
+| **Glass Slate ×10** | Furnace | 10 Stone Blocks + 2 Glass | Biome building blocks. |
+| ![Hollowglass Bar](NyuuTerraria/Content/Hollowglass/HollowglassBar.png) **Hollowglass Bar** | Furnace | 3 Hollowglass Ore, or 4 Glass + 1 Silver or Tungsten Bar + 1 Amethyst | Reach crafting material. |
+| **Glass Vase** | Furnace | 4 Glass + 1 Hollowglass Ore | A breakable supply vase. |
+| ![Reach Lantern](NyuuTerraria/Content/Hollowglass/ReachLantern.png) **Reach Lantern** | Work Bench | 1 Hollowglass Bar + 2 Torches | Placeable turquoise cave light. |
+| ![Reach Chest](NyuuTerraria/Content/Hollowglass/ReachChest.png) **Reach Chest** | Work Bench | 8 Glass Slate + 2 Hollowglass Bars | A 40-slot chest. Crafted chests start empty. |
+| ![Glassbound Seal](NyuuTerraria/Content/Hollowglass/GlassboundSeal.png) **Glassbound Seal** | Anvil | 4 Hollowglass Bars + 2 Fallen Stars | Summons Prism Sentinel in the Reach. |
+| ![Resonating Bell](NyuuTerraria/Content/Hollowglass/ResonatingBell.png) **Resonating Bell** | Anvil | 3 Prism Hearts + 5 Hollowglass Bars + 10 Obsidian | Summons Mourning Bell in the Reach. |
+| ![Glassedge Blade](NyuuTerraria/Content/Hollowglass/GlassedgeBlade.png) **Glassedge Blade** | Anvil | 8 Hollowglass Bars + 2 Emeralds | **31 melee damage** and a piercing glass blade projectile. |
+| ![Resonance Charm](NyuuTerraria/Content/Hollowglass/ResonanceCharm.png) **Resonance Charm** | Anvil | 4 Prism Hearts + 4 Hollowglass Bars | **+2 defense**, **+20 maximum mana**, **+4 percentage points of magic crit**. Uses a normal accessory slot. |
+| ![Hollowchime Staff](NyuuTerraria/Content/Hollowglass/HollowchimeStaff.png) **Hollowchime Staff** | Anvil | 5 Resonant Clappers + 10 Hollowglass Bars + 3 Fallen Stars | **56 magic damage**, **6 mana per cast**. Its gently homing shots can pierce two enemies. |
+| ![Little Glass Bell](NyuuTerraria/Content/Hollowglass/LittleGlassBell.png) **Pocket Chime** | Anvil | 2 Resonant Clappers + 3 Hollowglass Bars | Use to summon a glowing Little Glass Bell vanity pet. |
+
+Both summons are consumed on use and require the Reach biome. The second summon uses a first-boss drop. Both bosses are pre-Hardmode encounters.
 
 ## Where to find materials
 
@@ -165,6 +233,7 @@ Launch tModLoader through Steam. Nyuu Terraria forwards completed **vanilla Terr
 
 | Version | Added or changed |
 | --- | --- |
+| **v0.3.0** | Six backpacks, a dedicated Backpack slot and V-key storage window, Hollowglass Reach, two bosses, ruin loot, equipment, a pet, and exterior sprite cleanup. |
 | **v0.2.6** | Cleaned up the Amberflare Staff sprite, added individual armor and vanity icons, and moved the Warden set bonus into the armor section. |
 | **v0.2.5** | Full player guide. Redrawn Amberflare Staff, Amberheart Pendant, and Deepheart Pendant. |
 | **v0.2.4** | Amber Grotto, Amber Urns, Verdigris and Ember Amber, two cave enemies, two pets, tools, weapons, and pendants. |
