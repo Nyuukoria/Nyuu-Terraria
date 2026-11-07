@@ -1,38 +1,52 @@
-# Nyuu Terraria
+<a id="top"></a>
 
-**Explore forgotten caverns and portal expeditions, meet Lyra, build your character, and challenge new bosses.**
+<div align="center">
+  <img src="NyuuTerraria/icon.png" alt="Nyuu Terraria icon" width="64" height="64">
 
-Nyuu Terraria adds **seven ores**, **two underground biomes**, **two portal pocket expeditions**, **six bosses**, **three minibosses**, quests, five professions, pets, pride customization, armor, weapons, long hairstyles, extra trinket slots, and backpacks with up to **100 extra inventory slots**.
+  <h1>Nyuu Terraria</h1>
 
-<p align="center">
-  <img src="NyuuTerraria/Content/Backpacks/DemoniteBackpack.png" alt="Demonite Backpack" height="48">
-  &nbsp;&nbsp;
-  <img src="NyuuTerraria/Content/Skylight/NimbusWarden.png" alt="Nimbus Warden" height="88">
-  &nbsp;&nbsp;
-  <img src="NyuuTerraria/Content/Hollowglass/PrismSentinel.png" alt="Prism Sentinel" height="88">
-  &nbsp;&nbsp;
-  <img src="NyuuTerraria/Content/Hollowglass/MourningBell.png" alt="Mourning Bell" height="88">
-</p>
+  <p><strong>Cloud-born magic. Crystal caverns. Stories beyond the mirror.</strong></p>
+  <p>An early-game adventure that grows with you: explore, craft, meet Lyra, and make your character your own.</p>
 
-**Current version — v0.4.0** · **Requires tModLoader 1.4.5-dev**
+  <p>
+    <code>v0.4.0 · Chronicle Expeditions</code>
+    &nbsp;
+    <code>tModLoader 1.4.5-dev</code>
+  </p>
 
-[**Download the mod**](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Browse the source](NyuuTerraria/) · [Download source ZIP](downloads/NyuuTerraria-Source.zip) · [Version notes](#version-notes)
+  <p>
+    <a href="https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod"><strong>Download the mod</strong></a>
+    &nbsp; · &nbsp;
+    <a href="downloads/NyuuTerraria-Source.zip">Source ZIP</a>
+    &nbsp; · &nbsp;
+    <a href="#getting-started">Start playing</a>
+    &nbsp; · &nbsp;
+    <a href="#ideas-for-future-updates">Roadmap</a>
+  </p>
+
+  <p>
+    <img src="NyuuTerraria/Content/Reverie/RootboundKnight.png" alt="Rootbound Knight" height="96">
+    &nbsp;&nbsp;
+    <img src="NyuuTerraria/Content/Reverie/PrismMatriarch.png" alt="Prism Matriarch" height="112">
+    &nbsp;&nbsp;
+    <img src="NyuuTerraria/Content/Reverie/Bellkeeper.png" alt="The Bellkeeper" height="96">
+  </p>
+
+  <p><kbd>J</kbd> Quests &amp; professions &nbsp; · &nbsp; <kbd>V</kbd> Backpack</p>
+</div>
+
+| Explore somewhere new | Make your own build | Bring something home |
+| :---: | :---: | :---: |
+| **7 ores · 2 cave biomes**<br>Reverie & Hush pocket expeditions | **5 professions · 12 quests**<br>Pride customization & 8 long hairstyles | **6 bosses · 3 minibosses**<br>Pets, equipment & backpacks up to 100 slots |
 
 ## Find what you need
 
-| I want to… | Go here |
-| --- | --- |
-| Install the mod or play with friends | [Install and play](#install-and-play) |
-| Try the new quests, professions, portals, or Lyra | [Chronicle expeditions](#chronicle-expeditions) |
-| Know what to make first | [Getting started](#getting-started) |
-| Equip a backpack and use V | [Backpacks](#backpacks) |
-| Find ores and recipe ingredients | [Where to find materials](#where-to-find-materials) |
-| Explore caves and find pets | [Amber Grotto](#amber-grotto) · [Hollowglass Reach](#hollowglass-reach) |
-| Summon a boss or learn its attacks | [Boss progression](#boss-progression) |
-| Look up a recipe or item effect | [Complete crafting guide](#complete-crafting-guide) · [Reach recipes](#reach-recipes) |
-| Use trinket slots, storage, or hairstyles | [Using the new features](#using-the-new-features) |
-| See possible future additions | [Ideas by game stage](#ideas-for-future-updates) |
-| Build or contribute to the mod | [Building from source](#building-from-source) |
+| Start your adventure | Explore & fight | Craft & customize |
+| --- | --- | --- |
+| [Install & multiplayer](#install-and-play)<br>[First steps](#getting-started)<br>[What's new in v0.4.0](#chronicle-expeditions) | [Material locations](#where-to-find-materials)<br>[Cave bosses](#boss-progression)<br>[Expedition encounters](#expedition-bosses-and-minibosses) | [Backpacks](#backpacks)<br>[All crafting recipes](#complete-crafting-guide)<br>[Expedition recipes](#every-expedition-crafting-recipe) |
+| [Quests & professions](#journal-stories-and-professions)<br>[Lyra, hairstyles & outfits](#lyra-pride-hairstyles-and-clothing) | [Amber Grotto](#amber-grotto)<br>[Hollowglass Reach](#hollowglass-reach) | [Trinkets, storage & reforging](#using-the-new-features)<br>[Build & contribute](#building-from-source) |
+
+[Need help?](#quick-fixes) · [Future additions](#ideas-for-future-updates) · [Version history](#version-notes)
 
 ## Install and play
 
@@ -45,7 +59,7 @@ Nyuu Terraria adds **seven ores**, **two underground biomes**, **two portal pock
 | Your world | How to access the new content |
 | --- | --- |
 | **New world** | Natural ore veins, Amber Grottos, and Hollowglass ruins generate with the world. Explore the Underground and Cavern layers. |
-| **Existing world, including Meow** | Use the alternate bar recipes and craft biome blocks to build underground areas. The [Amber Grotto](#amber-grotto) and [Hollowglass Reach](#hollowglass-reach) sections give the block counts and recipes. |
+| **Existing world** | Use the alternate bar recipes and craft biome blocks to build underground areas. The [Amber Grotto](#amber-grotto) and [Hollowglass Reach](#hollowglass-reach) sections give the block counts and recipes. |
 
 ## Getting started
 
@@ -64,14 +78,24 @@ Follow the ingredient and crafting-station tables below for exact recipes.
 
 This is the first playable chapter of the roadmap: **Lyra**, **12 quests**, **five switchable professions**, **eight long hairstyles**, new equipment, **three bosses and three minibosses**, and two portal expeditions.
 
+<details>
+<summary><strong>View the v0.4.0 sprite gallery</strong> — equipment, encounters, wildlife & hairstyles</summary>
+
 ![Chronicle expedition sprites](docs/images/chronicle-expeditions-preview.png)
 
+</details>
+
 ### Fixes included
+
+<details>
+<summary><strong>Backpack, inventory & interface fixes</strong></summary>
 
 - The backpack remains in its existing saved slot, but is now displayed under **Equipment**, alongside pets and mounts. Click the Equipment tab in the inventory, then use the **Backpack** slot below those slots.
 - Backpack clicks no longer use a vanilla bank-container action. This fixes the missing-container error that interrupted the panel and made slots flicker.
 - Accessory/trinket wheel scrolling follows the expected direction. Custom bar sprites have a larger, consistently cropped inventory footprint.
 - Backpack and Chronicle panels use Terraria's scaled UI coordinates once, keeping drawing and clicks aligned when you change UI scale.
+
+</details>
 
 ### Your first expedition
 
@@ -94,6 +118,9 @@ The first 12 requests cover Lyra's atelier, the crystal orchard, the Rootbound K
 
 **J → Professions:** switch freely between the five professions. **Every profession saves its own XP, level, and invested skill points.** Switching does not erase any progress. Only your active profession grants its bonuses. Each level provides one point; use **+ Skill** to invest it or **Reset active skills** to redistribute that branch for free.
 
+<details>
+<summary><strong>Profession bonuses, skill points & XP progression</strong></summary>
+
 | Profession | Initial skill effect per invested point |
 | --- | --- |
 | Vanguard | +0.5% melee damage; +1 defense for every five points |
@@ -104,11 +131,16 @@ The first 12 requests cover Lyra's atelier, the crystal orchard, the Rootbound K
 
 Levels currently cap at **50 per profession**. Total XP required for level L is **50 × L²**. Quests, hostile enemy defeats, and first expedition visits award XP to the selected profession. Moving through the expeditions as Explorer also awards a small amount of exploration XP. These are the first passive skills; active abilities and branching trees remain planned.
 
+</details>
+
 Your future dialogue and unique quests can be added through [the content authoring guide](docs/CONTENT-AUTHORING.md). Dialogue and quest definitions are kept separately from the journal code.
 
 ### Lyra, pride, hairstyles, and clothing
 
 ![Lyra](NyuuTerraria/Content/Reverie/Lyra_Head.png) **Lyra, the Prism Tailor**, is a trans woman town NPC who can arrive when a suitable empty house is available. Talk to her for **Stories & quests**, or choose **Long hairstyles** repeatedly to cycle through all eight new styles for free. They are also available during character creation.
+
+<details>
+<summary><strong>Preview all eight long hairstyles</strong></summary>
 
 | Style | Preview | Style | Preview |
 | --- | --- | --- | --- |
@@ -117,11 +149,16 @@ Your future dialogue and unique quests can be added through [the content authori
 | **Trailing Ponytail** | ![Trailing Ponytail](docs/images/hairstyles/TrailingPonytail.png) | **Cascading Layers** | ![Cascading Layers](docs/images/hairstyles/CascadingLayers.png) |
 | **Long Side Braid** | ![Long Side Braid](docs/images/hairstyles/LongSideBraid.png) | **Halfup Ribbon** | ![Halfup Ribbon](docs/images/hairstyles/HalfupRibbon.png) |
 
+</details>
+
 The **Pride Ribbon** gives cyan and pink sparkles when visible. **Prism Longcoat** and **Prism Skirt** go in body and leg **vanity** slots. All styles and clothes are available to every character.
 
 Place a **Prism Wardrobe** and right-click it to open **J → Wardrobe**. Save up to **three appearance presets** containing hair, colors, and body appearance. Stand near that wardrobe to restore a preset. These presets do not duplicate or replace inventory/armor items. Choose pronouns in the same tab, or use **/nyuuprofile she/her** (any short custom value is accepted). Lyra's authored dialogue can use your character name and pronouns.
 
 ### Expedition materials and inhabitants
+
+<details>
+<summary><strong>Where to find materials, enemies & peaceful wildlife</strong></summary>
 
 | Material or creature | Where to find it / what it does |
 | --- | --- |
@@ -136,7 +173,12 @@ Place a **Prism Wardrobe** and right-click it to open **J → Wardrobe**. Save u
 
 The Reverie chest also contains a **Dew Berry Charm**, five Healing Potions, and a **Prism Cocoon**. The Hush chest contains **18 Echo Fragments**, an **Archive Lantern**, five Healing Potions, and a **Cracked Bell Sigil**. Hardmode summons still require Hardmode even when found early.
 
+</details>
+
 ### Expedition bosses and minibosses
+
+<details>
+<summary><strong>Summons, health, rewards & fight tips</strong></summary>
 
 Health below is the normal base value before difficulty/player adjustments. The original bosses also gained health: **Nimbus Warden 5,600**, **Prism Sentinel 7,200**, and **Mourning Bell 10,400**.
 
@@ -153,7 +195,12 @@ Health below is the normal base value before difficulty/player adjustments. The 
 
 **Hush jumpscares:** while exploring the Hush, a brief Lantern Stalker apparition and sound can occur after you have been inside for a short time. There is a cooldown between scares. It does not deal damage or lock movement. Toggle **Hush Jumpscares** in the mod's client settings.
 
+</details>
+
 ### Every expedition crafting recipe
+
+<details>
+<summary><strong>Open all 24 expedition recipes</strong></summary>
 
 “Anvil” means an Iron or Lead Anvil. Unless stated otherwise, recipes produce one item.
 
@@ -186,10 +233,11 @@ Health below is the normal base value before difficulty/player adjustments. The 
 
 Right-click a memorial to read/edit its inscription using the sign interface. These are crafted decorations; automatic death-grave variants and retrieval quests remain planned.
 
-**Validation:** compilation, packaged texture-path checks, clean sprite alpha, persistent profession/quest/backpack data, no-container backpack clicks, Equipment-tab visibility, both realm generators and reloads, and the four summon encounters' attack loops were checked. Full rendered client UI, multiplayer playthroughs, and gameplay balance still need in-game verification. [Validation details](docs/validation/0.4.0.md).
-
+</details>
 
 ## Boss progression
+
+These are the original cave and cloud encounters. For the Reverie and Hush fights, see [expedition bosses and minibosses](#expedition-bosses-and-minibosses).
 
 | Boss | Where to summon | Summon item | Main rewards |
 | --- | --- | --- | --- |
@@ -251,6 +299,9 @@ It has **10,400 base HP**, **33 contact damage**, and **12 defense**. It drops *
 
 ### Reach recipes
 
+<details>
+<summary><strong>Hollowglass equipment, summons & pet recipes</strong></summary>
+
 | Result | Station | Ingredients | What it does |
 | --- | --- | --- | --- |
 | ![Glass Slate](NyuuTerraria/Content/Hollowglass/GlassSlate.png) **Glass Slate ×10** | Furnace | 10 Stone Blocks + 2 Glass | Biome building blocks. |
@@ -267,7 +318,12 @@ It has **10,400 base HP**, **33 contact damage**, and **12 defense**. It drops *
 
 Both summons are consumed on use and require the Reach biome. The second summon uses a first-boss drop. Both bosses are pre-Hardmode encounters.
 
+</details>
+
 ## Where to find materials
+
+<details>
+<summary><strong>Open the complete material location guide</strong></summary>
 
 | Material | Where to look |
 | --- | --- |
@@ -290,6 +346,8 @@ Both summons are consumed on use and require the Reach biome. The second summon 
 | ![Leather](docs/images/materials/Leather.png) ![Emerald](docs/images/materials/Emerald.png) ![Obsidian](docs/images/materials/Obsidian.png)<br>**Leather, Emeralds, and Obsidian** | This mod adds a Work Bench recipe for Leather using **8 Gel + 1 Silk**. Find Emeralds underground. Obsidian forms where water meets lava. |
 | ![Silk](docs/images/materials/Silk.png) ![Chain](docs/images/materials/Chain.png)<br>**Silk and Chains** | Make Silk from Cobwebs at a Loom. Make Chains from Iron or Lead Bars at an anvil. |
 | ![Soulof Light](docs/images/materials/SoulofLight.png) ![Soulof Night](docs/images/materials/SoulofNight.png)<br>**Souls of Light and Night** | In Hardmode, fight enemies in the Cavern layer of the Hallow for Light and the Corruption or Crimson for Night. |
+
+</details>
 
 ## Amber Grotto
 
@@ -318,6 +376,8 @@ The Warden has **5,600 base HP**, **26 base contact damage**, and **9 defense**.
 
 ## Complete crafting guide
 
+Choose a station below to open its recipe book. For Moonprism gear, pride items, portals, and memorials, use the [expedition recipe book](#every-expedition-crafting-recipe).
+
 [Bars and Furnace recipes](#furnace) · [Weapons and tools](#anvil-weapons-and-tools) · [Armor](#anvil-armor) · [Accessories](#anvil-accessories-trinkets-and-boss-summon) · [Hardmode upgrade](#mythril-or-orichalcum-anvil) · [Storage, vanity, and bombs](#work-bench-loom-and-hand-crafting)
 
 Backpack recipes are in [Backpacks](#backpacks). Hollowglass equipment and summons are in [Reach recipes](#reach-recipes).
@@ -325,6 +385,9 @@ Backpack recipes are in [Backpacks](#backpacks). Hollowglass equipment and summo
 All recipes below produce **one item** unless a quantity is shown. “Anvil” means an **Iron or Lead Anvil**. Weapon values are base stats before reforges and player bonuses.
 
 ### Furnace
+
+<details>
+<summary><strong>Ore-to-bar recipes & alternate crafting routes</strong></summary>
 
 | Result | Ingredients |
 | --- | --- |
@@ -335,7 +398,12 @@ All recipes below produce **one item** unless a quantity is shown. “Anvil” m
 | ![Ember Amber Bar](NyuuTerraria/Content/AmberGrotto/EmberAmberBar.png) **Ember Amber Bar** | **3 Ember Amber Ore** or **1 Amber + 1 Gold or Platinum Bar** |
 | ![Amber Urn](NyuuTerraria/Content/AmberGrotto/AmberUrn.png) **Amber Urn** | **5 Clay Blocks + 1 Ember Amber Ore** |
 
+</details>
+
 ### Anvil weapons and tools
+
+<details>
+<summary><strong>Staves, weapons & exploration tools</strong></summary>
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
@@ -348,7 +416,12 @@ All recipes below produce **one item** unless a quantity is shown. “Anvil” m
 | ![Stormweaver Staff](NyuuTerraria/Content/Skylight/StormweaverStaff.png) **Stormweaver Staff** | 7 Skylight Bars + 4 Warden Cores + 15 Cloud | **22 magic damage per bolt, 6 mana per cast**. Fires three bolts in a fan. Each can hit up to two enemies. |
 | ![Verdigris Pickaxe](NyuuTerraria/Content/AmberGrotto/VerdigrisPickaxe.png) **Verdigris Pickaxe** | 8 Verdigris Bars + 4 Wood of any type | **60% pickaxe power**, **+1 tile reach**, and **10 melee damage**. |
 
+</details>
+
 ### Anvil armor
+
+<details>
+<summary><strong>Armor pieces, defense & set bonuses</strong></summary>
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
@@ -359,7 +432,12 @@ All recipes below produce **one item** unless a quantity is shown. “Anvil” m
 
 The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, and **+6 percentage points of magic crit**, alongside each piece’s individual effect.
 
+</details>
+
 ### Anvil accessories, trinkets, and boss summon
+
+<details>
+<summary><strong>Accessories, trinkets & Cloud Idol</strong></summary>
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
@@ -374,13 +452,23 @@ The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, a
 | ![Amberheart Pendant](NyuuTerraria/Content/AmberGrotto/AmberheartPendant.png) **Amberheart Pendant** | 5 Ember Amber Bars + 2 Chains | **+2 defense** and **+2 life regeneration**. |
 | ![Cloud Idol](NyuuTerraria/Content/Skylight/CloudIdol.png) **Cloud Idol** | 30 Cloud + 3 Skylight Bars | Summons Nimbus Warden aboveground or in the sky. |
 
+</details>
+
 ### Mythril or Orichalcum Anvil
+
+<details>
+<summary><strong>Hardmode equipment upgrade</strong></summary>
 
 | Result | Ingredients | What it does |
 | --- | --- | --- |
 | ![Deepheart Pendant](NyuuTerraria/Content/AmberGrotto/DeepheartPendant.png) **Deepheart Pendant** | 1 Amberheart Pendant + 5 Ember Amber Bars + 8 Souls of Night + 8 Souls of Light | Hardmode upgrade with **+5 defense**, **+3 life regeneration**, and **5% damage reduction**. |
 
+</details>
+
 ### Work Bench, Loom, and hand crafting
+
+<details>
+<summary><strong>Storage, clothes, furniture & bombs</strong></summary>
 
 | Result | Station | Ingredients | What it does |
 | --- | --- | --- | --- |
@@ -393,6 +481,8 @@ The **full Warden set** gives **15 total defense**, **12% reduced mana cost**, a
 | ![Cloudtail Trousers](NyuuTerraria/Content/Skylight/CloudtailTrousers.png) **Cloudtail Trousers** | Loom | 5 Silk + 3 Cloud | Leg vanity slot. |
 | ![Cloudy Bomb](NyuuTerraria/Content/Items/Consumables/CloudyBomb.png) **Cloudy Bomb** | Hand crafting | 1 Bomb + 4 Cloud + 4 Silver Bars | **28-tile blast radius**, damages enemies and clears terrain and walls, including protected Underworld terrain. The blast spares players. |
 | ![Sticky Cloudy Bomb](NyuuTerraria/Content/Items/Consumables/StickyCloudyBomb.png) **Sticky Cloudy Bomb** | Hand crafting | 1 Cloudy Bomb + 1 Gel | Sticks to the first surface it hits, then uses the same blast. |
+
+</details>
 
 ## Using the new features
 
@@ -419,6 +509,13 @@ Copy the [NyuuTerraria source folder](NyuuTerraria/) into `Documents\My Games\Te
 
 The `Content` folders contain the item, enemy, biome, and storage code alongside their sprites. The `Localization` folder contains item names and tooltips.
 
+<details>
+<summary><strong>Build validation & current testing limits</strong></summary>
+
+**Validation:** compilation, packaged texture-path checks, clean sprite alpha, persistent profession/quest/backpack data, no-container backpack clicks, Equipment-tab visibility, both realm generators and reloads, and the four summon encounters' attack loops were checked. Full rendered client UI, multiplayer playthroughs, and gameplay balance still need in-game verification. [Validation details](docs/validation/0.4.0.md).
+
+</details>
+
 ## Quick fixes
 
 | What you see | What to check |
@@ -434,9 +531,14 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 
 ## Ideas for future updates
 
+**Where the adventure goes next.** Open a category to explore its planned features.
+
 The roadmap below describes the longer-term designs. **v0.4.0 has started these systems:** Lyra, pride ribbon and moth, appearance presets, eight long hairstyles, a journal with 12 quests, persistent professions, crafted memorials, wildlife, encounters, and two pocket expeditions. See [the playable chapter](#chronicle-expeditions) for current behavior and recipes. Separate-world dimensions, full story locations, deeper skill trees, and the later encounters below remain future work.
 
 ### Trans pride and character expression
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 | Planned addition | Idea |
 | --- | --- |
@@ -445,7 +547,12 @@ The roadmap below describes the longer-term designs. **v0.4.0 has started these 
 | **Lyra, the Prism Tailor** | Continue the trans tailor's initial dialogue and journal requests with an authored atelier restoration, new story chapters, clothes, and vanity accessories. |
 | **Character profile** | Optional name and pronoun settings for modded dialogue. Clothing and hairstyle choices remain available to every character. |
 
+</details>
+
 ### New dimensions and scenarios
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 | Planned area | Setting and things to do |
 | --- | --- |
@@ -456,7 +563,12 @@ The roadmap below describes the longer-term designs. **v0.4.0 has started these 
 
 The Reverie would focus on discovery, magic, and building. The Hush would have its own horror story, encounters, and rewards.
 
+</details>
+
 ### Bosses, minibosses, and enemies
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 | Encounter | Stage and location | Fight idea and rewards |
 | --- | --- | --- |
@@ -470,7 +582,12 @@ The Reverie would focus on discovery, magic, and building. The Hush would have i
 | **The Unwritten — final dimension boss** | Post-Moon Lord, The Hush archive | Changes the arena between remembered locations. Rewards final-tier gear and unlocks the last chapter of the dimension story. |
 | **More regular enemies** | Across the new areas | Reef skitterers, vinebound armor, glass serpents, paper wraiths, lantern mimics, and starfallen constructs, each with its own drops and behavior. |
 
+</details>
+
 ### Quest journal and NPC stories
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 - **A proper quest journal** with tracked objectives, map hints, quest chains, and a clear reward preview.
 - **Village noticeboards** for gathering, fishing, crafting, exploration, and boss contracts.
@@ -478,7 +595,12 @@ The Reverie would focus on discovery, magic, and building. The Hush would have i
 - **Multiplayer quest credit** for players helping with the same objective, with individual reward claims.
 - **Rewards beyond equipment**, such as hairstyles, furniture recipes, pets, housing decorations, and access to new areas.
 
+</details>
+
 ### Levels, skills, and professions
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 The initial five professions already keep their own XP, levels, and skill investment when you switch. The future system will expand their passive ranks into branching choices, active abilities, and milestone unlocks.
 
@@ -492,7 +614,12 @@ The initial five professions already keep their own XP, levels, and skill invest
 
 The current journal supports free switching and skill resets. Future stations can add more build options; saved progress for every profession will remain part of the system.
 
+</details>
+
 ### Peaceful creatures and pets
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 | Creature | Idea |
 | --- | --- |
@@ -504,7 +631,12 @@ The current journal supports free switching and skill resets. Future stations ca
 
 Additional plans include feeding interactions, pet beds, idle animations, and a bestiary section for peaceful wildlife.
 
+</details>
+
 ### Graves and memorials
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 - **Grave styles by material and biome**, including copper plaques, obsidian markers, crystal headstones, and flower-covered memorials.
 - **Engravable memorial stones** with a player name, a short message, and decorative symbols.
@@ -512,13 +644,23 @@ Additional plans include feeding interactions, pet beds, idle animations, and a 
 - **A grave-recovery quest option** that marks your last death location and rewards retrieving a keepsake.
 - **Cemetery furniture**, such as fences, candles, wilted flowers, benches, and lanterns.
 
+</details>
+
 ### More long feminine hairstyles and clothes
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 The first eight long styles are available in v0.4.0. Future additions will expand the selection with more lengths, bangs, curls, braids, and ribbon arrangements.
 
 Each style would include its worn-under-a-hat version and animation frames. Matching clothes could include long skirts, fitted coats, embroidered dresses, boots, stockings, and mix-and-match hair ribbons.
 
+</details>
+
 ### Other progression ideas
+
+<details>
+<summary><strong>Explore the plan</strong></summary>
 
 | Stage | Additional ideas |
 | --- | --- |
@@ -526,8 +668,12 @@ Each style would include its worn-under-a-hat version and animation frames. Matc
 | **Middle game** | Corrupted versions of custom biomes, armor with active skills, and a relic forge that combines boss materials into new weapon effects. |
 | **Late game** | A celestial ruin dungeon, boss rematches with new phases, legendary weapon upgrades, and unusual mounts. |
 
+</details>
 
 ## Version notes
+
+<details>
+<summary><strong>Release history — v0.1.x through v0.4.0</strong></summary>
 
 | Version | Added or changed |
 | --- | --- |
@@ -543,3 +689,13 @@ Each style would include its worn-under-a-hat version and animation frames. Matc
 | **v0.2.0** | Skylight ore, Nimbus Warden, Warden armor, weapons, trinkets, slots, chest, vanity, and two hairstyles. |
 | **v0.1.x** | Wings and Staff of Democloud, Yuuki’s boots, Cloudy Bombs, and Steam achievement sync. |
 
+</details>
+
+
+---
+
+<p align="center">
+  <a href="#top">Back to top</a> &nbsp; · &nbsp;
+  <a href="#find-what-you-need">Player guide</a> &nbsp; · &nbsp;
+  <a href="docs/CONTENT-AUTHORING.md">Add your own stories</a>
+</p>
