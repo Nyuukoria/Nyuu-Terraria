@@ -48,12 +48,13 @@ public class RealmWorld : ModSystem
     internal bool EnsureArea(int realm)
     {
         if(Areas[realm].Width>0) return true;
-        // Leave a 12-tile margin around each pocket. Scan the actual world, including modded tiles and walls.
+        // Reserve a 96-tile horizontal buffer around each pocket. Scan the actual world, including modded tiles and walls.
         for(int step=0;step<18;step++)
         {
             int x=80+(step*197+realm*Main.maxTilesX/2)%(Main.maxTilesX-460);
             var candidate=new Rectangle(x,48,300,96);
-            var margin=candidate; margin.Inflate(12,12);
+            var margin=candidate; margin.Inflate(96,16);
+            if(margin.Left<20||margin.Right>=Main.maxTilesX-20||margin.Top<10||margin.Bottom>=Main.maxTilesY-20)continue;
             if(Array.Exists(Areas,r=>r.Width>0 && r.Intersects(margin)) || Array.Exists(ModContent.GetInstance<global::NyuuTerraria.Content.Frontiers.FrontierWorld>().Areas,r=>r.Width>0 && r.Intersects(margin))) continue;
             bool free=true;
             for(int tx=margin.Left;tx<margin.Right && free;tx++)

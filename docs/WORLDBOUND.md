@@ -1,10 +1,10 @@
-# Worldbound Chapters — v0.5.0
+# Worldbound Chapters â€” v0.5.0
 
-[Back to the player guide](../README.md) · [Every item and recipe](ITEMS.md) · [Showcase save](SHOWCASE.md)
+[Home](../README.md) · [Destination guides](DESTINATIONS.md) Â· [Every item and recipe](ITEMS.md) Â· [Showcase save](SHOWCASE.md)
 
 ## Controls and first steps
 
-Default keys: **L** Chronicle, **K** Spellbook, **V** Backpack, **G** profession ability. Existing assigned keys stay assigned; change any binding in Settings → Controls → Mod Controls. Escape closes the Chronicle. Its close button also works.
+Default keys: **L** Chronicle, **K** Spellbook, **V** Backpack, **G** profession ability. Existing assigned keys stay assigned; change any binding in Settings â†’ Controls â†’ Mod Controls. Escape closes the Chronicle. Its close button also works.
 
 Craft a **Field Journal** from a Book and 2 Silk at a Work Bench, or use L. Its Worldbound tab contains Requests, Talents, Profile, Wildlife, Stories, and Workshop. Pin an objective in Requests; claim a ready reward directly in Requests or in Quests. Materials are counted in your inventory and backpack. Completed objectives stay completed after rejoining.
 
@@ -40,10 +40,10 @@ Base health below is before difficulty and multiplayer scaling.
 
 | Encounter | Health / where | Summon or find | Fight advice / reward |
 | --- | --- | --- | --- |
-| The Pale Gardener | 18,000; Overgrown Citadel | Reusable Gardener Invitation: 8 Pale Blooms + 5 Daybloom at an anvil. No other active boss. | Leave a long horizontal route and a second platform. Move through the warning phase, then change direction after volleys; avoid getting trapped near the edges as attacks accelerate. Drops 3–5 Gardener Relics. |
-| The Unwritten | 48,000; Hush, after Plantera | Reusable Unwritten Page: 2 Archive Relics + 10 Echo Fragments at an anvil. The Archive Caretaker supplies the first relics. | Bring post-Plantera gear, mana support, healing and mobility. Keep distance during the warning, sidestep aimed volleys, and save your dash for charges. Drops 3–5 Archive Relics. |
-| Reef Ambusher | 3,600; Tidepool | Naturally spawning miniboss | Watch the fan of incoming shots. Drops 8–14 Tide Pearls and 2–4 Ritual Focuses. |
-| Archive Caretaker | 8,000; Hush | Naturally spawning miniboss | Keep room to dodge its extra volley. Drops 1–2 Archive Relics. |
+| The Pale Gardener | 18,000; Overgrown Citadel | Reusable Gardener Invitation: 8 Pale Blooms + 5 Daybloom at an anvil. No other active boss. | Leave a long horizontal route and a second platform. Move through the warning phase, then change direction after volleys; avoid getting trapped near the edges as attacks accelerate. Drops 3â€“5 Gardener Relics. |
+| The Unwritten | 48,000; Hush, after Plantera | Reusable Unwritten Page: 2 Archive Relics + 10 Echo Fragments at an anvil. The Archive Caretaker supplies the first relics. | Bring post-Plantera gear, mana support, healing and mobility. Keep distance during the warning, sidestep aimed volleys, and save your dash for charges. Drops 3â€“5 Archive Relics. |
+| Reef Ambusher | 3,600; Tidepool | Naturally spawning miniboss | Watch the fan of incoming shots. Drops 8â€“14 Tide Pearls and 2â€“4 Ritual Focuses. |
+| Archive Caretaker | 8,000; Hush | Naturally spawning miniboss | Keep room to dodge its extra volley. Drops 1â€“2 Archive Relics. |
 | Boss rematches | Original arena after that boss was defeated | Rematch Sigil: 3 Gardener Relics + 2 Archive Relics at an anvil | +65% health and +20% contact damage; victory adds a cosmetic Challenge Laurel. These rematches currently cover the two Worldbound bosses. |
 
 ## Professions and talents
@@ -75,13 +75,13 @@ Noticeboards open Requests, where ready objectives show Claim. Landmark discover
 | The archive: a missing name | Speak to the archive echo in Worldbound Stories. The Bellkeeper was not the end of the silence. | hush-3 | 1 UnwrittenPage + 200 XP |
 | The archive: what remained | Find the Archive Caretaker in the Hush. Its pages hold fragments of the missing explorers. | wb-hush4 | 2 ArchiveRelic + 450 XP |
 | The archive: write it back | Defeat The Unwritten in the Hush after Plantera. Move out of its marked charge and violet volleys. | wb-hush5 | 1 StarglassCoat + 900 XP |
-| Mira: somewhere gentle | Speak to Mira in Worldbound Stories. Her memorial garden starts with a small promise. | — | 1 MemorialWreath + 200 XP |
+| Mira: somewhere gentle | Speak to Mira in Worldbound Stories. Her memorial garden starts with a small promise. | â€” | 1 MemorialWreath + 200 XP |
 | Mira: a light for the path | Bring a Garden Lantern for Mira's remembrance walk. Craft one from Glass and Wood at a Work Bench. | wb-keeper1 | 1 GardenSkirt + 200 XP |
-| The last gardener | Defeat The Pale Gardener in the Overgrown Citadel. Craft a Gardener Invitation from Pale Blooms. | — | 2 GardenerRelic + 600 XP |
-| The promise in the forge | Find the Cinderwood landmark after Skeletron. A Cinder Key opens this expedition. | — | 1 Cindercoat + 400 XP |
-| Beyond the shattered stars | Find the Starglass landmark after Moon Lord. Craft a Starglass Chart at the Ancient Manipulator. | — | 1 StarglassSkirt + 900 XP |
-| Noticeboard: circles of practice | Activate a Ritual Focus and wait for its first pulse. Do not stand still while enemies approach. | — | 1 SpellPalette + 200 XP |
-| Noticeboard: steam in the garden | Combine Emberbloom and Tideglass on one enemy. The first reaction opens more possibilities. | — | 3 RitualFocus + 200 XP |
+| The last gardener | Defeat The Pale Gardener in the Overgrown Citadel. Craft a Gardener Invitation from Pale Blooms. | â€” | 2 GardenerRelic + 600 XP |
+| The promise in the forge | Find the Cinderwood landmark after Skeletron. A Cinder Key opens this expedition. | â€” | 1 Cindercoat + 400 XP |
+| Beyond the shattered stars | Find the Starglass landmark after Moon Lord. Craft a Starglass Chart at the Ancient Manipulator. | â€” | 1 StarglassSkirt + 900 XP |
+| Noticeboard: circles of practice | Activate a Ritual Focus and wait for its first pulse. Do not stand still while enemies approach. | â€” | 1 SpellPalette + 200 XP |
+| Noticeboard: steam in the garden | Combine Emberbloom and Tideglass on one enemy. The first reaction opens more possibilities. | â€” | 3 RitualFocus + 200 XP |
 
 ## Wildlife, home and memorials
 
@@ -91,7 +91,7 @@ Put a **Feeding Bowl** near a peaceful creature and right-click it with a Dayblo
 
 **Mira, the Cemetery Keeper**, can move into suitable housing after the Eye of Cthulhu is defeated. Use Memorial stories to open her story page. Craft Tidal, Cinder and Starglass Memorials at a Work Bench; the full material counts are in the reference. Death in the new areas drops a themed memorial item you can place yourself; it does not replace vanilla grave generation. Memorial Wreaths and lanterns help build a remembrance garden.
 
-Four new outfit pairs — Coastal, Cinder, Starglass and Garden — craft at a Loom from Silk and destination materials. Equip them in vanity slots. The worn sheets include collars, cuffs, fastenings and animated hems; the existing Warden, Cloudtail and Prism garments also received the visual pass.
+Four new outfit pairs â€” Coastal, Cinder, Starglass and Garden â€” craft at a Loom from Silk and destination materials. Equip them in vanity slots. The worn sheets include collars, cuffs, fastenings and animated hems; the existing Warden, Cloudtail and Prism garments also received the visual pass.
 
 ## Events
 
@@ -100,3 +100,7 @@ Four new outfit pairs — Coastal, Cinder, Starglass and Garden — craft at a L
 ## Extending the stories
 
 Add JSON packs under `NyuuTerraria/Data/packs/`, with unique quest and scene IDs. Packs can add prerequisite quests, event objectives, two-choice dialogue scenes and replies. Rebuild the mod after editing. See [content authoring](CONTENT-AUTHORING.md). Large branching story graphs, full-size dimensions, expanded event chapters and advanced class abilities remain in the roadmap.
+
+## Living Worlds update
+
+v0.5.2 adds themed skies, wider fresh placement buffers and animations using the existing creature artwork. See the [destination index](DESTINATIONS.md), [creature index](CREATURES.md) and [release notes](releases/v0.5.2.md).

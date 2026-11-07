@@ -24,11 +24,12 @@ public class FrontierWorld : ModSystem
     {
         if(area<0||area>=4||Main.netMode==NetmodeID.MultiplayerClient)return false;
         if(Areas[area].Width>0)return true;
-        for(int row=0;row<2;row++)for(int step=0;step<30;step++)
+        for(int row=0;row<4;row++)for(int step=0;step<Main.maxTilesX/16;step++)
         {
-            int x=45+(area*337+step*277)%(Main.maxTilesX-360),y=35+row*118;
-            var r=new Rectangle(x,y,280,96);var margin=r;margin.Inflate(10,10);
-            if(margin.Bottom>Math.Min(Main.worldSurface-18,Main.maxTilesY-40))continue;
+            int x=45+(area*337+step*16)%(Main.maxTilesX-360),y=26+row*112;
+            var r=new Rectangle(x,y,280,96);var margin=r;margin.Inflate(96,16);
+            if(margin.Left<20||margin.Right>=Main.maxTilesX-20||margin.Top<10)continue;
+            if(margin.Bottom>Main.maxTilesY-40)continue;
             if(Areas.Any(a=>a.Width>0&&a.Intersects(margin))||ModContent.GetInstance<RealmWorld>().Areas.Any(a=>a.Width>0&&a.Intersects(margin)))continue;
             bool free=true;
             for(int tx=margin.Left;tx<margin.Right&&free;tx++)for(int ty=margin.Top;ty<margin.Bottom;ty++){var t=Main.tile[tx,ty];if(t.HasTile||t.WallType!=0||t.LiquidAmount>0){free=false;break;}}
