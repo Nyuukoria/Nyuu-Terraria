@@ -24,6 +24,12 @@ public class NyuuTerraria : Mod
             var data=Main.LocalPlayer.GetModPlayer<ChroniclePlayer>();
             data.Record("defeat-enemies"); data.Record(key); data.AddExperience(xp);
         }
+        else if(kind==3 && Main.netMode==NetmodeID.MultiplayerClient)
+        {
+            int spell=reader.ReadByte(),amount=reader.ReadInt32();
+            if(spell==global::NyuuTerraria.Content.Spellcraft.Spells.Ward)
+                Main.LocalPlayer.GetModPlayer<global::NyuuTerraria.Content.Spellcraft.SpellcraftPlayer>().GainExperience(spell,Math.Clamp(amount,0,4));
+        }
         else if(kind==2)
         {
             int playerId=reader.ReadByte();

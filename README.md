@@ -9,7 +9,7 @@
   <p>An early-game adventure that grows with you: explore, craft, meet Lyra, and make your character your own.</p>
 
   <p>
-    <code>v0.4.0 · Chronicle Expeditions</code>
+    <code>v0.4.1 · Spellcraft</code>
     &nbsp;
     <code>tModLoader 1.4.5-dev</code>
   </p>
@@ -32,7 +32,7 @@
     <img src="NyuuTerraria/Content/Reverie/Bellkeeper.png" alt="The Bellkeeper" height="96">
   </p>
 
-  <p><kbd>J</kbd> Quests &amp; professions &nbsp; · &nbsp; <kbd>V</kbd> Backpack</p>
+  <p><kbd>K</kbd> Spellbook &nbsp; · &nbsp; <kbd>J</kbd> Quests &amp; professions &nbsp; · &nbsp; <kbd>V</kbd> Backpack</p>
 </div>
 
 | Explore somewhere new | Make your own build | Bring something home |
@@ -43,7 +43,7 @@
 
 | Start your adventure | Explore & fight | Craft & customize |
 | --- | --- | --- |
-| [Install & multiplayer](#install-and-play)<br>[First steps](#getting-started)<br>[What's new in v0.4.0](#chronicle-expeditions) | [Material locations](#where-to-find-materials)<br>[Cave bosses](#boss-progression)<br>[Expedition encounters](#expedition-bosses-and-minibosses) | [Backpacks](#backpacks)<br>[All crafting recipes](#complete-crafting-guide)<br>[Expedition recipes](#every-expedition-crafting-recipe) |
+| [Install & multiplayer](#install-and-play)<br>[First steps](#getting-started)<br>[New: v0.4.1 Spellcraft](#spellcraft)<br>[v0.4.0 Expeditions](#chronicle-expeditions) | [Material locations](#where-to-find-materials)<br>[Cave bosses](#boss-progression)<br>[Expedition encounters](#expedition-bosses-and-minibosses) | [Backpacks](#backpacks)<br>[All crafting recipes](#complete-crafting-guide)<br>[Expedition recipes](#every-expedition-crafting-recipe) |
 | [Quests & professions](#journal-stories-and-professions)<br>[Lyra, hairstyles & outfits](#lyra-pride-hairstyles-and-clothing) | [Amber Grotto](#amber-grotto)<br>[Hollowglass Reach](#hollowglass-reach) | [Trinkets, storage & reforging](#using-the-new-features)<br>[Build & contribute](#building-from-source) |
 
 [Need help?](#quick-fixes) · [Roadmap](#roadmap) · [Version history](#version-notes)
@@ -72,6 +72,77 @@
 Follow the ingredient and crafting-station tables below for exact recipes.
 
 
+<a id="v041"></a>
+<a id="spellcraft"></a>
+
+## v0.4.1 — Spellcraft
+
+**One wand. Six spells. A ward between you and danger.** Learn elemental tomes, build mastery through combat, and turn a quick cast into a glowing charged bloom.
+
+![Nyuu Terraria Spellcraft — wand, books, sigil, and elemental projectiles](docs/images/spellcraft-preview.png)
+
+### Start casting
+
+1. Craft the **Aetherloom Wand** at an Iron or Lead Anvil: **3 Skylight Bars + 8 Wood + 2 Fallen Stars**. Arcane Thread and Crescent Ward are known from the start.
+2. Press **K** to open the Spellbook, or choose its tab in the **J** journal. Select a learned spell, then left-click with the wand to cast it.
+3. Craft and use a learning tome once to unlock its spell for that character. You keep learned spells and mastery when switching spells or worlds.
+4. **Hold left-click for Emberbloom**, then release to fire. Hold **right-click for Crescent Ward** with any selected spell.
+
+K works without carrying the craftable Nyuu Spellbook. Change keys in **Settings → Controls → Mod Controls** if another mod uses them.
+
+### Spells and effects
+
+Values below are the base values before reforges, equipment, and mastery. Attack timing is in game ticks; 60 ticks is one second. The wand has **20% base total critical chance**, moderate knockback, and accepts normal magic reforges.
+
+| Spell | Base damage | Mana | Cast timing | What it does |
+| --- | ---: | ---: | --- | --- |
+| <img src="NyuuTerraria/Content/Spellcraft/ArcaneMote.png" width="40" alt="Arcane Thread"> **Arcane Thread** | 36 | 4 | 12 ticks | A fast lilac bolt with a connected pink-and-cyan trail. Known immediately. |
+| <img src="NyuuTerraria/Content/Spellcraft/EmberSeed.png" width="32" alt="Emberbloom"> **Emberbloom** | 49 | 7 + charging | Hold up to 90 ticks | A burning bloom that detonates on impact. A full charge adds up to 75% shot damage; holding costs 2 more mana every 20 ticks before mana reductions. The blast harms enemies and leaves terrain intact. |
+| <img src="NyuuTerraria/Content/Spellcraft/FrostShard.png" width="40" alt="Frostbloom"> **Frostbloom** | 31 | 5 | 15 ticks | A frostburn shard that pierces three enemies. At mastery 5 it becomes a three-shot fan, each dealing 70% shot damage. |
+| <img src="NyuuTerraria/Content/Spellcraft/TideOrb.png" width="32" alt="Tideglass"> **Tideglass** | 40 | 6 | 22 ticks | A piercing water orb that applies Wet and releases three weaker droplets on a hit. Droplets cannot split again. |
+| <img src="NyuuTerraria/Content/Spellcraft/DawnPetal.png" width="32" alt="Dawnmend"> **Dawnmend** | Healing | 18 | 30 ticks; 8-second cooldown | Restores 10 life + 1 per mastery, with a petal rune effect. Cannot be used at full health or during its cooldown. |
+| <img src="NyuuTerraria/Content/Spellcraft/StormSpark.png" width="40" alt="Stormglass Fork"> **Stormglass Fork** | 46 | 6 | 16 ticks | Lightning chains to 2 extra enemies, rising to 4 at mastery 8. Targets must be within 260 pixels of the previous target with line of sight. Links deal 60% shot damage, or 80% against Wet enemies. |
+| <img src="NyuuTerraria/Content/Spellcraft/WardSigil.png" width="32" alt="Crescent Ward"> **Crescent Ward** | Defensive | 2 to raise, then 2 / 12 ticks | Hold right-click | Blocks one eligible projectile in front of you, then recovers for 12 ticks. Stops when you release, swap items, or run out of mana. |
+
+Offensive bolts travel up to roughly **2,080 pixels** before timing out, unless terrain or penetration ends them sooner. Trails, impact circles, bloom bursts, lightning links, and ward rings each use their element's palette.
+
+**Ward limits:** contact damage, attacks from behind, slow or stationary hazards, large projectiles, important boss projectiles, and attacks dealing 120 or more projectile damage can pass through. This is a directional defense, not invulnerability. Equip Ward Sigil to halve its continuing cost; mana reductions apply, with a minimum of 1 mana per payment.
+
+### Learning and mastery
+
+Each spell has its own saved XP and level. Damaging real enemies builds combat mastery; successful ward blocks build ward mastery; successful healing builds Dawnmend mastery. Statue enemies do not grant combat mastery, and repeated hits on the same enemy have a short XP lockout.
+
+- **Level cap:** 5 before Hardmode, 10 in Hardmode. Advanced mastery stays saved when visiting a pre-Hardmode world; its effective power is capped there.
+- **Damage:** +3% per effective mastery level for offensive spells.
+- **Threshold:** level L requires a total of **75 × L² XP**. The Spellbook displays your current level and next threshold.
+- **Progress:** learned spells, selected spell, mastery, and Dawnmend cooldown belong to the character. Spell mastery is separate from profession ranks.
+
+### Every Spellcraft recipe
+
+| Item | Ingredients | Station / use |
+| --- | --- | --- |
+| <img src="NyuuTerraria/Content/Spellcraft/AetherloomWand.png" width="48" alt="Aetherloom Wand"> **Aetherloom Wand** | 3 Skylight Bars + 8 Wood + 2 Fallen Stars | Iron or Lead Anvil. Casts your selected spell; right-click holds Ward. |
+| <img src="NyuuTerraria/Content/Spellcraft/EmberbloomTome.png" width="32" alt="Emberbloom Tome"> **Emberbloom Tome** | 1 Book + 2 Ember Amber Bars + 10 Torches | Iron or Lead Anvil. Use once to learn Emberbloom. |
+| <img src="NyuuTerraria/Content/Spellcraft/FrostbloomTome.png" width="32" alt="Frostbloom Tome"> **Frostbloom Tome** | 1 Book + 3 Frostveil Bars + 5 Shiverthorn | Iron or Lead Anvil. Use once to learn Frostbloom. |
+| <img src="NyuuTerraria/Content/Spellcraft/TideglassTome.png" width="32" alt="Tideglass Tome"> **Tideglass Tome** | 1 Book + 3 Moonprism Bars + 5 Coral + 3 Bottled Water | Iron or Lead Anvil. Use once to learn Tideglass. |
+| <img src="NyuuTerraria/Content/Spellcraft/DawnmendTome.png" width="32" alt="Dawnmend Tome"> **Dawnmend Tome** | 1 Book + 2 Moonprism Bars + 5 Daybloom + 3 Lesser Healing Potions | Work Bench. Use once to learn Dawnmend. |
+| <img src="NyuuTerraria/Content/Spellcraft/StormglassTome.png" width="32" alt="Stormglass Tome"> **Stormglass Tome** | 1 Book + 4 Stormglass Bars + 3 Fallen Stars + 1 Lens | Iron or Lead Anvil. Use once to learn Stormglass Fork. |
+| <img src="NyuuTerraria/Content/Spellcraft/NyuuSpellbook.png" width="32" alt="Nyuu Spellbook"> **Nyuu Spellbook** | 1 Book + 2 Silk + 2 Fallen Stars | Work Bench. Opens the Spellbook; K also works without it. |
+| <img src="NyuuTerraria/Content/Spellcraft/WardSigil.png" width="32" alt="Ward Sigil"> **Ward Sigil** | 3 Moonprism Bars + 2 Lenses + 4 Silk | Iron or Lead Anvil. Accessory: +20 maximum mana and half continuing ward cost. Reforgeable. |
+
+**Finding ingredients:** gather Books from Dungeon bookshelves, grow Daybloom and Shiverthorn from seeds, and collect Coral on ocean sand. Fallen Stars land at night; Demon Eyes drop Lenses; Silk comes from Cobwebs at a Loom. See [material locations](#where-to-find-materials) for Skylight, Ember Amber, Frostveil, and [expedition recipes](#every-expedition-crafting-recipe) for Moonprism alternatives.
+
+**A useful combo:** apply Wet with Tideglass, then switch to Stormglass Fork for stronger chain links. Keep Arcane Thread for cheap quick casts, Frostbloom for lined-up enemies, and Dawnmend for recovery between attacks. Ward helps against small incoming shots; movement still matters against bosses.
+
+<details>
+<summary><strong>Validation and current limits</strong></summary>
+
+The release compiles against tModLoader 1.4.5-dev build 25921d5f. Isolated server checks cover learning, save/load, mastery caps, reforges, ward blocking and mana shutdown, healing cooldowns, charged shots, chaining, and nonrecursive droplets. All new PNGs decode and use clean transparency. Rendered client effects, multiplayer play, and gameplay balance still need playtesting. See the [validation notes](docs/validation/0.4.1.md).
+
+</details>
+
+
+<a id="v040"></a>
 <a id="chronicle-expeditions"></a>
 
 ## v0.4.0 — Chronicle expeditions
@@ -533,171 +604,180 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 
 ## Roadmap
 
-**Where I want to take Nyuu Terraria next.** More places worth exploring, more ways to build a character, and stories that make the world feel alive.
+More expressive magic, places worth getting lost in, and stories that grow with your character. This is the plan, not a promise of release dates. Finished features live in the [playable feature index](#already-playable), separate from the future work below.
 
-The first chapter is already playable in [v0.4.0](#chronicle-expeditions). The ideas below are for later updates; names, scope, and release order can change as the mod grows.
-
-| Direction | What comes next |
+| Status | Meaning |
 | --- | --- |
-| **Polish the foundations** | Refine backpack controls, inventory layouts, multiplayer behavior, worn sprites, boss pacing, and progression rewards. |
-| **Build out the adventure** | Expand the Reverie and Hush into separate-world destinations, give Lyra a longer story, and fill the world with discoveries and side quests. |
-| **Grow into the late game** | Add class equipment, deeper skills, biome upgrades, new bosses, and challenges that carry progression beyond Moon Lord. |
+| 🟢 **Added** | Playable in the linked version. |
+| 🟡 **In Progress** | Implementation has started, but the feature is unfinished. |
+| ⚪ **Not Started** | Planned work that has not been implemented. |
+| 🔵 **Considering** | An idea being explored; scope may change. |
+| 🔴 **Dropped** | A canceled idea, kept only when its history is useful. |
+
+The first Spellcraft wave is now added. There are currently no unfinished entries marked In Progress and no Dropped entries.
+
+| Build your character | Explore & encounter | Shape the world |
+| --- | --- | --- |
+| [Mage spellcraft](#mage-spellcraft-and-combat)<br>[Pride & expression](#trans-pride-and-character-expression)<br>[Levels & professions](#levels-skills-and-professions)<br>[Long hairstyles & clothes](#more-long-feminine-hairstyles-and-clothes) | [Dimensions & scenarios](#new-dimensions-and-scenarios)<br>[Bosses & enemies](#bosses-minibosses-and-enemies)<br>[Quests & stories](#quest-journal-and-npc-stories) | [Peaceful creatures & pets](#peaceful-creatures-and-pets)<br>[Graves & memorials](#graves-and-memorials)<br>[Other progression](#other-progression-ideas)<br>[Already playable](#already-playable) |
+
+### Mage spellcraft and combat
+
+The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https://steamcommunity.com/sharedfiles/filedetails/?id=2850199955) inspired the direction: magic with a sense of practice, spectacle, and discovery. Nyuu's spells, artwork, and implementation belong to its own world.
+
+| Status | Feature | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
+| ⚪ Not Started | More charged casts | Give frost, tide, and arcane spells their own held attacks, distinct release cues, and a reason to choose a quick cast. |
+| ⚪ Not Started | Ritual circles | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
+| ⚪ Not Started | Mage progression | Midgame catalysts, class armor, evolving wands, and late-game spell forms with clear boss gates. |
+| 🔵 Considering | Witch's broom | A craftable flight tool with upgrades and its own movement identity. |
+| 🔵 Considering | Cauldron workshop | Brew temporary spell infusions and discover recipes through exploration and NPC stories. |
+| 🔵 Considering | Party support | Targeted healing, support circles, and shared ward effects with balanced cooldowns. |
+| 🔵 Considering | Celestial casting | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
+| 🔵 Considering | Spell styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
 
 ### Trans pride and character expression
 
-<details>
-<summary><strong>Atelier stories, pride collections & more personal style</strong></summary>
-
-- **Lyra's atelier restoration:** rebuild her workshop through a story quest line, find lost patterns, and unlock embroidered outfits, furniture, and accessories.
-- **More pride cosmetics:** cyan, pink, and white capes, hair ribbons, clips, dyes, banners, lanterns, and matching pet accessories.
-- **A bigger Prism Wardrobe:** named appearance presets, outfit combinations, favorite looks, and better previews before applying a style.
-- **Personal touches:** more character-profile options, dialogue that respects those choices, and vanity versions of favorite combat equipment.
-- **Spell and companion styles:** collectible color themes for weapon trails, lantern light, and pet effects.
-
-</details>
+| Status | Feature | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Lyra's atelier restoration | A longer story about rebuilding her workshop, finding patterns, and unlocking embroidered outfits and furniture. |
+| ⚪ Not Started | Pride collections | More trans-pride capes, clips, hair ribbons, dyes, banners, lanterns, and matching pet accessories. |
+| ⚪ Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
+| 🔵 Considering | Personal profile options | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
 
 ### New dimensions and scenarios
 
-<details>
-<summary><strong>Beyond the mirror — strange, beautiful & unsettling places</strong></summary>
+The current Reverie and Hush are **pocket expeditions inside your world**. The full destinations below are future expansions.
 
-| Place | Ideas to explore |
-| --- | --- |
-| **The Reverie** | A full dimension with floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths between islands and uncover the mirror's history. |
-| **The Hush** | A separate horror chapter spanning an abandoned mining town, a forgotten archive, and a manor with changing corridors. Follow misleading lanterns, solve environmental puzzles, and piece together the fate of missing explorers. |
-| **Tidepool Hollows** | Coastal caves with pearl deposits, hidden fishing pools, shell furniture, flooded shrines, and reef encounters. |
-| **Overgrown Citadel** | A ruined fortress overtaken by roots and crystal growth. Open sealed gardens, recover relics, and reveal new paths as bosses fall. |
-| **Cinderwood Depths** | Ash-covered forests and abandoned forges near the Underworld, with ember creatures, heat-themed equipment, and buried workshops. |
-| **Starglass Expanse** | A late-game destination of shattered celestial ruins, unusual gravity, rare building materials, and the final observatory story. |
-
-For the Hush, I want more atmosphere between encounters: distant footsteps, lights that move out of sight, false rooms, and occasional jumpscares. Scare settings would remain adjustable.
-
-</details>
+| Status | Place | Ideas to explore |
+| --- | --- | --- |
+| ⚪ Not Started | The Reverie — full dimension | Floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths and discover the mirror's history. |
+| ⚪ Not Started | The Hush — horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
+| 🔵 Considering | Tidepool Hollows | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
+| 🔵 Considering | Overgrown Citadel | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
+| 🔵 Considering | Cinderwood Depths | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
+| 🔵 Considering | Starglass Expanse | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
 
 ### Bosses, minibosses, and enemies
 
-<details>
-<summary><strong>New encounters & deeper fights for familiar bosses</strong></summary>
-
-- **Expanded existing bosses:** more distinct phases, readable attack cues, difficulty tuning, trophies, masks, and equipment that reflects each boss's theme.
-- **The Hollow Astronomer:** an observatory boss with rotating constellations, marked gravity shifts, and celestial weapon rewards.
-- **The Unwritten:** a late-game Hush encounter that turns remembered locations into changing arenas and closes the archive's story.
-- **The Drowned Choir:** a Tidepool boss whose attacks move with waves, echoes, and currents.
-- **The Pale Gardener:** a Reverie guardian surrounded by shifting flower hazards and fragile crystal blooms.
-- **New minibosses:** an archive caretaker, a reef ambusher, a haunted armor patrol, and a creature hiding inside abandoned mine machinery.
-- **More everyday threats:** reef skitterers, vinebound armor, lantern mimics, ash burrowers, glass serpents, paper spirits, and starfallen constructs.
-- **Boss rematches:** optional stronger variants with new patterns and cosmetic rewards.
-
-</details>
+| Status | Encounter | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Existing boss expansion | More distinct phases, readable cues, difficulty tuning, trophies, masks, and themed rewards. |
+| 🔵 Considering | The Hollow Astronomer | Rotating constellations, marked gravity shifts, and celestial weapons in the observatory. |
+| 🔵 Considering | The Unwritten | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
+| 🔵 Considering | The Drowned Choir | A Tidepool boss built around waves, echoes, and shifting currents. |
+| 🔵 Considering | The Pale Gardener | A Reverie guardian with flower hazards and fragile crystal blooms. |
+| 🔵 Considering | More minibosses | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
+| ⚪ Not Started | More biome enemies | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
+| 🔵 Considering | Boss rematches | Optional stronger variants with new patterns and cosmetic rewards. |
 
 ### Quest journal and NPC stories
 
-<details>
-<summary><strong>Longer stories, discoveries & quests worth returning for</strong></summary>
-
-- Expand the journal with **tracked objectives, map hints, chapter pages, and clearer reward previews**.
-- Add **village noticeboards** for exploration, gathering, fishing, crafting, and encounter contracts.
-- Build **Lyra's atelier story**, the Hush missing-explorer mystery, and a Hollowglass research quest line.
-- Support **custom dialogue and unique quest packs**, with branching conversations and choices that change later scenes.
-- Improve **party quest tracking** so friends can follow the same story while keeping individual rewards and saved progress.
-- Add **world discoveries** such as letters, journals, hidden shrines, and small stories attached to ruins.
-- Include rewards such as **pets, hairstyles, furniture patterns, housing decorations, and access to new routes**.
-
-</details>
+| Status | Feature | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Better journal tracking | Tracked objectives, map hints, chapter pages, and clearer reward previews. |
+| ⚪ Not Started | Longer storylines | Lyra's atelier, the Hush missing-explorer mystery, and Hollowglass research. |
+| ⚪ Not Started | Dialogue and quest packs | Extend the existing custom-content format with branching choices and scenes, leaving room for your own dialogue and unique quests. |
+| ⚪ Not Started | Party story tracking | Follow the same chapter with friends while retaining individual rewards and saved progress. |
+| 🔵 Considering | Village noticeboards | Exploration, gathering, fishing, crafting, and encounter contracts. |
+| 🔵 Considering | World discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
+| 🔵 Considering | Story rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
 
 ### Levels, skills, and professions
 
-<details>
-<summary><strong>Skill trees, active abilities & mastery rewards</strong></summary>
+Switching already preserves each profession's progress. Future skills will build on that system.
 
-Every profession will continue to keep its own progress when switching. The next step is to turn the current passive ranks into more interesting build choices.
-
-| Profession | Possible future skills |
-| --- | --- |
-| **Vanguard** | Timed guards, short defensive abilities, melee combos, and shield specialization. |
-| **Ranger** | Precision shots, ammunition recovery, traps, and bow or thrown-weapon paths. |
-| **Arcanist** | Element combinations, spell modifiers, mana-control skills, and charged casts. |
-| **Summoner** | Companion commands, minion roles, support effects, and creature specialization. |
-| **Explorer** | Treasure clues, mining techniques, fishing bonuses, gathering skills, and navigation tools. |
-
-Other ideas include **mastery cosmetics**, milestone unlocks, saved build presets, and profession-specific crafting patterns. Skill resets and switching should stay easy to use.
-
-</details>
+| Status | Profession / feature | Possible skills |
+| --- | --- | --- |
+| ⚪ Not Started | Vanguard | Timed guards, defensive abilities, melee combos, and shields. |
+| ⚪ Not Started | Ranger | Precision shots, ammunition recovery, traps, and bow paths. |
+| ⚪ Not Started | Arcanist skill tree | Spell modifiers, mana control, and build choices beyond the new spell-mastery system. |
+| ⚪ Not Started | Summoner | Companion commands, minion roles, and support effects. |
+| ⚪ Not Started | Explorer | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
+| 🔵 Considering | Mastery rewards | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
 
 ### Peaceful creatures and pets
 
-<details>
-<summary><strong>Gardens, companions & a world with quieter moments</strong></summary>
-
-- Give **Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites** more idle behavior, feeding interactions, and favorite habitats.
-- Add **Tidepool Turtles**, lantern fireflies, garden birds, tiny crystal snails, and other biome-specific wildlife.
-- Introduce **pet beds, perches, bowls, small habitats, and collectible color variants**.
-- Add more companions through **exploration, friendship quests, and rare discoveries**.
-- Build a **wildlife journal** with observation goals and rewards for discovering peaceful creatures.
-- Let suitable gardens and decorated homes attract different visitors.
-
-</details>
+| Status | Feature | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
+| 🔵 Considering | New peaceful creatures | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
+| 🔵 Considering | Pet furnishings | Beds, perches, bowls, habitats, and collectible color variants. |
+| ⚪ Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
+| 🔵 Considering | Wildlife journal | Observation goals, discovery rewards, and gardens that attract visitors. |
 
 ### Graves and memorials
 
-<details>
-<summary><strong>Memorial gardens, keepsakes & more grave styles</strong></summary>
-
-- Expand memorials with **biome-specific shapes, more materials, decorative symbols, and flower arrangements**.
-- Add **death-grave variants** that match the area where a character fell.
-- Introduce an optional **keepsake retrieval quest** with a marker for the last death location.
-- Add **pet memorials**, candle stands, cemetery fences, benches, garden bells, and hanging lanterns.
-- Explore a **cemetery keeper NPC** with small stories and restoration requests.
-
-</details>
+| Status | Feature | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Memorial collections | More materials, biome shapes, decorative symbols, and flower arrangements. |
+| ⚪ Not Started | Death-grave variants | Graves that match the area where a character fell. |
+| 🔵 Considering | Keepsake retrieval | An optional last-death marker and a small retrieval quest. |
+| 🔵 Considering | Memorial gardens | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
+| 🔵 Considering | Cemetery keeper | A peaceful NPC with restoration requests and small stories. |
 
 ### More long feminine hairstyles and clothes
 
-<details>
-<summary><strong>Longer cuts, intricate braids & coordinated outfits</strong></summary>
-
-More style ideas include **hime cuts, waterfall braids, fishtail braids, double Dutch braids, long twin ponytails, soft wolf cuts, side ponytails, long locs, extra-long straight hair, and loose buns with trailing strands**.
-
-Each style should have matching movement frames, a version for wearing under hats, and clean color support. Outfit ideas include **embroidered dresses, long skirts, layered coats, stockings, boots, oversized sweaters, floral accessories, and matching hair ribbons**.
-
-I'd also like more themed collections: **atelier casualwear, moonlit formalwear, coastal outfits, cozy winter clothes, and gothic Hush clothing**.
-
-</details>
+| Status | Collection | What comes next |
+| --- | --- | --- |
+| ⚪ Not Started | Long flowing styles | Hime cuts, waterfall braids, extra-long straight hair, side ponytails, and soft wolf cuts. |
+| ⚪ Not Started | Braids and tied styles | Fishtail and double Dutch braids, twin ponytails, long locs, and loose buns with trailing strands. |
+| ⚪ Not Started | Animation and hats | Movement frames, clean dye support, and matching versions under headwear for every new style. |
+| 🔵 Considering | Atelier wardrobe | Embroidered dresses, long skirts, layered coats, stockings, oversized sweaters, and matching ribbons. |
+| 🔵 Considering | Themed outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
 
 ### Other progression ideas
 
-<details>
-<summary><strong>Equipment, building, storage & adventures across every stage</strong></summary>
+| Status | Stage / area | Ideas for later |
+| --- | --- | --- |
+| ⚪ Not Started | Early game | More ore bows, boomerangs, summons, and tools; starter ruins, fishing rewards, and exploration trinkets. |
+| ⚪ Not Started | Middle game | Class armor with active skills, boss-driven biome upgrades, weapon evolution, and a relic forge. |
+| 🔵 Considering | Late game | Celestial dungeons, legendary gear, unusual mounts, and challenges beyond Moon Lord. |
+| 🔵 Considering | Building and collecting | Furniture sets, plants, paintings, music boxes, vases, relics, and structures to restore. |
+| ⚪ Not Started | Storage and equipment | Storage search, sorting, clearer crafting hints, equipment previews, and easier loadout management. |
+| 🔵 Considering | World events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
 
-| Stage | Ideas for later |
-| --- | --- |
-| **Early game** | More ore-based bows, boomerangs, summons, and tools; hidden starter ruins; fishing rewards; small NPC requests; useful exploration trinkets. |
-| **Middle game** | Class armor with active skills, biome upgrades after major bosses, weapon evolution paths, new crafting stations, and a relic forge that combines boss materials. |
-| **Late game** | Celestial dungeons, multi-phase boss rematches, legendary equipment, unusual mounts, and challenges beyond Moon Lord. |
-| **Building & collecting** | More furniture sets, decorative plants, paintings, music boxes, rare vases, collectible relics, and small structures to restore. |
-| **Everyday improvements** | Storage search, sorting, clearer crafting hints, favorite quest tracking, better equipment previews, and easier loadout management. |
-| **World events** | Traveling caravans, strange weather, garden festivals, haunted nights, and roaming encounter chains. |
+### Already playable
+
+<details>
+<summary><strong>🟢 Added features and their versions</strong> — finished foundations, kept out of the future lists</summary>
+
+| Status | Feature | Added in | Guide |
+| --- | --- | --- | --- |
+| 🟢 Added | Aetherloom Wand, six casting modes, five learning tomes, spell mastery, charged Emberbloom, Crescent Ward, and Spellbook | [v0.4.1](#v041) | [Spellcraft guide](#spellcraft) |
+| 🟢 Added | Lyra, pride ribbon, profile customization, Prism Wardrobe, and eight long hairstyles | [v0.4.0](#v040) | [Character expression](#lyra-pride-hairstyles-and-clothing) |
+| 🟢 Added | Twelve quests, custom story data, and five switchable professions with saved progress | [v0.4.0](#v040) | [Journal and professions](#journal-stories-and-professions) |
+| 🟢 Added | Reverie and Hush pocket expeditions, adjustable scares, and persistent realm loot | [v0.4.0](#v040) | [First expedition](#chronicle-expeditions) |
+| 🟢 Added | Three expedition bosses, three minibosses, peaceful wildlife, pets, and crafted memorials | [v0.4.0](#v040) | [Expedition encounters](#expedition-bosses-and-minibosses) |
+| 🟢 Added | Sequential backpack upgrades that require empty storage; matching bomb artwork | [v0.3.1](#v031) | [Backpacks](#backpacks) |
+| 🟢 Added | Six backpack tiers, Equipment slot, V-key storage, Hollowglass Reach and its two bosses | [v0.3.0](#v030) | [Hollowglass Reach](#hollowglass-reach) |
+| 🟢 Added | Amber Grotto, Verdigris, Ember Amber, cave creatures, pets, tools, and pendants | [v0.2.4](#v024) | [Amber Grotto](#amber-grotto) |
+| 🟢 Added | Stormglass, Frostveil, Cloudvault storage, Satchel, and Belt | [v0.2.3](#v023) | [Crafting guide](#complete-crafting-guide) |
+| 🟢 Added | Skylight, Nimbus Warden, armor, trinkets, and vanity | [v0.2.0](#v020) | [Boss progression](#boss-progression) |
+| 🟢 Added | Democloud wings, staff, boots, and Cloudy Bombs | [v0.1.x](#v01x) | [Democloud recipes](#complete-crafting-guide) |
 
 </details>
 
+
 ## Version notes
 
-<details>
-<summary><strong>Release history — v0.1.x through v0.4.0</strong></summary>
+<details open>
+<summary><strong>Release history — v0.1.x through v0.4.1</strong></summary>
 
 | Version | Added or changed |
 | --- | --- |
+| **[v0.4.1](#v041)** | Added Aetherloom Wand, six casting modes, five learning tomes, K-key Spellbook, saved spell mastery, charged Emberbloom, piercing frost, splitting water, chained lightning, healing, Crescent Ward, Ward Sigil, and the status-table roadmap. |
 | **v0.4.0** | Backpack flicker and Equipment-tab placement fixes, corrected accessory scrolling, larger bar icons; Lyra, pride customization, eight long hairstyles, 12 quests, five persistent professions, Reverie/Hush pocket expeditions with optional scares, three bosses, three minibosses, wildlife, pets, Moonprism, weapons, and memorials. |
-| **v0.3.1** | Sequential backpack recipes with an empty-storage requirement, a Glass Slate guide icon, and new Warden, Lens, Cloudtail, and matching bomb artwork. |
-| **v0.3.0** | Six backpacks, a dedicated Backpack slot and V-key storage window, Hollowglass Reach, two bosses, ruin loot, equipment, a pet, and exterior sprite cleanup. |
+| <a id="v031"></a> **v0.3.1** | Sequential backpack recipes with an empty-storage requirement, a Glass Slate guide icon, and new Warden, Lens, Cloudtail, and matching bomb artwork. |
+| <a id="v030"></a> **v0.3.0** | Six backpacks, a dedicated Backpack slot and V-key storage window, Hollowglass Reach, two bosses, ruin loot, equipment, a pet, and exterior sprite cleanup. |
 | **v0.2.6** | Cleaned up the Amberflare Staff sprite, added individual armor and vanity icons, and moved the Warden set bonus into the armor section. |
 | **v0.2.5** | Full player guide. Redrawn Amberflare Staff, Amberheart Pendant, and Deepheart Pendant. |
-| **v0.2.4** | Amber Grotto, Amber Urns, Verdigris and Ember Amber, two cave enemies, two pets, tools, weapons, and pendants. |
-| **v0.2.3** | Stormglass and Frostveil, Cloudvault, Cloud Satchel, Cloudweave Belt, three hairstyles, and cooler Skylight artwork. |
+| <a id="v024"></a> **v0.2.4** | Amber Grotto, Amber Urns, Verdigris and Ember Amber, two cave enemies, two pets, tools, weapons, and pendants. |
+| <a id="v023"></a> **v0.2.3** | Stormglass and Frostveil, Cloudvault, Cloud Satchel, Cloudweave Belt, three hairstyles, and cooler Skylight artwork. |
 | **v0.2.2** | Redrawn Skylight items, equipment, boss, and spell sprites. |
 | **v0.2.1** | Updated Warden armor and Yuuki’s boots for the current armor set API. |
-| **v0.2.0** | Skylight ore, Nimbus Warden, Warden armor, weapons, trinkets, slots, chest, vanity, and two hairstyles. |
-| **v0.1.x** | Wings and Staff of Democloud, Yuuki’s boots, Cloudy Bombs, and Steam achievement sync. |
+| <a id="v020"></a> **v0.2.0** | Skylight ore, Nimbus Warden, Warden armor, weapons, trinkets, slots, chest, vanity, and two hairstyles. |
+| <a id="v01x"></a> **v0.1.x** | Wings and Staff of Democloud, Yuuki’s boots, Cloudy Bombs, and Steam achievement sync. |
 
 </details>
 

@@ -105,10 +105,16 @@ public class ChronicleChecks : ModSystem
                 Check(float.IsFinite(n.position.X)&&float.IsFinite(n.position.Y),"BOSS_TWO_PHASE_PATTERN_"+n.ModNPC.Name);
             }
             var before=world.Areas.ToArray();TagCompound wt=new();world.SaveWorldData(wt);world.ClearWorld();world.LoadWorldData(wt);Check(world.Areas.SequenceEqual(before),"REALM_COORDINATES_ROUNDTRIP");
-            WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
+            SpellcraftChecks.Run(); WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
+        }
+        catch(Exception error)
+        {
+            File.WriteAllText(Path.Combine(Main.SavePath,"NyuuTerraria-test-failure.txt"),error.ToString());
+            Console.WriteLine("TEST_FAILURE: "+error);Environment.Exit(1);
         }
         finally {p.active=false;Main.myPlayer=oldPlayer;}
     }
 }
+
 
 

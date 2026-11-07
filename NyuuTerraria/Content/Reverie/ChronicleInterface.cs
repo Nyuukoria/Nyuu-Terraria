@@ -66,8 +66,8 @@ public class ChronicleInterface : ModSystem
         Utils.DrawInvBG(Main.spriteBatch, p, new Color(32,25,51,250));
         Text("Nyuu Chronicle", p.X+18, p.Y+12, new Color(235,184,223), 1f);
         if (Button("X", new Rectangle(p.Right-42,p.Y+9,30,28))) Open = false;
-        string[] tabs = { "Quests", "Professions", "Wardrobe" };
-        for (int i=0;i<3;i++) if (Button(tabs[i],new Rectangle(p.X+18+i*185,p.Y+48,176,30))) { Tab=i; Page=0; }
+        string[] tabs = { "Quests", "Professions", "Wardrobe", "Spellbook" };
+        for (int i=0;i<4;i++) if (Button(tabs[i],new Rectangle(p.X+18+i*141,p.Y+48,133,30))) { Tab=i; Page=0; }
         var data = Main.LocalPlayer.GetModPlayer<ChroniclePlayer>();
         int x=p.X+18,y=p.Y+94;
         if (Tab == 0)
@@ -105,6 +105,8 @@ public class ChronicleInterface : ModSystem
             Text(effects[data.Profession],x,y+283,new Color(184,222,227),.63f);
             if(Button("Reset active skills",new Rectangle(x,p.Bottom-47,178,30))) { data.Skills[data.Profession]=0; data.SyncProfession(); }
         }
+        else if(Tab == 3)
+            global::NyuuTerraria.Content.Spellcraft.SpellbookView.Draw(p);
         else
         {
             Text("Appearance presets - save your current look in three slots.",x,y,scale:.73f);

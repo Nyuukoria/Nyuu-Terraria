@@ -64,3 +64,4 @@ Player-visible names and tooltips are in `Localization/en-US_Mods.NyuuTerraria.h
 ## Current expedition scope
 
 The Reverie and Hush in v0.4.0 are persistent pocket areas inside the current world. Generation checks for unused sky space and does not replace existing terrain. Changing their generation code affects newly created areas; it does not automatically rebuild an existing expedition. Back up test worlds before experimenting. Full separate-world dimensions and the longer story locations remain future milestones.
+
