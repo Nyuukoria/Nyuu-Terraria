@@ -1,24 +1,24 @@
 # Roadmap
 
-[Home](../README.md) Â· [Latest release](releases/v0.5.2.md) Â· [Playable systems](WORLDBOUND.md)
+[Home](../README.md) · [Latest release](releases/v0.5.2.md) · [Playable systems](WORLDBOUND.md)
 
 
 
 | Status | Latest completed work | Version |
 | --- | --- | --- |
-| ðŸŸ¢ Added | Backpack rendering and Equipment routing, direct quest claims, original-sprite alignment, worn-rig repairs and revised expedition generation | [v0.5.1](releases/v0.5.1.md) Â· [Test report](validation/0.5.1.md) |
+| 🟢 Added | Backpack rendering and Equipment routing, direct quest claims, original-sprite alignment, worn-rig repairs and revised expedition generation | [v0.5.1](releases/v0.5.1.md) · [Test report](validation/0.5.1.md) |
 
 ### Shipped in Worldbound Chapters
 
 | Status | Playable addition | Version / guide |
 | --- | --- | --- |
-| ðŸŸ¢ Added | Element reactions, Ritual Focus, infusions, Celestial Loom and four spell palettes | [v0.5.0](releases/v0.5.0.md) Â· [Magic](WORLDBOUND.md#magic-workshop) |
-| ðŸŸ¢ Added | Tidepool, Citadel, Cinderwood and Starglass pocket expeditions | [v0.5.0](releases/v0.5.0.md) Â· [Travel](WORLDBOUND.md#six-destinations-one-persistent-world) |
-| ðŸŸ¢ Added | Pale Gardener, Unwritten, two minibosses, four threats and two rematches | [v0.5.0](releases/v0.5.0.md) Â· [Encounters](WORLDBOUND.md#encounters-and-preparation) |
-| ðŸŸ¢ Added | 14 additional quests, four dialogue scenes, pinned tracking, noticeboards and profile labels | [v0.5.0](releases/v0.5.0.md) Â· [Stories](WORLDBOUND.md#stories-discoveries-and-rewards) |
-| ðŸŸ¢ Added | Five saved talent branches, free resets, active abilities and mastery rewards | [v0.5.0](releases/v0.5.0.md) Â· [Talents](WORLDBOUND.md#professions-and-talents) |
-| ðŸŸ¢ Added | Four peaceful creatures, observation reward, feeding bowls, beds and rest behavior | [v0.5.0](releases/v0.5.0.md) Â· [Wildlife](WORLDBOUND.md#wildlife-home-and-memorials) |
-| ðŸŸ¢ Added | Mira, three memorials, four outfits, furnishings, festival and convergence | [v0.5.0](releases/v0.5.0.md) Â· [Home and events](WORLDBOUND.md#events) |
+| 🟢 Added | Element reactions, Ritual Focus, infusions, Celestial Loom and four spell palettes | [v0.5.0](releases/v0.5.0.md) · [Magic](WORLDBOUND.md#magic-workshop) |
+| 🟢 Added | Tidepool, Citadel, Cinderwood and Starglass pocket expeditions | [v0.5.0](releases/v0.5.0.md) · [Travel](WORLDBOUND.md#six-destinations-one-persistent-world) |
+| 🟢 Added | Pale Gardener, Unwritten, two minibosses, four threats and two rematches | [v0.5.0](releases/v0.5.0.md) · [Encounters](WORLDBOUND.md#encounters-and-preparation) |
+| 🟢 Added | 14 additional quests, four dialogue scenes, pinned tracking, noticeboards and profile labels | [v0.5.0](releases/v0.5.0.md) · [Stories](WORLDBOUND.md#stories-discoveries-and-rewards) |
+| 🟢 Added | Five saved talent branches, free resets, active abilities and mastery rewards | [v0.5.0](releases/v0.5.0.md) · [Talents](WORLDBOUND.md#professions-and-talents) |
+| 🟢 Added | Four peaceful creatures, observation reward, feeding bowls, beds and rest behavior | [v0.5.0](releases/v0.5.0.md) · [Wildlife](WORLDBOUND.md#wildlife-home-and-memorials) |
+| 🟢 Added | Mira, three memorials, four outfits, furnishings, festival and convergence | [v0.5.0](releases/v0.5.0.md) · [Home and events](WORLDBOUND.md#events) |
 
 Remaining yellow rows refer to **deeper follow-ups**, such as full-size dimensions, linked rituals, expanded patterns, larger quest branches and more event types. The playable first wave above is included in the download.
 
@@ -27,11 +27,11 @@ More expressive magic, places worth getting lost in, and stories that grow with 
 
 | Status | Meaning |
 | --- | --- |
-| ðŸŸ¢ **Added** | Playable in the linked version. |
-| ðŸŸ¡ **In Progress** | Implementation has started, but the feature is unfinished. |
-| âšª **Not Started** | Planned work that has not been implemented. |
-| ðŸ”µ **Considering** | An idea being explored; scope may change. |
-| ðŸ”´ **Dropped** | A canceled idea, kept only when its history is useful. |
+| 🟢 **Added** | Playable in the linked version. |
+| 🟡 **In Progress** | Implementation has started, but the feature is unfinished. |
+| ⚪ **Not Started** | Planned work that has not been implemented. |
+| 🔵 **Considering** | An idea being explored; scope may change. |
+| 🔴 **Dropped** | A canceled idea, kept only when its history is useful. |
 
 
 
@@ -48,15 +48,15 @@ The first wave is [playable in v0.4.1](PLAYER-GUIDE.md#v041). [Elaina: Wandering
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ðŸŸ¡ In Progress | Additional element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
-| âšª Not Started | More charged casts | Give frost, tide, and arcane spells their own held attacks, distinct release cues, and a reason to choose a quick cast. |
-| ðŸŸ¡ In Progress | Linked ritual networks | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
-| âšª Not Started | Mage progression | Midgame catalysts, class armor, evolving wands, and late-game spell forms with clear boss gates. |
-| ðŸ”µ Considering | Witch's broom | A craftable flight tool with upgrades and its own movement identity. |
-| ðŸŸ¡ In Progress | Expanded cauldron discoveries | Brew temporary spell infusions and discover recipes through exploration and NPC stories. |
-| ðŸ”µ Considering | Party support | Targeted healing, support circles, and shared ward effects with balanced cooldowns. |
-| ðŸŸ¡ In Progress | Advanced celestial patterns | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
-| ðŸŸ¡ In Progress | More spell and companion styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
+| 🟡 In Progress | Additional element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
+| ⚪ Not Started | More charged casts | Give frost, tide, and arcane spells their own held attacks, distinct release cues, and a reason to choose a quick cast. |
+| 🟡 In Progress | Linked ritual networks | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
+| ⚪ Not Started | Mage progression | Midgame catalysts, class armor, evolving wands, and late-game spell forms with clear boss gates. |
+| 🔵 Considering | Witch's broom | A craftable flight tool with upgrades and its own movement identity. |
+| 🟡 In Progress | Expanded cauldron discoveries | Brew temporary spell infusions and discover recipes through exploration and NPC stories. |
+| 🔵 Considering | Party support | Targeted healing, support circles, and shared ward effects with balanced cooldowns. |
+| 🟡 In Progress | Advanced celestial patterns | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
+| 🟡 In Progress | More spell and companion styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
 
 </details>
 
@@ -67,10 +67,10 @@ The first wave is [playable in v0.4.1](PLAYER-GUIDE.md#v041). [Elaina: Wandering
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| âšª Not Started | Lyra's atelier restoration | A longer story about rebuilding her workshop, finding patterns, and unlocking embroidered outfits and furniture. |
-| âšª Not Started | Pride collections | More trans-pride capes, clips, hair ribbons, dyes, banners, lanterns, and matching pet accessories. |
-| âšª Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
-| ðŸŸ¡ In Progress | Expanded profile-aware dialogue | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
+| ⚪ Not Started | Lyra's atelier restoration | A longer story about rebuilding her workshop, finding patterns, and unlocking embroidered outfits and furniture. |
+| ⚪ Not Started | Pride collections | More trans-pride capes, clips, hair ribbons, dyes, banners, lanterns, and matching pet accessories. |
+| ⚪ Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
+| 🟡 In Progress | Expanded profile-aware dialogue | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
 
 </details>
 
@@ -83,12 +83,12 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 
 | Status | Place | Ideas to explore |
 | --- | --- | --- |
-| âšª Not Started | The Reverie â€” full dimension | Floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths and discover the mirror's history. |
-| âšª Not Started | The Hush â€” horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
-| ðŸŸ¡ In Progress | Tidepool: full coastal region | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
-| ðŸŸ¡ In Progress | Citadel: expanded fortress routes | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
-| ðŸŸ¡ In Progress | Cinderwood: full forge chapter | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
-| ðŸŸ¡ In Progress | Starglass: observatory finale | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
+| ⚪ Not Started | The Reverie — full dimension | Floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths and discover the mirror's history. |
+| ⚪ Not Started | The Hush — horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
+| 🟡 In Progress | Tidepool: full coastal region | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
+| 🟡 In Progress | Citadel: expanded fortress routes | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
+| 🟡 In Progress | Cinderwood: full forge chapter | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
+| 🟡 In Progress | Starglass: observatory finale | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
 
 </details>
 
@@ -99,14 +99,14 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 
 | Status | Encounter | What comes next |
 | --- | --- | --- |
-| âšª Not Started | Existing boss expansion | More distinct phases, readable cues, difficulty tuning, trophies, masks, and themed rewards. |
-| ðŸ”µ Considering | The Hollow Astronomer | Rotating constellations, marked gravity shifts, and celestial weapons in the observatory. |
-| ðŸŸ¡ In Progress | The Unwritten: expanded story mechanics | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
-| ðŸ”µ Considering | The Drowned Choir | A Tidepool boss built around waves, echoes, and shifting currents. |
-| ðŸŸ¡ In Progress | The Pale Gardener: expanded encounter | More garden mechanics for the existing Citadel guardian with flower hazards and fragile crystal blooms. |
-| ðŸŸ¡ In Progress | Further minibosses beyond the first two | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
-| ðŸŸ¡ In Progress | Additional biome enemy families | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
-| ðŸŸ¡ In Progress | More rematches and unique patterns | Optional stronger variants with new patterns and cosmetic rewards. |
+| ⚪ Not Started | Existing boss expansion | More distinct phases, readable cues, difficulty tuning, trophies, masks, and themed rewards. |
+| 🔵 Considering | The Hollow Astronomer | Rotating constellations, marked gravity shifts, and celestial weapons in the observatory. |
+| 🟡 In Progress | The Unwritten: expanded story mechanics | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
+| 🔵 Considering | The Drowned Choir | A Tidepool boss built around waves, echoes, and shifting currents. |
+| 🟡 In Progress | The Pale Gardener: expanded encounter | More garden mechanics for the existing Citadel guardian with flower hazards and fragile crystal blooms. |
+| 🟡 In Progress | Further minibosses beyond the first two | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
+| 🟡 In Progress | Additional biome enemy families | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
+| 🟡 In Progress | More rematches and unique patterns | Optional stronger variants with new patterns and cosmetic rewards. |
 
 </details>
 
@@ -117,13 +117,13 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ðŸŸ¡ In Progress | Map hints and chapter navigation | Tracked objectives, map hints, chapter pages, and clearer reward previews. |
-| ðŸŸ¡ In Progress | Further story chapters | Lyra's atelier, the Hush missing-explorer mystery, and Hollowglass research. |
-| ðŸŸ¡ In Progress | Deeper branching dialogue packs | Extend the existing custom-content format with branching choices and scenes, leaving room for your own dialogue and unique quests. |
-| âšª Not Started | Party story tracking | Follow the same chapter with friends while retaining individual rewards and saved progress. |
-| ðŸŸ¡ In Progress | Expanded noticeboard contract types | Exploration, gathering, fishing, crafting, and encounter contracts. |
-| ðŸŸ¡ In Progress | More letters and ruin discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
-| ðŸŸ¡ In Progress | Further cosmetic and route rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
+| 🟡 In Progress | Map hints and chapter navigation | Tracked objectives, map hints, chapter pages, and clearer reward previews. |
+| 🟡 In Progress | Further story chapters | Lyra's atelier, the Hush missing-explorer mystery, and Hollowglass research. |
+| 🟡 In Progress | Deeper branching dialogue packs | Extend the existing custom-content format with branching choices and scenes, leaving room for your own dialogue and unique quests. |
+| ⚪ Not Started | Party story tracking | Follow the same chapter with friends while retaining individual rewards and saved progress. |
+| 🟡 In Progress | Expanded noticeboard contract types | Exploration, gathering, fishing, crafting, and encounter contracts. |
+| 🟡 In Progress | More letters and ruin discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
+| 🟡 In Progress | Further cosmetic and route rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
 
 </details>
 
@@ -136,12 +136,12 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Profession / feature | Possible skills |
 | --- | --- | --- |
-| ðŸŸ¡ In Progress | Vanguard: guards and melee combos | Timed guards, defensive abilities, melee combos, and shields. |
-| ðŸŸ¡ In Progress | Ranger: traps and bow paths | Precision shots, ammunition recovery, traps, and bow paths. |
-| ðŸŸ¡ In Progress | Arcanist: advanced spell modifiers | Spell modifiers, mana control, and build choices beyond the new spell-mastery system. |
-| ðŸŸ¡ In Progress | Summoner: companion roles and commands | Companion commands, minion roles, and support effects. |
-| ðŸŸ¡ In Progress | Explorer: fishing and navigation skills | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
-| ðŸŸ¡ In Progress | More mastery cosmetics and presets | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
+| 🟡 In Progress | Vanguard: guards and melee combos | Timed guards, defensive abilities, melee combos, and shields. |
+| 🟡 In Progress | Ranger: traps and bow paths | Precision shots, ammunition recovery, traps, and bow paths. |
+| 🟡 In Progress | Arcanist: advanced spell modifiers | Spell modifiers, mana control, and build choices beyond the new spell-mastery system. |
+| 🟡 In Progress | Summoner: companion roles and commands | Companion commands, minion roles, and support effects. |
+| 🟡 In Progress | Explorer: fishing and navigation skills | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
+| 🟡 In Progress | More mastery cosmetics and presets | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
 
 </details>
 
@@ -152,11 +152,11 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ðŸŸ¡ In Progress | Richer habitat-specific wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
-| ðŸŸ¡ In Progress | Further peaceful species | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
-| ðŸŸ¡ In Progress | Expanded pet habitats and variants | Beds, perches, bowls, habitats, and collectible color variants. |
-| âšª Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
-| ðŸŸ¡ In Progress | More wildlife goals and garden visitors | Observation goals, discovery rewards, and gardens that attract visitors. |
+| 🟡 In Progress | Richer habitat-specific wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
+| 🟡 In Progress | Further peaceful species | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
+| 🟡 In Progress | Expanded pet habitats and variants | Beds, perches, bowls, habitats, and collectible color variants. |
+| ⚪ Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
+| 🟡 In Progress | More wildlife goals and garden visitors | Observation goals, discovery rewards, and gardens that attract visitors. |
 
 </details>
 
@@ -167,11 +167,11 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| âšª Not Started | Memorial collections | More materials, biome shapes, decorative symbols, and flower arrangements. |
-| ðŸŸ¡ In Progress | Expanded death-grave variants | Graves that match the area where a character fell. |
-| ðŸ”µ Considering | Keepsake retrieval | An optional last-death marker and a small retrieval quest. |
-| ðŸŸ¡ In Progress | Expanded memorial garden collections | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
-| ðŸŸ¡ In Progress | Mira: further restoration chapters | A peaceful NPC with restoration requests and small stories. |
+| ⚪ Not Started | Memorial collections | More materials, biome shapes, decorative symbols, and flower arrangements. |
+| 🟡 In Progress | Expanded death-grave variants | Graves that match the area where a character fell. |
+| 🔵 Considering | Keepsake retrieval | An optional last-death marker and a small retrieval quest. |
+| 🟡 In Progress | Expanded memorial garden collections | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
+| 🟡 In Progress | Mira: further restoration chapters | A peaceful NPC with restoration requests and small stories. |
 
 </details>
 
@@ -182,11 +182,11 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Collection | What comes next |
 | --- | --- | --- |
-| âšª Not Started | Long flowing styles | Hime cuts, waterfall braids, extra-long straight hair, side ponytails, and soft wolf cuts. |
-| âšª Not Started | Braids and tied styles | Fishtail and double Dutch braids, twin ponytails, long locs, and loose buns with trailing strands. |
-| âšª Not Started | Animation and hats | Movement frames, clean dye support, and matching versions under headwear for every new style. |
-| ðŸ”µ Considering | Atelier wardrobe | Embroidered dresses, long skirts, layered coats, stockings, oversized sweaters, and matching ribbons. |
-| ðŸŸ¡ In Progress | More seasonal and gothic outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
+| ⚪ Not Started | Long flowing styles | Hime cuts, waterfall braids, extra-long straight hair, side ponytails, and soft wolf cuts. |
+| ⚪ Not Started | Braids and tied styles | Fishtail and double Dutch braids, twin ponytails, long locs, and loose buns with trailing strands. |
+| ⚪ Not Started | Animation and hats | Movement frames, clean dye support, and matching versions under headwear for every new style. |
+| 🔵 Considering | Atelier wardrobe | Embroidered dresses, long skirts, layered coats, stockings, oversized sweaters, and matching ribbons. |
+| 🟡 In Progress | More seasonal and gothic outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
 
 </details>
 
@@ -197,12 +197,12 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Stage / area | Ideas for later |
 | --- | --- | --- |
-| âšª Not Started | Early game | More ore bows, boomerangs, summons, and tools; starter ruins, fishing rewards, and exploration trinkets. |
-| âšª Not Started | Middle game | Class armor with active skills, boss-driven biome upgrades, weapon evolution, and a relic forge. |
-| ðŸ”µ Considering | Late game | Celestial dungeons, legendary gear, unusual mounts, and challenges beyond Moon Lord. |
-| ðŸŸ¡ In Progress | More furniture and collectibles | Furniture sets, plants, paintings, music boxes, vases, relics, and structures to restore. |
-| âšª Not Started | Storage and equipment | Storage search, sorting, clearer crafting hints, equipment previews, and easier loadout management. |
-| ðŸŸ¡ In Progress | Further caravans, weather and haunted events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
+| ⚪ Not Started | Early game | More ore bows, boomerangs, summons, and tools; starter ruins, fishing rewards, and exploration trinkets. |
+| ⚪ Not Started | Middle game | Class armor with active skills, boss-driven biome upgrades, weapon evolution, and a relic forge. |
+| 🔵 Considering | Late game | Celestial dungeons, legendary gear, unusual mounts, and challenges beyond Moon Lord. |
+| 🟡 In Progress | More furniture and collectibles | Furniture sets, plants, paintings, music boxes, vases, relics, and structures to restore. |
+| ⚪ Not Started | Storage and equipment | Storage search, sorting, clearer crafting hints, equipment previews, and easier loadout management. |
+| 🟡 In Progress | Further caravans, weather and haunted events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
 
 </details>
 
@@ -213,17 +213,17 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | Added in | Guide |
 | --- | --- | --- | --- |
-| ðŸŸ¢ Added | Aetherloom Wand, six casting modes, five learning tomes, spell mastery, charged Emberbloom, Crescent Ward, and Spellbook | [v0.4.1](PLAYER-GUIDE.md#v041) | [Spellcraft guide](PLAYER-GUIDE.md#spellcraft) |
-| ðŸŸ¢ Added | Lyra, pride ribbon, profile customization, Prism Wardrobe, and eight long hairstyles | [v0.4.0](PLAYER-GUIDE.md#v040) | [Character expression](PLAYER-GUIDE.md#lyra-pride-hairstyles-and-clothing) |
-| ðŸŸ¢ Added | Twelve quests, custom story data, and five switchable professions with saved progress | [v0.4.0](PLAYER-GUIDE.md#v040) | [Journal and professions](PLAYER-GUIDE.md#journal-stories-and-professions) |
-| ðŸŸ¢ Added | Reverie and Hush pocket expeditions, adjustable scares, and persistent realm loot | [v0.4.0](PLAYER-GUIDE.md#v040) | [First expedition](PLAYER-GUIDE.md#chronicle-expeditions) |
-| ðŸŸ¢ Added | Three expedition bosses, three minibosses, peaceful wildlife, pets, and crafted memorials | [v0.4.0](PLAYER-GUIDE.md#v040) | [Expedition encounters](PLAYER-GUIDE.md#expedition-bosses-and-minibosses) |
-| ðŸŸ¢ Added | Sequential backpack upgrades that require empty storage; matching bomb artwork | [v0.3.1](PLAYER-GUIDE.md#v031) | [Backpacks](PLAYER-GUIDE.md#backpacks) |
-| ðŸŸ¢ Added | Six backpack tiers, Equipment slot, V-key storage, Hollowglass Reach and its two bosses | [v0.3.0](PLAYER-GUIDE.md#v030) | [Hollowglass Reach](PLAYER-GUIDE.md#hollowglass-reach) |
-| ðŸŸ¢ Added | Amber Grotto, Verdigris, Ember Amber, cave creatures, pets, tools, and pendants | [v0.2.4](PLAYER-GUIDE.md#v024) | [Amber Grotto](PLAYER-GUIDE.md#amber-grotto) |
-| ðŸŸ¢ Added | Stormglass, Frostveil, Cloudvault storage, Satchel, and Belt | [v0.2.3](PLAYER-GUIDE.md#v023) | [Crafting guide](PLAYER-GUIDE.md#complete-crafting-guide) |
-| ðŸŸ¢ Added | Skylight, Nimbus Warden, armor, trinkets, and vanity | [v0.2.0](PLAYER-GUIDE.md#v020) | [Boss progression](PLAYER-GUIDE.md#boss-progression) |
-| ðŸŸ¢ Added | Democloud wings, staff, boots, and Cloudy Bombs | [v0.1.x](PLAYER-GUIDE.md#v01x) | [Democloud recipes](PLAYER-GUIDE.md#complete-crafting-guide) |
+| 🟢 Added | Aetherloom Wand, six casting modes, five learning tomes, spell mastery, charged Emberbloom, Crescent Ward, and Spellbook | [v0.4.1](PLAYER-GUIDE.md#v041) | [Spellcraft guide](PLAYER-GUIDE.md#spellcraft) |
+| 🟢 Added | Lyra, pride ribbon, profile customization, Prism Wardrobe, and eight long hairstyles | [v0.4.0](PLAYER-GUIDE.md#v040) | [Character expression](PLAYER-GUIDE.md#lyra-pride-hairstyles-and-clothing) |
+| 🟢 Added | Twelve quests, custom story data, and five switchable professions with saved progress | [v0.4.0](PLAYER-GUIDE.md#v040) | [Journal and professions](PLAYER-GUIDE.md#journal-stories-and-professions) |
+| 🟢 Added | Reverie and Hush pocket expeditions, adjustable scares, and persistent realm loot | [v0.4.0](PLAYER-GUIDE.md#v040) | [First expedition](PLAYER-GUIDE.md#chronicle-expeditions) |
+| 🟢 Added | Three expedition bosses, three minibosses, peaceful wildlife, pets, and crafted memorials | [v0.4.0](PLAYER-GUIDE.md#v040) | [Expedition encounters](PLAYER-GUIDE.md#expedition-bosses-and-minibosses) |
+| 🟢 Added | Sequential backpack upgrades that require empty storage; matching bomb artwork | [v0.3.1](PLAYER-GUIDE.md#v031) | [Backpacks](PLAYER-GUIDE.md#backpacks) |
+| 🟢 Added | Six backpack tiers, Equipment slot, V-key storage, Hollowglass Reach and its two bosses | [v0.3.0](PLAYER-GUIDE.md#v030) | [Hollowglass Reach](PLAYER-GUIDE.md#hollowglass-reach) |
+| 🟢 Added | Amber Grotto, Verdigris, Ember Amber, cave creatures, pets, tools, and pendants | [v0.2.4](PLAYER-GUIDE.md#v024) | [Amber Grotto](PLAYER-GUIDE.md#amber-grotto) |
+| 🟢 Added | Stormglass, Frostveil, Cloudvault storage, Satchel, and Belt | [v0.2.3](PLAYER-GUIDE.md#v023) | [Crafting guide](PLAYER-GUIDE.md#complete-crafting-guide) |
+| 🟢 Added | Skylight, Nimbus Warden, armor, trinkets, and vanity | [v0.2.0](PLAYER-GUIDE.md#v020) | [Boss progression](PLAYER-GUIDE.md#boss-progression) |
+| 🟢 Added | Democloud wings, staff, boots, and Cloudy Bombs | [v0.1.x](PLAYER-GUIDE.md#v01x) | [Democloud recipes](PLAYER-GUIDE.md#complete-crafting-guide) |
 
 </details>
 

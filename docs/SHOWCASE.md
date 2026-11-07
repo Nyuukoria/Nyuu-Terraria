@@ -1,6 +1,6 @@
 # Nyuu Showcase 052
 
-[Download the showcase ZIP](../downloads/NyuuTerraria-Showcase.zip) Â· [Player guide](../README.md)
+[Download the showcase ZIP](../downloads/NyuuTerraria-Showcase.zip) · [Player guide](../README.md)
 
 Install the matching v0.5.2 mod first. Close the game. Copy the two files in **Players** to `Documents/My Games/Terraria/tModLoader-dev/Players`, and the two files in **Worlds** to the matching `Worlds` folder. Keep each `.plr` with its `.tplr`, and each `.wld` with its `.twld`. Use the local save folders; no cloud transfer is needed.
 
