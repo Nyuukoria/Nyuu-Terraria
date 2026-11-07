@@ -614,7 +614,7 @@ More expressive magic, places worth getting lost in, and stories that grow with 
 | 🔵 **Considering** | An idea being explored; scope may change. |
 | 🔴 **Dropped** | A canceled idea, kept only when its history is useful. |
 
-The first Spellcraft wave is now added. There are currently no unfinished entries marked In Progress and no Dropped entries.
+**v0.5.0 — Worldbound Chapters is in development.** Yellow rows have implementation underway: first-pass magic, destinations, encounters, story packs, talents, wildlife, and memorial systems. Full dimensions and longer expansions remain unfinished. Released downloads are still v0.4.1 until the next build is packaged. No ideas are currently marked Dropped.
 
 | Build your character | Explore & encounter | Shape the world |
 | --- | --- | --- |
@@ -629,15 +629,15 @@ The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https:/
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ⚪ Not Started | Element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
+| 🟡 In Progress | Element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
 | ⚪ Not Started | More charged casts | Give frost, tide, and arcane spells their own held attacks, distinct release cues, and a reason to choose a quick cast. |
-| ⚪ Not Started | Ritual circles | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
+| 🟡 In Progress | Ritual circles | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
 | ⚪ Not Started | Mage progression | Midgame catalysts, class armor, evolving wands, and late-game spell forms with clear boss gates. |
 | 🔵 Considering | Witch's broom | A craftable flight tool with upgrades and its own movement identity. |
-| 🔵 Considering | Cauldron workshop | Brew temporary spell infusions and discover recipes through exploration and NPC stories. |
+| 🟡 In Progress | Cauldron workshop | Brew temporary spell infusions and discover recipes through exploration and NPC stories. |
 | 🔵 Considering | Party support | Targeted healing, support circles, and shared ward effects with balanced cooldowns. |
-| 🔵 Considering | Celestial casting | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
-| 🔵 Considering | Spell styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
+| 🟡 In Progress | Celestial casting | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
+| 🟡 In Progress | Spell styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
 
 </details>
 
@@ -651,7 +651,7 @@ The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https:/
 | ⚪ Not Started | Lyra's atelier restoration | A longer story about rebuilding her workshop, finding patterns, and unlocking embroidered outfits and furniture. |
 | ⚪ Not Started | Pride collections | More trans-pride capes, clips, hair ribbons, dyes, banners, lanterns, and matching pet accessories. |
 | ⚪ Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
-| 🔵 Considering | Personal profile options | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
+| 🟡 In Progress | Personal profile options | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
 
 </details>
 
@@ -666,10 +666,10 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | --- | --- | --- |
 | ⚪ Not Started | The Reverie — full dimension | Floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths and discover the mirror's history. |
 | ⚪ Not Started | The Hush — horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
-| 🔵 Considering | Tidepool Hollows | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
-| 🔵 Considering | Overgrown Citadel | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
-| 🔵 Considering | Cinderwood Depths | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
-| 🔵 Considering | Starglass Expanse | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
+| 🟡 In Progress | Tidepool Hollows | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
+| 🟡 In Progress | Overgrown Citadel | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
+| 🟡 In Progress | Cinderwood Depths | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
+| 🟡 In Progress | Starglass Expanse | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
 
 </details>
 
@@ -682,12 +682,12 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | --- | --- | --- |
 | ⚪ Not Started | Existing boss expansion | More distinct phases, readable cues, difficulty tuning, trophies, masks, and themed rewards. |
 | 🔵 Considering | The Hollow Astronomer | Rotating constellations, marked gravity shifts, and celestial weapons in the observatory. |
-| 🔵 Considering | The Unwritten | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
+| 🟡 In Progress | The Unwritten | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
 | 🔵 Considering | The Drowned Choir | A Tidepool boss built around waves, echoes, and shifting currents. |
-| 🔵 Considering | The Pale Gardener | A Reverie guardian with flower hazards and fragile crystal blooms. |
-| 🔵 Considering | More minibosses | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
-| ⚪ Not Started | More biome enemies | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
-| 🔵 Considering | Boss rematches | Optional stronger variants with new patterns and cosmetic rewards. |
+| 🟡 In Progress | The Pale Gardener | A Reverie guardian with flower hazards and fragile crystal blooms. |
+| 🟡 In Progress | More minibosses | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
+| 🟡 In Progress | More biome enemies | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
+| 🟡 In Progress | Boss rematches | Optional stronger variants with new patterns and cosmetic rewards. |
 
 </details>
 
@@ -698,13 +698,13 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ⚪ Not Started | Better journal tracking | Tracked objectives, map hints, chapter pages, and clearer reward previews. |
-| ⚪ Not Started | Longer storylines | Lyra's atelier, the Hush missing-explorer mystery, and Hollowglass research. |
-| ⚪ Not Started | Dialogue and quest packs | Extend the existing custom-content format with branching choices and scenes, leaving room for your own dialogue and unique quests. |
+| 🟡 In Progress | Better journal tracking | Tracked objectives, map hints, chapter pages, and clearer reward previews. |
+| 🟡 In Progress | Longer storylines | Lyra's atelier, the Hush missing-explorer mystery, and Hollowglass research. |
+| 🟡 In Progress | Dialogue and quest packs | Extend the existing custom-content format with branching choices and scenes, leaving room for your own dialogue and unique quests. |
 | ⚪ Not Started | Party story tracking | Follow the same chapter with friends while retaining individual rewards and saved progress. |
-| 🔵 Considering | Village noticeboards | Exploration, gathering, fishing, crafting, and encounter contracts. |
-| 🔵 Considering | World discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
-| 🔵 Considering | Story rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
+| 🟡 In Progress | Village noticeboards | Exploration, gathering, fishing, crafting, and encounter contracts. |
+| 🟡 In Progress | World discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
+| 🟡 In Progress | Story rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
 
 </details>
 
@@ -717,12 +717,12 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Profession / feature | Possible skills |
 | --- | --- | --- |
-| ⚪ Not Started | Vanguard | Timed guards, defensive abilities, melee combos, and shields. |
-| ⚪ Not Started | Ranger | Precision shots, ammunition recovery, traps, and bow paths. |
-| ⚪ Not Started | Arcanist skill tree | Spell modifiers, mana control, and build choices beyond the new spell-mastery system. |
-| ⚪ Not Started | Summoner | Companion commands, minion roles, and support effects. |
-| ⚪ Not Started | Explorer | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
-| 🔵 Considering | Mastery rewards | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
+| 🟡 In Progress | Vanguard | Timed guards, defensive abilities, melee combos, and shields. |
+| 🟡 In Progress | Ranger | Precision shots, ammunition recovery, traps, and bow paths. |
+| 🟡 In Progress | Arcanist skill tree | Spell modifiers, mana control, and build choices beyond the new spell-mastery system. |
+| 🟡 In Progress | Summoner | Companion commands, minion roles, and support effects. |
+| 🟡 In Progress | Explorer | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
+| 🟡 In Progress | Mastery rewards | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
 
 </details>
 
@@ -733,11 +733,11 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| ⚪ Not Started | Wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
-| 🔵 Considering | New peaceful creatures | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
-| 🔵 Considering | Pet furnishings | Beds, perches, bowls, habitats, and collectible color variants. |
+| 🟡 In Progress | Wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
+| 🟡 In Progress | New peaceful creatures | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
+| 🟡 In Progress | Pet furnishings | Beds, perches, bowls, habitats, and collectible color variants. |
 | ⚪ Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
-| 🔵 Considering | Wildlife journal | Observation goals, discovery rewards, and gardens that attract visitors. |
+| 🟡 In Progress | Wildlife journal | Observation goals, discovery rewards, and gardens that attract visitors. |
 
 </details>
 
@@ -749,10 +749,10 @@ Switching already preserves each profession's progress. Future skills will build
 | Status | Feature | What comes next |
 | --- | --- | --- |
 | ⚪ Not Started | Memorial collections | More materials, biome shapes, decorative symbols, and flower arrangements. |
-| ⚪ Not Started | Death-grave variants | Graves that match the area where a character fell. |
+| 🟡 In Progress | Death-grave variants | Graves that match the area where a character fell. |
 | 🔵 Considering | Keepsake retrieval | An optional last-death marker and a small retrieval quest. |
-| 🔵 Considering | Memorial gardens | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
-| 🔵 Considering | Cemetery keeper | A peaceful NPC with restoration requests and small stories. |
+| 🟡 In Progress | Memorial gardens | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
+| 🟡 In Progress | Cemetery keeper | A peaceful NPC with restoration requests and small stories. |
 
 </details>
 
@@ -767,7 +767,7 @@ Switching already preserves each profession's progress. Future skills will build
 | ⚪ Not Started | Braids and tied styles | Fishtail and double Dutch braids, twin ponytails, long locs, and loose buns with trailing strands. |
 | ⚪ Not Started | Animation and hats | Movement frames, clean dye support, and matching versions under headwear for every new style. |
 | 🔵 Considering | Atelier wardrobe | Embroidered dresses, long skirts, layered coats, stockings, oversized sweaters, and matching ribbons. |
-| 🔵 Considering | Themed outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
+| 🟡 In Progress | Themed outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
 
 </details>
 
@@ -781,9 +781,9 @@ Switching already preserves each profession's progress. Future skills will build
 | ⚪ Not Started | Early game | More ore bows, boomerangs, summons, and tools; starter ruins, fishing rewards, and exploration trinkets. |
 | ⚪ Not Started | Middle game | Class armor with active skills, boss-driven biome upgrades, weapon evolution, and a relic forge. |
 | 🔵 Considering | Late game | Celestial dungeons, legendary gear, unusual mounts, and challenges beyond Moon Lord. |
-| 🔵 Considering | Building and collecting | Furniture sets, plants, paintings, music boxes, vases, relics, and structures to restore. |
+| 🟡 In Progress | Building and collecting | Furniture sets, plants, paintings, music boxes, vases, relics, and structures to restore. |
 | ⚪ Not Started | Storage and equipment | Storage search, sorting, clearer crafting hints, equipment previews, and easier loadout management. |
-| 🔵 Considering | World events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
+| 🟡 In Progress | World events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
 
 </details>
 
