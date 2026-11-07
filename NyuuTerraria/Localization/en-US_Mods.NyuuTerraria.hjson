@@ -329,6 +329,556 @@ Items: {
 		DisplayName: Staff of Democloud
 		Tooltip: Fires piercing storm-cloud comets that may split on hit. Boosts mana regeneration while held
 	}
+
+	ChronicleJournal: {
+		Tooltip: Open the quest journal, professions and appearance presets with J
+		DisplayName: Chronicle Journal
+	}
+
+	GardenMirror: {
+		Tooltip:
+			'''
+			Enter the Reverie pocket realm, or return home from either realm
+			Cannot be used during a boss fight
+			'''
+		DisplayName: Garden Mirror
+	}
+
+	CrackedBellPortal: {
+		Tooltip:
+			'''
+			Enter the Hush pocket realm, or return home from either realm
+			The Hush contains occasional jumpscares, configurable in mod settings
+			'''
+		DisplayName: Cracked Bell Portal
+	}
+
+	PrismWardrobe: {
+		Tooltip:
+			'''
+			Right-click to save or restore three appearance presets
+			Presets remember hair, colors and body appearance
+			'''
+		DisplayName: Prism Wardrobe
+	}
+
+	PrideRibbon: {
+		Tooltip:
+			'''
+			A cyan, pink and white pride ribbon
+			Leaves a gentle trail of pride-colored sparkles when visible
+			'''
+		DisplayName: Pride Ribbon
+	}
+
+	MoonprismOre: {
+		Tooltip:
+			'''
+			Mine crystal clusters beneath the Reverie orchard floor
+			Three ore make one Moonprism Bar at a Furnace
+			'''
+		DisplayName: Moonprism Ore
+	}
+
+	MoonprismBar: {
+		Tooltip: An iridescent alloy for early expedition equipment
+		DisplayName: Moonprism Bar
+	}
+
+	EchoFragment: {
+		Tooltip: Found in the Hush archive chest and dropped by its hostile inhabitants
+		DisplayName: Echo Fragment
+	}
+
+	PrismWingScale: {
+		Tooltip: Dropped by the Rootbound Knight and Prism Matriarch
+		DisplayName: Prism Wing Scale
+	}
+
+	PrismMothStaff: {
+		Tooltip: Fires piercing moth-light with a cyan and pink trail
+		DisplayName: Prism Moth Staff
+	}
+
+	MoonprismBow: {
+		Tooltip: Turns arrows into piercing moonprism bolts
+		DisplayName: Moonprism Bow
+	}
+
+	CoralBoomerang: {
+		Tooltip: A returning crescent of polished coral
+		DisplayName: Coral Boomerang
+	}
+
+	MooncapScepter: {
+		Tooltip: Summons a friendly Mooncap to attack nearby enemies
+		DisplayName: Mooncap Scepter
+	}
+
+	EchoScythe: {
+		Tooltip: Releases a spinning spectral blade
+		DisplayName: Echo Scythe
+	}
+
+	ArchiveLantern: {
+		Tooltip: Grants night vision and a cool light around you
+		DisplayName: Archive Lantern
+	}
+
+	PrismLongcoat: {
+		Tooltip:
+			'''
+			Embroidered atelier clothing
+			Equip in the body vanity slot
+			'''
+		DisplayName: Prism Longcoat
+	}
+
+	PrismSkirt: {
+		Tooltip:
+			'''
+			A long plum skirt with a cyan and pink hem
+			Equip in the leg vanity slot
+			'''
+		DisplayName: Prism Skirt
+	}
+
+	PrideMothCharm: {
+		Tooltip: Summons a glowing pride moth companion
+		DisplayName: Pride Moth Charm
+	}
+
+	DewBerryCharm: {
+		Tooltip: Summons a gentle Dew Fox companion
+		DisplayName: Dew Berry Charm
+	}
+
+	ReefShell: {
+		Tooltip: Summons the Reefback Guardian in the Reverie
+		DisplayName: Reef Shell
+	}
+
+	RootboundSeal: {
+		Tooltip: Summons the Rootbound Knight in the Reverie
+		DisplayName: Rootbound Seal
+	}
+
+	CrackedBellSigil: {
+		Tooltip:
+			'''
+			Summons the Bellkeeper in the Hush
+			Requires Hardmode
+			'''
+		DisplayName: Cracked Bell Sigil
+	}
+
+	PrismCocoon: {
+		Tooltip:
+			'''
+			Summons the Prism Matriarch in the Reverie
+			Requires Hardmode
+			'''
+		DisplayName: Prism Cocoon
+	}
+
+	PrismMemorial: {
+		Tooltip:
+			'''
+			An engravable crystal memorial
+			Right-click to read or edit its message
+			'''
+		DisplayName: Prism Memorial
+	}
+
+	CopperMemorial: {
+		Tooltip: An engravable memorial with a copper plaque
+		DisplayName: Copper Memorial
+	}
+
+	ObsidianMemorial: {
+		Tooltip: An engravable obsidian memorial with flowers
+		DisplayName: Obsidian Memorial
+	}
+
+	ReverieVase: {
+		Tooltip: A decorative crystal vase for gardens and homes
+		DisplayName: Reverie Vase
+	}
+
+	AetherloomWand: {
+		Tooltip:
+			'''
+			K: choose a learned spell in the Spellbook
+			Left-click to cast; hold right-click for Crescent Ward
+			Hold left-click with Emberbloom to charge a larger burst
+			'''
+		DisplayName: Aetherloom Wand
+	}
+
+	EmberbloomTome: {
+		Tooltip:
+			'''
+			Permanently learn Emberbloom for this character
+			Hold the Aetherloom Wand to charge a fiery rune burst
+			'''
+		DisplayName: Emberbloom Tome
+	}
+
+	FrostbloomTome: {
+		Tooltip:
+			'''
+			Permanently learn Frostbloom for this character
+			Piercing ice; unlock a three-shot fan at mastery 5
+			'''
+		DisplayName: Frostbloom Tome
+	}
+
+	TideglassTome: {
+		Tooltip:
+			'''
+			Permanently learn Tideglass for this character
+			Water orbs split on impact and leave enemies Wet
+			'''
+		DisplayName: Tideglass Tome
+	}
+
+	DawnmendTome: {
+		Tooltip:
+			'''
+			Permanently learn Dawnmend for this character
+			A self-healing spell with an eight-second cooldown
+			'''
+		DisplayName: Dawnmend Tome
+	}
+
+	StormglassTome: {
+		Tooltip:
+			'''
+			Permanently learn Stormglass Fork for this character
+			Lightning jumps to nearby enemies; wet targets take stronger chain hits
+			'''
+		DisplayName: Stormglass Tome
+	}
+
+	NyuuSpellbook: {
+		Tooltip:
+			'''
+			Open the Spellbook to select spells and track mastery
+			K also opens it without carrying this book
+			'''
+		DisplayName: Nyuu Spellbook
+	}
+
+	WardSigil: {
+		Tooltip:
+			'''
+			20 increased maximum mana
+			Halves the continuing mana cost of Crescent Ward
+			Equip in a normal accessory slot
+			'''
+		DisplayName: Ward Sigil
+	}
+
+	ArchiveRelic: {
+		Tooltip: ""
+		DisplayName: Archive Relic
+	}
+
+	CauldronWorkshop: {
+		DisplayName: Cauldron Workshop
+		Tooltip:
+			'''
+			Stand nearby to craft three workshop infusions
+			Right-click for recipes and destination guidance
+			'''
+	}
+
+	CelestialLoom: {
+		DisplayName: Celestial Loom
+		Tooltip: Fires constellation stars that split into five arcane bolts
+	}
+
+	CinderBloom: {
+		Tooltip: ""
+		DisplayName: Cinder Bloom
+	}
+
+	Cindercoat: {
+		Tooltip: ""
+		DisplayName: Cindercoat
+	}
+
+	CinderKey: {
+		DisplayName: Cinder Key
+		Tooltip:
+			'''
+			Opens Cinderwood Depths after Skeletron
+			Use again to return; existing terrain is preserved
+			'''
+	}
+
+	CinderMemorial: {
+		Tooltip: ""
+		DisplayName: Cinder Memorial
+	}
+
+	CinderSkirt: {
+		Tooltip: ""
+		DisplayName: Cinder Skirt
+	}
+
+	CitadelSigil: {
+		DisplayName: Citadel Sigil
+		Tooltip:
+			'''
+			Opens the Overgrown Citadel; use again to return
+			Seek pale flowers and the invitation of its gardener
+			'''
+	}
+
+	CoastalCoat: {
+		Tooltip: ""
+		DisplayName: Coastal Coat
+	}
+
+	CoastalSkirt: {
+		Tooltip: ""
+		DisplayName: Coastal Skirt
+	}
+
+	DiscoveryPlaque: {
+		DisplayName: Discovery Plaque
+		Tooltip: Right-click within a Worldbound destination to discover its landmark
+	}
+
+	ExplorerMedallion: {
+		DisplayName: Explorer Medallion
+		Tooltip:
+			'''
+			8% faster mining and 5% increased movement speed
+			Reveals treasure; earned from observing all eight wildlife species
+			'''
+	}
+
+	FeedingBowl: {
+		DisplayName: Feeding Bowl
+		Tooltip:
+			'''
+			Right-click with a Daybloom while a peaceful critter is nearby
+			It follows gently for one minute; records a wildlife friendship
+			'''
+	}
+
+	FieldJournal: {
+		DisplayName: Field Journal
+		Tooltip:
+			'''
+			Opens Worldbound in the L-key journal
+			Requests, talents, profile, wildlife, stories and workshop
+			'''
+	}
+
+	GardenDress: {
+		Tooltip: ""
+		DisplayName: Garden Dress
+	}
+
+	GardenerInvitation: {
+		DisplayName: Gardener Invitation
+		Tooltip:
+			'''
+			Summons The Pale Gardener in the Overgrown Citadel
+			Reusable; 18,000 base life, stronger in multiplayer difficulties
+			'''
+	}
+
+	GardenerRelic: {
+		Tooltip: ""
+		DisplayName: Gardener Relic
+	}
+
+	GardenLantern: {
+		DisplayName: Garden Lantern
+		Tooltip: A decorative lantern for memorial gardens
+	}
+
+	GardenSkirt: {
+		Tooltip: ""
+		DisplayName: Garden Skirt
+	}
+
+	HearthInfusion: {
+		DisplayName: Hearth Infusion
+		Tooltip:
+			'''
+			3 minutes of slightly improved life regeneration
+			Workshop infusions replace one another
+			'''
+	}
+
+	HeritageRibbon: {
+		DisplayName: Heritage Ribbon
+		Tooltip: 20 increased maximum mana and slightly improved life regeneration
+	}
+
+	MasteryCrest: {
+		DisplayName: Mastery Crest
+		Tooltip:
+			'''
+			Up to 6% increased damage, scaling with active profession level
+			Claim once per profession at level 15 in Worldbound Talents
+			'''
+	}
+
+	MemorialWreath: {
+		DisplayName: Memorial Wreath
+		Tooltip: A decorative wreath for a quieter place to remember
+	}
+
+	MoonwellInfusion: {
+		DisplayName: Moonwell Infusion
+		Tooltip:
+			'''
+			3 minutes of +5 mana regeneration bonus
+			Workshop infusions replace one another
+			'''
+	}
+
+	Noticeboard: {
+		DisplayName: Noticeboard
+		Tooltip:
+			'''
+			Right-click to pin an authored request
+			Claim completed rewards through the Quests tab
+			'''
+	}
+
+	PaleBloom: {
+		Tooltip: ""
+		DisplayName: Pale Bloom
+	}
+
+	PetBed: {
+		DisplayName: Pet Bed
+		Tooltip: A small resting place that heals nearby peaceful expedition critters
+	}
+
+	RematchSigil: {
+		DisplayName: Rematch Sigil
+		Tooltip:
+			'''
+			Rematches the defeated Gardener or Unwritten in their home area
+			65% more life and 20% more damage; awards a Challenge Laurel
+			'''
+	}
+
+	RitualFocus: {
+		DisplayName: Ritual Focus
+		Tooltip:
+			'''
+			25 mana
+			Places a stationary rune circle with a windup and damage pulses
+			Lasts 4 seconds; does not damage terrain
+			'''
+	}
+
+	SpellPalette: {
+		DisplayName: Spell Palette
+		Tooltip:
+			'''
+			Cycles Elemental, Trans pride, Moonlit and Ember dusk trails
+			Also available in Worldbound Profile; saves per character
+			'''
+	}
+
+	StarfocusInfusion: {
+		DisplayName: Starfocus Infusion
+		Tooltip:
+			'''
+			3 minutes of +4 magic critical chance
+			Workshop infusions replace one another
+			'''
+	}
+
+	StarglassChart: {
+		DisplayName: Starglass Chart
+		Tooltip:
+			'''
+			Opens the Starglass Expanse after Moon Lord
+			Use again to return; existing terrain is preserved
+			'''
+	}
+
+	StarglassCoat: {
+		Tooltip: ""
+		DisplayName: Starglass Coat
+	}
+
+	StarglassMemorial: {
+		Tooltip: ""
+		DisplayName: Starglass Memorial
+	}
+
+	StarglassShard: {
+		Tooltip: ""
+		DisplayName: Starglass Shard
+	}
+
+	StarglassSkirt: {
+		Tooltip: ""
+		DisplayName: Starglass Skirt
+	}
+
+	TidalMemorial: {
+		Tooltip: ""
+		DisplayName: Tidal Memorial
+	}
+
+	TideCompass: {
+		DisplayName: Tide Compass
+		Tooltip:
+			'''
+			Opens Tidepool Hollows; use again to return
+			A persistent pocket expedition with finite chest loot
+			'''
+	}
+
+	TidePearl: {
+		Tooltip: ""
+		DisplayName: Tide Pearl
+	}
+
+	UnwrittenPage: {
+		DisplayName: Unwritten Page
+		Tooltip:
+			'''
+			Summons The Unwritten in the Hush after Plantera
+			Reusable; 48,000 base life
+			'''
+	}
+
+	ChallengeLaurel: {
+		DisplayName: Challenge Laurel
+		Tooltip: A pink particle flourish commemorates an empowered rematch
+	}
+
+	GardenFestivalBell: {
+		DisplayName: Garden Festival Bell
+		Tooltip:
+			'''
+			Starts a five-minute garden festival
+			Peaceful Worldbound critters appear more often; every third dawn also starts it
+			'''
+	}
+
+	StarlitBeacon: {
+		DisplayName: Starlit Beacon
+		Tooltip:
+			'''
+			After Moon Lord, starts a three-minute Starglass convergence
+			Starfallen Constructs appear more often in the Expanse
+			'''
+	}
 }
 
 Projectiles: {
@@ -348,6 +898,25 @@ Projectiles: {
 	GlassedgeBolt.DisplayName: Glassedge Bolt
 	HollowchimeBolt.DisplayName: Hollowchime Bolt
 	LittleGlassBell.DisplayName: Little Glass Bell
+	CelestialStar.DisplayName: Celestial Star
+	FrontierHazard.DisplayName: Frontier Hazard
+	ReactionBurst.DisplayName: Reaction Burst
+	RitualCircle.DisplayName: Ritual Circle
+	CoralBoomerangFlight.DisplayName: Coral Boomerang Flight
+	DewFoxPet.DisplayName: Dew Fox Pet
+	EchoSlash.DisplayName: Echo Slash
+	EchoWave.DisplayName: Echo Wave
+	MooncapMinion.DisplayName: Mooncap Minion
+	MoonprismArrow.DisplayName: Moonprism Arrow
+	PrideMothPet.DisplayName: Pride Moth Pet
+	PrismMothBolt.DisplayName: Prism Moth Bolt
+	CastingSigil.DisplayName: Casting Sigil
+	CrescentWard.DisplayName: Crescent Ward
+	EmberCharge.DisplayName: Ember Charge
+	EmberDetonation.DisplayName: Ember Detonation
+	MendingBloom.DisplayName: Mending Bloom
+	SpellShot.DisplayName: Spell Shot
+	StormLink.DisplayName: Storm Link
 }
 
 NPCs: {
@@ -358,6 +927,62 @@ NPCs: {
 	MourningBell.DisplayName: Mourning Bell
 	GlassCrawler.DisplayName: Glass Crawler
 	GlasswingMoth.DisplayName: Glasswing Moth
+
+	Lyra: {
+		DisplayName: Prism Tailor
+
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I love {NPCName}.
+		}
+	}
+
+	RootboundKnight.DisplayName: Rootbound Knight
+	Bellkeeper.DisplayName: The Bellkeeper
+	PrismMatriarch.DisplayName: Prism Matriarch
+	ReefbackGuardian.DisplayName: Reefback Guardian
+	LanternStalker.DisplayName: Lantern Stalker
+	TheMirrorless.DisplayName: The Mirrorless
+	GlassSerpent.DisplayName: Glass Serpent
+	PaperWraith.DisplayName: Paper Wraith
+	DewFox.DisplayName: Dew Fox
+	GlassDeer.DisplayName: Glass Deer
+	Mothcat.DisplayName: Mothcat
+	MooncapSprite.DisplayName: Mooncap Sprite
+
+	CemeteryKeeper: {
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I love {NPCName}.
+		}
+
+		DisplayName: Cemetery Keeper
+	}
+
+	PaleGardener.DisplayName: The Pale Gardener
+	TheUnwritten.DisplayName: The Unwritten
+	ArchiveCaretaker.DisplayName: Archive Caretaker
+	ReefAmbusher.DisplayName: Reef Ambusher
+	ReefSkitterer.DisplayName: Reef Skitterer
+	VineboundArmor.DisplayName: Vinebound Armor
+	AshBurrower.DisplayName: Ash Burrower
+	StarfallenConstruct.DisplayName: Starfallen Construct
+	TidepoolTurtle.DisplayName: Tidepool Turtle
+	GardenBird.DisplayName: Garden Bird
+	CrystalSnail.DisplayName: Crystal Snail
+	LanternFirefly.DisplayName: Lantern Firefly
 }
 
 Tiles: {
@@ -375,6 +1000,22 @@ Tiles: {
 	GlassVaseTile.MapEntry: Glass Vase
 	ReachChestTile.MapEntry: Reach Chest
 	ReachLanternTile.MapEntry: Reach Lantern
+	PrismWardrobeTile.MapEntry: Prism Wardrobe
+	MoonprismOreTile.MapEntry: Moonprism Ore
+	PrismMemorialTile.MapEntry: Prism Memorial
+	CopperMemorialTile.MapEntry: Copper Memorial
+	ObsidianMemorialTile.MapEntry: Obsidian Memorial
+	ReverieVaseTile.MapEntry: Reverie Vase
+	CauldronWorkshopTile.MapEntry: Cauldron Workshop
+	NoticeboardTile.MapEntry: Noticeboard
+	PetBedTile.MapEntry: Pet Bed
+	FeedingBowlTile.MapEntry: Feeding Bowl
+	GardenLanternTile.MapEntry: Garden Lantern
+	MemorialWreathTile.MapEntry: Memorial Wreath
+	DiscoveryPlaqueTile.MapEntry: Discovery Plaque
+	TidalMemorialTile.MapEntry: Tidal Memorial
+	CinderMemorialTile.MapEntry: Cinder Memorial
+	StarglassMemorialTile.MapEntry: Starglass Memorial
 }
 
 Biomes: {
@@ -386,6 +1027,36 @@ Biomes: {
 	HollowglassReachBiome: {
 		DisplayName: Hollowglass Reach
 		TownNPCDialogueName: the Hollowglass Reach Biome
+	}
+
+	ReverieBiome: {
+		DisplayName: The Reverie
+		TownNPCDialogueName: the Reverie Biome
+	}
+
+	HushBiome: {
+		DisplayName: The Hush
+		TownNPCDialogueName: the Hush Biome
+	}
+
+	CinderwoodDepthsBiome: {
+		TownNPCDialogueName: the Cinderwood Depths Biome
+		DisplayName: Cinderwood Depths
+	}
+
+	OvergrownCitadelBiome: {
+		TownNPCDialogueName: the Overgrown Citadel Biome
+		DisplayName: Overgrown Citadel
+	}
+
+	StarglassExpanseBiome: {
+		TownNPCDialogueName: the Starglass Expanse Biome
+		DisplayName: Starglass Expanse
+	}
+
+	TidepoolHollowsBiome: {
+		TownNPCDialogueName: the Tidepool Hollows Biome
+		DisplayName: Tidepool Hollows
 	}
 }
 
@@ -411,74 +1082,40 @@ Buffs: {
 		DisplayName: Little Glass Bell
 		Description: A little bell follows you through the dark
 	}
+
+	DewFoxCompanion: {
+		DisplayName: Dew Fox
+		Description: A gentle fox follows you
+	}
+
+	PrideMothCompanion: {
+		DisplayName: Pride Moth
+		Description: A moth shines in cyan, pink and white
+	}
+
+	MooncapBond: {
+		DisplayName: Mooncap Guardian
+		Description: A small mushroom fights by your side
+	}
 }
 
-Keybinds.Backpack.DisplayName: Open Backpack
+Keybinds: {
+	Backpack.DisplayName: Open Backpack
+	QuestJournal.DisplayName: Open Nyuu Chronicle
+	Spellbook.DisplayName: Open Nyuu Spellbook
+	// Worldbound Chapters
+	ProfessionAbility.DisplayName: Profession active ability
+}
+
 Conditions.BackpackEmpty: Backpack storage must be empty
 
+Configs: {
+	ExpeditionClientConfig: {
+		DisplayName: Expedition Client Config
 
-Keybinds.QuestJournal.DisplayName: "Open Nyuu Chronicle"
-Items.ChronicleJournal.Tooltip: "Open the quest journal, professions and appearance presets with J"
-Items.GardenMirror.Tooltip: "Enter the Reverie pocket realm, or return home from either realm\nCannot be used during a boss fight"
-Items.CrackedBellPortal.Tooltip: "Enter the Hush pocket realm, or return home from either realm\nThe Hush contains occasional jumpscares, configurable in mod settings"
-Items.PrismWardrobe.Tooltip: "Right-click to save or restore three appearance presets\nPresets remember hair, colors and body appearance"
-Items.PrideRibbon.Tooltip: "A cyan, pink and white pride ribbon\nLeaves a gentle trail of pride-colored sparkles when visible"
-Items.MoonprismOre.Tooltip: "Mine crystal clusters beneath the Reverie orchard floor\nThree ore make one Moonprism Bar at a Furnace"
-Items.MoonprismBar.Tooltip: "An iridescent alloy for early expedition equipment"
-Items.EchoFragment.Tooltip: "Found in the Hush archive chest and dropped by its hostile inhabitants"
-Items.PrismWingScale.Tooltip: "Dropped by the Rootbound Knight and Prism Matriarch"
-Items.PrismMothStaff.Tooltip: "Fires piercing moth-light with a cyan and pink trail"
-Items.MoonprismBow.Tooltip: "Turns arrows into piercing moonprism bolts"
-Items.CoralBoomerang.Tooltip: "A returning crescent of polished coral"
-Items.MooncapScepter.Tooltip: "Summons a friendly Mooncap to attack nearby enemies"
-Items.EchoScythe.Tooltip: "Releases a spinning spectral blade"
-Items.ArchiveLantern.Tooltip: "Grants night vision and a cool light around you"
-Items.PrismLongcoat.Tooltip: "Embroidered atelier clothing\nEquip in the body vanity slot"
-Items.PrismSkirt.Tooltip: "A long plum skirt with a cyan and pink hem\nEquip in the leg vanity slot"
-Items.PrideMothCharm.Tooltip: "Summons a glowing pride moth companion"
-Items.DewBerryCharm.Tooltip: "Summons a gentle Dew Fox companion"
-Items.ReefShell.Tooltip: "Summons the Reefback Guardian in the Reverie"
-Items.RootboundSeal.Tooltip: "Summons the Rootbound Knight in the Reverie"
-Items.CrackedBellSigil.Tooltip: "Summons the Bellkeeper in the Hush\nRequires Hardmode"
-Items.PrismCocoon.Tooltip: "Summons the Prism Matriarch in the Reverie\nRequires Hardmode"
-Items.PrismMemorial.Tooltip: "An engravable crystal memorial\nRight-click to read or edit its message"
-Items.CopperMemorial.Tooltip: "An engravable memorial with a copper plaque"
-Items.ObsidianMemorial.Tooltip: "An engravable obsidian memorial with flowers"
-Items.ReverieVase.Tooltip: "A decorative crystal vase for gardens and homes"
-NPCs.Lyra.DisplayName: "Prism Tailor"
-NPCs.RootboundKnight.DisplayName: "Rootbound Knight"
-NPCs.Bellkeeper.DisplayName: "The Bellkeeper"
-NPCs.PrismMatriarch.DisplayName: "Prism Matriarch"
-NPCs.ReefbackGuardian.DisplayName: "Reefback Guardian"
-NPCs.LanternStalker.DisplayName: "Lantern Stalker"
-NPCs.TheMirrorless.DisplayName: "The Mirrorless"
-NPCs.GlassSerpent.DisplayName: "Glass Serpent"
-NPCs.PaperWraith.DisplayName: "Paper Wraith"
-NPCs.DewFox.DisplayName: "Dew Fox"
-NPCs.GlassDeer.DisplayName: "Glass Deer"
-NPCs.Mothcat.DisplayName: "Mothcat"
-NPCs.MooncapSprite.DisplayName: "Mooncap Sprite"
-Biomes.ReverieBiome.DisplayName: "The Reverie"
-Biomes.HushBiome.DisplayName: "The Hush"
-Tiles.PrismWardrobeTile.MapEntry: "Prism Wardrobe"
-Tiles.MoonprismOreTile.MapEntry: "Moonprism Ore"
-Tiles.PrismMemorialTile.MapEntry: "Prism Memorial"
-Tiles.CopperMemorialTile.MapEntry: "Copper Memorial"
-Tiles.ObsidianMemorialTile.MapEntry: "Obsidian Memorial"
-Tiles.ReverieVaseTile.MapEntry: "Reverie Vase"
-Buffs.DewFoxCompanion.DisplayName: "Dew Fox"
-Buffs.DewFoxCompanion.Description: "A gentle fox follows you"
-Buffs.PrideMothCompanion.DisplayName: "Pride Moth"
-Buffs.PrideMothCompanion.Description: "A moth shines in cyan, pink and white"
-Buffs.MooncapBond.DisplayName: "Mooncap Guardian"
-Buffs.MooncapBond.Description: "A small mushroom fights by your side"
-
-Keybinds.Spellbook.DisplayName: "Open Nyuu Spellbook"
-Items.AetherloomWand.Tooltip: "K: choose a learned spell in the Spellbook\nLeft-click to cast; hold right-click for Crescent Ward\nHold left-click with Emberbloom to charge a larger burst"
-Items.EmberbloomTome.Tooltip: "Permanently learn Emberbloom for this character\nHold the Aetherloom Wand to charge a fiery rune burst"
-Items.FrostbloomTome.Tooltip: "Permanently learn Frostbloom for this character\nPiercing ice; unlock a three-shot fan at mastery 5"
-Items.TideglassTome.Tooltip: "Permanently learn Tideglass for this character\nWater orbs split on impact and leave enemies Wet"
-Items.DawnmendTome.Tooltip: "Permanently learn Dawnmend for this character\nA self-healing spell with an eight-second cooldown"
-Items.StormglassTome.Tooltip: "Permanently learn Stormglass Fork for this character\nLightning jumps to nearby enemies; wet targets take stronger chain hits"
-Items.NyuuSpellbook.Tooltip: "Open the Spellbook to select spells and track mastery\nK also opens it without carrying this book"
-Items.WardSigil.Tooltip: "20 increased maximum mana\nHalves the continuing mana cost of Crescent Ward\nEquip in a normal accessory slot"
+		HushJumpscares: {
+			Label: Hush Jumpscares
+			Tooltip: ""
+		}
+	}
+}

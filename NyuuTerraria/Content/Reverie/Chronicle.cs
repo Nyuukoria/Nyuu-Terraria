@@ -37,6 +37,7 @@ public class ChronicleContent : ModSystem
     {
         Quests = JsonSerializer.Deserialize<QuestDefinition[]>(Encoding.UTF8.GetString(Mod.GetFileBytes("Data/quests.json")));
         LyraDialogue = JsonSerializer.Deserialize<string[]>(Encoding.UTF8.GetString(Mod.GetFileBytes("Data/lyra-dialogue.json")));
+        Quests = Quests.Concat(global::NyuuTerraria.Content.Frontiers.FrontierStories.Load(Mod)).ToArray();
         foreach (var quest in Quests)
         {
             if (string.IsNullOrWhiteSpace(quest.Id) || quest.Count < 1 || quest.RewardCount < 1 || quest.Experience < 0 ||

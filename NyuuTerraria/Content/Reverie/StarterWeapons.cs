@@ -39,6 +39,7 @@ public class CoralBoomerangFlight : PrismMothBolt
     public override void SetDefaults() {base.SetDefaults();Projectile.DamageType=DamageClass.Melee;Projectile.penetrate=-1;Projectile.timeLeft=240;}
     public override void AI()
     {
+        Projectile.frame=(int)(Main.GameUpdateCount/10)%4;
         Player p=Main.player[Projectile.owner];
         if(!p.active || p.dead) {Projectile.Kill();return;}
         Projectile.rotation+=.35f;
@@ -69,7 +70,7 @@ public class MooncapScepter : ModItem
 }
 public class MooncapBond : ModBuff
 {
-    public override string Texture=>"NyuuTerraria/Content/Reverie/MooncapSprite";
+    public override string Texture=>"NyuuTerraria/Content/Reverie/MooncapScepter";
     public override void SetStaticDefaults() {Main.buffNoTimeDisplay[Type]=true;Main.buffNoSave[Type]=true;}
     public override void Update(Player player,ref int buffIndex)
     {
@@ -80,7 +81,7 @@ public class MooncapBond : ModBuff
 public class MooncapMinion : ModProjectile
 {
     public override string Texture=>"NyuuTerraria/Content/Reverie/MooncapSprite";
-    public override void SetStaticDefaults() {Main.projPet[Type]=true;ProjectileID.Sets.MinionSacrificable[Type]=true;}
+    public override void SetStaticDefaults() {Main.projPet[Type]=true;Main.projFrames[Type]=4;ProjectileID.Sets.MinionSacrificable[Type]=true;}
     public override void SetDefaults()
     {
         Projectile.width=24;Projectile.height=26;Projectile.minion=true;Projectile.minionSlots=1;Projectile.friendly=true;
@@ -89,6 +90,7 @@ public class MooncapMinion : ModProjectile
     }
     public override void AI()
     {
+        Projectile.frame=(int)(Main.GameUpdateCount/10)%4;
         Player p=Main.player[Projectile.owner];
         if(!p.active || p.dead || !p.HasBuff(ModContent.BuffType<MooncapBond>())) return;
         Projectile.timeLeft=2;NPC target=null;float closest=550;
@@ -135,4 +137,5 @@ public class ReverieVaseTile : ModTile
         Terraria.ObjectData.TileObjectData.addTile(Type);AddMapEntry(new Color(172,148,194),CreateMapEntryName());
     }
 }
+
 

@@ -57,10 +57,26 @@ The five profession indices are Vanguard (0), Ranger (1), Arcanist (2), Summoner
 
 ## Art and names
 
-Item, NPC, tile, and hairstyle source sprites live beside their classes under `Content/Reverie`. Sprites use Terraria's 2-pixel grid and transparent backgrounds. Hair uses 40 × 784 sheets with 14 animation rows; hats use a matching `_Alt` sheet. Lyra uses four 32 × 48 frames stacked vertically. Clothing uses the existing composite body and leg rig layouts. Do not resize an animation sheet as if it were a single inventory icon.
+Item, NPC, tile, and hairstyle source sprites live beside their classes under `Content/Reverie`. Sprites use Terraria's 2-pixel grid and transparent backgrounds. Hair uses 40 × 784 sheets with 14 animation rows; hats use a matching `_Alt` sheet. Lyra and Mira use four 40 × 56 frames stacked vertically. Creature sheets use four equal-height frames; documentation displays a cropped first frame. Clothing uses the existing composite body and leg rig layouts. Do not resize an animation sheet as if it were a single inventory icon.
 
 Player-visible names and tooltips are in `Localization/en-US_Mods.NyuuTerraria.hjson`. Add localization alongside new content.
 
 ## Current expedition scope
 
 The Reverie and Hush in v0.4.0 are persistent pocket areas inside the current world. Generation checks for unused sky space and does not replace existing terrain. Changing their generation code affects newly created areas; it does not automatically rebuild an existing expedition. Back up test worlds before experimenting. Full separate-world dimensions and the longer story locations remain future milestones.
+
+
+## Worldbound story packs — v0.5.0
+
+Create `Data/packs/your-pack.json`. Its root object contains `Quests` and `Scenes` arrays. Quest fields match `Data/quests.json`; use permanent unique IDs and valid reward internal names. Packs load alphabetically. The bundled `worldbound.json` is a complete working example with 14 quests and four scenes.
+
+```json
+{
+  "Quests": [{"Id":"custom-a", "Title":"A quiet beginning", "Description":"Speak in Worldbound Stories.", "Count":1, "Experience":100, "Reward":"FieldJournal", "RewardCount":1, "Event":"custom-choice"}],
+  "Scenes": [{"Id":"custom-scene-a", "Speaker":"Lyra", "Text":"What shall we make?", "Requires":"", "Choices":[{"Text":"A place to rest", "Event":"custom-choice", "Reply":"Let us begin."}]}]
+}
+```
+
+Scenes support up to two choices and an optional completed-quest `Requires` gate. Choosing records its event once per scene, with a saved discovery ID; repeated clicks cannot grant additional quest credit. This supports prerequisite-based chapters and choice replies, rather than arbitrary branching graphs. Keep existing IDs when editing a published pack. Rebuild the mod and use the same pack on every multiplayer participant.
+
+Worldbound content lives in `Content/Frontiers`. New furniture must use matching tile dimensions and 18-pixel coordinate spacing. Mod development tests belong outside the release source folder. The showcase exporter is published under `tests/` and must never be bundled into the playable mod.

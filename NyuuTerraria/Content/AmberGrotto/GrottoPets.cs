@@ -76,7 +76,7 @@ public abstract class GrottoPet : ModProjectile
     protected abstract Vector3 Glow { get; }
     protected abstract float FollowHeight { get; }
 
-    public override void SetStaticDefaults() => Main.projPet[Type] = true;
+    public override void SetStaticDefaults() {Main.projPet[Type] = true;Main.projFrames[Type]=4;}
 
     public override void SetDefaults()
     {
@@ -92,6 +92,7 @@ public abstract class GrottoPet : ModProjectile
 
     public override void AI()
     {
+        Projectile.frame=(int)(Main.GameUpdateCount/10)%4;
         Player player = Main.player[Projectile.owner];
         if (!player.active || player.dead || !player.HasBuff(PetBuff))
             return;
@@ -130,3 +131,4 @@ public class AmberWisp : GrottoPet
     protected override Vector3 Glow => new Vector3(0.48f, 0.25f, 0.06f);
     protected override float FollowHeight => -53f;
 }
+

@@ -135,7 +135,8 @@ public class SpellShot : ModProjectile
     }
     public override bool PreDraw(Player player,ref Color lightColor)
     {
-        Color color=Spells.Colors[Spell];Vector2 previous=Projectile.Center;
+        int palette=Main.player[Projectile.owner].GetModPlayer<global::NyuuTerraria.Content.Frontiers.FrontierPlayer>().Palette;
+        Color color=palette==1?new Color(245,169,184):palette==2?new Color(159,189,255):palette==3?new Color(255,159,108):Spells.Colors[Spell];Vector2 previous=Projectile.Center;
         for(int i=0;i<Projectile.oldPos.Length;i++)
         {
             if(Projectile.oldPos[i]==Vector2.Zero) break;

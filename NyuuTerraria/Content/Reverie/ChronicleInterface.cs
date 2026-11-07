@@ -15,9 +15,16 @@ public class ChronicleInterface : ModSystem
     internal static bool Open;
     internal static int Tab, Page;
     internal static Point WardrobeOrigin = new(-1, -1);
-    public override void Load() { if (!Main.dedServ) JournalKey = KeybindLoader.RegisterKeybind(Mod, "QuestJournal", "J"); }
+    public override void Load() { if (!Main.dedServ) JournalKey = KeybindLoader.RegisterKeybind(Mod, "QuestJournal", "L"); }
     public override void Unload() { JournalKey = null; Open = false; }
     public override void OnWorldUnload() { Open = false; WardrobeOrigin = new(-1, -1); }
+    public override void PostUpdateInput()
+    {
+        if(Main.gameMenu || !Open || !Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Escape) || Main.oldKeyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Escape)) return;
+        Open=false;
+        PlayerInput.Triggers.Current.Inventory=false;
+        PlayerInput.Triggers.JustPressed.Inventory=false;
+    }
     private static Rectangle Bounds => new((int)(Main.screenWidth / 2 - 300), Math.Max(24, (int)(Main.screenHeight / 2 - 230)), 600, 460);
     public override void UpdateUI(GameTime gameTime)
     {
@@ -66,8 +73,8 @@ public class ChronicleInterface : ModSystem
         Utils.DrawInvBG(Main.spriteBatch, p, new Color(32,25,51,250));
         Text("Nyuu Chronicle", p.X+18, p.Y+12, new Color(235,184,223), 1f);
         if (Button("X", new Rectangle(p.Right-42,p.Y+9,30,28))) Open = false;
-        string[] tabs = { "Quests", "Professions", "Wardrobe", "Spellbook" };
-        for (int i=0;i<4;i++) if (Button(tabs[i],new Rectangle(p.X+18+i*141,p.Y+48,133,30))) { Tab=i; Page=0; }
+        string[] tabs = { "Quests", "Professions", "Wardrobe", "Spellbook", "Worldbound" };
+        for (int i=0;i<5;i++) if (Button(tabs[i],new Rectangle(p.X+18+i*113,p.Y+48,106,30))) { Tab=i; Page=0; }
         var data = Main.LocalPlayer.GetModPlayer<ChroniclePlayer>();
         int x=p.X+18,y=p.Y+94;
         if (Tab == 0)
@@ -83,11 +90,12 @@ public class ChronicleInterface : ModSystem
                 // Authoring guide caps descriptions at two short lines.
                 string[] lines=q.Description.Split('|');
                 for(int n=0;n<Math.Min(lines.Length,2);n++) Text(lines[n],x,top+23+n*18,scale:.7f);
-                Text($"{Math.Min(data.Progress(q),q.Count)}/{q.Count}   Reward: {q.Experience} XP + {q.RewardCount} {q.Reward}",x,top+63,scale:.63f);
+                Text($"{(done?q.Count:Math.Min(data.Progress(q),q.Count))}/{q.Count}   Reward: {q.Experience} XP + {q.RewardCount} {q.Reward}",x,top+63,scale:.63f);
+                if(Button("Pin",new Rectangle(p.Right-159,top+48,60,30))) Main.LocalPlayer.GetModPlayer<global::NyuuTerraria.Content.Frontiers.FrontierPlayer>().Tracked=q.Id;
                 if(!done && !locked && Button("Claim",new Rectangle(p.Right-92,top+48,73,30))) data.Claim(q);
             }
             if(Button("<",new Rectangle(x,p.Bottom-43,35,28))) Page=Math.Max(0,Page-1);
-            Text($"Page {Page+1}/{pages}  -  J to close",x+52,p.Bottom-36,scale:.7f);
+            Text($"Page {Page+1}/{pages}  -  L to close",x+52,p.Bottom-36,scale:.7f);
             if(Button(">",new Rectangle(p.Right-55,p.Bottom-43,35,28))) Page=Math.Min(pages-1,Page+1);
         }
         else if(Tab == 1)
@@ -105,6 +113,8 @@ public class ChronicleInterface : ModSystem
             Text(effects[data.Profession],x,y+283,new Color(184,222,227),.63f);
             if(Button("Reset active skills",new Rectangle(x,p.Bottom-47,178,30))) { data.Skills[data.Profession]=0; data.SyncProfession(); }
         }
+        else if(Tab == 4)
+            global::NyuuTerraria.Content.Frontiers.FrontierView.Draw(p);
         else if(Tab == 3)
             global::NyuuTerraria.Content.Spellcraft.SpellbookView.Draw(p);
         else
@@ -143,3 +153,4 @@ public class ProfileCommand : ModCommand
         caller.Reply("Dialogue pronouns: "+caller.Player.GetModPlayer<ChroniclePlayer>().Pronouns);
     }
 }
+

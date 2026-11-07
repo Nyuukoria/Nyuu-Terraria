@@ -1,0 +1,210 @@
+{
+  "Quests": [
+    {
+      "Id": "wb-atelier4",
+      "Title": "Lyra: the missing pattern",
+      "Description": "Speak with Lyra in Worldbound Stories.|Choose how you want to restore the atelier.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "FieldJournal",
+      "RewardCount": 1,
+      "Requires": "atelier-3",
+      "Event": "atelier-choice"
+    },
+    {
+      "Id": "wb-atelier5",
+      "Title": "Lyra: a thread across the sea",
+      "Description": "Explore Tidepool Hollows with a Tide Compass.|The old tide shrine may hold her lost pattern.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "CoastalCoat",
+      "RewardCount": 1,
+      "Requires": "wb-atelier4",
+      "Event": "discover-landmark-tidepool"
+    },
+    {
+      "Id": "wb-atelier6",
+      "Title": "Lyra: a garden of our own",
+      "Description": "Bring 6 Pale Blooms from the Citadel.|A new beginning deserves a place to grow.",
+      "Count": 6,
+      "Experience": 200,
+      "Reward": "GardenDress",
+      "RewardCount": 1,
+      "Requires": "wb-atelier5",
+      "ModItem": "PaleBloom"
+    },
+    {
+      "Id": "wb-atelier7",
+      "Title": "Lyra: a life of my own",
+      "Description": "Return to Worldbound Stories for Lyra's next chapter.|Your support belongs in the finished collection.",
+      "Count": 1,
+      "Experience": 500,
+      "Reward": "HeritageRibbon",
+      "RewardCount": 1,
+      "Requires": "wb-atelier6",
+      "Event": "atelier-finish"
+    },
+    {
+      "Id": "wb-hush4",
+      "Title": "The archive: a missing name",
+      "Description": "Speak to the archive echo in Worldbound Stories.|The Bellkeeper was not the end of the silence.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "UnwrittenPage",
+      "RewardCount": 1,
+      "Requires": "hush-3",
+      "Event": "archive-choice"
+    },
+    {
+      "Id": "wb-hush5",
+      "Title": "The archive: what remained",
+      "Description": "Find the Archive Caretaker in the Hush.|Its pages hold fragments of the missing explorers.",
+      "Count": 1,
+      "Experience": 450,
+      "Reward": "ArchiveRelic",
+      "RewardCount": 2,
+      "Requires": "wb-hush4",
+      "Event": "defeat-ArchiveCaretaker"
+    },
+    {
+      "Id": "wb-hush6",
+      "Title": "The archive: write it back",
+      "Description": "Defeat The Unwritten in the Hush after Plantera.|Move out of its marked charge and violet volleys.",
+      "Count": 1,
+      "Experience": 900,
+      "Reward": "StarglassCoat",
+      "RewardCount": 1,
+      "Requires": "wb-hush5",
+      "Event": "defeat-TheUnwritten"
+    },
+    {
+      "Id": "wb-keeper1",
+      "Title": "Mira: somewhere gentle",
+      "Description": "Speak to Mira in Worldbound Stories.|Her memorial garden starts with a small promise.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "MemorialWreath",
+      "RewardCount": 1,
+      "Event": "keeper-choice"
+    },
+    {
+      "Id": "wb-keeper2",
+      "Title": "Mira: a light for the path",
+      "Description": "Bring a Garden Lantern for Mira's remembrance walk.|Craft one from Glass and Wood at a Work Bench.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "GardenSkirt",
+      "RewardCount": 1,
+      "Requires": "wb-keeper1",
+      "ModItem": "GardenLantern"
+    },
+    {
+      "Id": "wb-citadel",
+      "Title": "The last gardener",
+      "Description": "Defeat The Pale Gardener in the Overgrown Citadel.|Craft a Gardener Invitation from Pale Blooms.",
+      "Count": 1,
+      "Experience": 600,
+      "Reward": "GardenerRelic",
+      "RewardCount": 2,
+      "Event": "defeat-PaleGardener"
+    },
+    {
+      "Id": "wb-cinder",
+      "Title": "The promise in the forge",
+      "Description": "Find the Cinderwood landmark after Skeletron.|A Cinder Key opens this expedition.",
+      "Count": 1,
+      "Experience": 400,
+      "Reward": "Cindercoat",
+      "RewardCount": 1,
+      "Event": "discover-landmark-cinderwood"
+    },
+    {
+      "Id": "wb-stars",
+      "Title": "Beyond the shattered stars",
+      "Description": "Find the Starglass landmark after Moon Lord.|Craft a Starglass Chart at the Ancient Manipulator.",
+      "Count": 1,
+      "Experience": 900,
+      "Reward": "StarglassSkirt",
+      "RewardCount": 1,
+      "Event": "discover-landmark-starglass"
+    },
+    {
+      "Id": "wb-ritual",
+      "Title": "Noticeboard: circles of practice",
+      "Description": "Activate a Ritual Focus and wait for its first pulse.|Do not stand still while enemies approach.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "SpellPalette",
+      "RewardCount": 1,
+      "Event": "discover-first-ritual"
+    },
+    {
+      "Id": "wb-reaction",
+      "Title": "Noticeboard: steam in the garden",
+      "Description": "Combine Emberbloom and Tideglass on one enemy.|The first reaction opens more possibilities.",
+      "Count": 1,
+      "Experience": 200,
+      "Reward": "RitualFocus",
+      "RewardCount": 3,
+      "Event": "discover-reaction-0"
+    }
+  ],
+  "Scenes": [
+    {
+      "Id": "atelier-restoration",
+      "Speaker": "Lyra",
+      "Requires": "atelier-3",
+      "Text": "I want the atelier to feel like a home I chose.|You know me as a trans woman, but there are so many|other things I want to make room for. Where do we begin?",
+      "Choices": [
+        {
+          "Text": "Find the pattern by the sea",
+          "Event": "atelier-choice",
+          "Reply": "Then let us follow the tide. I will be here."
+        },
+        {
+          "Text": "Make something that feels like you",
+          "Event": "atelier-choice",
+          "Reply": "That is a good beginning. The tide shrine has my old pattern."
+        }
+      ]
+    },
+    {
+      "Id": "atelier-a-life-of-my-own",
+      "Speaker": "Lyra",
+      "Requires": "wb-atelier6",
+      "Text": "The stitches are imperfect. I think I like them that way.|This is a life of my own, not one someone chose for me.|Thank you for making room for that, {player}.",
+      "Choices": [
+        {
+          "Text": "There is room for your whole story",
+          "Event": "atelier-finish",
+          "Reply": "And for yours. Take this ribbon when the request is ready."
+        }
+      ]
+    },
+    {
+      "Id": "archive-missing-name",
+      "Speaker": "Archive echo",
+      "Requires": "hush-3",
+      "Text": "A line is missing from every ledger.|The caretaker still carries the torn pages.|Beyond it, something writes the travelers out of memory.",
+      "Choices": [
+        {
+          "Text": "We will remember them",
+          "Event": "archive-choice",
+          "Reply": "Find the caretaker. Its lantern moves where the halls go quiet."
+        }
+      ]
+    },
+    {
+      "Id": "keeper-a-gentle-place",
+      "Speaker": "Mira",
+      "Text": "A memorial need not be a warning.|It can be a garden, or a lantern someone keeps alight.|Would you help me make a gentler place?",
+      "Choices": [
+        {
+          "Text": "Let us start with a garden",
+          "Event": "keeper-choice",
+          "Reply": "A wreath first, then a light. Small things can hold a great deal."
+        }
+      ]
+    }
+  ]
+}

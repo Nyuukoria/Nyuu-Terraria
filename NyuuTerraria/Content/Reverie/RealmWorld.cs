@@ -54,7 +54,7 @@ public class RealmWorld : ModSystem
             int x=80+(step*197+realm*Main.maxTilesX/2)%(Main.maxTilesX-460);
             var candidate=new Rectangle(x,48,300,96);
             var margin=candidate; margin.Inflate(12,12);
-            if(Array.Exists(Areas,r=>r.Width>0 && r.Intersects(margin))) continue;
+            if(Array.Exists(Areas,r=>r.Width>0 && r.Intersects(margin)) || Array.Exists(ModContent.GetInstance<global::NyuuTerraria.Content.Frontiers.FrontierWorld>().Areas,r=>r.Width>0 && r.Intersects(margin))) continue;
             bool free=true;
             for(int tx=margin.Left;tx<margin.Right && free;tx++)
             for(int ty=margin.Top;ty<margin.Bottom;ty++)
@@ -100,13 +100,12 @@ public class RealmWorld : ModSystem
         if(realm==0)
         {
             // Crystal orchard is a source of the new pre-Hardmode alloy.
-            for(int cluster=0;cluster<18;cluster++)
+            for(int cluster=0;cluster<9;cluster++)
             {
-                int cx=r.Left+35+cluster*14;
+                int cx=r.Left+35+cluster*28;
                 for(int dx=-2;dx<=2;dx++) for(int dy=1;dy<=4;dy++)
                     if(Math.Abs(dx)+dy<6) Put(cx+dx,floor+dy,ModContent.TileType<MoonprismOreTile>());
-                for(int y=floor-5;y<floor;y++) Put(cx,y,TileID.LivingWood);
-                for(int dx=-3;dx<=3;dx++) Put(cx+dx,floor-6+Math.Abs(dx)/2,TileID.LeafBlock);
+                global::NyuuTerraria.Content.Frontiers.ExpeditionScenery.Tree(cx,floor,12+cluster%3*2,cluster);
             }
         }
         else
@@ -202,3 +201,4 @@ public class CrackedBellPortal : RealmKey
     public override int Realm=>1;
     public override void AddRecipes()=>CreateRecipe().AddIngredient<MoonprismBar>(6).AddIngredient(ItemID.Obsidian,20).AddIngredient(ItemID.Bone,10).AddTile(TileID.Anvils).Register();
 }
+

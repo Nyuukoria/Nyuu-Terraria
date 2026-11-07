@@ -71,7 +71,7 @@ public class ChronicleChecks : ModSystem
             d.Completed.Clear();p.inventory[0]=new Item(ItemID.Wood,10);
             Check(d.Claim(ChronicleContent.Quests[0])&&p.inventory[0].stack==2,"QUEST_MATERIAL_CONSUMPTION_AND_REWARD");
             Check(!d.Claim(ChronicleContent.Quests[0]),"QUEST_REWARD_CANNOT_BE_CLAIMED_TWICE");
-            Check(ChronicleContent.Quests.Length==12&&ChronicleContent.Quests.All(q=>Mod.TryFind<ModItem>(q.Reward,out _)),"ALL_TWELVE_QUEST_REWARDS_RESOLVE");
+            Check(ChronicleContent.Quests.Length>=12&&ChronicleContent.Quests.All(q=>Mod.TryFind<ModItem>(q.Reward,out _)),"ALL_QUEST_REWARDS_RESOLVE");
             var storage=p.GetModPlayer<BackpackStorage>();storage.Initialize();
             storage.Items[0]=new Item(ModContent.ItemType<MoonprismBar>(),13);storage.Items[99]=new Item(ItemID.GoldCoin,2);
             TagCompound bt=new();storage.SaveData(bt);storage.Initialize();storage.LoadData(bt);
@@ -105,7 +105,7 @@ public class ChronicleChecks : ModSystem
                 Check(float.IsFinite(n.position.X)&&float.IsFinite(n.position.Y),"BOSS_TWO_PHASE_PATTERN_"+n.ModNPC.Name);
             }
             var before=world.Areas.ToArray();TagCompound wt=new();world.SaveWorldData(wt);world.ClearWorld();world.LoadWorldData(wt);Check(world.Areas.SequenceEqual(before),"REALM_COORDINATES_ROUNDTRIP");
-            SpellcraftChecks.Run(); WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
+            SpellcraftChecks.Run(); FrontierChecks.Run(); PolishChecks.Run(); WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
         }
         catch(Exception error)
         {
@@ -115,6 +115,8 @@ public class ChronicleChecks : ModSystem
         finally {p.active=false;Main.myPlayer=oldPlayer;}
     }
 }
+
+
 
 
 
