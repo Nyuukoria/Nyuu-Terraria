@@ -57,7 +57,7 @@ The five profession indices are Vanguard (0), Ranger (1), Arcanist (2), Summoner
 
 ## Art and names
 
-Item, NPC, tile, and hairstyle source sprites live beside their classes under `Content/Reverie`. Generated art is fitted to Terraria's 2-pixel grid and uses transparent alpha. Hair uses 40 × 784 sheets with 14 animation rows; hats use a matching `_Alt` sheet. Lyra uses four 32 × 48 frames stacked vertically. Clothing uses the existing composite body and leg rig layouts. Do not resize an animation sheet as if it were a single inventory icon.
+Item, NPC, tile, and hairstyle source sprites live beside their classes under `Content/Reverie`. Sprites use Terraria's 2-pixel grid and transparent backgrounds. Hair uses 40 × 784 sheets with 14 animation rows; hats use a matching `_Alt` sheet. Lyra uses four 32 × 48 frames stacked vertically. Clothing uses the existing composite body and leg rig layouts. Do not resize an animation sheet as if it were a single inventory icon.
 
 Player-visible names and tooltips are in `Localization/en-US_Mods.NyuuTerraria.hjson`. Add localization alongside new content.
 

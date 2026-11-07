@@ -21,7 +21,7 @@
     &nbsp; · &nbsp;
     <a href="#getting-started">Start playing</a>
     &nbsp; · &nbsp;
-    <a href="#ideas-for-future-updates">Roadmap</a>
+    <a href="#roadmap">Roadmap</a>
   </p>
 
   <p>
@@ -46,7 +46,7 @@
 | [Install & multiplayer](#install-and-play)<br>[First steps](#getting-started)<br>[What's new in v0.4.0](#chronicle-expeditions) | [Material locations](#where-to-find-materials)<br>[Cave bosses](#boss-progression)<br>[Expedition encounters](#expedition-bosses-and-minibosses) | [Backpacks](#backpacks)<br>[All crafting recipes](#complete-crafting-guide)<br>[Expedition recipes](#every-expedition-crafting-recipe) |
 | [Quests & professions](#journal-stories-and-professions)<br>[Lyra, hairstyles & outfits](#lyra-pride-hairstyles-and-clothing) | [Amber Grotto](#amber-grotto)<br>[Hollowglass Reach](#hollowglass-reach) | [Trinkets, storage & reforging](#using-the-new-features)<br>[Build & contribute](#building-from-source) |
 
-[Need help?](#quick-fixes) · [Future additions](#ideas-for-future-updates) · [Version history](#version-notes)
+[Need help?](#quick-fixes) · [Roadmap](#roadmap) · [Version history](#version-notes)
 
 ## Install and play
 
@@ -58,7 +58,7 @@
 
 | Your world | How to access the new content |
 | --- | --- |
-| **New world** | Natural ore veins, Amber Grottos, and Hollowglass ruins generate with the world. Explore the Underground and Cavern layers. |
+| **New world** | Natural ore veins, Amber Grottos, and Hollowglass ruins appear when you create a world. Explore the Underground and Cavern layers. |
 | **Existing world** | Use the alternate bar recipes and craft biome blocks to build underground areas. The [Amber Grotto](#amber-grotto) and [Hollowglass Reach](#hollowglass-reach) sections give the block counts and recipes. |
 
 ## Getting started
@@ -81,7 +81,7 @@ This is the first playable chapter of the roadmap: **Lyra**, **12 quests**, **fi
 <details>
 <summary><strong>View the v0.4.0 sprite gallery</strong> — equipment, encounters, wildlife & hairstyles</summary>
 
-![Chronicle expedition sprites](docs/images/chronicle-expeditions-preview.png)
+![Chronicle expedition sprites](docs/images/chronicle-expeditions-preview.png?v=roadmap-040)
 
 </details>
 
@@ -191,7 +191,7 @@ Health below is the normal base value before difficulty/player adjustments. The 
 | ![Bellkeeper](NyuuTerraria/Content/Reverie/Bellkeeper_Head_Boss.png) **The Bellkeeper** | Use **Cracked Bell Sigil** in the Hush, **Hardmode** | 19,000 | Echo Scythe, 12–18 Echo Fragments, 18–30 Moonprism Ore. Stay away from the center of each ring, move through a gap, and save room to dodge its charge. |
 | ![Prism Matriarch](NyuuTerraria/Content/Reverie/PrismMatriarch_Head_Boss.png) **Prism Matriarch** | Use **Prism Cocoon** in the Reverie, **Hardmode** | 24,000 | 12–18 Prism Wing Scales, Pride Moth Charm, and Prism Moth Staff. Alternate between platform levels to avoid rings and aimed five-shot fans. |
 
-**Preparation:** bring healing potions, useful accessories, and a mobility option. The generated areas already have three central platform levels. A piercing staff, Moonprism Bow, or a summon can keep damage going while you dodge. Below half health, the ring patterns and charges become faster.
+**Preparation:** bring healing potions, useful accessories, and a mobility option. The expedition areas already have three central platform levels. A piercing staff, Moonprism Bow, or a summon can keep damage going while you dodge. Below half health, the ring patterns and charges become faster.
 
 **Hush jumpscares:** while exploring the Hush, a brief Lantern Stalker apparition and sound can occur after you have been inside for a short time. There is a cooldown between scares. It does not deal damage or lock movement. Toggle **Hush Jumpscares** in the mod's client settings.
 
@@ -512,7 +512,7 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 <details>
 <summary><strong>Build validation & current testing limits</strong></summary>
 
-**Validation:** compilation, packaged texture-path checks, clean sprite alpha, persistent profession/quest/backpack data, no-container backpack clicks, Equipment-tab visibility, both realm generators and reloads, and the four summon encounters' attack loops were checked. Full rendered client UI, multiplayer playthroughs, and gameplay balance still need in-game verification. [Validation details](docs/validation/0.4.0.md).
+**Validation:** compilation, packaged texture-path checks, clean sprite alpha, persistent profession/quest/backpack data, no-container backpack clicks, Equipment-tab visibility, both realm creation and reloads, and the four summon encounters' attack loops were checked. Full rendered client UI, multiplayer playthroughs, and gameplay balance still need in-game verification. [Validation details](docs/validation/0.4.0.md).
 
 </details>
 
@@ -524,149 +524,159 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 | **A backpack upgrade is missing** | Empty all backpack storage, including overflow slots, and put the preceding backpack in your inventory. Each upgrade also needs its listed material and an anvil. |
 | **V does not open a backpack** | Equip the pack in the dedicated **Backpack** slot. Check the **Open Backpack** keybind under Controls. |
 | **A boss summon cannot be used** | Cloud Idol requires the surface or sky. Glassbound Seal and Resonating Bell require active Hollowglass Reach, with neither Reach boss already present. |
-| **New ores or ruins are missing from an old world** | Use alternate bar recipes and craft biome blocks, or generate a new world. |
+| **New ores or ruins are missing from an old world** | Use alternate bar recipes and craft biome blocks, or create a new world. |
 | **Some Cloudvault slots are hidden** | Hover over the chest inventory and scroll to reach the lower rows. |
 | **A recipe is missing** | Check the exact station and named ingredients. Anvil means Iron or Lead. Deepheart requires a Mythril or Orichalcum Anvil. |
 | **A sprite or held item looks wrong** | Include the item name and a screenshot so the sprite, placement, and animation frame can be checked. |
 
-## Ideas for future updates
+<a id="ideas-for-future-updates"></a>
 
-**Where the adventure goes next.** Open a category to explore its planned features.
+## Roadmap
 
-The roadmap below describes the longer-term designs. **v0.4.0 has started these systems:** Lyra, pride ribbon and moth, appearance presets, eight long hairstyles, a journal with 12 quests, persistent professions, crafted memorials, wildlife, encounters, and two pocket expeditions. See [the playable chapter](#chronicle-expeditions) for current behavior and recipes. Separate-world dimensions, full story locations, deeper skill trees, and the later encounters below remain future work.
+**Where I want to take Nyuu Terraria next.** More places worth exploring, more ways to build a character, and stories that make the world feel alive.
+
+The first chapter is already playable in [v0.4.0](#chronicle-expeditions). The ideas below are for later updates; names, scope, and release order can change as the mod grows.
+
+| Direction | What comes next |
+| --- | --- |
+| **Polish the foundations** | Refine backpack controls, inventory layouts, multiplayer behavior, worn sprites, boss pacing, and progression rewards. |
+| **Build out the adventure** | Expand the Reverie and Hush into separate-world destinations, give Lyra a longer story, and fill the world with discoveries and side quests. |
+| **Grow into the late game** | Add class equipment, deeper skills, biome upgrades, new bosses, and challenges that carry progression beyond Moon Lord. |
 
 ### Trans pride and character expression
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Atelier stories, pride collections & more personal style</strong></summary>
 
-| Planned addition | Idea |
-| --- | --- |
-| **Prism Wardrobe** | Expand the existing three appearance presets with saved outfit combinations and more wardrobe options. |
-| **Trans pride collection** | Expand the existing ribbon, clothing, and moth pet with cyan, pink, and white capes, clips, dyes, banners, and furniture. |
-| **Lyra, the Prism Tailor** | Continue the trans tailor's initial dialogue and journal requests with an authored atelier restoration, new story chapters, clothes, and vanity accessories. |
-| **Character profile** | Optional name and pronoun settings for modded dialogue. Clothing and hairstyle choices remain available to every character. |
+- **Lyra's atelier restoration:** rebuild her workshop through a story quest line, find lost patterns, and unlock embroidered outfits, furniture, and accessories.
+- **More pride cosmetics:** cyan, pink, and white capes, hair ribbons, clips, dyes, banners, lanterns, and matching pet accessories.
+- **A bigger Prism Wardrobe:** named appearance presets, outfit combinations, favorite looks, and better previews before applying a style.
+- **Personal touches:** more character-profile options, dialogue that respects those choices, and vanity versions of favorite combat equipment.
+- **Spell and companion styles:** collectible color themes for weapon trails, lantern light, and pet effects.
 
 </details>
 
 ### New dimensions and scenarios
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Beyond the mirror — strange, beautiful & unsettling places</strong></summary>
 
-| Planned area | Setting and things to do |
+| Place | Ideas to explore |
 | --- | --- |
-| **The Reverie** | A new dimension reached through a restored garden mirror. Explore floating flower islands, moonlit lakes, crystal orchards, and ruined observatories. Find new ores, build with luminous furniture, meet peaceful creatures, and follow the Prism Tailor's story. |
-| **The Hush** | A separate horror scenario reached through a cracked bell portal. Explore an abandoned mining town, an underground archive, and a manor whose corridors change between visits. Follow unreliable lantern signals, investigate missing explorers, and collect clues that reveal the area's history. |
-| **Tidepool Hollows** | An early-game coastal cave biome with fishing treasures, pearl gear, shell furniture, and a reef miniboss. |
-| **Overgrown Citadel** | A Hardmode ruin with tangled gardens, corrupted crystal enemies, relic crafting, and a boss guarding the entrance to the Reverie's deeper areas. |
+| **The Reverie** | A full dimension with floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths between islands and uncover the mirror's history. |
+| **The Hush** | A separate horror chapter spanning an abandoned mining town, a forgotten archive, and a manor with changing corridors. Follow misleading lanterns, solve environmental puzzles, and piece together the fate of missing explorers. |
+| **Tidepool Hollows** | Coastal caves with pearl deposits, hidden fishing pools, shell furniture, flooded shrines, and reef encounters. |
+| **Overgrown Citadel** | A ruined fortress overtaken by roots and crystal growth. Open sealed gardens, recover relics, and reveal new paths as bosses fall. |
+| **Cinderwood Depths** | Ash-covered forests and abandoned forges near the Underworld, with ember creatures, heat-themed equipment, and buried workshops. |
+| **Starglass Expanse** | A late-game destination of shattered celestial ruins, unusual gravity, rare building materials, and the final observatory story. |
 
-The Reverie would focus on discovery, magic, and building. The Hush would have its own horror story, encounters, and rewards.
+For the Hush, I want more atmosphere between encounters: distant footsteps, lights that move out of sight, false rooms, and occasional jumpscares. Scare settings would remain adjustable.
 
 </details>
 
 ### Bosses, minibosses, and enemies
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>New encounters & deeper fights for familiar bosses</strong></summary>
 
-| Encounter | Stage and location | Fight idea and rewards |
-| --- | --- | --- |
-| **Reefback Guardian — miniboss** | Early game, Tidepool Hollows | A shell-armored creature that leaves openings after charging. Drops pearls for early ranged gear and water accessories. |
-| **The Rootbound Knight — boss** | Late pre-Hardmode, Overgrown Citadel outskirts | Switches between shield defense and sweeping vine attacks. Drops materials for melee and summoning sets. |
-| **Lantern Stalker — miniboss** | The Hush | Follows false lantern trails and retreats into dark passages. Drops a lantern that reveals hidden writing. |
-| **The Bellkeeper — boss** | Hardmode, The Hush mining town | Uses directional sound waves, falling chains, and a bell that players can interrupt. Drops echo weapons and sound-themed accessories. |
-| **The Mirrorless — miniboss** | The Hush manor | A reflection that repeats your recent movements with a delay. Rewards a short-range repositioning accessory. |
-| **Prism Matriarch — boss** | Mid-to-late Hardmode, The Reverie | A giant moth with shifting wing patterns and colored projectile paths. Drops flight gear, mage equipment, and decorative wings. |
-| **The Hollow Astronomer — boss** | Late game, ruined observatory | Rotates constellations around the arena and changes gravity during marked phases. Drops celestial weapons and crafting materials. |
-| **The Unwritten — final dimension boss** | Post-Moon Lord, The Hush archive | Changes the arena between remembered locations. Rewards final-tier gear and unlocks the last chapter of the dimension story. |
-| **More regular enemies** | Across the new areas | Reef skitterers, vinebound armor, glass serpents, paper wraiths, lantern mimics, and starfallen constructs, each with its own drops and behavior. |
+- **Expanded existing bosses:** more distinct phases, readable attack cues, difficulty tuning, trophies, masks, and equipment that reflects each boss's theme.
+- **The Hollow Astronomer:** an observatory boss with rotating constellations, marked gravity shifts, and celestial weapon rewards.
+- **The Unwritten:** a late-game Hush encounter that turns remembered locations into changing arenas and closes the archive's story.
+- **The Drowned Choir:** a Tidepool boss whose attacks move with waves, echoes, and currents.
+- **The Pale Gardener:** a Reverie guardian surrounded by shifting flower hazards and fragile crystal blooms.
+- **New minibosses:** an archive caretaker, a reef ambusher, a haunted armor patrol, and a creature hiding inside abandoned mine machinery.
+- **More everyday threats:** reef skitterers, vinebound armor, lantern mimics, ash burrowers, glass serpents, paper spirits, and starfallen constructs.
+- **Boss rematches:** optional stronger variants with new patterns and cosmetic rewards.
 
 </details>
 
 ### Quest journal and NPC stories
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Longer stories, discoveries & quests worth returning for</strong></summary>
 
-- **A proper quest journal** with tracked objectives, map hints, quest chains, and a clear reward preview.
-- **Village noticeboards** for gathering, fishing, crafting, exploration, and boss contracts.
-- **NPC story quests**, including Lyra's atelier restoration, missing explorers in The Hush, and a researcher studying Hollowglass.
-- **Multiplayer quest credit** for players helping with the same objective, with individual reward claims.
-- **Rewards beyond equipment**, such as hairstyles, furniture recipes, pets, housing decorations, and access to new areas.
+- Expand the journal with **tracked objectives, map hints, chapter pages, and clearer reward previews**.
+- Add **village noticeboards** for exploration, gathering, fishing, crafting, and encounter contracts.
+- Build **Lyra's atelier story**, the Hush missing-explorer mystery, and a Hollowglass research quest line.
+- Support **custom dialogue and unique quest packs**, with branching conversations and choices that change later scenes.
+- Improve **party quest tracking** so friends can follow the same story while keeping individual rewards and saved progress.
+- Add **world discoveries** such as letters, journals, hidden shrines, and small stories attached to ruins.
+- Include rewards such as **pets, hairstyles, furniture patterns, housing decorations, and access to new routes**.
 
 </details>
 
 ### Levels, skills, and professions
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Skill trees, active abilities & mastery rewards</strong></summary>
 
-The initial five professions already keep their own XP, levels, and skill investment when you switch. The future system will expand their passive ranks into branching choices, active abilities, and milestone unlocks.
+Every profession will continue to keep its own progress when switching. The next step is to turn the current passive ranks into more interesting build choices.
 
-| Skill branch | Example choices |
+| Profession | Possible future skills |
 | --- | --- |
-| **Vanguard** | Melee timing bonuses, guard skills, and short defensive abilities. |
-| **Ranger** | Bow and thrown-weapon bonuses, ammunition recovery, and precision shots. |
-| **Arcanist** | Mana control, spell effects, and elemental combinations. |
-| **Summoner** | Companion commands, minion specialization, and support effects. |
-| **Explorer** | Mining, fishing, gathering, navigation, and treasure detection. |
+| **Vanguard** | Timed guards, short defensive abilities, melee combos, and shield specialization. |
+| **Ranger** | Precision shots, ammunition recovery, traps, and bow or thrown-weapon paths. |
+| **Arcanist** | Element combinations, spell modifiers, mana-control skills, and charged casts. |
+| **Summoner** | Companion commands, minion roles, support effects, and creature specialization. |
+| **Explorer** | Treasure clues, mining techniques, fishing bonuses, gathering skills, and navigation tools. |
 
-The current journal supports free switching and skill resets. Future stations can add more build options; saved progress for every profession will remain part of the system.
+Other ideas include **mastery cosmetics**, milestone unlocks, saved build presets, and profession-specific crafting patterns. Skill resets and switching should stay easy to use.
 
 </details>
 
 ### Peaceful creatures and pets
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Gardens, companions & a world with quieter moments</strong></summary>
 
-| Creature | Idea |
-| --- | --- |
-| **Dew Fox** | A tiny forest creature that visits gardens and follows dropped berries. |
-| **Glass Deer** | A rare glowing animal in crystal orchards, with a photo or observation quest. |
-| **Mothcat** | A sleepy creature that rests near lanterns and can become a pet. |
-| **Tidepool Turtle** | A coastal critter with shell-color variants and a small aquarium habitat. |
-| **Mooncap Sprites** | Friendly mushroom creatures that gather around suitable player-built gardens. |
-
-Additional plans include feeding interactions, pet beds, idle animations, and a bestiary section for peaceful wildlife.
+- Give **Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites** more idle behavior, feeding interactions, and favorite habitats.
+- Add **Tidepool Turtles**, lantern fireflies, garden birds, tiny crystal snails, and other biome-specific wildlife.
+- Introduce **pet beds, perches, bowls, small habitats, and collectible color variants**.
+- Add more companions through **exploration, friendship quests, and rare discoveries**.
+- Build a **wildlife journal** with observation goals and rewards for discovering peaceful creatures.
+- Let suitable gardens and decorated homes attract different visitors.
 
 </details>
 
 ### Graves and memorials
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Memorial gardens, keepsakes & more grave styles</strong></summary>
 
-- **Grave styles by material and biome**, including copper plaques, obsidian markers, crystal headstones, and flower-covered memorials.
-- **Engravable memorial stones** with a player name, a short message, and decorative symbols.
-- **Pet memorials** for builds and gardens.
-- **A grave-recovery quest option** that marks your last death location and rewards retrieving a keepsake.
-- **Cemetery furniture**, such as fences, candles, wilted flowers, benches, and lanterns.
+- Expand memorials with **biome-specific shapes, more materials, decorative symbols, and flower arrangements**.
+- Add **death-grave variants** that match the area where a character fell.
+- Introduce an optional **keepsake retrieval quest** with a marker for the last death location.
+- Add **pet memorials**, candle stands, cemetery fences, benches, garden bells, and hanging lanterns.
+- Explore a **cemetery keeper NPC** with small stories and restoration requests.
 
 </details>
 
 ### More long feminine hairstyles and clothes
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Longer cuts, intricate braids & coordinated outfits</strong></summary>
 
-The first eight long styles are available in v0.4.0. Future additions will expand the selection with more lengths, bangs, curls, braids, and ribbon arrangements.
+More style ideas include **hime cuts, waterfall braids, fishtail braids, double Dutch braids, long twin ponytails, soft wolf cuts, side ponytails, long locs, extra-long straight hair, and loose buns with trailing strands**.
 
-Each style would include its worn-under-a-hat version and animation frames. Matching clothes could include long skirts, fitted coats, embroidered dresses, boots, stockings, and mix-and-match hair ribbons.
+Each style should have matching movement frames, a version for wearing under hats, and clean color support. Outfit ideas include **embroidered dresses, long skirts, layered coats, stockings, boots, oversized sweaters, floral accessories, and matching hair ribbons**.
+
+I'd also like more themed collections: **atelier casualwear, moonlit formalwear, coastal outfits, cozy winter clothes, and gothic Hush clothing**.
 
 </details>
 
 ### Other progression ideas
 
 <details>
-<summary><strong>Explore the plan</strong></summary>
+<summary><strong>Equipment, building, storage & adventures across every stage</strong></summary>
 
-| Stage | Additional ideas |
+| Stage | Ideas for later |
 | --- | --- |
-| **Early game** | Starter bows, boomerangs, and summon weapons for existing ores; exploration tools; fishing rewards; small NPC requests. |
-| **Middle game** | Corrupted versions of custom biomes, armor with active skills, and a relic forge that combines boss materials into new weapon effects. |
-| **Late game** | A celestial ruin dungeon, boss rematches with new phases, legendary weapon upgrades, and unusual mounts. |
+| **Early game** | More ore-based bows, boomerangs, summons, and tools; hidden starter ruins; fishing rewards; small NPC requests; useful exploration trinkets. |
+| **Middle game** | Class armor with active skills, biome upgrades after major bosses, weapon evolution paths, new crafting stations, and a relic forge that combines boss materials. |
+| **Late game** | Celestial dungeons, multi-phase boss rematches, legendary equipment, unusual mounts, and challenges beyond Moon Lord. |
+| **Building & collecting** | More furniture sets, decorative plants, paintings, music boxes, rare vases, collectible relics, and small structures to restore. |
+| **Everyday improvements** | Storage search, sorting, clearer crafting hints, favorite quest tracking, better equipment previews, and easier loadout management. |
+| **World events** | Traveling caravans, strange weather, garden festivals, haunted nights, and roaming encounter chains. |
 
 </details>
 
