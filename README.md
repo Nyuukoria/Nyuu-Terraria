@@ -139,24 +139,24 @@ Both summons are consumed on use and require the Reach biome. The second summon 
 | Material | Where to look |
 | --- | --- |
 | ![Glass Slate](NyuuTerraria/Content/Hollowglass/GlassSlate.png) **Glass Slate** | Mine dark turquoise stone in Hollowglass Reach, or craft 10 from 10 Stone Blocks + 2 Glass at a Furnace. |
-| **Hollowglass Ore** | Hollowglass Reach veins, enemies, chests, and vases. See the [Reach recipes](#reach-recipes) for its alternate bar recipe. |
-| **Skylight Ore** | Stone in the Underground and upper Cavern layers of new worlds. |
-| **Stormglass Ore** | Cavern stone in new worlds, deeper than the first Skylight veins. |
-| **Frostveil Ore** | Underground snow and ice in new worlds. |
-| **Verdigris Ore** | Moss Slate pockets in Amber Grottos. Mossback Beetles can also drop it, and it can be found in Amber Urns. |
-| **Ember Amber Ore** | Amber Grottos. The amber veins give off a faint glow. Lantern Moths can also drop it. |
-| **Moss Slate** | Mine the green-gray stone around an Amber Grotto, or craft it at a Work Bench. |
-| **Warden Core** | Defeat Nimbus Warden for **9–14 cores**. The staff, armor pieces, and charm all use them. |
-| **Cloud** | Mine the fluffy blocks on Floating Islands. |
-| **Wood, Gel, and Bombs** | Chop trees for Wood and fight Slimes for Gel. Look for Bombs in pots and chests, or buy them from the Demolitionist. |
-| **Copper, Iron, Lead, Silver, Gold, and Platinum Bars** | Mine and smelt the corresponding ores at a Furnace. Recipes that list alternatives accept either named bar. The alternate Verdigris recipe specifically requires **Copper**, and Cloudy Bombs specifically require **Silver**. |
-| **Demonite Bars and Shadow Scales** | Smelt Demonite Ore into bars at a Furnace. Eater of Worlds is a source of Demonite Ore and Shadow Scales. |
-| **Ice Blocks and Snow Blocks** | Mine in the Snow biome. The Frostveil Bar recipe takes **Ice Blocks**, and the Frostveil Sigil takes **Snow Blocks**. |
-| **Glowing Mushrooms, Amber, and Clay** | Look underground for Glowing Mushroom biomes. Mine Amber in the Underground Desert, or process Silt, Slush, or Desert Fossil in an Extractinator. Clay occurs in reddish deposits. [Amber sources](https://terraria.wiki.gg/wiki/Amber) |
-| **Daybloom, Fallen Stars, Lenses, and Glowsticks** | Gather Daybloom from surface grass, pick up Fallen Stars at night, fight Demon Eyes for Lenses, and look for Glowsticks in pots or buy them from the Merchant at night. |
-| **Leather, Emeralds, and Obsidian** | This mod adds a Work Bench recipe for Leather using **8 Gel + 1 Silk**. Find Emeralds underground. Obsidian forms where water meets lava. |
-| **Silk and Chains** | Make Silk from Cobwebs at a Loom. Make Chains from Iron or Lead Bars at an anvil. |
-| **Souls of Light and Night** | In Hardmode, fight enemies in the Cavern layer of the Hallow for Light and the Corruption or Crimson for Night. |
+| ![Hollowglass Ore](NyuuTerraria/Content/Hollowglass/HollowglassOre.png) **Hollowglass Ore** | Hollowglass Reach veins, enemies, chests, and vases. See the [Reach recipes](#reach-recipes) for its alternate bar recipe. |
+| ![Skylight Ore](NyuuTerraria/Content/Skylight/SkylightOre.png) **Skylight Ore** | Stone in the Underground and upper Cavern layers of new worlds. |
+| ![Stormglass Ore](NyuuTerraria/Content/Skylight/StormglassOre.png) **Stormglass Ore** | Cavern stone in new worlds, deeper than the first Skylight veins. |
+| ![Frostveil Ore](NyuuTerraria/Content/Skylight/FrostveilOre.png) **Frostveil Ore** | Underground snow and ice in new worlds. |
+| ![Verdigris Ore](NyuuTerraria/Content/AmberGrotto/VerdigrisOre.png) **Verdigris Ore** | Moss Slate pockets in Amber Grottos. Mossback Beetles can also drop it, and it can be found in Amber Urns. |
+| ![Ember Amber Ore](NyuuTerraria/Content/AmberGrotto/EmberAmberOre.png) **Ember Amber Ore** | Amber Grottos. The amber veins give off a faint glow. Lantern Moths can also drop it. |
+| ![Moss Slate](NyuuTerraria/Content/AmberGrotto/MossSlate.png) **Moss Slate** | Mine the green-gray stone around an Amber Grotto, or craft it at a Work Bench. |
+| ![Warden Core](NyuuTerraria/Content/Skylight/WardenCore.png) **Warden Core** | Defeat Nimbus Warden for **9–14 cores**. The staff, armor pieces, and charm all use them. |
+| ![Cloud](docs/images/materials/Cloud.png)<br>**Cloud** | Mine the fluffy blocks on Floating Islands. |
+| ![Wood](docs/images/materials/Wood.png) ![Gel](docs/images/materials/Gel.png) ![Bomb](docs/images/materials/Bomb.png)<br>**Wood, Gel, and Bombs** | Chop trees for Wood and fight Slimes for Gel. Look for Bombs in pots and chests, or buy them from the Demolitionist. |
+| ![Copper Bar](docs/images/materials/CopperBar.png) ![Iron Bar](docs/images/materials/IronBar.png) ![Lead Bar](docs/images/materials/LeadBar.png) ![Silver Bar](docs/images/materials/SilverBar.png) ![Gold Bar](docs/images/materials/GoldBar.png) ![Platinum Bar](docs/images/materials/PlatinumBar.png)<br>**Copper, Iron, Lead, Silver, Gold, and Platinum Bars** | Mine and smelt the corresponding ores at a Furnace. Recipes that list alternatives accept either named bar. The alternate Verdigris recipe specifically requires **Copper**, and Cloudy Bombs specifically require **Silver**. |
+| ![Demonite Bar](docs/images/materials/DemoniteBar.png) ![Shadow Scale](docs/images/materials/ShadowScale.png)<br>**Demonite Bars and Shadow Scales** | Smelt Demonite Ore into bars at a Furnace. Eater of Worlds is a source of Demonite Ore and Shadow Scales. |
+| ![Ice Block](docs/images/materials/IceBlock.png) ![Snow Block](docs/images/materials/SnowBlock.png)<br>**Ice Blocks and Snow Blocks** | Mine in the Snow biome. The Frostveil Bar recipe takes **Ice Blocks**, and the Frostveil Sigil takes **Snow Blocks**. |
+| ![Glowing Mushroom](docs/images/materials/GlowingMushroom.png) ![Amber](docs/images/materials/Amber.png) ![Clay Block](docs/images/materials/ClayBlock.png)<br>**Glowing Mushrooms, Amber, and Clay** | Look underground for Glowing Mushroom biomes. Mine Amber in the Underground Desert, or process Silt, Slush, or Desert Fossil in an Extractinator. Clay occurs in reddish deposits. [Amber sources](https://terraria.wiki.gg/wiki/Amber) |
+| ![Daybloom](docs/images/materials/Daybloom.png) ![Fallen Star](docs/images/materials/FallenStar.png) ![Lens](docs/images/materials/Lens.png) ![Glowstick](docs/images/materials/Glowstick.png)<br>**Daybloom, Fallen Stars, Lenses, and Glowsticks** | Gather Daybloom from surface grass, pick up Fallen Stars at night, fight Demon Eyes for Lenses, and look for Glowsticks in pots or buy them from the Merchant at night. |
+| ![Leather](docs/images/materials/Leather.png) ![Emerald](docs/images/materials/Emerald.png) ![Obsidian](docs/images/materials/Obsidian.png)<br>**Leather, Emeralds, and Obsidian** | This mod adds a Work Bench recipe for Leather using **8 Gel + 1 Silk**. Find Emeralds underground. Obsidian forms where water meets lava. |
+| ![Silk](docs/images/materials/Silk.png) ![Chain](docs/images/materials/Chain.png)<br>**Silk and Chains** | Make Silk from Cobwebs at a Loom. Make Chains from Iron or Lead Bars at an anvil. |
+| ![Soulof Light](docs/images/materials/SoulofLight.png) ![Soulof Night](docs/images/materials/SoulofNight.png)<br>**Souls of Light and Night** | In Hardmode, fight enemies in the Cavern layer of the Hallow for Light and the Corruption or Crimson for Night. |
 
 ## Amber Grotto
 
