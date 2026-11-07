@@ -301,13 +301,98 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 
 ## Ideas for future updates
 
-These are possible future additions to build on the current progression.
+The following features are planned concepts for future updates. Names, recipes, and release order may change as the designs are tested.
 
-| Stage | Ideas |
+### Trans pride and character expression
+
+| Planned addition | Idea |
 | --- | --- |
-| **Early game** | **Tidepool caves** with fishing loot and a reef miniboss; a **village noticeboard** with exploration rewards; **starter bows, boomerangs, and summoning gear** using the existing ores. |
-| **Middle game / Hardmode** | **Corrupted versions of the custom biomes** with new enemies and ore upgrades; **class armor sets** with active skills; a **relic forge** that combines boss materials into new weapon effects. |
-| **Late game** | A **celestial ruin dungeon** after Moon Lord; a **three-boss rematch gauntlet** with new phases and rewards; **legendary weapon upgrades and mounts** built from the final bosses. |
+| **Prism Wardrobe** | A furniture station for saving outfits, hairstyles, hair colors, and character appearance presets, then switching between them. |
+| **Trans pride collection** | Cyan, pink, and white capes, ribbons, hair clips, dyes, banners, furniture, and a little pride moth pet. |
+| **Lyra, the Prism Tailor** | A trans woman NPC with her own story, dialogue, and crafting quests. Her quest line restores a ruined atelier and unlocks embroidered clothes, long hairstyles, and vanity accessories. |
+| **Character profile** | Optional name and pronoun settings for modded dialogue. Clothing and hairstyle choices remain available to every character. |
+
+### New dimensions and scenarios
+
+| Planned area | Setting and things to do |
+| --- | --- |
+| **The Reverie** | A new dimension reached through a restored garden mirror. Explore floating flower islands, moonlit lakes, crystal orchards, and ruined observatories. Find new ores, build with luminous furniture, meet peaceful creatures, and follow the Prism Tailor's story. |
+| **The Hush** | A separate horror scenario reached through a cracked bell portal. Explore an abandoned mining town, an underground archive, and a manor whose corridors change between visits. Follow unreliable lantern signals, investigate missing explorers, and collect clues that reveal the area's history. |
+| **Tidepool Hollows** | An early-game coastal cave biome with fishing treasures, pearl gear, shell furniture, and a reef miniboss. |
+| **Overgrown Citadel** | A Hardmode ruin with tangled gardens, corrupted crystal enemies, relic crafting, and a boss guarding the entrance to the Reverie's deeper areas. |
+
+The Reverie would focus on discovery, magic, and building. The Hush would have its own horror story, encounters, and rewards.
+
+### Bosses, minibosses, and enemies
+
+| Encounter | Stage and location | Fight idea and rewards |
+| --- | --- | --- |
+| **Reefback Guardian — miniboss** | Early game, Tidepool Hollows | A shell-armored creature that leaves openings after charging. Drops pearls for early ranged gear and water accessories. |
+| **The Rootbound Knight — boss** | Late pre-Hardmode, Overgrown Citadel outskirts | Switches between shield defense and sweeping vine attacks. Drops materials for melee and summoning sets. |
+| **Lantern Stalker — miniboss** | The Hush | Follows false lantern trails and retreats into dark passages. Drops a lantern that reveals hidden writing. |
+| **The Bellkeeper — boss** | Hardmode, The Hush mining town | Uses directional sound waves, falling chains, and a bell that players can interrupt. Drops echo weapons and sound-themed accessories. |
+| **The Mirrorless — miniboss** | The Hush manor | A reflection that repeats your recent movements with a delay. Rewards a short-range repositioning accessory. |
+| **Prism Matriarch — boss** | Mid-to-late Hardmode, The Reverie | A giant moth with shifting wing patterns and colored projectile paths. Drops flight gear, mage equipment, and decorative wings. |
+| **The Hollow Astronomer — boss** | Late game, ruined observatory | Rotates constellations around the arena and changes gravity during marked phases. Drops celestial weapons and crafting materials. |
+| **The Unwritten — final dimension boss** | Post-Moon Lord, The Hush archive | Changes the arena between remembered locations. Rewards final-tier gear and unlocks the last chapter of the dimension story. |
+| **More regular enemies** | Across the new areas | Reef skitterers, vinebound armor, glass serpents, paper wraiths, lantern mimics, and starfallen constructs, each with its own drops and behavior. |
+
+### Quest journal and NPC stories
+
+- **A proper quest journal** with tracked objectives, map hints, quest chains, and a clear reward preview.
+- **Village noticeboards** for gathering, fishing, crafting, exploration, and boss contracts.
+- **NPC story quests**, including Lyra's atelier restoration, missing explorers in The Hush, and a researcher studying Hollowglass.
+- **Multiplayer quest credit** for players helping with the same objective, with individual reward claims.
+- **Rewards beyond equipment**, such as hairstyles, furniture recipes, pets, housing decorations, and access to new areas.
+
+### Levels, skills, and professions
+
+The proposed leveling system would award experience for quests, exploration milestones, and combat. Early progression would introduce a few useful choices, with deeper branches opening as bosses are defeated.
+
+| Skill branch | Example choices |
+| --- | --- |
+| **Vanguard** | Melee timing bonuses, guard skills, and short defensive abilities. |
+| **Ranger** | Bow and thrown-weapon bonuses, ammunition recovery, and precision shots. |
+| **Arcanist** | Mana control, spell effects, and elemental combinations. |
+| **Summoner** | Companion commands, minion specialization, and support effects. |
+| **Explorer** | Mining, fishing, gathering, navigation, and treasure detection. |
+
+A craftable respec station would let players change their build. Quest progress, skills, and profession levels would be saved per character.
+
+### Peaceful creatures and pets
+
+| Creature | Idea |
+| --- | --- |
+| **Dew Fox** | A tiny forest creature that visits gardens and follows dropped berries. |
+| **Glass Deer** | A rare glowing animal in crystal orchards, with a photo or observation quest. |
+| **Mothcat** | A sleepy creature that rests near lanterns and can become a pet. |
+| **Tidepool Turtle** | A coastal critter with shell-color variants and a small aquarium habitat. |
+| **Mooncap Sprites** | Friendly mushroom creatures that gather around suitable player-built gardens. |
+
+Additional plans include feeding interactions, pet beds, idle animations, and a bestiary section for peaceful wildlife.
+
+### Graves and memorials
+
+- **Grave styles by material and biome**, including copper plaques, obsidian markers, crystal headstones, and flower-covered memorials.
+- **Engravable memorial stones** with a player name, a short message, and decorative symbols.
+- **Pet memorials** for builds and gardens.
+- **A grave-recovery quest option** that marks your last death location and rewards retrieving a keepsake.
+- **Cemetery furniture**, such as fences, candles, wilted flowers, benches, and lanterns.
+
+### More long feminine hairstyles and clothes
+
+Planned hairstyles include **waist-length waves, long straight hair with curtain bangs, a high ponytail with trailing strands, a thick side braid, twin braids, long curls, a layered side-swept cut, and a half-up ribbon style**.
+
+Each style would include its worn-under-a-hat version and animation frames. Matching clothes could include long skirts, fitted coats, embroidered dresses, boots, stockings, and mix-and-match hair ribbons.
+
+### Other progression ideas
+
+| Stage | Additional ideas |
+| --- | --- |
+| **Early game** | Starter bows, boomerangs, and summon weapons for existing ores; exploration tools; fishing rewards; small NPC requests. |
+| **Middle game** | Corrupted versions of custom biomes, armor with active skills, and a relic forge that combines boss materials into new weapon effects. |
+| **Late game** | A celestial ruin dungeon, boss rematches with new phases, legendary weapon upgrades, and unusual mounts. |
+
 
 ## Version notes
 
