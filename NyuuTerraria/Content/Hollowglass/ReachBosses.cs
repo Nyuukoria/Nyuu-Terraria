@@ -117,7 +117,7 @@ public abstract class ReachBoss : ModNPC
 [AutoloadBossHead]
 public class PrismSentinel : ReachBoss
 {
-    protected override int Health => 3600;
+    protected override int Health => 7200;
     protected override int Damage => 28;
     protected override int Reward => ModContent.ItemType<PrismHeart>();
 
@@ -158,7 +158,7 @@ public class PrismSentinel : ReachBoss
 [AutoloadBossHead]
 public class MourningBell : ReachBoss
 {
-    protected override int Health => 5200;
+    protected override int Health => 10400;
     protected override int Damage => 33;
     protected override int Reward => ModContent.ItemType<ResonantClapper>();
 

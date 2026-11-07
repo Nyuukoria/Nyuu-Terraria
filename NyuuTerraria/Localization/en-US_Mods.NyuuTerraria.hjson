@@ -1,84 +1,104 @@
 Items: {
-    CopperBackpack: {
-        DisplayName: Copper Backpack
-        Tooltip: Adds 20 backpack slots. Equip in the Backpack slot and press V.
-    }
-    IronBackpack: {
-        DisplayName: Iron Backpack
-        Tooltip: Adds 30 backpack slots. Equip in the Backpack slot and press V.
-    }
-    GoldBackpack: {
-        DisplayName: Gold Backpack
-        Tooltip: Adds 40 backpack slots. Equip in the Backpack slot and press V.
-    }
-    EmeraldBackpack: {
-        DisplayName: Emerald Backpack
-        Tooltip: Adds 60 backpack slots. Equip in the Backpack slot and press V.
-    }
-    ObsidianBackpack: {
-        DisplayName: Obsidian Backpack
-        Tooltip: Adds 80 backpack slots. Equip in the Backpack slot and press V.
-    }
-    DemoniteBackpack: {
-        DisplayName: Demonite Backpack
-        Tooltip: Adds 100 backpack slots. Equip in the Backpack slot and press V.
-    }
-    GlassSlate: {
-        DisplayName: Glass Slate
-        Tooltip: Place 100 nearby blocks underground to create Hollowglass Reach
-    }
-    HollowglassOre: {
-        DisplayName: Hollowglass Ore
-        Tooltip: Mine in Hollowglass Reach or find in its ruin chests
-    }
-    HollowglassBar: {
-        DisplayName: Hollowglass Bar
-        Tooltip: An alloy that catches echoes of light
-    }
-    GlassVase: {
-        DisplayName: Glass Vase
-        Tooltip: Break for potions, ore, or coins
-    }
-    ReachLantern: {
-        DisplayName: Reach Lantern
-        Tooltip: A placeable lantern with turquoise light
-    }
-    ReachChest: {
-        DisplayName: Reach Chest
-        Tooltip: A 40-slot storage chest. Natural ruin chests contain supplies and a Glassbound Seal.
-    }
-    GlassboundSeal: {
-        DisplayName: Glassbound Seal
-        Tooltip: Summons Prism Sentinel in Hollowglass Reach
-    }
-    ResonatingBell: {
-        DisplayName: Resonating Bell
-        Tooltip: Summons Mourning Bell in Hollowglass Reach
-    }
-    PrismHeart: {
-        DisplayName: Prism Heart
-        Tooltip: Dropped by Prism Sentinel
-    }
-    ResonantClapper: {
-        DisplayName: Resonant Clapper
-        Tooltip: Dropped by Mourning Bell
-    }
-    GlassedgeBlade: {
-        DisplayName: Glassedge Blade
-        Tooltip: Launches a piercing glass blade
-    }
-    HollowchimeStaff: {
-        DisplayName: Hollowchime Staff
-        Tooltip: Fires a gently homing chime that pierces two enemies
-    }
-    ResonanceCharm: {
-        DisplayName: Resonance Charm
-        Tooltip: Grants 2 defense, 20 maximum mana, and 4% magic critical strike chance
-    }
-    PocketChime: {
-        DisplayName: Pocket Chime
-        Tooltip: Summons a Little Glass Bell companion
-    }
+	CopperBackpack: {
+		DisplayName: Copper Backpack
+		Tooltip: Adds 20 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	IronBackpack: {
+		DisplayName: Iron Backpack
+		Tooltip: Adds 30 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	GoldBackpack: {
+		DisplayName: Gold Backpack
+		Tooltip: Adds 40 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	EmeraldBackpack: {
+		DisplayName: Emerald Backpack
+		Tooltip: Adds 60 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	ObsidianBackpack: {
+		DisplayName: Obsidian Backpack
+		Tooltip: Adds 80 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	DemoniteBackpack: {
+		DisplayName: Demonite Backpack
+		Tooltip: Adds 100 backpack slots. Equip in the Backpack slot and press V.
+	}
+
+	GlassSlate: {
+		DisplayName: Glass Slate
+		Tooltip: Place 100 nearby blocks underground to create Hollowglass Reach
+	}
+
+	HollowglassOre: {
+		DisplayName: Hollowglass Ore
+		Tooltip: Mine in Hollowglass Reach or find in its ruin chests
+	}
+
+	HollowglassBar: {
+		DisplayName: Hollowglass Bar
+		Tooltip: An alloy that catches echoes of light
+	}
+
+	GlassVase: {
+		DisplayName: Glass Vase
+		Tooltip: Break for potions, ore, or coins
+	}
+
+	ReachLantern: {
+		DisplayName: Reach Lantern
+		Tooltip: A placeable lantern with turquoise light
+	}
+
+	ReachChest: {
+		DisplayName: Reach Chest
+		Tooltip: A 40-slot storage chest. Natural ruin chests contain supplies and a Glassbound Seal.
+	}
+
+	GlassboundSeal: {
+		DisplayName: Glassbound Seal
+		Tooltip: Summons Prism Sentinel in Hollowglass Reach
+	}
+
+	ResonatingBell: {
+		DisplayName: Resonating Bell
+		Tooltip: Summons Mourning Bell in Hollowglass Reach
+	}
+
+	PrismHeart: {
+		DisplayName: Prism Heart
+		Tooltip: Dropped by Prism Sentinel
+	}
+
+	ResonantClapper: {
+		DisplayName: Resonant Clapper
+		Tooltip: Dropped by Mourning Bell
+	}
+
+	GlassedgeBlade: {
+		DisplayName: Glassedge Blade
+		Tooltip: Launches a piercing glass blade
+	}
+
+	HollowchimeStaff: {
+		DisplayName: Hollowchime Staff
+		Tooltip: Fires a gently homing chime that pierces two enemies
+	}
+
+	ResonanceCharm: {
+		DisplayName: Resonance Charm
+		Tooltip: Grants 2 defense, 20 maximum mana, and 4% magic critical strike chance
+	}
+
+	PocketChime: {
+		DisplayName: Pocket Chime
+		Tooltip: Summons a Little Glass Bell companion
+	}
+
 	MossSlate: {
 		DisplayName: Moss Slate
 		Tooltip: The mossy rock found in Amber Grottos
@@ -324,12 +344,20 @@ Projectiles: {
 	AmberflareBolt.DisplayName: Amberflare Bolt
 	GlowcapFirefly.DisplayName: Glowcap Firefly
 	AmberWisp.DisplayName: Amber Wisp
+	ReachShard.DisplayName: Reach Shard
+	GlassedgeBolt.DisplayName: Glassedge Bolt
+	HollowchimeBolt.DisplayName: Hollowchime Bolt
+	LittleGlassBell.DisplayName: Little Glass Bell
 }
 
 NPCs: {
 	NimbusWarden.DisplayName: Nimbus Warden
 	MossbackBeetle.DisplayName: Mossback Beetle
 	LanternMoth.DisplayName: Lantern Moth
+	PrismSentinel.DisplayName: Prism Sentinel
+	MourningBell.DisplayName: Mourning Bell
+	GlassCrawler.DisplayName: Glass Crawler
+	GlasswingMoth.DisplayName: Glasswing Moth
 }
 
 Tiles: {
@@ -342,6 +370,11 @@ Tiles: {
 	AmberUrnTile.MapEntry: Amber Urn
 	VerdigrisOreTile.MapEntry: Verdigris Ore
 	EmberAmberOreTile.MapEntry: Ember Amber Ore
+	GlassSlateTile.MapEntry: Glass Slate
+	HollowglassOreTile.MapEntry: Hollowglass Ore
+	GlassVaseTile.MapEntry: Glass Vase
+	ReachChestTile.MapEntry: Reach Chest
+	ReachLanternTile.MapEntry: Reach Lantern
 }
 
 Biomes: {
@@ -349,11 +382,18 @@ Biomes: {
 		DisplayName: Amber Grotto
 		TownNPCDialogueName: the Amber Grotto Biome
 	}
+
+	HollowglassReachBiome: {
+		DisplayName: Hollowglass Reach
+		TownNPCDialogueName: the Hollowglass Reach Biome
+	}
 }
 
 Bestiary: {
 	MossbackBeetle: The thick moss on its shell hides flecks of Verdigris.
 	LanternMoth: Its warm eyes look like tiny lanterns from across the cave.
+	GlassCrawler: Glass plates shield this crawler as it searches the Reach.
+	GlasswingMoth: Its wings catch the light of forgotten rune lanterns.
 }
 
 Buffs: {
@@ -366,26 +406,69 @@ Buffs: {
 		DisplayName: Amber Wisp
 		Description: A seed of warm amber lights the way
 	}
+
+	LittleGlassBellBuff: {
+		DisplayName: Little Glass Bell
+		Description: A little bell follows you through the dark
+	}
 }
 
 Keybinds.Backpack.DisplayName: Open Backpack
-Biomes.HollowglassReachBiome.DisplayName: Hollowglass Reach
-Tiles.GlassSlateTile.MapEntry: Glass Slate
-Tiles.HollowglassOreTile.MapEntry: Hollowglass Ore
-Tiles.GlassVaseTile.MapEntry: Glass Vase
-Tiles.ReachChestTile.MapEntry: Reach Chest
-Tiles.ReachLanternTile.MapEntry: Reach Lantern
-NPCs.PrismSentinel.DisplayName: Prism Sentinel
-NPCs.MourningBell.DisplayName: Mourning Bell
-NPCs.GlassCrawler.DisplayName: Glass Crawler
-NPCs.GlasswingMoth.DisplayName: Glasswing Moth
-Bestiary.GlassCrawler: Glass plates shield this crawler as it searches the Reach.
-Bestiary.GlasswingMoth: Its wings catch the light of forgotten rune lanterns.
-Projectiles.ReachShard.DisplayName: Reach Shard
-Projectiles.GlassedgeBolt.DisplayName: Glassedge Bolt
-Projectiles.HollowchimeBolt.DisplayName: Hollowchime Bolt
-Projectiles.LittleGlassBell.DisplayName: Little Glass Bell
-Buffs.LittleGlassBellBuff.DisplayName: Little Glass Bell
-Buffs.LittleGlassBellBuff.Description: A little bell follows you through the dark
-
 Conditions.BackpackEmpty: Backpack storage must be empty
+
+
+Keybinds.QuestJournal.DisplayName: "Open Nyuu Chronicle"
+Items.ChronicleJournal.Tooltip: "Open the quest journal, professions and appearance presets with J"
+Items.GardenMirror.Tooltip: "Enter the Reverie pocket realm, or return home from either realm\nCannot be used during a boss fight"
+Items.CrackedBellPortal.Tooltip: "Enter the Hush pocket realm, or return home from either realm\nThe Hush contains occasional jumpscares, configurable in mod settings"
+Items.PrismWardrobe.Tooltip: "Right-click to save or restore three appearance presets\nPresets remember hair, colors and body appearance"
+Items.PrideRibbon.Tooltip: "A cyan, pink and white pride ribbon\nLeaves a gentle trail of pride-colored sparkles when visible"
+Items.MoonprismOre.Tooltip: "Mine crystal clusters beneath the Reverie orchard floor\nThree ore make one Moonprism Bar at a Furnace"
+Items.MoonprismBar.Tooltip: "An iridescent alloy for early expedition equipment"
+Items.EchoFragment.Tooltip: "Found in the Hush archive chest and dropped by its hostile inhabitants"
+Items.PrismWingScale.Tooltip: "Dropped by the Rootbound Knight and Prism Matriarch"
+Items.PrismMothStaff.Tooltip: "Fires piercing moth-light with a cyan and pink trail"
+Items.MoonprismBow.Tooltip: "Turns arrows into piercing moonprism bolts"
+Items.CoralBoomerang.Tooltip: "A returning crescent of polished coral"
+Items.MooncapScepter.Tooltip: "Summons a friendly Mooncap to attack nearby enemies"
+Items.EchoScythe.Tooltip: "Releases a spinning spectral blade"
+Items.ArchiveLantern.Tooltip: "Grants night vision and a cool light around you"
+Items.PrismLongcoat.Tooltip: "Embroidered atelier clothing\nEquip in the body vanity slot"
+Items.PrismSkirt.Tooltip: "A long plum skirt with a cyan and pink hem\nEquip in the leg vanity slot"
+Items.PrideMothCharm.Tooltip: "Summons a glowing pride moth companion"
+Items.DewBerryCharm.Tooltip: "Summons a gentle Dew Fox companion"
+Items.ReefShell.Tooltip: "Summons the Reefback Guardian in the Reverie"
+Items.RootboundSeal.Tooltip: "Summons the Rootbound Knight in the Reverie"
+Items.CrackedBellSigil.Tooltip: "Summons the Bellkeeper in the Hush\nRequires Hardmode"
+Items.PrismCocoon.Tooltip: "Summons the Prism Matriarch in the Reverie\nRequires Hardmode"
+Items.PrismMemorial.Tooltip: "An engravable crystal memorial\nRight-click to read or edit its message"
+Items.CopperMemorial.Tooltip: "An engravable memorial with a copper plaque"
+Items.ObsidianMemorial.Tooltip: "An engravable obsidian memorial with flowers"
+Items.ReverieVase.Tooltip: "A decorative crystal vase for gardens and homes"
+NPCs.Lyra.DisplayName: "Prism Tailor"
+NPCs.RootboundKnight.DisplayName: "Rootbound Knight"
+NPCs.Bellkeeper.DisplayName: "The Bellkeeper"
+NPCs.PrismMatriarch.DisplayName: "Prism Matriarch"
+NPCs.ReefbackGuardian.DisplayName: "Reefback Guardian"
+NPCs.LanternStalker.DisplayName: "Lantern Stalker"
+NPCs.TheMirrorless.DisplayName: "The Mirrorless"
+NPCs.GlassSerpent.DisplayName: "Glass Serpent"
+NPCs.PaperWraith.DisplayName: "Paper Wraith"
+NPCs.DewFox.DisplayName: "Dew Fox"
+NPCs.GlassDeer.DisplayName: "Glass Deer"
+NPCs.Mothcat.DisplayName: "Mothcat"
+NPCs.MooncapSprite.DisplayName: "Mooncap Sprite"
+Biomes.ReverieBiome.DisplayName: "The Reverie"
+Biomes.HushBiome.DisplayName: "The Hush"
+Tiles.PrismWardrobeTile.MapEntry: "Prism Wardrobe"
+Tiles.MoonprismOreTile.MapEntry: "Moonprism Ore"
+Tiles.PrismMemorialTile.MapEntry: "Prism Memorial"
+Tiles.CopperMemorialTile.MapEntry: "Copper Memorial"
+Tiles.ObsidianMemorialTile.MapEntry: "Obsidian Memorial"
+Tiles.ReverieVaseTile.MapEntry: "Reverie Vase"
+Buffs.DewFoxCompanion.DisplayName: "Dew Fox"
+Buffs.DewFoxCompanion.Description: "A gentle fox follows you"
+Buffs.PrideMothCompanion.DisplayName: "Pride Moth"
+Buffs.PrideMothCompanion.Description: "A moth shines in cyan, pink and white"
+Buffs.MooncapBond.DisplayName: "Mooncap Guardian"
+Buffs.MooncapBond.Description: "A small mushroom fights by your side"

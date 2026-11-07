@@ -86,6 +86,10 @@ public class DemoniteBackpack : BackpackItem
 
 public class BackpackSlot : ModAccessorySlot
 {
+    // Preserve the existing saved slot while rendering it in the Equipment tab.
+    public override bool IsHidden() => Main.EquipPage != 2;
+    public override Microsoft.Xna.Framework.Vector2? CustomLocation =>
+        new Microsoft.Xna.Framework.Vector2(Main.screenWidth - 92, AccessorySlotLoader.DrawVerticalAlignment + 5 * 47);
     public override string FunctionalTexture => "NyuuTerraria/Content/Backpacks/BackpackSlot";
     public override bool HasEquipmentLoadoutSupport => false;
     public override bool DrawVanitySlot => false;

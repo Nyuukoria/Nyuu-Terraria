@@ -1,8 +1,8 @@
 # Nyuu Terraria
 
-**Explore forgotten caverns, fight three bosses, and build your way from early-game tools to enchanted gear.**
+**Explore forgotten caverns and portal expeditions, meet Lyra, build your character, and challenge new bosses.**
 
-Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three bosses**, pets, armor, weapons, extra trinket slots, and backpacks with up to **100 extra inventory slots**.
+Nyuu Terraria adds **seven ores**, **two underground biomes**, **two portal pocket expeditions**, **six bosses**, **three minibosses**, quests, five professions, pets, pride customization, armor, weapons, long hairstyles, extra trinket slots, and backpacks with up to **100 extra inventory slots**.
 
 <p align="center">
   <img src="NyuuTerraria/Content/Backpacks/DemoniteBackpack.png" alt="Demonite Backpack" height="48">
@@ -14,15 +14,16 @@ Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three boss
   <img src="NyuuTerraria/Content/Hollowglass/MourningBell.png" alt="Mourning Bell" height="88">
 </p>
 
-**Current version — v0.3.1** · **Requires tModLoader 1.4.5-dev**
+**Current version — v0.4.0** · **Requires tModLoader 1.4.5-dev**
 
-[**Download the mod**](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Browse the source](NyuuTerraria/) · [Version notes](#version-notes)
+[**Download the mod**](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Browse the source](NyuuTerraria/) · [Download source ZIP](downloads/NyuuTerraria-Source.zip) · [Version notes](#version-notes)
 
 ## Find what you need
 
 | I want to… | Go here |
 | --- | --- |
 | Install the mod or play with friends | [Install and play](#install-and-play) |
+| Try the new quests, professions, portals, or Lyra | [Chronicle expeditions](#chronicle-expeditions) |
 | Know what to make first | [Getting started](#getting-started) |
 | Equip a backpack and use V | [Backpacks](#backpacks) |
 | Find ores and recipe ingredients | [Where to find materials](#where-to-find-materials) |
@@ -56,6 +57,138 @@ Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three boss
 
 Follow the ingredient and crafting-station tables below for exact recipes.
 
+
+<a id="chronicle-expeditions"></a>
+
+## v0.4.0 — Chronicle expeditions
+
+This is the first playable chapter of the roadmap: **Lyra**, **12 quests**, **five switchable professions**, **eight long hairstyles**, new equipment, **three bosses and three minibosses**, and two portal expeditions.
+
+![Chronicle expedition sprites](docs/images/chronicle-expeditions-preview.png)
+
+### Fixes included
+
+- The backpack remains in its existing saved slot, but is now displayed under **Equipment**, alongside pets and mounts. Click the Equipment tab in the inventory, then use the **Backpack** slot below those slots.
+- Backpack clicks no longer use a vanilla bank-container action. This fixes the missing-container error that interrupted the panel and made slots flicker.
+- Accessory/trinket wheel scrolling follows the expected direction. Custom bar sprites have a larger, consistently cropped inventory footprint.
+- Backpack and Chronicle panels use Terraria's scaled UI coordinates once, keeping drawing and clicks aligned when you change UI scale.
+
+### Your first expedition
+
+1. Press **J** to open **Nyuu Chronicle**. A crafted Chronicle Journal also opens it.
+2. Make a **Garden Mirror** at a Work Bench. Use it to enter **the Reverie**.
+3. Mine **Moonprism Ore** under the orchard floor and smelt it at a Furnace. Look for the expedition chest near the landing area.
+4. Follow Lyra's atelier requests in the journal, craft equipment, and challenge the **Reefback Guardian** or **Rootbound Knight**.
+5. Craft a **Cracked Bell Portal** to enter **the Hush**. Bring healing items and a lantern. Its enemies provide Echo Fragments.
+6. In Hardmode, challenge **the Bellkeeper**, **the Mirrorless**, and **Prism Matriarch**.
+
+**Portal behavior:** use either key again while inside either expedition to return. Keys are reusable and cannot be used during a boss fight. In this release, these are **persistent pocket areas in unused sky space within your current world**, rather than separate world files. They have biome detection, enemies, resources, structures, loot, and combat platforms. The full separate-world dimensions, changing manor, mining town, and observatory remain future work.
+
+Both areas are created only on their first visit and saved with the world. Their chests do not refill. Existing terrain and builds are checked before an area is placed; if no empty space fits, travel is refused without replacing terrain. Existing worlds can use this feature.
+
+### Journal, stories, and professions
+
+**J → Quests** shows objectives, prerequisite quests, progress, and rewards. Press **Claim** when ready. Gathering requests consume the listed inventory materials; exploration and combat requests consume nothing. Each reward can be claimed once per character. Combat credit goes to nearby players who helped damage that enemy; peaceful wildlife and statue enemies do not award combat XP.
+
+The first 12 requests cover Lyra's atelier, the crystal orchard, the Rootbound Knight, entering the Hush, the Lantern Stalker, Bellkeeper, Matriarch, an enemy-clearance contract, and the Reefback challenge. Your completed requests and counters persist between worlds.
+
+**J → Professions:** switch freely between the five professions. **Every profession saves its own XP, level, and invested skill points.** Switching does not erase any progress. Only your active profession grants its bonuses. Each level provides one point; use **+ Skill** to invest it or **Reset active skills** to redistribute that branch for free.
+
+| Profession | Initial skill effect per invested point |
+| --- | --- |
+| Vanguard | +0.5% melee damage; +1 defense for every five points |
+| Ranger | +0.5% ranged damage |
+| Arcanist | +0.5% magic damage and +1 mana regeneration bonus |
+| Summoner | +0.5% summon damage |
+| Explorer | +0.4% movement speed and +0.3% mining speed, with the mining bonus capped at 15% |
+
+Levels currently cap at **50 per profession**. Total XP required for level L is **50 × L²**. Quests, hostile enemy defeats, and first expedition visits award XP to the selected profession. Moving through the expeditions as Explorer also awards a small amount of exploration XP. These are the first passive skills; active abilities and branching trees remain planned.
+
+Your future dialogue and unique quests can be added through [the content authoring guide](docs/CONTENT-AUTHORING.md). Dialogue and quest definitions are kept separately from the journal code.
+
+### Lyra, pride, hairstyles, and clothing
+
+![Lyra](NyuuTerraria/Content/Reverie/Lyra_Head.png) **Lyra, the Prism Tailor**, is a trans woman town NPC who can arrive when a suitable empty house is available. Talk to her for **Stories & quests**, or choose **Long hairstyles** repeatedly to cycle through all eight new styles for free. They are also available during character creation.
+
+| Style | Preview | Style | Preview |
+| --- | --- | --- | --- |
+| **Waistlength Waves** | ![Waistlength Waves](docs/images/hairstyles/WaistlengthWaves.png) | **Twin Ribbon Braids** | ![Twin Ribbon Braids](docs/images/hairstyles/TwinRibbonBraids.png) |
+| **Silken Curtain** | ![Silken Curtain](docs/images/hairstyles/SilkenCurtain.png) | **Moonlit Curls** | ![Moonlit Curls](docs/images/hairstyles/MoonlitCurls.png) |
+| **Trailing Ponytail** | ![Trailing Ponytail](docs/images/hairstyles/TrailingPonytail.png) | **Cascading Layers** | ![Cascading Layers](docs/images/hairstyles/CascadingLayers.png) |
+| **Long Side Braid** | ![Long Side Braid](docs/images/hairstyles/LongSideBraid.png) | **Halfup Ribbon** | ![Halfup Ribbon](docs/images/hairstyles/HalfupRibbon.png) |
+
+The **Pride Ribbon** gives cyan and pink sparkles when visible. **Prism Longcoat** and **Prism Skirt** go in body and leg **vanity** slots. All styles and clothes are available to every character.
+
+Place a **Prism Wardrobe** and right-click it to open **J → Wardrobe**. Save up to **three appearance presets** containing hair, colors, and body appearance. Stand near that wardrobe to restore a preset. These presets do not duplicate or replace inventory/armor items. Choose pronouns in the same tab, or use **/nyuuprofile she/her** (any short custom value is accepted). Lyra's authored dialogue can use your character name and pronouns.
+
+### Expedition materials and inhabitants
+
+| Material or creature | Where to find it / what it does |
+| --- | --- |
+| ![Moonprism Ore](NyuuTerraria/Content/Reverie/MoonprismOre.png) **Moonprism Ore** | Mine crystal clusters beneath the Reverie's orchard floor. Glass Serpents can drop 1–3, and the first expedition chest contains 18. |
+| ![Moonprism Bar](NyuuTerraria/Content/Reverie/MoonprismBar.png) **Moonprism Bar** | Smelt 3 Moonprism Ore at a Furnace. Used for early expedition equipment and the Hush portal. |
+| ![Echo Fragment](NyuuTerraria/Content/Reverie/EchoFragment.png) **Echo Fragment** | Hush chest and hostile Hush inhabitants. The Rootbound Knight and Bellkeeper also drop 12–18. |
+| ![Prism Wing Scale](NyuuTerraria/Content/Reverie/PrismWingScale.png) **Prism Wing Scale** | Rootbound Knight drops 5–8; Prism Matriarch drops 12–18. Used for the Matriarch summon. |
+| ![Glass Serpent](NyuuTerraria/Content/Reverie/GlassSerpent.png) **Glass Serpent** | Hostile Reverie creature: 180 base HP, 30 contact damage. |
+| ![Paper Wraith](NyuuTerraria/Content/Reverie/PaperWraith.png) **Paper Wraith** | Hostile Hush creature: 280 base HP, 30 contact damage; periodically fires an aimed echo. |
+| ![Dew Fox](NyuuTerraria/Content/Reverie/DewFox.png) **Dew Fox**, ![Glass Deer](NyuuTerraria/Content/Reverie/GlassDeer.png) **Glass Deer** | Peaceful Reverie wildlife. |
+| ![Mothcat](NyuuTerraria/Content/Reverie/Mothcat.png) **Mothcat**, ![Mooncap Sprite](NyuuTerraria/Content/Reverie/MooncapSprite.png) **Mooncap Sprite** | More peaceful Reverie wildlife. Feeding and garden interactions are future additions. |
+
+The Reverie chest also contains a **Dew Berry Charm**, five Healing Potions, and a **Prism Cocoon**. The Hush chest contains **18 Echo Fragments**, an **Archive Lantern**, five Healing Potions, and a **Cracked Bell Sigil**. Hardmode summons still require Hardmode even when found early.
+
+### Expedition bosses and minibosses
+
+Health below is the normal base value before difficulty/player adjustments. The original bosses also gained health: **Nimbus Warden 5,600**, **Prism Sentinel 7,200**, and **Mourning Bell 10,400**.
+
+| Encounter | Where / how to summon | Base HP | Rewards and fight advice |
+| --- | --- | --- | --- |
+| ![Reefback Guardian](NyuuTerraria/Content/Reverie/ReefbackGuardian.png) **Reefback Guardian — miniboss** | Use **Reef Shell** in the Reverie | 3,200 | 10–18 Moonprism Ore and 8–16 Coral. Use the platforms to change height as it prepares its charge. |
+| ![Rootbound Knight](NyuuTerraria/Content/Reverie/RootboundKnight_Head_Boss.png) **Rootbound Knight** | Use **Rootbound Seal** in the Reverie | 10,000 | 5–8 Prism Wing Scales, 12–18 Echo Fragments, 18–30 Moonprism Ore. Its defense falls from 32 to 8 after the hovering phase. Dodge the charge, then attack during its recovery. |
+| ![Lantern Stalker](NyuuTerraria/Content/Reverie/LanternStalker.png) **Lantern Stalker — miniboss** | Rare natural Hush spawn | 4,200 | Archive Lantern and 1–3 Echo Fragments. It is translucent while stalking, then becomes visible and speeds up before its charge. Keep space around yourself. |
+| ![The Mirrorless](NyuuTerraria/Content/Reverie/TheMirrorless.png) **The Mirrorless — miniboss** | Rare natural Hush spawn in **Hardmode** | 6,500 | 1–3 Echo Fragments; 1-in-3 chance for Echo Scythe. Circle around its hovering path and move aside for aimed shots. |
+| ![Bellkeeper](NyuuTerraria/Content/Reverie/Bellkeeper_Head_Boss.png) **The Bellkeeper** | Use **Cracked Bell Sigil** in the Hush, **Hardmode** | 19,000 | Echo Scythe, 12–18 Echo Fragments, 18–30 Moonprism Ore. Stay away from the center of each ring, move through a gap, and save room to dodge its charge. |
+| ![Prism Matriarch](NyuuTerraria/Content/Reverie/PrismMatriarch_Head_Boss.png) **Prism Matriarch** | Use **Prism Cocoon** in the Reverie, **Hardmode** | 24,000 | 12–18 Prism Wing Scales, Pride Moth Charm, and Prism Moth Staff. Alternate between platform levels to avoid rings and aimed five-shot fans. |
+
+**Preparation:** bring healing potions, useful accessories, and a mobility option. The generated areas already have three central platform levels. A piercing staff, Moonprism Bow, or a summon can keep damage going while you dodge. Below half health, the ring patterns and charges become faster.
+
+**Hush jumpscares:** while exploring the Hush, a brief Lantern Stalker apparition and sound can occur after you have been inside for a short time. There is a cooldown between scares. It does not deal damage or lock movement. Toggle **Hush Jumpscares** in the mod's client settings.
+
+### Every expedition crafting recipe
+
+“Anvil” means an Iron or Lead Anvil. Unless stated otherwise, recipes produce one item.
+
+| Item | Station | Ingredients | Use |
+| --- | --- | --- | --- |
+| ![Journal](NyuuTerraria/Content/Reverie/ChronicleJournal.png) **Chronicle Journal** | Work Bench | 8 Wood + 2 Silk | Open quests, professions, and presets; J works without carrying it. |
+| ![Mirror](NyuuTerraria/Content/Reverie/GardenMirror.png) **Garden Mirror** | Work Bench | 20 Glass + 5 Fallen Stars + 8 Silk | Reusable Reverie travel key and realm exit. |
+| ![Portal](NyuuTerraria/Content/Reverie/CrackedBellPortal.png) **Cracked Bell Portal** | Anvil | 6 Moonprism Bars + 20 Obsidian + 10 Bone | Reusable Hush travel key and realm exit. |
+| ![Bar](NyuuTerraria/Content/Reverie/MoonprismBar.png) **Moonprism Bar** | Furnace | 3 Moonprism Ore | Equipment material. |
+| ![Wardrobe](NyuuTerraria/Content/Reverie/GardenMirror.png) **Prism Wardrobe** | Work Bench | 25 Wood + 10 Glass + 5 Silk | Place and right-click for appearance presets. |
+| ![Ribbon](NyuuTerraria/Content/Reverie/PrideRibbon.png) **Pride Ribbon** | Loom | 3 Silk + 1 Fallen Star | Wearable pride sparkles. |
+| ![Coat](NyuuTerraria/Content/Reverie/PrismLongcoat.png) **Prism Longcoat** | Loom | 10 Silk + 2 Moonprism Bars | Body vanity clothing. |
+| ![Skirt](NyuuTerraria/Content/Reverie/PrismSkirt.png) **Prism Skirt** | Loom | 10 Silk + 2 Moonprism Bars | Leg vanity clothing. |
+| ![Staff](NyuuTerraria/Content/Reverie/PrismMothStaff.png) **Prism Moth Staff** | Anvil | 10 Moonprism Bars + 4 Fallen Stars + 12 Wood | 42 base magic damage, 5 mana, use time 12; piercing moth bolts and a colored trail. |
+| ![Bow](NyuuTerraria/Content/Reverie/MoonprismBow.png) **Moonprism Bow** | Anvil | 7 Moonprism Bars + 12 Wood | 27 base ranged damage; consumes arrows and turns them into piercing bolts. |
+| ![Boomerang](NyuuTerraria/Content/Reverie/CoralBoomerang.png) **Coral Boomerang** | Work Bench | 8 Coral + 15 Wood | 22 base melee damage; returns after flying out or hitting terrain. |
+| ![Scepter](NyuuTerraria/Content/Reverie/MooncapScepter.png) **Mooncap Scepter** | Anvil | 5 Moonprism Bars + 15 Glowing Mushrooms + 10 Wood | 19 base summon damage; one minion slot per Mooncap. |
+| ![Scythe](NyuuTerraria/Content/Reverie/EchoScythe.png) **Echo Scythe** | Anvil | 12 Echo Fragments + 8 Moonprism Bars | 56 base melee damage; sends out a spinning spectral blade. |
+| ![Lantern](NyuuTerraria/Content/Reverie/ArchiveLantern.png) **Archive Lantern** | Anvil | 4 Echo Fragments + 5 Torches + 3 Iron or Lead Bars | Accessory granting night vision and light. |
+| ![Fox charm](NyuuTerraria/Content/Reverie/DewBerryCharm.png) **Dew Berry Charm** | Work Bench | 3 Moonprism Bars + 3 Daybloom | Dew Fox pet. |
+| ![Moth charm](NyuuTerraria/Content/Reverie/PrideMothCharm.png) **Pride Moth Charm** | Loom | 8 Silk + 4 Moonprism Bars | Glowing Pride Moth pet. |
+| ![Shell](NyuuTerraria/Content/Reverie/ReefShell.png) **Reef Shell** | Work Bench | 10 Coral + 3 Seashells | Reefback Guardian summon. |
+| ![Seal](NyuuTerraria/Content/Reverie/RootboundSeal.png) **Rootbound Seal** | Anvil | 5 Moonprism Bars + 3 Vines | Rootbound Knight summon. |
+| ![Sigil](NyuuTerraria/Content/Reverie/CrackedBellSigil.png) **Cracked Bell Sigil** | Anvil | 8 Echo Fragments + 10 Obsidian | Bellkeeper summon; use in Hardmode. |
+| ![Cocoon](NyuuTerraria/Content/Reverie/PrismCocoon.png) **Prism Cocoon** | Anvil | 6 Prism Wing Scales + 5 Souls of Light | Prism Matriarch summon; use in Hardmode. |
+| ![Memorial](NyuuTerraria/Content/Reverie/PrismMemorial.png) **Prism Memorial** | Work Bench | 20 Stone Blocks + 2 Moonprism Bars + 2 Daybloom | Engravable decorative crystal memorial. |
+| ![Copper memorial](NyuuTerraria/Content/Reverie/CopperMemorial.png) **Copper Memorial** | Work Bench | 4 Copper Bars + 15 Stone Blocks | Engravable memorial with a plaque. |
+| ![Obsidian memorial](NyuuTerraria/Content/Reverie/ObsidianMemorial.png) **Obsidian Memorial** | Work Bench | 15 Obsidian + 2 Daybloom | Engravable flower-covered memorial. |
+| ![Vase](NyuuTerraria/Content/Reverie/ReverieVase.png) **Reverie Vase** | Furnace | 5 Clay Blocks + 1 Moonprism Ore | Decorative furniture; also placed in the expeditions. |
+
+Right-click a memorial to read/edit its inscription using the sign interface. These are crafted decorations; automatic death-grave variants and retrieval quests remain planned.
+
+**Validation:** compilation, packaged texture-path checks, clean sprite alpha, persistent profession/quest/backpack data, no-container backpack clicks, Equipment-tab visibility, both realm generators and reloads, and the four summon encounters' attack loops were checked. Full rendered client UI, multiplayer playthroughs, and gameplay balance still need in-game verification. [Validation details](docs/validation/0.4.0.md).
+
+
 ## Boss progression
 
 | Boss | Where to summon | Summon item | Main rewards |
@@ -68,7 +201,7 @@ Follow the ingredient and crafting-station tables below for exact recipes.
 
 ## Backpacks
 
-Equip one backpack in the dedicated **Backpack** slot, then press **V** to open or close its window. You can change the binding under Controls. Use the arrow buttons to change pages when the pack has more than 50 slots.
+Open the inventory's **Equipment** tab (the tab containing pets and mounts). Equip one backpack in the dedicated **Backpack** slot below those slots, then press **V** to open or close its window. You can change the binding under Controls. Use the arrow buttons to change pages when the pack has more than 50 slots.
 
 | Backpack | Extra slots | Full recipe at an Iron or Lead Anvil |
 | --- | --- | --- |
@@ -106,7 +239,7 @@ Craft **Glassbound Seal** at an anvil with **4 Hollowglass Bars + 2 Fallen Stars
 
 It fires three-shot crystal fans while hovering, then pauses and glows amber before charging. Run across a platform during the volleys, and change height when it stops to prepare the charge. Its defense falls during the charge phase, giving you an opening to attack. Below half health its volleys and charges get faster.
 
-The Sentinel has **3,600 base HP**, **28 contact damage**, and **16 defense while hovering**, falling to **5 during the charge phase**. It drops **7–11 Prism Hearts** and **12–20 Hollowglass Ore**. Use the hearts for a Resonance Charm or the second boss summon.
+The Sentinel has **7,200 base HP**, **28 contact damage**, and **16 defense while hovering**, falling to **5 during the charge phase**. It drops **7–11 Prism Hearts** and **12–20 Hollowglass Ore**. Use the hearts for a Resonance Charm or the second boss summon.
 
 ### Mourning Bell
 
@@ -114,7 +247,7 @@ At an anvil, combine **3 Prism Hearts + 5 Hollowglass Bars + 10 Obsidian** into 
 
 The Bell sways before releasing rings of crystal shots, then fires aimed bolts. Keep enough space to see gaps between the ring shots and move through a gap while keeping your distance from the center. Change direction for the aimed bolts. Below half health the attack cycle speeds up.
 
-It has **5,200 base HP**, **33 contact damage**, and **12 defense**. It drops **7–11 Resonant Clappers** and **12–20 Hollowglass Ore**. Clappers craft the Hollowchime Staff and the Little Glass Bell pet.
+It has **10,400 base HP**, **33 contact damage**, and **12 defense**. It drops **7–11 Resonant Clappers** and **12–20 Hollowglass Ore**. Clappers craft the Hollowchime Staff and the Little Glass Bell pet.
 
 ### Reach recipes
 
@@ -181,7 +314,7 @@ For an existing world, use a **Work Bench** to turn **10 Stone Blocks + 1 Glowin
 3. The Warden hovers, fires volleys, then dives. Run sideways during volleys. Move out of the dive path as it lines up, then attack while it passes.
 4. **Below half health**, the Warden dives faster and fires wider volleys. Save flight for dodging. The **Dawnpetal Staff**, **Amberflare Staff**, or **Staff of Democloud** are all craftable before the fight. Stormweaver gear requires cores from a kill.
 
-The Warden has **2,800 base HP**, **26 base contact damage**, and **9 defense**. It drops **9–14 Warden Cores** per kill before any difficulty-specific adjustments. The three armor pieces use six cores in total. The staff and charm use another seven.
+The Warden has **5,600 base HP**, **26 base contact damage**, and **9 defense**. It drops **9–14 Warden Cores** per kill before any difficulty-specific adjustments. The three armor pieces use six cores in total. The staff and charm use another seven.
 
 ## Complete crafting guide
 
@@ -301,15 +434,15 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 
 ## Ideas for future updates
 
-The following features are planned concepts for future updates. Names, recipes, and release order may change as the designs are tested.
+The roadmap below describes the longer-term designs. **v0.4.0 has started these systems:** Lyra, pride ribbon and moth, appearance presets, eight long hairstyles, a journal with 12 quests, persistent professions, crafted memorials, wildlife, encounters, and two pocket expeditions. See [the playable chapter](#chronicle-expeditions) for current behavior and recipes. Separate-world dimensions, full story locations, deeper skill trees, and the later encounters below remain future work.
 
 ### Trans pride and character expression
 
 | Planned addition | Idea |
 | --- | --- |
-| **Prism Wardrobe** | A furniture station for saving outfits, hairstyles, hair colors, and character appearance presets, then switching between them. |
-| **Trans pride collection** | Cyan, pink, and white capes, ribbons, hair clips, dyes, banners, furniture, and a little pride moth pet. |
-| **Lyra, the Prism Tailor** | A trans woman NPC with her own story, dialogue, and crafting quests. Her quest line restores a ruined atelier and unlocks embroidered clothes, long hairstyles, and vanity accessories. |
+| **Prism Wardrobe** | Expand the existing three appearance presets with saved outfit combinations and more wardrobe options. |
+| **Trans pride collection** | Expand the existing ribbon, clothing, and moth pet with cyan, pink, and white capes, clips, dyes, banners, and furniture. |
+| **Lyra, the Prism Tailor** | Continue the trans tailor's initial dialogue and journal requests with an authored atelier restoration, new story chapters, clothes, and vanity accessories. |
 | **Character profile** | Optional name and pronoun settings for modded dialogue. Clothing and hairstyle choices remain available to every character. |
 
 ### New dimensions and scenarios
@@ -347,7 +480,7 @@ The Reverie would focus on discovery, magic, and building. The Hush would have i
 
 ### Levels, skills, and professions
 
-The proposed leveling system would award experience for quests, exploration milestones, and combat. Early progression would introduce a few useful choices, with deeper branches opening as bosses are defeated.
+The initial five professions already keep their own XP, levels, and skill investment when you switch. The future system will expand their passive ranks into branching choices, active abilities, and milestone unlocks.
 
 | Skill branch | Example choices |
 | --- | --- |
@@ -357,7 +490,7 @@ The proposed leveling system would award experience for quests, exploration mile
 | **Summoner** | Companion commands, minion specialization, and support effects. |
 | **Explorer** | Mining, fishing, gathering, navigation, and treasure detection. |
 
-A craftable respec station would let players change their build. Quest progress, skills, and profession levels would be saved per character.
+The current journal supports free switching and skill resets. Future stations can add more build options; saved progress for every profession will remain part of the system.
 
 ### Peaceful creatures and pets
 
@@ -381,7 +514,7 @@ Additional plans include feeding interactions, pet beds, idle animations, and a 
 
 ### More long feminine hairstyles and clothes
 
-Planned hairstyles include **waist-length waves, long straight hair with curtain bangs, a high ponytail with trailing strands, a thick side braid, twin braids, long curls, a layered side-swept cut, and a half-up ribbon style**.
+The first eight long styles are available in v0.4.0. Future additions will expand the selection with more lengths, bangs, curls, braids, and ribbon arrangements.
 
 Each style would include its worn-under-a-hat version and animation frames. Matching clothes could include long skirts, fitted coats, embroidered dresses, boots, stockings, and mix-and-match hair ribbons.
 
@@ -398,6 +531,7 @@ Each style would include its worn-under-a-hat version and animation frames. Matc
 
 | Version | Added or changed |
 | --- | --- |
+| **v0.4.0** | Backpack flicker and Equipment-tab placement fixes, corrected accessory scrolling, larger bar icons; Lyra, pride customization, eight long hairstyles, 12 quests, five persistent professions, Reverie/Hush pocket expeditions with optional scares, three bosses, three minibosses, wildlife, pets, Moonprism, weapons, and memorials. |
 | **v0.3.1** | Sequential backpack recipes with an empty-storage requirement, a Glass Slate guide icon, and new Warden, Lens, Cloudtail, and matching bomb artwork. |
 | **v0.3.0** | Six backpacks, a dedicated Backpack slot and V-key storage window, Hollowglass Reach, two bosses, ruin loot, equipment, a pet, and exterior sprite cleanup. |
 | **v0.2.6** | Cleaned up the Amberflare Staff sprite, added individual armor and vanity icons, and moved the Warden set bonus into the armor section. |
@@ -408,3 +542,4 @@ Each style would include its worn-under-a-hat version and animation frames. Matc
 | **v0.2.1** | Updated Warden armor and Yuuki’s boots for the current armor set API. |
 | **v0.2.0** | Skylight ore, Nimbus Warden, Warden armor, weapons, trinkets, slots, chest, vanity, and two hairstyles. |
 | **v0.1.x** | Wings and Staff of Democloud, Yuuki’s boots, Cloudy Bombs, and Steam achievement sync. |
+

@@ -64,6 +64,7 @@ public class BackpackStorage : ModPlayer
         Open = !Open;
         if (Open)
         {
+            global::NyuuTerraria.Content.Reverie.ChronicleInterface.Open = false;
             Main.playerInventory = true;
             Player.chest = -1;
         }
@@ -126,17 +127,18 @@ public class BackpackInterface : ModSystem
         if (!storage.Open || storage.VisibleSlots == 0)
             return true;
 
+        int capacity = storage.Capacity;
         int count = storage.VisibleSlots;
         int pages = (count + 49) / 50;
         storage.Page = Math.Clamp(storage.Page, 0, pages - 1);
         int pageStart = storage.Page * 50;
         int rows = (Math.Min(50, count - pageStart) + 9) / 10;
-        float screenWidth = Main.screenWidth / Main.UIScale;
-        float screenHeight = Main.screenHeight / Main.UIScale;
+        float screenWidth = Main.screenWidth;
+        float screenHeight = Main.screenHeight;
         int x = Math.Max(8, (int)(screenWidth / 2 - 252));
         int y = Math.Max(8, Math.Min((int)screenHeight - rows * 44 - 92, 340));
         var panel = new Rectangle(x, y, 504, rows * 44 + 80);
-        Vector2 mouse = new Vector2(Main.mouseX, Main.mouseY) / Main.UIScale;
+        Vector2 mouse = new Vector2(Main.mouseX, Main.mouseY);
         SpriteBatch batch = Main.spriteBatch;
         Utils.DrawInvBG(batch, panel, new Color(58, 42, 79, 245));
         Utils.DrawBorderString(batch, $"Backpack — {storage.Capacity} slots", new Vector2(x + 14, y + 9), Color.White);
@@ -159,7 +161,7 @@ public class BackpackInterface : ModSystem
                 int slot = pageStart + i;
                 Vector2 position = new Vector2(x + 14 + i % 10 * 47, y + 42 + i / 10 * 44);
                 Rectangle hitbox = new Rectangle((int)position.X, (int)position.Y, 40, 40);
-                bool overflow = slot >= storage.Capacity;
+                bool overflow = slot >= capacity;
                 ItemSlot.Draw(batch, storage.Items, ItemSlot.Context.BankItem, slot, position,
                     overflow ? new Color(170, 135, 140) : Color.White);
                 if (!hitbox.Contains(mouse.ToPoint()))
@@ -178,12 +180,16 @@ public class BackpackInterface : ModSystem
                 }
                 else
                 {
-                    ItemSlot.LeftClick(storage.Items, ItemSlot.Context.BankItem, slot);
-                    ItemSlot.RightClick(storage.Items, ItemSlot.Context.BankItem, slot);
+                    // BankItem input assumes an open vanilla container in Terraria 1.4.5.
+                    // A one-slot inventory view avoids that container lookup and index-dependent hooks.
+                    Item[] view = { storage.Items[slot] };
+                    ItemSlot.LeftClick(view, ItemSlot.Context.InventoryItem, 0);
+                    ItemSlot.RightClick(view, ItemSlot.Context.InventoryItem, 0);
+                    storage.Items[slot] = view[0];
                 }
                 if (wasEmpty != storage.IsEmpty)
                     Recipe.UpdateRecipeList();
-                ItemSlot.MouseHover(storage.Items, ItemSlot.Context.BankItem, slot);
+                ItemSlot.MouseHover(new[] { storage.Items[slot] }, ItemSlot.Context.InventoryItem, 0);
             }
         }
         finally

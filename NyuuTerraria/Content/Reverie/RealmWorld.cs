@@ -1,0 +1,204 @@
+using System;
+using System.IO;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.Audio;
+
+namespace NyuuTerraria.Content.Reverie;
+
+// First expedition chapter: portal-accessed pocket realms in unused sky space.
+// Never overwrite existing terrain or builds. Persist both areas with the owning world.
+public class RealmWorld : ModSystem
+{
+    internal Rectangle[] Areas = new Rectangle[2];
+    private ulong[] lastTravel=new ulong[Main.maxPlayers];
+    internal static int RealmAt(Vector2 position)
+    {
+        var point=(position/16f).ToPoint();
+        var areas=ModContent.GetInstance<RealmWorld>().Areas;
+        for(int i=0;i<2;i++) if(areas[i].Width>0 && areas[i].Contains(point)) return i;
+        return -1;
+    }
+    public override void ClearWorld() { Areas=new Rectangle[2]; lastTravel=new ulong[Main.maxPlayers]; }
+    public override void SaveWorldData(TagCompound tag)
+    {
+        for(int i=0;i<2;i++) tag["realm"+i]=new int[]{Areas[i].X,Areas[i].Y,Areas[i].Width,Areas[i].Height};
+    }
+    public override void LoadWorldData(TagCompound tag)
+    {
+        for(int i=0;i<2;i++)
+        {
+            int[] r=tag.GetIntArray("realm"+i);
+            if(r.Length==4 && r[2]==300 && r[3]==96 && r[0]>=20 && r[0]+r[2]<Main.maxTilesX-20 && r[1]>=20 && r[1]+r[3]<Main.maxTilesY-20)
+                Areas[i]=new Rectangle(r[0],r[1],r[2],r[3]);
+        }
+    }
+    public override void NetSend(BinaryWriter writer)
+    {
+        foreach(var r in Areas) { writer.Write(r.X);writer.Write(r.Y);writer.Write(r.Width);writer.Write(r.Height); }
+    }
+    public override void NetReceive(BinaryReader reader)
+    {
+        for(int i=0;i<2;i++) Areas[i]=new Rectangle(reader.ReadInt32(),reader.ReadInt32(),reader.ReadInt32(),reader.ReadInt32());
+    }
+    internal bool EnsureArea(int realm)
+    {
+        if(Areas[realm].Width>0) return true;
+        // Leave a 12-tile margin around each pocket. Scan the actual world, including modded tiles and walls.
+        for(int step=0;step<18;step++)
+        {
+            int x=80+(step*197+realm*Main.maxTilesX/2)%(Main.maxTilesX-460);
+            var candidate=new Rectangle(x,48,300,96);
+            var margin=candidate; margin.Inflate(12,12);
+            if(Array.Exists(Areas,r=>r.Width>0 && r.Intersects(margin))) continue;
+            bool free=true;
+            for(int tx=margin.Left;tx<margin.Right && free;tx++)
+            for(int ty=margin.Top;ty<margin.Bottom;ty++)
+            {
+                Tile tile=Main.tile[tx,ty];
+                if(tile.HasTile || tile.WallType!=0 || tile.LiquidAmount>0) {free=false;break;}
+            }
+            if(!free) continue;
+            Areas[realm]=candidate;
+            Build(realm,candidate);
+            if(Main.netMode==NetmodeID.Server)
+            {
+                NetMessage.SendData(MessageID.WorldData);
+                for(int tx=candidate.Left;tx<candidate.Right;tx+=24)
+                for(int ty=candidate.Top;ty<candidate.Bottom;ty+=24)
+                    NetMessage.SendTileSquare(-1,tx,ty,24,24);
+            }
+            return true;
+        }
+        return false;
+    }
+    private static void Put(int x,int y,int type)
+    {
+        Tile t=Main.tile[x,y];t.HasTile=true;t.TileType=(ushort)type;t.TileFrameX=t.TileFrameY=0;
+    }
+    private static void Build(int realm,Rectangle r)
+    {
+        int stone=realm==0 ? TileID.Pearlstone : TileID.GrayBrick;
+        int wall=realm==0 ? WallID.Glass : WallID.GrayBrick;
+        int floor=r.Bottom-13;
+        for(int x=r.Left;x<r.Right;x++)
+        for(int y=r.Top;y<r.Bottom;y++)
+        {
+            bool boundary=x<r.Left+3 || x>=r.Right-3 || y>=r.Bottom-8;
+            if(boundary) Put(x,y,stone);
+            if(y>r.Top+6 && y<floor && realm==1) Main.tile[x,y].WallType=(ushort)wall;
+        }
+        // Landing pad, exit marker, and a wide central combat arena.
+        for(int x=r.Left+8;x<r.Right-8;x++) Put(x,floor,stone);
+        for(int platform=0;platform<3;platform++)
+        for(int x=r.Left+104;x<r.Left+245;x++)
+            Put(x,floor-12-platform*13,TileID.Platforms);
+        if(realm==0)
+        {
+            // Crystal orchard is a source of the new pre-Hardmode alloy.
+            for(int cluster=0;cluster<18;cluster++)
+            {
+                int cx=r.Left+35+cluster*14;
+                for(int dx=-2;dx<=2;dx++) for(int dy=1;dy<=4;dy++)
+                    if(Math.Abs(dx)+dy<6) Put(cx+dx,floor+dy,ModContent.TileType<MoonprismOreTile>());
+                for(int y=floor-5;y<floor;y++) Put(cx,y,TileID.LivingWood);
+                for(int dx=-3;dx<=3;dx++) Put(cx+dx,floor-6+Math.Abs(dx)/2,TileID.LeafBlock);
+            }
+        }
+        else
+        {
+            // Separate archive rooms and mine corridors, without blocking the arena.
+            for(int room=0;room<3;room++)
+            {
+                int cx=r.Left+18+room*26;
+                for(int dx=0;dx<21;dx++) Put(cx+dx,floor-24,TileID.GrayBrick);
+                for(int dy=9;dy<24;dy++) Put(cx,floor-dy,TileID.GrayBrick);
+                for(int dx=3;dx<17;dx++) Put(cx+dx,floor-10,TileID.Books);
+            }
+        }
+        for(int x=r.Left;x<r.Right;x++) for(int y=r.Top;y<r.Bottom;y++) WorldGen.SquareTileFrame(x,y);
+        // Loot is finite per world. It is never regenerated by revisiting a portal.
+        for(int x=r.Left+38;x<r.Left+85;x+=10)
+            WorldGen.PlaceObject(x,floor-1,ModContent.TileType<ReverieVaseTile>());
+        int chest=WorldGen.PlaceChest(r.Left+14,floor-1,TileID.Containers,false,realm==0 ? 0 : 1);
+        if(chest>=0)
+        {
+            var loot=Main.chest[chest].item;
+            loot[0].SetDefaults(realm==0 ? ModContent.ItemType<MoonprismOre>() : ModContent.ItemType<EchoFragment>());loot[0].stack=18;
+            loot[1].SetDefaults(realm==0 ? ModContent.ItemType<DewBerryCharm>() : ModContent.ItemType<ArchiveLantern>());
+            loot[2].SetDefaults(ItemID.HealingPotion);loot[2].stack=5;
+            loot[3].SetDefaults(realm==0 ? ModContent.ItemType<PrismCocoon>() : ModContent.ItemType<CrackedBellSigil>());
+        }
+    }
+    internal void Travel(Player player,int realm)
+    {
+        if(Main.netMode==NetmodeID.MultiplayerClient || realm is <0 or >1 || player.dead) return;
+        if(lastTravel[player.whoAmI]>0 && Main.GameUpdateCount-lastTravel[player.whoAmI]<90) return;
+        lastTravel[player.whoAmI]=Main.GameUpdateCount;
+        var data=player.GetModPlayer<ChroniclePlayer>();
+        int current=RealmAt(player.Center);
+        Vector2 destination;
+        if(current>=0)
+        {
+            destination=data.ReturnWorld==Main.ActiveWorldFileData.UniqueId.ToString() ? data.ReturnPosition : new Vector2(Main.spawnTileX*16,Main.spawnTileY*16-48);
+            if(!WorldGen.InWorld((int)destination.X/16,(int)destination.Y/16,20) || Collision.SolidCollision(destination,player.width,player.height))
+                destination=new Vector2(Main.spawnTileX*16,Main.spawnTileY*16-48);
+        }
+        else
+        {
+            if(!EnsureArea(realm))
+            {
+                if(Main.netMode==NetmodeID.SinglePlayer) Main.NewText("No clear sky space was found. Try a fresh world; existing builds were preserved.",Color.LightPink);
+                return;
+            }
+            data.ReturnPosition=player.position;data.ReturnWorld=Main.ActiveWorldFileData.UniqueId.ToString();
+            var r=Areas[realm];destination=new Vector2((r.Left+23)*16,(r.Bottom-13)*16-player.height-2);
+        }
+        player.Teleport(destination);player.velocity=Vector2.Zero;player.fallStart=(int)player.position.Y/16;
+        player.immune=true;player.immuneTime=120;
+        if(Main.netMode==NetmodeID.Server)
+            NetMessage.SendData(MessageID.TeleportEntity,number:0,number2:player.whoAmI,number3:destination.X,number4:destination.Y);
+    }
+}
+
+public class ReverieBiome : ModBiome
+{
+    public override string BestiaryIcon => "NyuuTerraria/Content/Reverie/GardenMirror";
+    public override SceneEffectPriority Priority=>SceneEffectPriority.BiomeHigh;
+    public override int Music=>MusicID.Hallow;
+    public override bool IsBiomeActive(Player player)=>RealmWorld.RealmAt(player.Center)==0;
+}
+public class HushBiome : ModBiome
+{
+    public override string BestiaryIcon => "NyuuTerraria/Content/Reverie/CrackedBellPortal";
+    public override SceneEffectPriority Priority=>SceneEffectPriority.BiomeHigh;
+    public override int Music=>MusicID.Eerie;
+    public override bool IsBiomeActive(Player player)=>RealmWorld.RealmAt(player.Center)==1;
+}
+public abstract class RealmKey : ModItem
+{
+    public abstract int Realm { get; }
+    public override void SetDefaults() {Item.width=32;Item.height=40;Item.useStyle=ItemUseStyleID.HoldUp;Item.useTime=Item.useAnimation=45;Item.rare=ItemRarityID.Orange;}
+    public override bool CanUseItem(Player player)=>!player.dead && !Main.npc.Any(n=>n.active && n.boss);
+    public override bool? UseItem(Player player)
+    {
+        if(player.whoAmI!=Main.myPlayer) return true;
+        if(Main.netMode==NetmodeID.MultiplayerClient) {var p=Mod.GetPacket();p.Write((byte)0);p.Write((byte)Realm);p.Send();}
+        else ModContent.GetInstance<RealmWorld>().Travel(player,Realm);
+        return true;
+    }
+}
+public class GardenMirror : RealmKey
+{
+    public override int Realm=>0;
+    public override void AddRecipes()=>CreateRecipe().AddIngredient(ItemID.Glass,20).AddIngredient(ItemID.FallenStar,5).AddIngredient(ItemID.Silk,8).AddTile(TileID.WorkBenches).Register();
+}
+public class CrackedBellPortal : RealmKey
+{
+    public override int Realm=>1;
+    public override void AddRecipes()=>CreateRecipe().AddIngredient<MoonprismBar>(6).AddIngredient(ItemID.Obsidian,20).AddIngredient(ItemID.Bone,10).AddTile(TileID.Anvils).Register();
+}

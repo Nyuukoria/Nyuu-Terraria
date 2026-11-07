@@ -58,7 +58,7 @@ public class NimbusWarden : ModNPC
     {
         NPC.width = 126;
         NPC.height = 88;
-        NPC.lifeMax = 2800;
+        NPC.lifeMax = 5600;
         NPC.damage = 26;
         NPC.defense = 9;
         NPC.knockBackResist = 0f;
