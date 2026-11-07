@@ -14,7 +14,7 @@ Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three boss
   <img src="NyuuTerraria/Content/Hollowglass/MourningBell.png" alt="Mourning Bell" height="88">
 </p>
 
-**Current version — v0.3.0** · **Requires tModLoader 1.4.5-dev**
+**Current version — v0.3.1** · **Requires tModLoader 1.4.5-dev**
 
 [**Download the mod**](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) · [Browse the source](NyuuTerraria/) · [Version notes](#version-notes)
 
@@ -30,6 +30,7 @@ Nyuu Terraria adds **six ores**, **two custom underground biomes**, **three boss
 | Summon a boss or learn its attacks | [Boss progression](#boss-progression) |
 | Look up a recipe or item effect | [Complete crafting guide](#complete-crafting-guide) · [Reach recipes](#reach-recipes) |
 | Use trinket slots, storage, or hairstyles | [Using the new features](#using-the-new-features) |
+| See possible future additions | [Ideas by game stage](#ideas-for-future-updates) |
 | Build or contribute to the mod | [Building from source](#building-from-source) |
 
 ## Install and play
@@ -69,18 +70,20 @@ Follow the ingredient and crafting-station tables below for exact recipes.
 
 Equip one backpack in the dedicated **Backpack** slot, then press **V** to open or close its window. You can change the binding under Controls. Use the arrow buttons to change pages when the pack has more than 50 slots.
 
-| Backpack | Extra slots | Material for its recipe |
+| Backpack | Extra slots | Full recipe at an Iron or Lead Anvil |
 | --- | --- | --- |
-| ![Copper Backpack](NyuuTerraria/Content/Backpacks/CopperBackpack.png) **Copper** | **20** | 12 Copper Bars |
-| ![Iron Backpack](NyuuTerraria/Content/Backpacks/IronBackpack.png) **Iron** | **30** | 12 Iron Bars |
-| ![Gold Backpack](NyuuTerraria/Content/Backpacks/GoldBackpack.png) **Gold** | **40** | 12 Gold Bars |
-| ![Emerald Backpack](NyuuTerraria/Content/Backpacks/EmeraldBackpack.png) **Emerald** | **60** | 8 Emeralds |
-| ![Obsidian Backpack](NyuuTerraria/Content/Backpacks/ObsidianBackpack.png) **Obsidian** | **80** | 30 Obsidian |
-| ![Demonite Backpack](NyuuTerraria/Content/Backpacks/DemoniteBackpack.png) **Demonite** | **100** | 20 Demonite Bars |
+| ![Copper Backpack](NyuuTerraria/Content/Backpacks/CopperBackpack.png) **Copper** | **20** | 12 Copper Bars + any chest |
+| ![Iron Backpack](NyuuTerraria/Content/Backpacks/IronBackpack.png) **Iron** | **30** | 12 Iron Bars + 1 Copper Backpack |
+| ![Gold Backpack](NyuuTerraria/Content/Backpacks/GoldBackpack.png) **Gold** | **40** | 12 Gold Bars + 1 Iron Backpack |
+| ![Emerald Backpack](NyuuTerraria/Content/Backpacks/EmeraldBackpack.png) **Emerald** | **60** | 8 Emeralds + 1 Gold Backpack |
+| ![Obsidian Backpack](NyuuTerraria/Content/Backpacks/ObsidianBackpack.png) **Obsidian** | **80** | 30 Obsidian + 1 Emerald Backpack |
+| ![Demonite Backpack](NyuuTerraria/Content/Backpacks/DemoniteBackpack.png) **Demonite** | **100** | 20 Demonite Bars + 1 Obsidian Backpack |
 
-**Crafting station — Iron or Lead Anvil.** Add **2 Leather + 4 Silk** to the material listed for your chosen backpack. For an early Leather source, craft **1 Leather** from **8 Gel + 1 Silk** at a **Work Bench**.
+**Upgrade order — Copper → Iron → Gold → Emerald → Obsidian → Demonite.** Each upgrade consumes the previous backpack. “Any chest” includes vanilla placeable chests and the mod’s Skylight Chest, Cloudvault, and Reach Chest.
 
-**Using it:** equip the pack, press **V**, and move items into its slots. Contents belong to your character and carry over between worlds. Changing backpacks changes the usable capacity. If you switch to a smaller pack or remove it, stored items beyond the available capacity appear as withdrawal-only slots. Pick those items up with an empty cursor. They remain saved until you withdraw them.
+**Using it:** equip the pack, press **V**, and move items into its slots. Contents belong to your character and carry over between worlds. **Every backpack storage slot must be empty before crafting an upgrade**, including overflow slots. Empty it into your inventory or a [Cloudvault](#work-bench-loom-and-hand-crafting), move the old backpack from its equipment slot into your inventory, craft the next tier, and equip the result.
+
+Switching to a smaller pack or removing it still leaves over-capacity items available to withdraw with an empty cursor. Those items also need to be withdrawn before an upgrade becomes available.
 
 ## Hollowglass Reach
 
@@ -117,7 +120,7 @@ It has **5,200 base HP**, **33 contact damage**, and **12 defense**. It drops **
 
 | Result | Station | Ingredients | What it does |
 | --- | --- | --- | --- |
-| **Glass Slate ×10** | Furnace | 10 Stone Blocks + 2 Glass | Biome building blocks. |
+| ![Glass Slate](NyuuTerraria/Content/Hollowglass/GlassSlate.png) **Glass Slate ×10** | Furnace | 10 Stone Blocks + 2 Glass | Biome building blocks. |
 | ![Hollowglass Bar](NyuuTerraria/Content/Hollowglass/HollowglassBar.png) **Hollowglass Bar** | Furnace | 3 Hollowglass Ore, or 4 Glass + 1 Silver or Tungsten Bar + 1 Amethyst | Reach crafting material. |
 | **Glass Vase** | Furnace | 4 Glass + 1 Hollowglass Ore | A breakable supply vase. |
 | ![Reach Lantern](NyuuTerraria/Content/Hollowglass/ReachLantern.png) **Reach Lantern** | Work Bench | 1 Hollowglass Bar + 2 Torches | Placeable turquoise cave light. |
@@ -135,6 +138,7 @@ Both summons are consumed on use and require the Reach biome. The second summon 
 
 | Material | Where to look |
 | --- | --- |
+| ![Glass Slate](NyuuTerraria/Content/Hollowglass/GlassSlate.png) **Glass Slate** | Mine dark turquoise stone in Hollowglass Reach, or craft 10 from 10 Stone Blocks + 2 Glass at a Furnace. |
 | **Hollowglass Ore** | Hollowglass Reach veins, enemies, chests, and vases. See the [Reach recipes](#reach-recipes) for its alternate bar recipe. |
 | **Skylight Ore** | Stone in the Underground and upper Cavern layers of new worlds. |
 | **Stormglass Ore** | Cavern stone in new worlds, deeper than the first Skylight veins. |
@@ -287,6 +291,7 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 | What you see | What to check |
 | --- | --- |
 | **The mod fails to load after a tModLoader update** | Confirm you are using **1.4.5-dev**. Development builds can change their mod APIs. Include the error text when reporting a loading problem. |
+| **A backpack upgrade is missing** | Empty all backpack storage, including overflow slots, and put the preceding backpack in your inventory. Each upgrade also needs its listed material and an anvil. |
 | **V does not open a backpack** | Equip the pack in the dedicated **Backpack** slot. Check the **Open Backpack** keybind under Controls. |
 | **A boss summon cannot be used** | Cloud Idol requires the surface or sky. Glassbound Seal and Resonating Bell require active Hollowglass Reach, with neither Reach boss already present. |
 | **New ores or ruins are missing from an old world** | Use alternate bar recipes and craft biome blocks, or generate a new world. |
@@ -294,10 +299,21 @@ The `Content` folders contain the item, enemy, biome, and storage code alongside
 | **A recipe is missing** | Check the exact station and named ingredients. Anvil means Iron or Lead. Deepheart requires a Mythril or Orichalcum Anvil. |
 | **A sprite or held item looks wrong** | Include the item name and a screenshot so the sprite, placement, and animation frame can be checked. |
 
+## Ideas for future updates
+
+These are possible future additions to build on the current progression.
+
+| Stage | Ideas |
+| --- | --- |
+| **Early game** | **Tidepool caves** with fishing loot and a reef miniboss; a **village noticeboard** with exploration rewards; **starter bows, boomerangs, and summoning gear** using the existing ores. |
+| **Middle game / Hardmode** | **Corrupted versions of the custom biomes** with new enemies and ore upgrades; **class armor sets** with active skills; a **relic forge** that combines boss materials into new weapon effects. |
+| **Late game** | A **celestial ruin dungeon** after Moon Lord; a **three-boss rematch gauntlet** with new phases and rewards; **legendary weapon upgrades and mounts** built from the final bosses. |
+
 ## Version notes
 
 | Version | Added or changed |
 | --- | --- |
+| **v0.3.1** | Sequential backpack recipes with an empty-storage requirement, a Glass Slate guide icon, and new Warden, Lens, Cloudtail, and matching bomb artwork. |
 | **v0.3.0** | Six backpacks, a dedicated Backpack slot and V-key storage window, Hollowglass Reach, two bosses, ruin loot, equipment, a pet, and exterior sprite cleanup. |
 | **v0.2.6** | Cleaned up the Amberflare Staff sprite, added individual armor and vanity icons, and moved the Warden set bonus into the armor section. |
 | **v0.2.5** | Full player guide. Redrawn Amberflare Staff, Amberheart Pendant, and Deepheart Pendant. |

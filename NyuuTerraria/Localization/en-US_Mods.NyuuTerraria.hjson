@@ -387,3 +387,5 @@ Projectiles.HollowchimeBolt.DisplayName: Hollowchime Bolt
 Projectiles.LittleGlassBell.DisplayName: Little Glass Bell
 Buffs.LittleGlassBellBuff.DisplayName: Little Glass Bell
 Buffs.LittleGlassBellBuff.Description: A little bell follows you through the dark
+
+Conditions.BackpackEmpty: Backpack storage must be empty

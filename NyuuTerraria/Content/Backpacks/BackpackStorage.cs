@@ -17,6 +17,17 @@ public class BackpackStorage : ModPlayer
     internal bool Open;
     internal int Page;
 
+    internal bool IsEmpty
+    {
+        get
+        {
+            foreach (Item item in Items)
+                if (!item.IsAir)
+                    return false;
+            return true;
+        }
+    }
+
     internal int Capacity =>
         ModContent.GetInstance<BackpackSlot>().FunctionalItem.ModItem is BackpackItem pack ? pack.Capacity : 0;
 
@@ -155,6 +166,7 @@ public class BackpackInterface : ModSystem
                     continue;
 
                 player.mouseInterface = true;
+                bool wasEmpty = storage.IsEmpty;
                 if (overflow)
                 {
                     if (Main.mouseLeft && Main.mouseLeftRelease && Main.mouseItem.IsAir)
@@ -169,6 +181,8 @@ public class BackpackInterface : ModSystem
                     ItemSlot.LeftClick(storage.Items, ItemSlot.Context.BankItem, slot);
                     ItemSlot.RightClick(storage.Items, ItemSlot.Context.BankItem, slot);
                 }
+                if (wasEmpty != storage.IsEmpty)
+                    Recipe.UpdateRecipeList();
                 ItemSlot.MouseHover(storage.Items, ItemSlot.Context.BankItem, slot);
             }
         }
