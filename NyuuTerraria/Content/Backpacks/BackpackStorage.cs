@@ -162,7 +162,7 @@ public class BackpackInterface : ModSystem
                 Vector2 position = new Vector2(x + 14 + i % 10 * 47, y + 42 + i / 10 * 44);
                 Rectangle hitbox = new Rectangle((int)position.X, (int)position.Y, 40, 40);
                 bool overflow = slot >= capacity;
-                ItemSlot.Draw(batch, storage.Items, ItemSlot.Context.BankItem, slot, position,
+                ItemSlot.Draw(batch, new[] { storage.Items[slot] }, ItemSlot.Context.BankItem, 0, position,
                     overflow ? new Color(170, 135, 140) : Color.White);
                 if (!hitbox.Contains(mouse.ToPoint()))
                     continue;

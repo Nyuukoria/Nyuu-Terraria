@@ -13,14 +13,17 @@ namespace NyuuTerraria.Content.Frontiers;
 public abstract class FrontierEnemy : ModNPC
 {
     protected virtual int Area=>0;protected virtual int Health=>200;protected virtual int Attack=>24;
-    public override void SetDefaults(){NPC.width=38;NPC.height=38;NPC.lifeMax=Health;NPC.damage=Attack;NPC.defense=10;NPC.aiStyle=-1;NPC.noGravity=true;NPC.knockBackResist=.4f;NPC.value=Item.buyPrice(silver:8);NPC.HitSound=SoundID.NPCHit5;NPC.DeathSound=SoundID.NPCDeath6;}
+    protected virtual bool Flying=>this is StarfallenConstruct;
+    public override void SetDefaults(){NPC.width=38;NPC.height=38;NPC.lifeMax=Health;NPC.damage=Attack;NPC.defense=10;NPC.aiStyle=-1;NPC.noGravity=Flying;NPC.knockBackResist=.4f;NPC.value=Item.buyPrice(silver:8);NPC.HitSound=SoundID.NPCHit5;NPC.DeathSound=SoundID.NPCDeath6;}
     public override float SpawnChance(NPC.Spawner info)=>FrontierWorld.AreaAt(info.Player.Center)==Area?.12f:0;
     public override void AI()
     {
         NPC.TargetClosest();Player p=Main.player[NPC.target];NPC.ai[0]++;
         if(!p.active||p.dead){NPC.velocity.Y-=.1f;NPC.EncourageDespawn(90);return;}
         Vector2 goal=p.Center+new Vector2(0,MathF.Sin(NPC.ai[0]*.03f)*45);
-        NPC.velocity=Vector2.Lerp(NPC.velocity,(goal-NPC.Center).SafeNormalize(Vector2.UnitX)*3,.035f);NPC.spriteDirection=NPC.velocity.X>=0?1:-1;
+        if(Flying)NPC.velocity=Vector2.Lerp(NPC.velocity,(goal-NPC.Center).SafeNormalize(Vector2.UnitX)*3,.035f);
+        else {NPC.direction=p.Center.X>=NPC.Center.X?1:-1;NPC.velocity.X=MathHelper.Lerp(NPC.velocity.X,NPC.direction*2.2f,.07f);}
+        NPC.spriteDirection=NPC.velocity.X>=0?1:-1;
         if(NPC.collideX)NPC.velocity.Y=-3;
     }
     public override void ModifyNPCLoot(NPCLoot loot)

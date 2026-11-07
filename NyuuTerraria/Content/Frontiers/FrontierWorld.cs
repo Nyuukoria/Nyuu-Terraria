@@ -42,28 +42,8 @@ public class FrontierWorld : ModSystem
     private static void Put(int x,int y,int type){var t=Main.tile[x,y];t.HasTile=true;t.TileType=(ushort)type;t.TileFrameX=t.TileFrameY=0;}
     private static void Build(int area,Rectangle r)
     {
-        int[] ground={TileID.Sandstone,TileID.LivingWood,TileID.Ash,TileID.Pearlstone};int stone=ground[area],floor=r.Bottom-15;
-        for(int x=r.Left;x<r.Right;x++)for(int y=r.Top;y<r.Bottom;y++)
-        {if(x<r.Left+3||x>=r.Right-3||y>=floor)Put(x,y,stone);}
-        // Keep the left landing and middle arena open; landmarks occupy the far side.
-        for(int layer=0;layer<3;layer++)for(int x=r.Left+66;x<r.Right-45;x++)Put(x,floor-12-layer*14,TileID.Platforms);
-        for(int n=0;n<8;n++)
-        {
-            int cx=r.Left+48+n*27;
-            if(area==0)
-            {
-                for(int x=cx;x<cx+13&&x<r.Right-4;x++)for(int y=floor+1;y<floor+6;y++){var poolTile=Main.tile[x,y];poolTile.HasTile=false;poolTile.LiquidAmount=200;}
-                for(int h=1;h<5;h++)Put(cx-2,floor-h,TileID.Coralstone);
-            }
-            else if(area==1||area==2)
-            {
-                if(n%2==0)ExpeditionScenery.Tree(cx,floor,15+n%3*2,n,area==2);
-            }
-            else for(int h=0;h<6;h++)for(int dx=-2;dx<=2;dx++)if(Math.Abs(dx)+h<7)Put(cx+dx,floor-h,TileID.Glass);
-        }
-        // A discoverable ruin with a unique, finite chest and plaque.
-        for(int x=r.Right-62;x<r.Right-15;x++){Put(x,floor-22,area==1?TileID.StoneSlab:TileID.GrayBrick);if(area==1)for(int y=floor-21;y<floor;y++){var tile=Main.tile[x,y];tile.WallType=WallID.LivingWood;}}
-        for(int y=floor-21;y<floor;y++){Put(r.Right-62,y,TileID.GrayBrick);Put(r.Right-16,y,TileID.GrayBrick);}
+        int floor=r.Bottom-15;
+        ExpeditionLandscape.Build(r,floor,area+2);
         for(int x=r.Left;x<r.Right;x++)for(int y=r.Top;y<r.Bottom;y++)WorldGen.SquareTileFrame(x,y);
         int chest=WorldGen.PlaceChest(r.Right-47,floor-1,TileID.Containers,false,0);
         if(chest>=0)

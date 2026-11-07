@@ -9,17 +9,23 @@ namespace NyuuTerraria.Content.Backpacks;
 
 public class BackpackLayout : ModSystem
 {
-    private ILHook buffsHook;
+    private ILHook buffsHook,inventoryHook;
     internal static bool BuffLayoutPatched;
-    public override void UpdateUI(Microsoft.Xna.Framework.GameTime time)
-    {
-        if(!Main.gameMenu&&Main.playerInventory&&Main.mouseItem.ModItem is BackpackItem)Main.EquipPage=2;
-    }
+    internal static void SelectEquipmentPage()
+    {if(!Main.gameMenu&&Main.playerInventory&&Main.mouseItem.ModItem is BackpackItem)Main.EquipPage=2;}
+    public override void UpdateUI(Microsoft.Xna.Framework.GameTime time)=>SelectEquipmentPage();
     public override void Load()
     {
         if(Main.dedServ)return;
         var method=typeof(Main).GetMethod("DrawInventory",BindingFlags.Instance|BindingFlags.NonPublic|BindingFlags.Public);
         if(method==null)return;
+        // Vanilla auto-selects an armor page for accessory cursor items during inventory drawing.
+        // Apply our page after that selection, before the first equipment-page branch is drawn.
+        var select=typeof(Terraria.UI.ItemSlot).GetMethod("SelectEquipPage",BindingFlags.Static|BindingFlags.Public|BindingFlags.NonPublic);
+        if(select!=null)inventoryHook=new ILHook(select,il=>{
+            var cursor=new ILCursor(il);
+            while(cursor.TryGotoNext(MoveType.Before,i=>i.OpCode==OpCodes.Ret)){cursor.EmitDelegate<Action>(SelectEquipmentPage);cursor.Index++;}
+        });
         buffsHook=new ILHook(method,il=>
         {
             var cursor=new ILCursor(il);
@@ -30,5 +36,5 @@ public class BackpackLayout : ModSystem
             BuffLayoutPatched=true;
         });
     }
-    public override void Unload(){buffsHook?.Dispose();buffsHook=null;BuffLayoutPatched=false;}
+    public override void Unload(){buffsHook?.Dispose();buffsHook=null;inventoryHook?.Dispose();inventoryHook=null;BuffLayoutPatched=false;}
 }

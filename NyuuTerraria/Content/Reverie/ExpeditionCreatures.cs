@@ -282,7 +282,11 @@ public class PrideMothCompanion : GrottoPetBuff
 public class DewFoxPet : GrottoPet
 {
     public override string Texture=>"NyuuTerraria/Content/Reverie/DewFox";
-    protected override int PetBuff=>ModContent.BuffType<DewFoxCompanion>();protected override Vector3 Glow=>new(.15f,.12f,.22f);protected override float FollowHeight=>8;
+    protected override int PetBuff=>ModContent.BuffType<DewFoxCompanion>();protected override Vector3 Glow=>new(.15f,.12f,.22f);protected override float FollowHeight=>-10;
+    public override void SetDefaults(){base.SetDefaults();Projectile.width=30;Projectile.height=28;Projectile.tileCollide=true;}
+    public override void AI(){var p=Main.player[Projectile.owner];if(!p.active||p.dead||!p.HasBuff(PetBuff))return;Projectile.timeLeft=2;float dx=p.Center.X-p.direction*42-Projectile.Center.X;Projectile.velocity.X=Math.Abs(dx)>22?Math.Clamp(dx*.07f,-4,4):0;Projectile.velocity.Y=Math.Min(8,Projectile.velocity.Y+.3f);Projectile.spriteDirection=Projectile.velocity.X>=0?1:-1;Projectile.frame=Math.Abs(Projectile.velocity.X)>.2f?(int)(Main.GameUpdateCount/8)%4:0;if(Projectile.Distance(p.Center)>700){Projectile.position=p.Bottom-new Vector2(15,28);Projectile.netUpdate=true;}}
+    public override bool OnTileCollide(Vector2 oldVelocity){if(Math.Abs(oldVelocity.X)>.5&&Projectile.velocity.X==0)Projectile.velocity.Y=-4;return false;}
+    public override bool PreDraw(Player player,ref Color lightColor){var texture=Terraria.GameContent.TextureAssets.Projectile[Type].Value;var frame=new Rectangle(0,Projectile.frame*texture.Height/4,texture.Width,texture.Height/4);Main.EntitySpriteDraw(texture,Projectile.Bottom-Main.screenPosition,frame,lightColor,0,new Vector2(frame.Width/2f,frame.Height),1f,Projectile.spriteDirection==1?Microsoft.Xna.Framework.Graphics.SpriteEffects.FlipHorizontally:Microsoft.Xna.Framework.Graphics.SpriteEffects.None);return false;}
 }
 public class PrideMothPet : GrottoPet
 {

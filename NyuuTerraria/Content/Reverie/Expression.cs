@@ -94,6 +94,7 @@ public class Lyra : ModNPC
     }
     public override void FindFrame(int frameHeight)
     {
+        NPC.spriteDirection=NPC.direction;
         NPC.frameCounter+=System.Math.Abs(NPC.velocity.X)*.15;
         NPC.frame.Y=(NPC.velocity.X==0 ? 0 : (int)NPC.frameCounter%4)*frameHeight;
     }

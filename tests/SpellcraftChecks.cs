@@ -22,7 +22,7 @@ public static class SpellcraftChecks
             (Action<Action<ModPacket,int,int>,ModPacket,int,int>)((original,packet,to,ignore)=>{}));
         try
         {
-            ClearProjectiles();data.Initialize();
+            p.Center=new Vector2(320,320);ClearProjectiles();data.Initialize();
             Check(data.Learned[0]&&data.Learned[6]&&data.Learned.Count(x=>x)==2,"STARTER_SPELLS_ONLY");
             Check(!data.Select(1)&&data.Select(0),"LOCKED_SPELL_CANNOT_BE_SELECTED");
             Check(data.Learn(1)&&!data.Learn(1),"TOME_LEARNING_ONCE");

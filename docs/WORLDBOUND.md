@@ -6,7 +6,7 @@
 
 Default keys: **L** Chronicle, **K** Spellbook, **V** Backpack, **G** profession ability. Existing assigned keys stay assigned; change any binding in Settings → Controls → Mod Controls. Escape closes the Chronicle. Its close button also works.
 
-Craft a **Field Journal** from a Book and 2 Silk at a Work Bench, or use L. Its Worldbound tab contains Requests, Talents, Profile, Wildlife, Stories, and Workshop. Pin an objective in Requests; collect and claim its reward in Quests. Completed objectives stay completed after rejoining.
+Craft a **Field Journal** from a Book and 2 Silk at a Work Bench, or use L. Its Worldbound tab contains Requests, Talents, Profile, Wildlife, Stories, and Workshop. Pin an objective in Requests; claim a ready reward directly in Requests or in Quests. Materials are counted in your inventory and backpack. Completed objectives stay completed after rejoining.
 
 ## Six destinations, one persistent world
 
@@ -32,7 +32,7 @@ See [the recipe reference](ITEMS.md) for each travel item's exact ingredients. D
 | Celestial Loom | 105 base magic damage, 14 mana, 28-tick casting, piercing shots and five arcane fragments. A post-Moon Lord craft; full recipe in the reference. |
 | Spell Palette | Use to cycle four spell colors. Saved per character. Colors change appearance, not damage. |
 
-The original Aetherloom casting modes, healing, shield, mastery, and learning tomes remain in [Spellcraft](../README.md#spellcraft).
+The original Aetherloom casting modes, healing, shield, mastery, and learning tomes remain in [Spellcraft](PLAYER-GUIDE.md#spellcraft).
 
 ## Encounters and preparation
 
@@ -64,7 +64,7 @@ At profession level 15, claim a Mastery Crest in Talents once per profession. It
 
 There are **26 quests** including 14 new Worldbound requests, plus four choice scenes. Start with the original atelier quests, then continue Lyra's missing-pattern and coastal/garden chapters. The Hush continues through archive discoveries; Mira has memorial requests. Prerequisites unlock subsequent chapters. Story choices record progress once per scene; revisiting does not duplicate quest credit.
 
-Noticeboards open Requests. Landmark discoveries are recorded when you visit them; the journal can pin one objective on screen. Rewards include the Coastal Coat, Garden Dress, Heritage Ribbon and other equipment. The Heritage Ribbon grants mana and regeneration. The table below lists the new requests directly from their content pack.
+Noticeboards open Requests, where ready objectives show Claim. Landmark discoveries are recorded when you visit them; the journal can pin one objective on screen. Rewards include the Coastal Coat, Garden Dress, Heritage Ribbon and other equipment. The Heritage Ribbon grants mana and regeneration. The table below lists the new requests directly from their content pack.
 
 | Request | What to do | Prerequisite | Reward |
 | --- | --- | --- | --- |

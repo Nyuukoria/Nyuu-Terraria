@@ -60,7 +60,7 @@ public class CemeteryKeeper : ModNPC
     public override System.Collections.Generic.List<string> SetNPCNameList()=>new(){"Mira"};
     public override string GetChat()=>"A memorial can be a garden, a light, or a quiet place to remember. I keep requests in the Worldbound journal.";
     public override void RegisterChatButtons(NPCInteractionList interactions)=>interactions.Prepend(new KeeperStories());
-    public override void FindFrame(int h){NPC.frameCounter+=Math.Abs(NPC.velocity.X)*.15;NPC.frame.Y=(NPC.velocity.X==0?0:(int)NPC.frameCounter%4)*h;}
+    public override void FindFrame(int h){NPC.spriteDirection=NPC.direction;NPC.frameCounter+=Math.Abs(NPC.velocity.X)*.2;NPC.frame.Y=(Math.Abs(NPC.velocity.X)<.1?0:(int)NPC.frameCounter%4)*h;}
     public override void TownNPCAttackStrength(ref int damage,ref float knockback){damage=20;knockback=3;}
     public override void TownNPCAttackCooldown(ref int cooldown,ref int randExtraCooldown){cooldown=45;randExtraCooldown=10;}
     public override void TownNPCAttackProj(ref int projType,ref int attackDelay){projType=ProjectileID.Spark;attackDelay=8;}

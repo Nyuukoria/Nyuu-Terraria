@@ -24,7 +24,7 @@ public class ShowcaseBuilder : ModSystem
         try
         {
             Main.myPlayer=0;var p=Main.player[0];typeof(PlayerLoader).GetMethod("SetupPlayer",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{p});
-            p.ConsumedLifeCrystals=15;p.ConsumedLifeFruit=20;p.ConsumedManaCrystals=9;p.active=true;p.dead=false;p.name="Nyuu Showcase";p.statLifeMax=p.statLifeMax2=p.statLife=500;p.statManaMax=p.statManaMax2=p.statMana=400;
+            p.ConsumedLifeCrystals=15;p.ConsumedLifeFruit=20;p.ConsumedManaCrystals=9;p.active=true;p.dead=false;p.name="Nyuu Showcase 051";p.statLifeMax=p.statLifeMax2=p.statLife=500;p.statManaMax=p.statManaMax2=p.statMana=400;
             p.hair=ModContent.GetInstance<WaistlengthWaves>().Type;p.skinVariant=6;p.hairColor=new Color(182,145,224);p.skinColor=new Color(243,202,184);p.eyeColor=new Color(100,200,216);
             p.armor[0].SetDefaults(ItemID.NebulaHelmet);p.armor[1].SetDefaults(ItemID.NebulaBreastplate);p.armor[2].SetDefaults(ItemID.NebulaLeggings);
             int[] accessories={ItemID.FishronWings,ItemID.TerrasparkBoots,ItemID.CelestialCuffs,ItemID.AnkhShield,ItemID.ManaCloak};for(int i=0;i<5;i++)p.armor[3+i].SetDefaults(accessories[i]);
@@ -36,7 +36,7 @@ public class ShowcaseBuilder : ModSystem
             Main.hardMode=true;foreach(var field in typeof(NPC).GetFields(BindingFlags.Public|BindingFlags.Static).Where(f=>f.FieldType==typeof(bool)&&f.Name.StartsWith("downed")))field.SetValue(null,true);
             int network=Main.netMode;Main.netMode=NetmodeID.SinglePlayer;
             var old=ModContent.GetInstance<RealmWorld>();var fresh=ModContent.GetInstance<FrontierWorld>();
-            for(int i=0;i<2;i++)if(!old.EnsureArea(i))throw new Exception("Could not create original destination "+i);
+            foreach(var area in old.Areas.Concat(fresh.Areas).Where(a=>a.Width>0)){for(int c=0;c<Main.chest.Length;c++)if(Main.chest[c]!=null&&area.Contains(Main.chest[c].x,Main.chest[c].y))Main.chest[c]=null;for(int tx=area.Left;tx<area.Right;tx++)for(int ty=area.Top;ty<area.Bottom;ty++){var tile=Main.tile[tx,ty];tile.HasTile=false;tile.WallType=0;tile.LiquidAmount=0;}}old.ClearWorld();fresh.ClearWorld();for(int i=0;i<2;i++)if(!old.EnsureArea(i))throw new Exception("Could not create original destination "+i);
             for(int i=0;i<4;i++)if(!fresh.EnsureArea(i))throw new Exception("Could not create new destination "+i);
             fresh.GardenerDown=fresh.UnwrittenDown=true;
             Main.netMode=network;
@@ -75,7 +75,7 @@ public class ShowcaseBuilder : ModSystem
             for(int x=center-160;x<center+160;x++)for(int y=floor-32;y<floor+12;y++)WorldGen.SquareTileFrame(x,y);
             foreach(var town in Main.npc)if(town.active&&(town.type==ModContent.NPCType<Lyra>()||town.type==ModContent.NPCType<CemeteryKeeper>()))town.active=false;
             NPC.NewNPC(p.GetSource_Misc("Showcase"),(center-60)*16,(floor-3)*16,ModContent.NPCType<Lyra>());NPC.NewNPC(p.GetSource_Misc("Showcase"),(center+60)*16,(floor-3)*16,ModContent.NPCType<CemeteryKeeper>());
-            Main.worldName="Nyuu Showcase";Main.ActiveWorldFileData.Name=Main.worldName;
+            Main.worldName="Nyuu Showcase 051";Main.ActiveWorldFileData.Name=Main.worldName;
             WorldFile.SaveWorld();
             string players=Path.Combine(Main.SavePath,"Players");Directory.CreateDirectory(players);string playerPath=Path.Combine(players,"Nyuu_Showcase.plr");var file=new PlayerFileData(playerPath,false){Player=p,Metadata=FileMetadata.FromCurrentSettings(FileType.Player)};typeof(Player).GetMethod("InternalSavePlayerFile",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{file});
             var read=Player.LoadPlayer(playerPath,false);if(read.Player.ConsumedLifeCrystals!=15||read.Player.ConsumedLifeFruit!=20||read.Player.ConsumedManaCrystals!=9||read.Player.name!=p.name||read.Player.inventory[0].type!=hotbar[0]||read.Player.GetModPlayer<SpellcraftPlayer>().Experience[0]!=7500)throw new Exception("Player save roundtrip failed");

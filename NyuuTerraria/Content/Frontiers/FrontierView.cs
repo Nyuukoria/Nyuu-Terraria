@@ -24,7 +24,7 @@ internal static class FrontierView
         switch(Page)
         {
             case 0:
-                Text("Noticeboard — pin a request, then follow it in your journal.",x,y);
+                Text("Requests — pin objectives and claim ready rewards here.",x,y);
                 QuestPage=Math.Clamp(QuestPage,0,Math.Max(0,(ChronicleContent.Quests.Length-1)/5));
                 for(int i=0;i<5&&QuestPage*5+i<ChronicleContent.Quests.Length;i++)
                 {
@@ -32,10 +32,11 @@ internal static class FrontierView
                     string title=quest.Title.Length>42?quest.Title[..42]+"…":quest.Title;
                     Text((done?"✓ ":locked?"[Locked] ":"")+title,x,top,.67f,done?Color.LightGreen:Color.White);
                     Text($"{(done?quest.Count:Math.Min(q.Progress(quest),quest.Count))}/{quest.Count} — {quest.Experience} XP",x,top+17,.57f);
+                    if(!done&&!locked&&q.Progress(quest)>=quest.Count&&Button("Claim",x+365,top,80))q.Claim(quest);
                     if(Button(d.Tracked==quest.Id?"Unpin":"Pin",x+453,top,95))d.Tracked=d.Tracked==quest.Id?"":quest.Id;
                 }
                 if(Button("<",x,panel.Bottom-52,45))QuestPage--;if(Button(">",x+500,panel.Bottom-52,45))QuestPage++;
-                Text($"Page {QuestPage+1} · Claim rewards in Quests",x+60,panel.Bottom-43,.65f);break;
+                Text($"Page {QuestPage+1} · Ready requests show Claim",x+60,panel.Bottom-43,.65f);break;
             case 1:
                 int branch=q.Profession;int spent=d.Talents.Skip(branch*3).Take(3).Sum();
                 Text($"{ChroniclePlayer.Professions[branch]} — {q.Level(branch)/3-spent} talent points available",x,y,.77f,Color.LightCyan);

@@ -83,18 +83,18 @@ public class ChroniclePlayer : ModPlayer
         int itemType = quest.Item;
         if (!string.IsNullOrEmpty(quest.ModItem) && Mod.TryFind<ModItem>(quest.ModItem, out var item)) itemType = item.Type;
         if (itemType > 0)
-            return Player.inventory.Where(i => i.type == itemType).Sum(i => i.stack);
+            return QuestItems().Where(i => i.type == itemType).Sum(i => i.stack);
         return Events.TryGetValue(quest.Event, out int count) ? count : 0;
     }
     internal bool Claim(QuestDefinition quest)
     {
-        if (Completed.Contains(quest.Id) || (!string.IsNullOrEmpty(quest.Requires) && !Completed.Contains(quest.Requires)) || Progress(quest) < quest.Count) return false;
+        if (Player.dead || quest==null || !ChronicleContent.Quests.Contains(quest) || Completed.Contains(quest.Id) || (!string.IsNullOrEmpty(quest.Requires) && !Completed.Contains(quest.Requires)) || Progress(quest) < quest.Count) return false;
         int type = quest.Item;
         if (!string.IsNullOrEmpty(quest.ModItem) && Mod.TryFind<ModItem>(quest.ModItem, out var ingredient)) type = ingredient.Type;
         if (type > 0)
         {
             int remaining = quest.Count;
-            foreach (Item item in Player.inventory)
+            foreach (Item item in QuestItems())
             {
                 if (item.type != type) continue;
                 int take = Math.Min(remaining, item.stack);
@@ -110,6 +110,7 @@ public class ChroniclePlayer : ModPlayer
         if (!Main.dedServ) Recipe.UpdateRecipeList();
         return true;
     }
+    private System.Collections.Generic.IEnumerable<Item> QuestItems()=>Player.inventory.Concat(Player.GetModPlayer<global::NyuuTerraria.Content.Backpacks.BackpackStorage>().Items);
     public override void ProcessTriggers(TriggersSet triggersSet)
     {
         if (ChronicleInterface.JournalKey?.JustPressed == true && !Main.drawingPlayerChat && !Main.editSign && !Main.editChest)

@@ -13,6 +13,7 @@ public class ChronicleInterface : ModSystem
 {
     internal static ModKeybind JournalKey;
     internal static bool Open;
+    private static bool clickPending;
     internal static int Tab, Page;
     internal static Point WardrobeOrigin = new(-1, -1);
     public override void Load() { if (!Main.dedServ) JournalKey = KeybindLoader.RegisterKeybind(Mod, "QuestJournal", "L"); }
@@ -29,7 +30,8 @@ public class ChronicleInterface : ModSystem
     public override void UpdateUI(GameTime gameTime)
     {
         if (Main.gameMenu || Main.LocalPlayer.dead) Open = false;
-        if (!Open) return;
+        if (!Open) {clickPending=false;return;}
+        clickPending=Main.mouseLeft&&Main.mouseLeftRelease;
         Main.LocalPlayer.GetModPlayer<global::NyuuTerraria.Content.Backpacks.BackpackStorage>().Open = false;
         // UpdateUI can run with world coordinates; Draw layers already use UI coordinates.
         // Normalize once, then restore the caller's input/screen state.
@@ -63,8 +65,8 @@ public class ChronicleInterface : ModSystem
         bool hover = rect.Contains(Mouse);
         Utils.DrawInvBG(Main.spriteBatch, rect, hover ? new Color(113,81,146) : new Color(64,48,92));
         Text(label, rect.X + 8, rect.Y + 5);
-        if (!hover || !Main.mouseLeft || !Main.mouseLeftRelease) return false;
-        Main.mouseLeftRelease = false; return true;
+        if (!hover || !(clickPending || Main.mouseLeft&&Main.mouseLeftRelease)) return false;
+        clickPending=false;Main.mouseLeftRelease = false; return true;
     }
     private static bool Draw()
     {

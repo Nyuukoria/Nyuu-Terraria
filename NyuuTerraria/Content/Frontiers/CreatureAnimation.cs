@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
@@ -11,5 +12,5 @@ public class CreatureAnimationSetup : ModSystem
 public class CreatureAnimation : GlobalNPC
 {
     public override void FindFrame(NPC npc,int frameHeight)
-    {if(npc.ModNPC?.Mod!=Mod||!CreatureAnimationSetup.Names.Contains(npc.ModNPC.Name))return;npc.frame.Y=(int)(Main.GameUpdateCount/10+npc.whoAmI)%4*frameHeight;}
+    {if(npc.ModNPC?.Mod!=Mod||!CreatureAnimationSetup.Names.Contains(npc.ModNPC.Name))return;bool grounded=!npc.noGravity;npc.frame.Y=(grounded&&Math.Abs(npc.velocity.X)<.1f?0:(int)(Main.GameUpdateCount/(grounded?8u:12u)+((uint)npc.whoAmI))%4)*frameHeight;}
 }

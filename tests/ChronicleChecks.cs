@@ -105,7 +105,7 @@ public class ChronicleChecks : ModSystem
                 Check(float.IsFinite(n.position.X)&&float.IsFinite(n.position.Y),"BOSS_TWO_PHASE_PATTERN_"+n.ModNPC.Name);
             }
             var before=world.Areas.ToArray();TagCompound wt=new();world.SaveWorldData(wt);world.ClearWorld();world.LoadWorldData(wt);Check(world.Areas.SequenceEqual(before),"REALM_COORDINATES_ROUNDTRIP");
-            SpellcraftChecks.Run(); FrontierChecks.Run(); PolishChecks.Run(); WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
+            SpellcraftChecks.Run(); FrontierChecks.Run(); PolishChecks.Run();Audit051Checks.Run(); WorldFile.SaveWorld();Console.WriteLine("CHRONICLE_TESTS_COMPLETE"); Environment.Exit(0);
         }
         catch(Exception error)
         {

@@ -22,7 +22,7 @@ public static class PolishChecks
         Check(TileObjectData.GetTileData(ModContent.TileType<PetBedTile>(),0).Width==3,"PET_BED_HAS_PROPER_FURNITURE_FOOTPRINT");
         Check(TileObjectData.GetTileData(ModContent.TileType<NoticeboardTile>(),0).Height==3,"NOTICEBOARD_HAS_FULL_HEIGHT");
         foreach(var n in ModContent.GetInstance<global::NyuuTerraria.NyuuTerraria>().GetContent<ModNPC>().Where(n=>CreatureAnimationSetup.Names.Contains(n.Name)))Check(Main.npcFrameCount[n.Type]==4,"ANIMATION_"+n.Name);
-        bool server=Main.dedServ;try{Main.dedServ=false;ModContent.GetInstance<BackpackLayout>().Load();Check(BackpackLayout.BuffLayoutPatched,"BUFF_LAYOUT_PATCH_MATCHES_DEV_BUILD");}finally{ModContent.GetInstance<BackpackLayout>().Unload();Main.dedServ=server;}
+        bool server=Main.dedServ;try{Main.dedServ=false;ModContent.GetInstance<BackpackLayout>().Load();Check(BackpackLayout.BuffLayoutPatched,"BUFF_LAYOUT_PATCH_MATCHES_DEV_BUILD");Main.playerInventory=true;Main.mouseItem=new Item(ModContent.ItemType<CopperBackpack>());Main.EquipPage=0;typeof(Terraria.UI.ItemSlot).GetMethod("SelectEquipPage",System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Static).Invoke(null,new object[]{Main.mouseItem});Check(Main.EquipPage==2,"VANILLA_SELECTION_IS_OVERRIDDEN_FOR_BACKPACK");Main.mouseItem=new Item();}finally{ModContent.GetInstance<BackpackLayout>().Unload();Main.dedServ=server;}
         Console.WriteLine("POLISH_TESTS_COMPLETE");
     }
 }

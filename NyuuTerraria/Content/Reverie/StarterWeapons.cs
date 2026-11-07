@@ -39,7 +39,7 @@ public class CoralBoomerangFlight : PrismMothBolt
     public override void SetDefaults() {base.SetDefaults();Projectile.DamageType=DamageClass.Melee;Projectile.penetrate=-1;Projectile.timeLeft=240;}
     public override void AI()
     {
-        Projectile.frame=(int)(Main.GameUpdateCount/10)%4;
+        Projectile.frame=0;
         Player p=Main.player[Projectile.owner];
         if(!p.active || p.dead) {Projectile.Kill();return;}
         Projectile.rotation+=.35f;

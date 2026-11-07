@@ -4,7 +4,7 @@
 
 All **145 items** registered by the playable mod. Recipes below were exported from the running game. Recipe groups can accept alternatives described in the player guide. An item without a recipe is found, dropped, purchased, or awarded; use the location guides linked below.
 
-[Material locations](../README.md#where-to-find-materials) · [Bosses](../README.md#boss-progression) · [Quests and expeditions](WORLDBOUND.md)
+[Material locations](PLAYER-GUIDE.md#where-to-find-materials) · [Bosses](PLAYER-GUIDE.md#boss-progression) · [Quests and expeditions](WORLDBOUND.md)
 
 Backpack upgrades additionally require **empty backpack storage**. Copper accepts the chest recipe group. Backpack metal upgrades specifically require the named bars.
 
