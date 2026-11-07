@@ -620,7 +620,10 @@ The first Spellcraft wave is now added. There are currently no unfinished entrie
 | --- | --- | --- |
 | [Mage spellcraft](#mage-spellcraft-and-combat)<br>[Pride & expression](#trans-pride-and-character-expression)<br>[Levels & professions](#levels-skills-and-professions)<br>[Long hairstyles & clothes](#more-long-feminine-hairstyles-and-clothes) | [Dimensions & scenarios](#new-dimensions-and-scenarios)<br>[Bosses & enemies](#bosses-minibosses-and-enemies)<br>[Quests & stories](#quest-journal-and-npc-stories) | [Peaceful creatures & pets](#peaceful-creatures-and-pets)<br>[Graves & memorials](#graves-and-memorials)<br>[Other progression](#other-progression-ideas)<br>[Already playable](#already-playable) |
 
-### Mage spellcraft and combat
+<a id="mage-spellcraft-and-combat"></a>
+
+<details>
+<summary><strong>Mage spellcraft and combat</strong></summary>
 
 The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https://steamcommunity.com/sharedfiles/filedetails/?id=2850199955) inspired the direction: magic with a sense of practice, spectacle, and discovery. Nyuu's spells, artwork, and implementation belong to its own world.
 
@@ -636,7 +639,12 @@ The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https:/
 | 🔵 Considering | Celestial casting | Sweeping beams, orbiting sigils, constellation storms, and a post-Moon Lord ritual weapon. |
 | 🔵 Considering | Spell styles | Collectible trail palettes, casting-circle patterns, and companion effects that preserve readable attacks. |
 
-### Trans pride and character expression
+</details>
+
+<a id="trans-pride-and-character-expression"></a>
+
+<details>
+<summary><strong>Trans pride and character expression</strong></summary>
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
@@ -645,7 +653,12 @@ The first wave is [playable in v0.4.1](#v041). [Elaina: Wandering Witch](https:/
 | ⚪ Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
 | 🔵 Considering | Personal profile options | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
 
-### New dimensions and scenarios
+</details>
+
+<a id="new-dimensions-and-scenarios"></a>
+
+<details>
+<summary><strong>New dimensions and scenarios</strong></summary>
 
 The current Reverie and Hush are **pocket expeditions inside your world**. The full destinations below are future expansions.
 
@@ -658,7 +671,12 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | 🔵 Considering | Cinderwood Depths | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
 | 🔵 Considering | Starglass Expanse | Celestial ruins, unusual gravity, rare building materials, and the observatory story's final chapter. |
 
-### Bosses, minibosses, and enemies
+</details>
+
+<a id="bosses-minibosses-and-enemies"></a>
+
+<details>
+<summary><strong>Bosses, minibosses, and enemies</strong></summary>
 
 | Status | Encounter | What comes next |
 | --- | --- | --- |
@@ -671,7 +689,12 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | ⚪ Not Started | More biome enemies | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
 | 🔵 Considering | Boss rematches | Optional stronger variants with new patterns and cosmetic rewards. |
 
-### Quest journal and NPC stories
+</details>
+
+<a id="quest-journal-and-npc-stories"></a>
+
+<details>
+<summary><strong>Quest journal and NPC stories</strong></summary>
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
@@ -683,7 +706,12 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | 🔵 Considering | World discoveries | Letters, hidden shrines, explorer journals, and small stories attached to ruins. |
 | 🔵 Considering | Story rewards | Hairstyles, pets, furniture patterns, housing decorations, and access to new routes. |
 
-### Levels, skills, and professions
+</details>
+
+<a id="levels-skills-and-professions"></a>
+
+<details>
+<summary><strong>Levels, skills, and professions</strong></summary>
 
 Switching already preserves each profession's progress. Future skills will build on that system.
 
@@ -696,7 +724,12 @@ Switching already preserves each profession's progress. Future skills will build
 | ⚪ Not Started | Explorer | Treasure clues, mining techniques, fishing, gathering, and navigation tools. |
 | 🔵 Considering | Mastery rewards | Cosmetics, milestone unlocks, saved skill presets, and profession crafting patterns, with easy resets. |
 
-### Peaceful creatures and pets
+</details>
+
+<a id="peaceful-creatures-and-pets"></a>
+
+<details>
+<summary><strong>Peaceful creatures and pets</strong></summary>
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
@@ -706,7 +739,12 @@ Switching already preserves each profession's progress. Future skills will build
 | ⚪ Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
 | 🔵 Considering | Wildlife journal | Observation goals, discovery rewards, and gardens that attract visitors. |
 
-### Graves and memorials
+</details>
+
+<a id="graves-and-memorials"></a>
+
+<details>
+<summary><strong>Graves and memorials</strong></summary>
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
@@ -716,7 +754,12 @@ Switching already preserves each profession's progress. Future skills will build
 | 🔵 Considering | Memorial gardens | Pet memorials, candle stands, fences, benches, garden bells, and hanging lanterns. |
 | 🔵 Considering | Cemetery keeper | A peaceful NPC with restoration requests and small stories. |
 
-### More long feminine hairstyles and clothes
+</details>
+
+<a id="more-long-feminine-hairstyles-and-clothes"></a>
+
+<details>
+<summary><strong>More long feminine hairstyles and clothes</strong></summary>
 
 | Status | Collection | What comes next |
 | --- | --- | --- |
@@ -726,7 +769,12 @@ Switching already preserves each profession's progress. Future skills will build
 | 🔵 Considering | Atelier wardrobe | Embroidered dresses, long skirts, layered coats, stockings, oversized sweaters, and matching ribbons. |
 | 🔵 Considering | Themed outfits | Moonlit formalwear, coastal clothes, cozy winter sets, and gothic Hush fashion. |
 
-### Other progression ideas
+</details>
+
+<a id="other-progression-ideas"></a>
+
+<details>
+<summary><strong>Other progression ideas</strong></summary>
 
 | Status | Stage / area | Ideas for later |
 | --- | --- | --- |
@@ -737,10 +785,12 @@ Switching already preserves each profession's progress. Future skills will build
 | ⚪ Not Started | Storage and equipment | Storage search, sorting, clearer crafting hints, equipment previews, and easier loadout management. |
 | 🔵 Considering | World events | Caravans, strange weather, garden festivals, haunted nights, and roaming encounters. |
 
-### Already playable
+</details>
+
+<a id="already-playable"></a>
 
 <details>
-<summary><strong>🟢 Added features and their versions</strong> — finished foundations, kept out of the future lists</summary>
+<summary><strong>Already playable</strong></summary>
 
 | Status | Feature | Added in | Guide |
 | --- | --- | --- | --- |
@@ -757,7 +807,6 @@ Switching already preserves each profession's progress. Future skills will build
 | 🟢 Added | Democloud wings, staff, boots, and Cloudy Bombs | [v0.1.x](#v01x) | [Democloud recipes](#complete-crafting-guide) |
 
 </details>
-
 
 ## Version notes
 
