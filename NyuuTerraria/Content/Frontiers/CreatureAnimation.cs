@@ -12,5 +12,6 @@ public class CreatureAnimationSetup : ModSystem
 public class CreatureAnimation : GlobalNPC
 {
     public override void FindFrame(NPC npc,int frameHeight)
-    {if(npc.ModNPC?.Mod!=Mod||!CreatureAnimationSetup.Names.Contains(npc.ModNPC.Name))return;bool grounded=!npc.noGravity;npc.frame.Y=(grounded&&Math.Abs(npc.velocity.X)<.1f?0:(int)(Main.GameUpdateCount/(grounded?8u:12u)+((uint)npc.whoAmI))%4)*frameHeight;}
+    {if(npc.ModNPC?.Mod!=Mod||!CreatureAnimationSetup.Names.Contains(npc.ModNPC.Name))return;bool grounded=!npc.noGravity;uint speed=grounded?8u:LivingAnimation.Rigs.TryGetValue(npc.ModNPC.Name,out var rig)&&rig==LivingRig.Moth?5u:9u; // wings beat faster than a float bobs
+     npc.frame.Y=(grounded&&Math.Abs(npc.velocity.X)<.1f?0:(int)(Main.GameUpdateCount/speed+((uint)npc.whoAmI))%4)*frameHeight;}
 }
