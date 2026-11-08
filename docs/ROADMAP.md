@@ -1,11 +1,12 @@
 # Roadmap
 
-[Home](../README.md) · [Latest release](releases/v0.5.4.md) · [Playable systems](WORLDBOUND.md)
+[Home](../README.md) · [Latest release](releases/v0.5.5.md) · [Playable systems](WORLDBOUND.md)
 
 
 
 | Status | Latest completed work | Version |
 | --- | --- | --- |
+| 🟢 Added | The Reverie as its own dimension world (single player), rebuilt ore, slate, wall and decoration art, Showcase 055 | [v0.5.5](releases/v0.5.5.md) |
 | 🟢 Added | Worn outfits redrawn from their icons with matching sleeves and legs, framed ore and slate tiles, title screen and theme, creature facing fixes, backpack shift-click stashing | [v0.5.4](releases/v0.5.4.md) |
 | 🟢 Added | Baked four-frame animation for creatures and pets, ink-accurate sprite anchoring, boss and small-creature draw sizes | [v0.5.2](releases/v0.5.2.md) · [v0.5.3](releases/v0.5.3.md) |
 | 🟢 Added | Backpack rendering and Equipment routing, direct quest claims, original-sprite alignment, worn-rig repairs and revised expedition generation | [v0.5.1](releases/v0.5.1.md) |
@@ -216,6 +217,7 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | Added in | Guide |
 | --- | --- | --- | --- |
+| 🟢 Added | Reverie dimension, ore/slate/wall/decoration art rebuild, Showcase 055 | [v0.5.5](releases/v0.5.5.md) | [The Reverie](destinations/REVERIE.md) |
 | 🟢 Added | Outfit redraw, framed ore and slate tiles, title screen, creature facing, backpack shift-click | [v0.5.4](releases/v0.5.4.md) | [Release notes](releases/v0.5.4.md) |
 | 🟢 Added | Baked creature and pet animation, sprite anchoring, boss draw sizes | [v0.5.2](releases/v0.5.2.md) | [Creatures](CREATURES.md) |
 | 🟢 Added | Element reactions, Ritual Focus, infusions, Celestial Loom, spell palettes, four new destinations, Pale Gardener, The Unwritten, talents, wildlife care and Mira | [v0.5.0](releases/v0.5.0.md) | [Worldbound](WORLDBOUND.md) |

@@ -9,7 +9,7 @@
 A cozy-but-dangerous content mod for Terraria: cloud-born magic, six portal destinations,<br>
 nine bosses, a full wardrobe, backpacks, and a guide named Lyra with stories to tell.
 
-![Version](https://img.shields.io/badge/version-0.5.4-8a6fd1?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-0.5.5-8a6fd1?style=for-the-badge)
 ![tModLoader](https://img.shields.io/badge/tModLoader-1.4.5--dev-4f8a5c?style=for-the-badge)
 ![Multiplayer](https://img.shields.io/badge/multiplayer-supported-3f7fae?style=for-the-badge)
 
@@ -133,18 +133,17 @@ Equip a backpack in its own slot on the **Equipment / pets** tab. You can rebind
 
 ---
 
-## 🆕 What's new in v0.5.4
+## 🆕 What's new in v0.5.5
 
 | | Change |
 | --- | --- |
-| 👗 **Outfits** | Coats and dresses show their real designs when worn: lapels, open fronts, flared hems. Sleeves and leg pieces match each coat's colours. |
-| ⛏️ **Ores** | Every ore vein has outlined, rounded edges, with shaded crystals set in stone instead of flat boxes. |
-| 🧱 **Blocks** | Moss Slate, Glass Slate and the Glass Slate wall no longer show invisible holes. |
-| 🎵 **Title screen** | A new logo and a looping theme. Choose *Nyuu Terraria* from the menu-theme list. |
-| 🦊 **Creatures** | Creatures painted facing left no longer walk backwards. Pets play all four animation frames. |
-| 🎒 **Backpack** | <kbd>Shift</kbd> + click stashing skips favourited items and respects stack rules. |
+| 🌌 **The Reverie is a dimension** | The Garden Mirror opens a whole separate world (single player): meadows, moonlit lakes, floating islands, Moonprism caves and an old observatory. Nothing is built in your sky any more. |
+| 👗 **Outfits** | Real sleeves and legs in each coat's colours. |
+| ⛏️ **Ores and blocks** | Ore veins, slates and walls use Terraria's exact block edges, with no more boxes or invisible holes. |
+| 🏺 **Decorations** | Five redrawn, the rest cleaned up, and all of them sit on the ground instead of floating. |
+| 🗺️ **Showcase** | New [Showcase 055](docs/SHOWCASE.md) save with a decoration gallery. |
 
-📄 Full notes: [docs/releases/v0.5.4.md](docs/releases/v0.5.4.md) · Older versions: [docs/releases](docs/releases)
+📄 Full notes: [docs/releases/v0.5.5.md](docs/releases/v0.5.5.md) · Older versions: [docs/releases](docs/releases)
 
 ---
 

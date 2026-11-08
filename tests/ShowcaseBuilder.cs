@@ -8,7 +8,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.IO;
 using Terraria.ModLoader;
+using NyuuTerraria.Content.AmberGrotto;
 using NyuuTerraria.Content.Backpacks;
+using NyuuTerraria.Content.Hollowglass;
 using NyuuTerraria.Content.Frontiers;
 using NyuuTerraria.Content.Reverie;
 using NyuuTerraria.Content.Spellcraft;
@@ -24,7 +26,7 @@ public class ShowcaseBuilder : ModSystem
         try
         {
             Main.myPlayer=0;var p=Main.player[0];typeof(PlayerLoader).GetMethod("SetupPlayer",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{p});
-            p.ConsumedLifeCrystals=15;p.ConsumedLifeFruit=20;p.ConsumedManaCrystals=9;p.active=true;p.dead=false;p.name="Nyuu Showcase 052";p.statLifeMax=p.statLifeMax2=p.statLife=500;p.statManaMax=p.statManaMax2=p.statMana=400;
+            p.ConsumedLifeCrystals=15;p.ConsumedLifeFruit=20;p.ConsumedManaCrystals=9;p.active=true;p.dead=false;p.name="Nyuu Showcase 055";p.statLifeMax=p.statLifeMax2=p.statLife=500;p.statManaMax=p.statManaMax2=p.statMana=400;
             p.hair=ModContent.GetInstance<WaistlengthWaves>().Type;p.skinVariant=6;p.hairColor=new Color(182,145,224);p.skinColor=new Color(243,202,184);p.eyeColor=new Color(100,200,216);
             p.armor[0].SetDefaults(ItemID.NebulaHelmet);p.armor[1].SetDefaults(ItemID.NebulaBreastplate);p.armor[2].SetDefaults(ItemID.NebulaLeggings);
             int[] accessories={ItemID.FishronWings,ItemID.TerrasparkBoots,ItemID.CelestialCuffs,ItemID.AnkhShield,ItemID.ManaCloak};for(int i=0;i<5;i++)p.armor[3+i].SetDefaults(accessories[i]);
@@ -37,6 +39,9 @@ public class ShowcaseBuilder : ModSystem
             int network=Main.netMode;Main.netMode=NetmodeID.SinglePlayer;
             var old=ModContent.GetInstance<RealmWorld>();var fresh=ModContent.GetInstance<FrontierWorld>();
             foreach(var area in old.Areas.Concat(fresh.Areas).Where(a=>a.Width>0)){for(int c=0;c<Main.chest.Length;c++)if(Main.chest[c]!=null&&area.Contains(Main.chest[c].x,Main.chest[c].y))Main.chest[c]=null;for(int tx=area.Left;tx<area.Right;tx++)for(int ty=area.Top;ty<area.Bottom;ty++){var tile=Main.tile[tx,ty];tile.HasTile=false;tile.WallType=0;tile.LiquidAmount=0;}}old.ClearWorld();fresh.ClearWorld();for(int i=0;i<2;i++)if(!old.EnsureArea(i))throw new Exception("Could not create original destination "+i);
+            // The Reverie is its own dimension world now: remove the old sky pocket so the mirror opens the dimension.
+            if(old.Areas[0].Width>0){var r=old.Areas[0];r.Inflate(4,4);for(int c=0;c<Main.chest.Length;c++)if(Main.chest[c]!=null&&r.Contains(Main.chest[c].x,Main.chest[c].y))Main.chest[c]=null;
+                for(int x=Math.Max(r.Left,5);x<Math.Min(r.Right,Main.maxTilesX-5);x++)for(int y=Math.Max(r.Top,5);y<Math.Min(r.Bottom,Main.maxTilesY-5);y++)Main.tile[x,y].ClearEverything();old.Areas[0]=default;}
             for(int i=0;i<4;i++)if(!fresh.EnsureArea(i))throw new Exception("Could not create new destination "+i);
             var regions=old.Areas.Concat(fresh.Areas).ToArray();
             for(int a=0;a<regions.Length;a++)for(int b=a+1;b<regions.Length;b++){var margin=regions[a];margin.Inflate(96,16);if(margin.Intersects(regions[b]))throw new Exception("Destinations too close: "+a+","+b);}
@@ -75,12 +80,15 @@ public class ShowcaseBuilder : ModSystem
             p.inventory[10].SetDefaults(ItemID.SuperHealingPotion);p.inventory[10].stack=999;p.inventory[11].SetDefaults(ItemID.SuperManaPotion);p.inventory[11].stack=999;
             int[] stations={TileID.WorkBenches,TileID.Anvils,TileID.Furnaces,TileID.Loom,TileID.AlchemyTable,TileID.LunarCraftingStation};for(int i=0;i<stations.Length;i++)WorldGen.PlaceObject(center-50+i*8,floor-1,stations[i]);
             int[] furniture={ModContent.TileType<CauldronWorkshopTile>(),ModContent.TileType<NoticeboardTile>(),ModContent.TileType<PetBedTile>(),ModContent.TileType<FeedingBowlTile>(),ModContent.TileType<GardenLanternTile>(),ModContent.TileType<MemorialWreathTile>()};for(int i=0;i<furniture.Length;i++)WorldGen.PlaceObject(center+10+i*7,floor-1,furniture[i]);
+            // Decoration gallery: every placeable decoration on the ground floor, east of the furniture.
+            int[] decor={ModContent.TileType<PrismWardrobeTile>(),ModContent.TileType<PrismMemorialTile>(),ModContent.TileType<CopperMemorialTile>(),ModContent.TileType<ObsidianMemorialTile>(),ModContent.TileType<TidalMemorialTile>(),ModContent.TileType<CinderMemorialTile>(),ModContent.TileType<StarglassMemorialTile>(),ModContent.TileType<DiscoveryPlaqueTile>(),ModContent.TileType<ReverieVaseTile>(),ModContent.TileType<AmberUrnTile>(),ModContent.TileType<GlassVaseTile>(),ModContent.TileType<ReachLanternTile>()};
+            for(int i=0,x=center+62;i<decor.Length;i++,x+=6)WorldGen.PlaceObject(x,floor-1,decor[i]);
             for(int x=center-160;x<center+160;x++)for(int y=floor-32;y<floor+12;y++)WorldGen.SquareTileFrame(x,y);
             foreach(var town in Main.npc)if(town.active&&(town.type==ModContent.NPCType<Lyra>()||town.type==ModContent.NPCType<CemeteryKeeper>()))town.active=false;
             NPC.NewNPC(p.GetSource_Misc("Showcase"),(center-60)*16,(floor-3)*16,ModContent.NPCType<Lyra>());NPC.NewNPC(p.GetSource_Misc("Showcase"),(center+60)*16,(floor-3)*16,ModContent.NPCType<CemeteryKeeper>());
-            Main.worldName="Nyuu Showcase 052";Main.ActiveWorldFileData.Name=Main.worldName;
+            Main.worldName="Nyuu Showcase 055";Main.ActiveWorldFileData.Name=Main.worldName;
             WorldFile.SaveWorld();
-            string players=Path.Combine(Main.SavePath,"Players");Directory.CreateDirectory(players);string playerPath=Path.Combine(players,"Nyuu_Showcase.plr");var file=new PlayerFileData(playerPath,false){Player=p,Metadata=FileMetadata.FromCurrentSettings(FileType.Player)};typeof(Player).GetMethod("InternalSavePlayerFile",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{file});
+            string players=Path.Combine(Main.SavePath,"Players");Directory.CreateDirectory(players);string playerPath=Path.Combine(players,"Nyuu_Showcase_055.plr");var file=new PlayerFileData(playerPath,false){Player=p,Metadata=FileMetadata.FromCurrentSettings(FileType.Player)};typeof(Player).GetMethod("InternalSavePlayerFile",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{file});
             var read=Player.LoadPlayer(playerPath,false);if(read.Player.ConsumedLifeCrystals!=15||read.Player.ConsumedLifeFruit!=20||read.Player.ConsumedManaCrystals!=9||read.Player.name!=p.name||read.Player.inventory[0].type!=hotbar[0]||read.Player.GetModPlayer<SpellcraftPlayer>().Experience[0]!=7500)throw new Exception("Player save roundtrip failed");
             int stored=0;foreach(var c in Main.chest)if(c!=null)foreach(var i in c.item)if(i.ModItem?.Mod==Mod)stored++;
             if(stored<items.Length)throw new Exception("The showcase catalog is missing items");
