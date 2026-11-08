@@ -72,8 +72,32 @@ internal static partial class NyuuArtFixes
         { "MooncapMinion", new Anchor(48, 48, 8, 40, 15, 48) }
     };
 
-    /// <summary>Pets and minions that animate from a 4-frame sheet.</summary>    
-    
+    /// <summary>
+    /// Creatures whose artwork is painted facing LEFT. Terraria's convention is that a sprite
+    /// faces right and gets mirrored for spriteDirection -1, so for these the mirror has to be
+    /// inverted or they walk backwards while looking forwards. Read off the artwork: head,
+    /// beak, snout or jaw end sits on the left of the frame.
+    /// </summary>
+    private static readonly string[] FacesLeft =
+    {
+        "DewFox", "DewFoxPet", "GlassDeer", "Mothcat",
+        "GardenBird", "GlassSerpent", "ReefbackGuardian"
+    };
+
+    private static bool FlipsWhenRight(string name)
+    {
+        for (int i = 0; i < FacesLeft.Length; i++)
+            if (FacesLeft[i] == name) return true;
+        return false;
+    }
+
+    /// <summary>Mirror this sprite for a facing direction of 1 (right) or -1 (left).</summary>
+    private static bool ShouldFlip(string name, int direction)
+    {
+        return FlipsWhenRight(name) ? direction > 0 : direction < 0;
+    }
+
+    /// <summary>Pets and minions that animate from a 4-frame sheet.</summary>
     private static readonly string[] Pets =
     {
         "GlowcapFirefly", "AmberWisp", "LittleGlassBell",
@@ -163,7 +187,7 @@ internal static partial class NyuuArtFixes
         if (frameY < 0 || frameY + fh > tex.Height) frameY = 0;
 
         bool grounded = !npc.noGravity;
-        bool flip = npc.spriteDirection == -1;
+        bool flip = ShouldFlip(name, npc.spriteDirection);
         Vector2 origin = OriginFor(a, tex.Width, grounded, flip);
         Vector2 pos = (grounded ? npc.Bottom : npc.Center) - screenPos;
         Rectangle src = new Rectangle(0, frameY, tex.Width, fh);
@@ -197,8 +221,9 @@ internal static partial class NyuuArtFixes
         if (frameY + fh > tex.Height) frameY = 0;
 
         bool grounded = name == "DewFoxPet";
-        bool flip = projectile.spriteDirection == -1 ||
-                    (Math.Abs(projectile.velocity.X) > .15f && projectile.velocity.X < 0);
+        int face = projectile.spriteDirection;
+        if (Math.Abs(projectile.velocity.X) > .15f) face = projectile.velocity.X > 0 ? 1 : -1;
+        bool flip = ShouldFlip(name, face);
         Vector2 origin = OriginFor(a, tex.Width, grounded, flip);
         Vector2 pos = (grounded ? projectile.Bottom : projectile.Center) - Main.screenPosition;
         Rectangle src = new Rectangle(0, frameY, tex.Width, fh);

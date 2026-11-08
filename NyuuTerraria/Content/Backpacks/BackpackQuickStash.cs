@@ -58,6 +58,16 @@ public class BackpackQuickStash : ModSystem
         orig(inv, context, slot);
     }
 
+    /// <summary>
+    /// True only on the frame the button goes down. Vanilla clears mouseLeftRelease on a fresh
+    /// press, so holding shift and *then* clicking reads as a fresh press, while clicking and
+    /// then pressing shift does not - which is the order that was asked for.
+    /// </summary>
+    private static bool FreshClick()
+    {
+        return Main.mouseLeft && Main.mouseLeftRelease;
+    }
+
     private static bool ShiftHeld()
     {
         return Main.keyState.IsKeyDown(Keys.LeftShift) || Main.keyState.IsKeyDown(Keys.RightShift);
@@ -72,6 +82,7 @@ public class BackpackQuickStash : ModSystem
         Player player = Main.LocalPlayer;
         if (player == null || !player.active || inv != player.inventory) return false;
         if (!ShiftHeld() || !Main.mouseItem.IsAir) return false;
+        if (!FreshClick()) return false;
 
         BackpackStorage storage = player.GetModPlayer<BackpackStorage>();
         if (storage == null || !storage.Open) return false;

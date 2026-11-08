@@ -5,7 +5,7 @@
 
 ### Magic to master. Places to discover. A character all your own.
 
-**v0.5.3 · Living Worlds** &nbsp;|&nbsp; **tModLoader 1.4.5-dev**
+**v0.5.4 · Living Worlds** &nbsp;|&nbsp; **tModLoader 1.4.5-dev**
 
 [**Download the mod**](downloads/NyuuTerraria.tmod) · [**Showcase save**](downloads/NyuuTerraria-Showcase.zip) · [**Source**](downloads/NyuuTerraria-Source.zip)
 
@@ -55,31 +55,15 @@ backpack; it tops up matching stacks first, then uses the first free slot.
 | Look at the plan | [Roadmap](docs/ROADMAP.md) |
 | Author content | [Content authoring](docs/CONTENT-AUTHORING.md) |
 
-## What's new in v0.5.3
+## What's new in v0.5.4
 
 | Area | Change |
 | --- | --- |
-| Pets | All six companions and the mooncap minion now play four distinct animation frames instead of a single static pose. |
-| Outfits | The seven coats and seven leg pieces keep their original silhouettes but gain rim lighting, soft edge shade and one distinguishing accent each. |
-| Backpack | Shift + left click moves an inventory item into the open backpack, stacking onto matching items first. |
-| Bosses | The nine boss sprites are drawn larger so their on-screen size matches the hitbox they already used. |
-| Creatures | Seven small enemies are drawn at a size that matches their hitbox. |
+| Outfits | Every coat, dress and leg piece is redrawn from its own inventory icon, so what you wear is what the icon shows — lapels, open front, flared hem. |
+| Title screen | New title art and a looping theme of its own. |
+| Facing | Creatures and companions painted facing left no longer walk backwards. |
+| Backpack | Hold shift, then left click an inventory item to send it to the open backpack. |
+| Pets | All six companions and the mooncap minion play four distinct frames. |
+| Size | Bosses and small creatures are drawn at a size that matches their body. |
 
-Full notes: [docs/releases/v0.5.3.md](docs/releases/v0.5.3.md)
-
-## Build from source
-
-```
-git clone https://github.com/Nyuukoria/Nyuu-Terraria
-```
-
-Move (or link) the `NyuuTerraria` folder into
-`Documents/My Games/Terraria/tModLoader/ModSources`, then **Workshop → Develop Mods → Build + Reload**.
-The build needs the .NET SDK, not just the runtime. The output replaces
-`Documents/My Games/Terraria/tModLoader-dev/Mods/NyuuTerraria.tmod`.
-
-## Contributing
-
-The rules that keep new content consistent — 2-pixel grid, sheet sizes, 14-row hair sheets,
-four stacked Lyra frames — are in [docs/CONTENT-AUTHORING.md](docs/CONTENT-AUTHORING.md).
-Anything that follows them drops into the existing systems without new code.
+Full notes: [docs/releases/v0.5.4.md](docs/releases/v0.5.4.md)
