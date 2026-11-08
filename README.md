@@ -1,69 +1,208 @@
 <div align="center">
-<img src="NyuuTerraria/icon.png" width="80" alt="Nyuu Terraria emblem">
+
+<img src="NyuuTerraria/icon.png" width="96" alt="Nyuu Terraria emblem">
 
 # Nyuu Terraria
 
-### Magic to master. Places to discover. A character all your own.
+**Magic to master. Places to discover. A character all your own.**
 
-**v0.5.4 · Living Worlds** &nbsp;|&nbsp; **tModLoader 1.4.5-dev**
+A cozy-but-dangerous content mod for Terraria: cloud-born magic, six portal destinations,<br>
+nine bosses, a full wardrobe, backpacks, and a guide named Lyra with stories to tell.
 
-[**Download the mod**](downloads/NyuuTerraria.tmod) · [**Showcase save**](downloads/NyuuTerraria-Showcase.zip) · [**Source**](downloads/NyuuTerraria-Source.zip)
+![Version](https://img.shields.io/badge/version-0.5.4-8a6fd1?style=for-the-badge)
+![tModLoader](https://img.shields.io/badge/tModLoader-1.4.5--dev-4f8a5c?style=for-the-badge)
+![Multiplayer](https://img.shields.io/badge/multiplayer-supported-3f7fae?style=for-the-badge)
 
-<img src="docs/images/worldbound-preview.png" alt="Worldbound equipment, creatures and discoveries" width="820">
+### [⬇️ Download the mod](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod) &nbsp;·&nbsp; [🗺️ Showcase save](docs/SHOWCASE.md) &nbsp;·&nbsp; [📖 Player guide](docs/PLAYER-GUIDE.md)
+
+<br>
+
+<img src="docs/images/NimbusWarden.png" height="88" alt="Nimbus Warden">
+<img src="docs/images/PrismMatriarch.png" height="88" alt="Prism Matriarch">
+<img src="docs/images/RootboundKnight.png" height="88" alt="Rootbound Knight">
+<img src="docs/images/MourningBell.png" height="88" alt="Mourning Bell">
+<img src="docs/images/PaleGardener.png" height="88" alt="Pale Gardener">
+<img src="docs/images/TheUnwritten.png" height="88" alt="The Unwritten">
+
 </div>
 
 ---
 
-Nyuu Terraria adds a magic progression, six portal destinations, a wardrobe with hairstyles
-and outfits, backpacks, creatures and a guide named Lyra who hands out requests. Everything is
-optional — you can ignore the story and just build.
+## ✨ What's inside
 
-## Install
+<table>
+<tr>
+<td width="50%" valign="top">
 
-1. Copy `NyuuTerraria.tmod` into `Documents/My Games/Terraria/tModLoader-dev/Mods`.
-2. Enable **Nyuu Terraria** in the mods menu and reload.
-3. Play in a backed-up world, or import the [showcase save](docs/SHOWCASE.md) to see everything at once.
+### 🔮 Spellcraft
+Elemental tomes, charged blooms, crescent wards and element reactions.
+Open your **Spellbook** with <kbd>K</kbd> and pick a casting mode.
 
-Every player on a server needs the same game branch and the same mod version.
+</td>
+<td width="50%" valign="top">
 
-## Controls
+### 🌀 Six destinations
+Portal pockets inside your own world: the **Reverie**, the **Hush**, **Tidepool Hollows**,
+the **Overgrown Citadel**, **Cinderwood Depths** and the **Starglass Expanse**.
 
-| Key | Opens |
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 👑 Bosses and creatures
+Nine bosses, minibosses and rematches, plus peaceful wildlife you can feed, house and observe.
+
+</td>
+<td valign="top">
+
+### 👗 A character all your own
+Coats, dresses, skirts and armor, eight long hairstyles, a **Prism Wardrobe** for saved looks,
+and pets that follow you around.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 🎒 Backpacks
+Six sizes from 20 to 100 slots in their own equipment slot. <kbd>Shift</kbd> + click
+sends items straight in.
+
+</td>
+<td valign="top">
+
+### 📜 Lyra and the Chronicle
+Requests, stories, professions with talent trees, and a journal of everything you've found.
+Open it with <kbd>L</kbd>.
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+<img src="docs/images/worldbound-preview.png" width="760" alt="Worldbound items, creatures and outfits">
+</div>
+
+---
+
+## 🚀 Quick start
+
+1. **Download** [`NyuuTerraria.tmod`](https://github.com/Nyuukoria/Nyuu-Terraria/raw/refs/heads/main/downloads/NyuuTerraria.tmod).
+2. **Copy it** into `Documents/My Games/Terraria/tModLoader-dev/Mods`.
+3. **Enable** *Nyuu Terraria* in the Mods menu and reload.
+4. **Play.** Use a backed-up world, or load the [showcase save](docs/SHOWCASE.md) to see everything at once.
+
+> [!TIP]
+> New here? [Getting started](docs/GETTING-STARTED.md) walks you through the first hour, from
+> your first Skylight ore to your first portal.
+
+> [!NOTE]
+> Everyone on a server needs the same game branch and the same mod version.
+
+---
+
+## 🎮 Controls
+
+| Key | What it does |
+| :---: | --- |
+| <kbd>L</kbd> | **Chronicle**: requests, stories, profiles, professions, wildlife |
+| <kbd>K</kbd> | **Spellbook** and casting modes |
+| <kbd>V</kbd> | **Backpack** storage (arrows page through it) |
+| <kbd>G</kbd> | Your active **profession ability** |
+| <kbd>Shift</kbd> + click | Send an inventory item into the open backpack |
+| <kbd>Esc</kbd> | Close the Chronicle |
+
+Equip a backpack in its own slot on the **Equipment / pets** tab. You can rebind any key under
+*Settings → Controls → Mod Controls*.
+
+---
+
+## 📚 Guides
+
+| I want to… | Read |
 | --- | --- |
-| **L** | Chronicle — requests, stories, profiles, professions, wildlife |
-| **K** | Spellbook and casting modes |
-| **V** | Backpack storage (arrows page through it) |
-| **G** | Active profession ability |
-| **Escape** | Close the Chronicle |
-
-Equip a backpack on the **Equipment / pets tab**, in its own Backpack slot. Rebind anything under
-Settings → Controls → Mod Controls.
-
-**Shift + left click** any inventory item while the backpack is open to send it straight into the
-backpack; it tops up matching stacks first, then uses the first free slot.
-
-## Start here
-
-| Goal | Read |
-| --- | --- |
-| Get going | [Getting started](docs/GETTING-STARTED.md) |
-| Learn the systems | [Player handbook](docs/PLAYER-GUIDE.md) |
-| See every item and recipe | [Items](docs/ITEMS.md) |
+| Get going fast | [Getting started](docs/GETTING-STARTED.md) |
+| Learn every system | [Player handbook](docs/PLAYER-GUIDE.md) |
+| Look up items and recipes | [Items](docs/ITEMS.md) |
 | Find a destination | [Six destinations](docs/DESTINATIONS.md) |
 | Understand magic and quests | [Worldbound](docs/WORLDBOUND.md) |
 | Meet the creatures | [Creatures](docs/CREATURES.md) |
-| Look at the plan | [Roadmap](docs/ROADMAP.md) |
-| Author content | [Content authoring](docs/CONTENT-AUTHORING.md) |
+| See what's coming | [Roadmap](docs/ROADMAP.md) |
+| Add my own content | [Content authoring](docs/CONTENT-AUTHORING.md) |
 
-## What's new in v0.5.4
+---
 
-| Area | Change |
+## 🆕 What's new in v0.5.4
+
+| | Change |
 | --- | --- |
-| Outfits | Every coat, dress and leg piece is redrawn from its own inventory icon, so what you wear is what the icon shows — lapels, open front, flared hem. |
-| Title screen | New title art and a looping theme of its own. |
-| Facing | Creatures and companions painted facing left no longer walk backwards. |
-| Backpack | Hold shift, then left click an inventory item to send it to the open backpack. |
-| Pets | All six companions and the mooncap minion play four distinct frames. |
-| Size | Bosses and small creatures are drawn at a size that matches their body. |
+| 👗 **Outfits** | Coats and dresses show their real designs when worn: lapels, open fronts, flared hems. Sleeves and leg pieces match each coat's colours. |
+| ⛏️ **Ores** | Every ore vein has outlined, rounded edges, with shaded crystals set in stone instead of flat boxes. |
+| 🧱 **Blocks** | Moss Slate, Glass Slate and the Glass Slate wall no longer show invisible holes. |
+| 🎵 **Title screen** | A new logo and a looping theme. Choose *Nyuu Terraria* from the menu-theme list. |
+| 🦊 **Creatures** | Creatures painted facing left no longer walk backwards. Pets play all four animation frames. |
+| 🎒 **Backpack** | <kbd>Shift</kbd> + click stashing skips favourited items and respects stack rules. |
 
-Full notes: [docs/releases/v0.5.4.md](docs/releases/v0.5.4.md)
+📄 Full notes: [docs/releases/v0.5.4.md](docs/releases/v0.5.4.md) · Older versions: [docs/releases](docs/releases)
+
+---
+
+<details>
+<summary><b>🖼️ More previews</b></summary>
+<br>
+
+<div align="center">
+
+**Spellcraft**<br>
+<img src="docs/images/spellcraft-preview.png" width="680" alt="Spellcraft tomes and spell projectiles">
+
+**Backpacks and the Hollowglass Reach**<br>
+<img src="docs/images/backpacks-and-hollowglass-preview.png" width="560" alt="Backpacks and Hollowglass bosses">
+
+**Skylight gear**<br>
+<img src="docs/images/skylight-art-preview.png" width="520" alt="Skylight weapons, armor and trinkets">
+
+</div>
+</details>
+
+<details>
+<summary><b>🛠️ Build from source</b></summary>
+<br>
+
+```bash
+git clone https://github.com/Nyuukoria/Nyuu-Terraria
+```
+
+1. Move or link the `NyuuTerraria` folder into `Documents/My Games/Terraria/tModLoader/ModSources`.
+2. In tModLoader, open **Workshop → Develop Mods** and click **Build + Reload**.
+3. The new build replaces `Documents/My Games/Terraria/tModLoader-dev/Mods/NyuuTerraria.tmod`.
+
+You need the **.NET SDK**, not just the runtime.
+</details>
+
+<details>
+<summary><b>❓ FAQ</b></summary>
+<br>
+
+**Will it break my world?**<br>
+Destinations are built in free space in your existing world, and the generator never clears
+terrain to make room. Still, back up your world first.
+
+**Can I skip the story?**<br>
+Yes. Everything is optional. Ignore Lyra and just build if you like.
+
+**Where do I find the first ore?**<br>
+Skylight ore spawns in stone below the surface, and Frostveil spawns in ice and snow. See
+[Getting started](docs/GETTING-STARTED.md).
+</details>
+
+---
+
+<div align="center">
+
+Made with 💜 by **Nyuukoria**
+
+<sub>Found a bug? <a href="https://github.com/Nyuukoria/Nyuu-Terraria/issues">Open an issue</a>.</sub>
+
+</div>
