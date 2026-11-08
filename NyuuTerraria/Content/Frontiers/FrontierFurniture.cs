@@ -80,28 +80,24 @@ public class MemorialWreath : FrontierFurniture
 public class MemorialWreathTile : FrontierFurnitureTile { }
 public class DiscoveryPlaque : FrontierFurniture
 {
- public override string Texture=>"NyuuTerraria/Content/Frontiers/MemorialWreath";
  protected override int Tile=>ModContent.TileType<DiscoveryPlaqueTile>();
  public override void AddRecipes()=>CreateRecipe().AddIngredient(ItemID.StoneBlock,10).AddIngredient(ItemID.Wood,5).AddTile(TileID.WorkBenches).Register();
 }
 public class DiscoveryPlaqueTile : FrontierFurnitureTile { }
 public class TidalMemorial : FrontierFurniture
 {
- public override string Texture=>"NyuuTerraria/Content/Frontiers/MemorialWreath";
  protected override int Tile=>ModContent.TileType<TidalMemorialTile>();
  public override void AddRecipes()=>CreateRecipe().AddIngredient(ItemID.Coral,8).AddIngredient(ItemID.Wood,5).AddTile(TileID.WorkBenches).Register();
 }
 public class TidalMemorialTile : FrontierFurnitureTile { }
 public class CinderMemorial : FrontierFurniture
 {
- public override string Texture=>"NyuuTerraria/Content/Frontiers/MemorialWreath";
  protected override int Tile=>ModContent.TileType<CinderMemorialTile>();
  public override void AddRecipes()=>CreateRecipe().AddIngredient(ItemID.Obsidian,10).AddIngredient(ItemID.Wood,5).AddTile(TileID.WorkBenches).Register();
 }
 public class CinderMemorialTile : FrontierFurnitureTile { }
 public class StarglassMemorial : FrontierFurniture
 {
- public override string Texture=>"NyuuTerraria/Content/Frontiers/MemorialWreath";
  protected override int Tile=>ModContent.TileType<StarglassMemorialTile>();
  public override void AddRecipes()=>CreateRecipe().AddIngredient(ItemID.FallenStar,5).AddIngredient(ItemID.Wood,5).AddTile(TileID.WorkBenches).Register();
 }

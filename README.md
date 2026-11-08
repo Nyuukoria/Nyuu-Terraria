@@ -9,7 +9,7 @@
 A cozy-but-dangerous content mod for Terraria: cloud-born magic, six portal destinations,<br>
 nine bosses, a full wardrobe, backpacks, and a guide named Lyra with stories to tell.
 
-![Version](https://img.shields.io/badge/version-0.5.5-8a6fd1?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-0.5.6-8a6fd1?style=for-the-badge)
 ![tModLoader](https://img.shields.io/badge/tModLoader-1.4.5--dev-4f8a5c?style=for-the-badge)
 ![Multiplayer](https://img.shields.io/badge/multiplayer-supported-3f7fae?style=for-the-badge)
 
@@ -133,17 +133,16 @@ Equip a backpack in its own slot on the **Equipment / pets** tab. You can rebind
 
 ---
 
-## 🆕 What's new in v0.5.5
+## 🆕 What's new in v0.5.6
 
 | | Change |
 | --- | --- |
-| 🌌 **The Reverie is a dimension** | The Garden Mirror opens a whole separate world (single player): meadows, moonlit lakes, floating islands, Moonprism caves and an old observatory. Nothing is built in your sky any more. |
-| 👗 **Outfits** | Real sleeves and legs in each coat's colours. |
-| ⛏️ **Ores and blocks** | Ore veins, slates and walls use Terraria's exact block edges, with no more boxes or invisible holes. |
-| 🏺 **Decorations** | Five redrawn, the rest cleaned up, and all of them sit on the ground instead of floating. |
-| 🗺️ **Showcase** | New [Showcase 055](docs/SHOWCASE.md) save with a decoration gallery. |
+| 🕯️ **The Hush is a dimension** | The Cracked Bell Portal opens its own world (single player): an abandoned mining town, a mine shaft down to a forgotten archive, and a dark manor. |
+| 🌌 **The Reverie too** | Since v0.5.5 the Garden Mirror opens a whole separate Reverie world. |
+| ✨ **Terraria-quality art** | Bars, ores, ore blocks, slates, the Garden Mirror and the decorations are rebuilt on Terraria's own sprites in Nyuu colours. |
+| 🛠️ **Fixes** | Wrong decoration icons, a memory leak on mod reload, a slow title-screen load, and multiplayer Reverie placement. |
 
-📄 Full notes: [docs/releases/v0.5.5.md](docs/releases/v0.5.5.md) · Older versions: [docs/releases](docs/releases)
+📄 Full notes: [docs/releases/v0.5.6.md](docs/releases/v0.5.6.md) · Older versions: [docs/releases](docs/releases)
 
 ---
 

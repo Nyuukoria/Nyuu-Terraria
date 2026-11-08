@@ -2,7 +2,7 @@
 
 [Download the showcase ZIP](../downloads/NyuuTerraria-Showcase.zip) · [Player guide](../README.md)
 
-Install the matching **v0.5.5** mod first, then close the game.
+Install **v0.5.5 or newer** first, then close the game.
 
 1. Copy the two files in **Players** to `Documents/My Games/Terraria/tModLoader-dev/Players`.
 2. Copy the two files in **Worlds** to `Documents/My Games/Terraria/tModLoader-dev/Worlds`.
@@ -21,7 +21,8 @@ Select **Nyuu Showcase 055** for both player and world.
 ## Destinations
 
 * **The Reverie is its own dimension.** Use the **Garden Mirror** (hotbar slot 3). The first visit generates the Reverie world, so expect a short loading screen. Use the mirror inside it to come home.
-* **The Hush, Tidepool, Citadel, Cinderwood and Starglass** are still pocket regions in this world, reached with their travel items on the hotbar.
+* **The Hush** is its own dimension too from v0.5.6 (Cracked Bell Portal, hotbar slot 4); this save still contains its old pocket, which the portal takes you home from if you stand in it.
+* **Tidepool, Citadel, Cinderwood and Starglass** are still pocket regions in this world, reached with their travel items on the hotbar.
 
 Hotbar: Aetherloom Wand, Field Journal, Garden Mirror, Hush portal, Tide Compass, Citadel Sigil, Cinder Key, Starglass Chart, Celestial Loom and Zenith.
 

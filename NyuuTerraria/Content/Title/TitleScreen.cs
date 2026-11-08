@@ -30,7 +30,7 @@ public class TitleScreen : ModMenu
     {
         if (Main.dedServ) return;
 
-        logo = ModContent.Request<Texture2D>(LogoPath, AssetRequestMode.ImmediateLoad);
+        logo = ModContent.Request<Texture2D>(LogoPath); // async: no blocking load at startup
 
         try
         {

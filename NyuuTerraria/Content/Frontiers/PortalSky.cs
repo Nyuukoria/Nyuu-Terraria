@@ -13,6 +13,21 @@ public class PortalSkySystem : ModSystem
     public override void Load(){if(!Main.dedServ)SkyManager.Instance[Key]=new PortalSky();}
     public override void PostUpdateEverything(){if(Main.dedServ)return;int realm=Main.gameMenu?-1:RealmWorld.RealmAt(Main.LocalPlayer.Center),area=Main.gameMenu?-1:FrontierWorld.AreaAt(Main.LocalPlayer.Center);int theme=realm>=0?realm:area>=0?area+2:-1;if(theme>=0){PortalSky.Theme=theme;SkyManager.Instance.Activate(Key);}else SkyManager.Instance.Deactivate(Key);}
     public override void OnWorldUnload(){if(!Main.dedServ)SkyManager.Instance[Key].Reset();}
+    // The sky lives in Terraria's global sky list; leaving it there after unload keeps the whole old
+    // copy of the mod in memory ("mod class still using memory" on every reload).
+    public override void Unload()
+    {
+        if(Main.dedServ||SkyManager.Instance==null)return;
+        var manager=SkyManager.Instance;
+        if(manager[Key] is CustomSky sky)
+        {
+            sky.Deactivate();
+            var active=typeof(SkyManager).GetField("_activeSkies",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic)?.GetValue(manager) as System.Collections.Generic.LinkedList<CustomSky>;
+            active?.Remove(sky);
+        }
+        var effects=typeof(EffectManager<CustomSky>).GetField("_effects",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic)?.GetValue(manager) as System.Collections.Generic.Dictionary<string,CustomSky>;
+        effects?.Remove(Key);
+    }
 }
 public class PortalSky : CustomSky
 {

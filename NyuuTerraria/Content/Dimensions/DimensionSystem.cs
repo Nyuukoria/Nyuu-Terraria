@@ -49,7 +49,7 @@ public abstract class Dimension
 /// </summary>
 public class DimensionSystem : ModSystem
 {
-    internal static readonly Dimension[] All = { new ReverieDimension() };
+    internal static readonly Dimension[] All = { new ReverieDimension(), new HushDimension() };
 
     /// <summary>Set while a dimension is being generated, so world gen runs only its passes.</summary>
     internal static Dimension Generating;

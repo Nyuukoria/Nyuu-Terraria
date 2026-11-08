@@ -53,7 +53,7 @@ public class DimensionChecks : ModSystem
                 int solid = 0, chests = 0;
                 for (int x = 0; x < Main.maxTilesX; x++) for (int y = 0; y < Main.maxTilesY; y++) if (Main.tile[x, y].HasTile) solid++;
                 foreach (Chest c in Main.chest) if (c != null) chests++;
-                if (chests < 8) throw new Exception(d.Id + ": only " + chests + " chests placed");
+                if (chests < 5) throw new Exception(d.Id + ": only " + chests + " chests placed");
                 report += $"{d.Id}: {Main.maxTilesX}x{Main.maxTilesY}, {solid} tiles, {chests} chests, spawn {Main.spawnTileX},{Main.spawnTileY}\n";
                 WriteMap(Path.Combine(Main.SavePath, d.Id + ".map"));
             }

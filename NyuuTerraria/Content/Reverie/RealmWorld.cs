@@ -51,11 +51,15 @@ public class RealmWorld : ModSystem
     {
         if(Areas[realm].Width>0) return true;
         // Reserve a 96-tile horizontal buffer around each pocket. Scan the actual world, including modded tiles and walls.
-        for(int step=0;step<18;step++)
+        // Search several sky rows and dense horizontal steps, like the frontier destinations do;
+        // a single 18-step row often found no room in small or busy worlds.
+        for(int row=0;row<4;row++)
+        for(int step=0;step<Main.maxTilesX/16;step++)
         {
-            int x=80+(step*197+realm*Main.maxTilesX/2)%(Main.maxTilesX-460);
-            var candidate=new Rectangle(x,48,300,96);
+            int x=80+(step*16+realm*Main.maxTilesX/2)%(Main.maxTilesX-460);
+            var candidate=new Rectangle(x,48+row*112,300,96);
             var margin=candidate; margin.Inflate(96,16);
+            if(candidate.Bottom>Main.worldSurface-10)continue; // stay in the sky
             if(margin.Left<20||margin.Right>=Main.maxTilesX-20||margin.Top<10||margin.Bottom>=Main.maxTilesY-20)continue;
             if(Array.Exists(Areas,r=>r.Width>0 && r.Intersects(margin)) || Array.Exists(ModContent.GetInstance<global::NyuuTerraria.Content.Frontiers.FrontierWorld>().Areas,r=>r.Width>0 && r.Intersects(margin))) continue;
             bool free=true;

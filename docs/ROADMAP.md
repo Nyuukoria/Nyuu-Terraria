@@ -1,11 +1,12 @@
 # Roadmap
 
-[Home](../README.md) · [Latest release](releases/v0.5.5.md) · [Playable systems](WORLDBOUND.md)
+[Home](../README.md) · [Latest release](releases/v0.5.6.md) · [Playable systems](WORLDBOUND.md)
 
 
 
 | Status | Latest completed work | Version |
 | --- | --- | --- |
+| 🟢 Added | The Hush as its own dimension world, Terraria-quality bars, ores, ore blocks, slates and decorations, unload and multiplayer-placement fixes | [v0.5.6](releases/v0.5.6.md) |
 | 🟢 Added | The Reverie as its own dimension world (single player), rebuilt ore, slate, wall and decoration art, Showcase 055 | [v0.5.5](releases/v0.5.5.md) |
 | 🟢 Added | Worn outfits redrawn from their icons with matching sleeves and legs, framed ore and slate tiles, title screen and theme, creature facing fixes, backpack shift-click stashing | [v0.5.4](releases/v0.5.4.md) |
 | 🟢 Added | Baked four-frame animation for creatures and pets, ink-accurate sprite anchoring, boss and small-creature draw sizes | [v0.5.2](releases/v0.5.2.md) · [v0.5.3](releases/v0.5.3.md) |
@@ -86,9 +87,9 @@ All six destinations are currently **pocket expeditions inside your world**, pla
 
 | Status | Place | Ideas to explore |
 | --- | --- | --- |
-| 🟡 In Progress | True dimensions | Each destination becomes its own world file, reached only through its portal, like the Nether. The Reverie is first (single player); the other five and multiplayer come next. |
+| 🟡 In Progress | True dimensions | Each destination becomes its own world file, reached only through its portal, like the Nether. The Reverie and the Hush are done (single player); Tidepool, Citadel, Cinderwood, Starglass and multiplayer come next. |
 | 🟡 In Progress | The Reverie — full dimension | Its own 1600×900 world with flower meadows, floating flower islands, moonlit lakes, Moonprism caves and an abandoned observatory. Next: seasonal gardens, restoring paths and the mirror's history. |
-| ⚪ Not Started | The Hush — horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
+| 🟡 In Progress | The Hush — horror chapter | Its own world with the abandoned mining town, a mine shaft to the forgotten archive, and the manor (v0.5.6), plus adjustable jumpscares. Next: shifting corridors, missing explorers, misleading lanterns and false rooms. |
 | 🟡 In Progress | Tidepool: full coastal region | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
 | 🟡 In Progress | Citadel: expanded fortress routes | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
 | 🟡 In Progress | Cinderwood: full forge chapter | Ash-covered forests and buried forges near the Underworld, with ember creatures and abandoned workshops. |
