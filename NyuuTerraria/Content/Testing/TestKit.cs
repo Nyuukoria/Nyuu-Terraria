@@ -82,7 +82,10 @@ public class NyuuTestKit : ModItem
             int row = made / PerRow;
             Vector2 spot = new Vector2(player.Center.X - 170f + col * ColumnWidth,
                                        player.Center.Y - 40f + row * RowHeight);
-            Item.NewItem(source, spot, type, give);
+            int index = Item.NewItem(source, spot, type, give);
+            // A multiplayer client only spawns the drop locally; tell the server about it.
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+                NetMessage.SendData(MessageID.SyncItem, -1, -1, null, index, 1f);
             made++;
         }
 

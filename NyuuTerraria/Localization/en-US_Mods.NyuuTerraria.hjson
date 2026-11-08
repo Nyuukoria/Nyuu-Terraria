@@ -879,6 +879,11 @@ Items: {
 			Starfallen Constructs appear more often in the Expanse
 			'''
 	}
+
+	NyuuTestKit: {
+		DisplayName: Nyuu Test Kit
+		Tooltip: Drops one stack of every Nyuu Terraria item at your feet
+	}
 }
 
 Projectiles: {

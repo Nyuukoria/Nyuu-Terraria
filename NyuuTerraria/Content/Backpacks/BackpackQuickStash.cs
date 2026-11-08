@@ -2,6 +2,8 @@ using System;
 using System.Reflection;
 using Microsoft.Xna.Framework.Input;
 using Terraria;
+using Terraria.Audio;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 
@@ -92,18 +94,17 @@ public class BackpackQuickStash : ModSystem
 
         Item item = inv[slot];
         if (item == null || item.IsAir || item.stack <= 0) return false;
+        // Favourited items stay put, like vanilla quick-stack; a backpack never goes inside a backpack.
+        if (item.favorited || item.ModItem is BackpackItem) return false;
         if (!HasRoom(storage, capacity, item)) return false;
 
         // 1. top up matching stacks that are not full
         for (int i = 0; i < capacity && !item.IsAir; i++)
         {
             Item dest = storage.Items[i];
-            if (dest.IsAir || dest.type != item.type || dest.prefix != item.prefix) continue;
-            int space = dest.maxStack - dest.stack;
-            if (space <= 0) continue;
-            int moved = Math.Min(space, item.stack);
-            dest.stack += moved;
-            item.stack -= moved;
+            if (!Stackable(dest, item)) continue;
+            // ItemLoader handles ModItem.CanStack/OnStack, so modded per-item data is respected.
+            ItemLoader.TryStackItems(dest, item, out _);
             if (item.stack <= 0) item.TurnToAir();
         }
 
@@ -119,8 +120,15 @@ public class BackpackQuickStash : ModSystem
             }
         }
 
+        SoundEngine.PlaySound(SoundID.Grab);
         Recipe.UpdateRecipeList();
         return true;
+    }
+
+    private static bool Stackable(Item dest, Item item)
+    {
+        return !dest.IsAir && dest.type == item.type && dest.stack < dest.maxStack
+            && ItemLoader.CanStack(dest, item);
     }
 
     private static bool HasRoom(BackpackStorage storage, int capacity, Item item)
@@ -129,7 +137,7 @@ public class BackpackQuickStash : ModSystem
         {
             Item dest = storage.Items[i];
             if (dest.IsAir) return true;
-            if (dest.type == item.type && dest.prefix == item.prefix && dest.stack < dest.maxStack) return true;
+            if (Stackable(dest, item)) return true;
         }
         return false;
     }
