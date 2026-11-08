@@ -105,7 +105,7 @@ public class LivingNPCAnimation : GlobalNPC
     public override bool PreDraw(NPC npc,SpriteBatch batch,Vector2 screenPos,Color drawColor)
     {
         if(npc.ModNPC?.Mod!=Mod||!LivingAnimation.Rigs.ContainsKey(npc.ModNPC.Name))return true;
-        if(NyuuTerraria.Content.NyuuArtFixes.TryDrawNpc(npc,batch,screenPos,drawColor))return false;
+        if(NyuuArtFixes.TryDrawNpc(npc,batch,screenPos,drawColor))return false;
         var texture=TextureAssets.Npc[npc.type].Value;int h=texture.Height/Main.npcFrameCount[npc.type];bool ground=!npc.noGravity;
         bool action=!npc.friendly&&(npc.velocity.LengthSquared()>25||npc.boss&&npc.ai[0]%300>=150&&npc.ai[0]%300<210);
         float phase=(float)(Main.GameUpdateCount%100000)*.1f+npc.whoAmI*1.7f;
@@ -119,7 +119,7 @@ public class LivingProjectileAnimation : GlobalProjectile
 {
     public override bool PreDraw(Projectile projectile,Player player,ref Color lightColor)
     {
-        if(NyuuTerraria.Content.NyuuArtFixes.TryDrawNpc(npc,batch,screenPos,drawColor))return false;
+        if(NyuuArtFixes.TryDrawProjectile(projectile,ref lightColor))return false; // nyuu-fixpack
         if(projectile.ModProjectile?.Mod!=Mod||!LivingAnimation.Projectiles.Contains(projectile.ModProjectile.Name))return true;
         string name=projectile.ModProjectile.Name;bool ground=name=="DewFoxPet";var texture=TextureAssets.Projectile[projectile.type].Value;
         int direction=Math.Abs(projectile.velocity.X)>.15f?Math.Sign(projectile.velocity.X):projectile.spriteDirection;
