@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Utilities;
 using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -101,14 +103,6 @@ public class DimensionSystem : ModSystem
         cachedDimension = null;
     }
 
-    public override void ModifyWorldGenTasks(List<GenPass> tasks)
-    {
-        if (Generating == null) return;
-        Dimension d = Generating;
-        tasks.Clear();
-        tasks.Add(new PassLegacy("Nyuu dimension: " + d.Id, (progress, _) => d.Generate(progress), 1));
-    }
-
     // ---------------------------------------------------------------- travel
 
     internal static bool CanTravel(Player player)
@@ -192,29 +186,29 @@ public class DimensionSystem : ModSystem
 
     private static readonly FieldInfo PathField = typeof(FileData).GetField("_path", BindingFlags.Instance | BindingFlags.NonPublic);
 
+    /// <summary>
+    /// Makes the dimension's world file. This is our own small "subworld" pipeline: vanilla world
+    /// generation always runs its Reset step first, which assumes a normal-size world and crashes on
+    /// a small dimension, and it would also run every other mod's passes. Here only the dimension's
+    /// own generator runs, behind the normal world-loading screen, and the result is saved like any world.
+    /// </summary>
     private static void Create(Dimension d, string path, int gameMode)
     {
-        WorldFileData data = WorldFile.CreateMetadata(d.DisplayName, false, gameMode);
-        PathField.SetValue(data, path);
-        data.SetWorldSize(d.Width, d.Height);
-        // Vanilla's Reset pass would pick this; without it the dimension would share the home world's
-        // id, and with it the player's bed spawn and map.
-        data.WorldId = new Random().Next(1, int.MaxValue);
+        WorldFileData data = NewMetadata(d, path, gameMode);
         data.SetAsActive();
-
         Main.worldName = d.DisplayName;
-        Main.maxTilesX = d.Width;
-        Main.maxTilesY = d.Height;
-        WorldGen.setWorldSize();
-        Generating = d;
 
-        WorldGen.CreateNewWorld(null, null, playable =>
+        var progress = new GenerationProgress { TotalWeight = 1 };
+        Main.menuMode = 888;
+        Main.MenuUI.SetState(new DimensionLoading(progress, d.DisplayName));
+
+        Task.Run(() =>
         {
-            Generating = null;
+            bool ok = Build(d, data, progress);
             Main.QueueMainThreadAction(() =>
             {
-                WorldFileData made = WorldFile.GetAllMetadata(path, false);
-                if (playable && made != null && made.IsValid)
+                WorldFileData made = ok ? WorldFile.GetAllMetadata(path, false) : null;
+                if (made != null && made.IsValid)
                 {
                     made.SetAsActive();
                     WorldGen.playWorld();
@@ -226,6 +220,51 @@ public class DimensionSystem : ModSystem
                 }
             });
         });
+    }
+
+    internal static WorldFileData NewMetadata(Dimension d, string path, int gameMode)
+    {
+        WorldFileData data = WorldFile.CreateMetadata(d.DisplayName, false, gameMode);
+        PathField.SetValue(data, path);
+        data.SetWorldSize(d.Width, d.Height);
+        // Vanilla's Reset step would pick this; without it the dimension would share the home world's
+        // id, and with it the player's bed spawn and map.
+        data.WorldId = new Random().Next(1, int.MaxValue);
+        return data;
+    }
+
+    /// <summary>Generates and saves a dimension into the active world data. Runs off the main thread.</summary>
+    internal static bool Build(Dimension d, WorldFileData data, GenerationProgress progress)
+    {
+        try
+        {
+            Generating = d;
+            WorldGen.generatingWorld = true;
+            WorldGen.isGeneratingOrLoadingWorld = true;
+            WorldGen.generatingWorldOnThisThread = true;
+            Main.rand = new UnifiedRandom(data.Seed);
+            Main.maxTilesX = d.Width;
+            Main.maxTilesY = d.Height;
+            WorldGen.setWorldSize();
+            WorldGen.clearWorld();
+            progress.Start(1);
+            d.Generate(progress);
+            progress.End();
+        }
+        catch (Exception e)
+        {
+            ModContent.GetInstance<DimensionSystem>().Mod.Logger.Error("Generating dimension " + d.Id + " failed", e);
+            return false;
+        }
+        finally
+        {
+            Generating = null;
+            WorldGen.generatingWorld = false;
+            WorldGen.isGeneratingOrLoadingWorld = false;
+            WorldGen.generatingWorldOnThisThread = false;
+        }
+        WorldFile.SaveNewWorld();
+        return true;
     }
 
     /// <summary>

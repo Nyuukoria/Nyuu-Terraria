@@ -114,7 +114,12 @@ public class ReverieDimension : Dimension
                 if (x % 3 == 0) Flower(x, top - 1);
             }
             ExpeditionScenery.Tree(cx + rand.Next(-rx / 2, rx / 2), cy - 2, 12, n);
-            if (n % 3 == 1) LootChest(cx - rx / 2, cy - 3, rand, island: true);
+            if (n % 3 == 1)
+            {
+                int chestX = cx - rx / 2, chestY = cy - 12;
+                while (chestY < cy + ry && !Floor(chestX, chestY + 1)) chestY++;
+                if (Floor(chestX + 1, chestY + 1) && Clear(chestX, chestY - 1, 2, 2)) LootChest(chestX, chestY, rand, island: true);
+            }
         }
         progress.Set(.65);
 
@@ -134,10 +139,12 @@ public class ReverieDimension : Dimension
         progress.Set(.75);
 
         // ---- underground caches
-        for (int n = 0, tries = 0; n < 8 && tries < 4000; tries++)
+        // A chest needs a 2x2 gap standing on two solid, unsloped blocks: walk down cave columns to find floors.
+        for (int n = 0, tries = 0; n < 8 && tries < 20000; tries++)
         {
             int x = rand.Next(Margin, w - Margin), y = rand.Next((int)Main.rockLayer, h - 100);
-            if (Main.tile[x, y].HasTile || !Main.tile[x, y + 1].HasTile || Main.tile[x + 1, y].HasTile) continue;
+            while (y < h - 60 && !(Main.tile[x, y + 1].HasTile && Main.tileSolid[Main.tile[x, y + 1].TileType])) y++;
+            if (!Clear(x, y - 1, 2, 2) || !Floor(x, y + 1) || !Floor(x + 1, y + 1)) continue;
             if (LootChest(x, y, rand, island: false)) n++;
         }
 
@@ -171,6 +178,23 @@ public class ReverieDimension : Dimension
         t.TileType = (ushort)type;
         t.TileFrameX = t.TileFrameY = 0;
         t.LiquidAmount = 0;
+    }
+
+    private static bool Clear(int x, int top, int width, int height)
+    {
+        for (int dx = 0; dx < width; dx++)
+            for (int dy = 0; dy < height; dy++)
+            {
+                Tile t = Main.tile[x + dx, top + dy];
+                if (t.HasTile || t.LiquidAmount > 0) return false;
+            }
+        return true;
+    }
+
+    private static bool Floor(int x, int y)
+    {
+        Tile t = Main.tile[x, y];
+        return t.HasTile && Main.tileSolid[t.TileType] && !Main.tileSolidTop[t.TileType] && t.Slope == SlopeType.Solid && !t.IsHalfBlock;
     }
 
     private static void Flower(int x, int y)
