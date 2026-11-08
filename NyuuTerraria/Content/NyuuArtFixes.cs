@@ -24,8 +24,7 @@
 //     using the bounds measured in creature-anchors.g.cs, so flyers stop drifting inside
 //     their own hitbox.
 //
-//  3. Optional hitbox fitting (FitHitboxToArt, off by default because it changes combat).
-//     When on, each creature's hitbox is trimmed to its artwork.
+//  Hitbox sizes are deliberately NOT touched - that is combat balance.
 //
 // No world writes, no save format changes, no network state.
 
@@ -39,18 +38,24 @@ using NyuuTerraria.Content.Frontiers;
 
 namespace NyuuTerraria.Content;
 
-internal readonly record struct Anchor(
-    LivingRig rig, int fw, int fh,
-    int inkL, int inkR, int inkT, int inkB,
-    int dx, int dy, int hitW, int hitH);
+internal readonly struct Anchor
+{
+    internal readonly LivingRig Rig;
+    internal readonly int Fw, Fh, InkL, InkR, InkT, InkB, Dx, Dy, HitW, HitH;
+
+    internal Anchor(LivingRig rig, int fw, int fh, int inkL, int inkR, int inkT, int inkB,
+                    int dx, int dy, int hitW, int hitH)
+    {
+        Rig = rig; Fw = fw; Fh = fh;
+        InkL = inkL; InkR = inkR; InkT = inkT; InkB = inkB;
+        Dx = dx; Dy = dy; HitW = hitW; HitH = hitH;
+    }
+}
 
 internal static partial class NyuuArtFixes
 {
     /// <summary>Play the four poses in the PNG instead of the runtime joint slicing.</summary>
     public static bool UseBakedFrames = true;
-
-    /// <summary>Trim hitboxes to the artwork. Changes combat, off by default.</summary>
-    public static bool FitHitboxToArt = false;
 
     /// <summary>Frame height the sheet is currently being drawn with.</summary>
     private static int FrameHeight(Texture2D tex, int frames, int want)
@@ -61,8 +66,8 @@ internal static partial class NyuuArtFixes
 
     private static Vector2 OriginFor(Anchor a, Rectangle src, bool grounded, bool flip)
     {
-        float ox = (a.inkL + a.inkR) / 2f;
-        float oy = grounded ? a.inkB : (a.inkT + a.inkB) / 2f;
+        float ox = (a.InkL + a.InkR) / 2f;
+        float oy = grounded ? a.InkB : (a.InkT + a.InkB) / 2f;
         if (flip) ox = src.Width - ox;
         return new Vector2(ox, oy);
     }
@@ -76,7 +81,7 @@ internal static partial class NyuuArtFixes
 
         var tex = TextureAssets.Npc[npc.type].Value;
         int frames = Math.Max(1, Main.npcFrameCount[npc.type]);
-        int fh = FrameHeight(tex, frames, a.fh);
+        int fh = FrameHeight(tex, frames, a.Fh);
         int frameY = npc.frame.Height == fh ? npc.frame.Y : 0;
         if (frameY < 0 || frameY + fh > tex.Height) frameY = 0;
 
@@ -103,7 +108,7 @@ internal static partial class NyuuArtFixes
 
         var tex = TextureAssets.Projectile[projectile.type].Value;
         int frames = Math.Max(1, Main.projFrames[projectile.type]);
-        int fh = FrameHeight(tex, frames, a.fh);
+        int fh = FrameHeight(tex, frames, a.Fh);
         int frameY = Math.Clamp(projectile.frame, 0, Math.Max(0, tex.Height / fh - 1)) * fh;
         if (frameY + fh > tex.Height) frameY = 0;
 
@@ -118,18 +123,5 @@ internal static partial class NyuuArtFixes
             grounded ? 0f : projectile.rotation, origin, projectile.scale,
             flip ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
         return true;
-    }
-}
-
-/// <summary>Optional: trim creature hitboxes to their artwork.</summary>
-public class NyuuHitboxFit : GlobalNPC
-{
-    public override void PostSetDefaults(NPC npc)
-    {
-        if (!NyuuArtFixes.FitHitboxToArt) return;
-        if (npc.ModNPC is null) return;
-        if (!NyuuArtFixes.Anchors.TryGetValue(npc.ModNPC.Name, out var a)) return;
-        npc.width = Math.Max(8, a.inkR - a.inkL);
-        npc.height = Math.Max(8, a.inkB - a.inkT);
     }
 }
