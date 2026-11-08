@@ -109,6 +109,8 @@ public class HollowglassGeneration : ModSystem
 
     public override void PostWorldGen()
     {
+        if (global::NyuuTerraria.Content.Dimensions.DimensionSystem.Generating != null)
+            return;
         foreach (Point ruin in generatedRuins)
         {
             int chestIndex = PlaceRuinChest(ruin);

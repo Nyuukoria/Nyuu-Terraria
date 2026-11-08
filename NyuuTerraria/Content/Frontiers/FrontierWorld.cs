@@ -18,7 +18,7 @@ public class FrontierWorld : ModSystem
     internal bool GardenerDown,UnwrittenDown;internal int EventTicks,EventKind;private int days;private bool previousDay;
     private ulong[] travel=new ulong[Main.maxPlayers];
     public override void ClearWorld(){Areas=new Rectangle[4];GardenerDown=UnwrittenDown=false;EventTicks=days=0;travel=new ulong[Main.maxPlayers];previousDay=Main.dayTime;}
-    internal static int AreaAt(Vector2 p){var a=ModContent.GetInstance<FrontierWorld>().Areas;for(int i=0;i<4;i++)if(a[i].Width>0&&a[i].Contains((p/16f).ToPoint()))return i;return -1;}
+    internal static int AreaAt(Vector2 p){if(global::NyuuTerraria.Content.Dimensions.DimensionSystem.Current is { } dim)return dim.Area;var a=ModContent.GetInstance<FrontierWorld>().Areas;for(int i=0;i<4;i++)if(a[i].Width>0&&a[i].Contains((p/16f).ToPoint()))return i;return -1;}
     internal static bool Unlocked(int area)=>area<2||area==2&&NPC.downedBoss3||area==3&&NPC.downedMoonlord;
     internal bool EnsureArea(int area)
     {

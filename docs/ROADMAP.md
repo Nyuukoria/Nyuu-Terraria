@@ -1,12 +1,14 @@
 # Roadmap
 
-[Home](../README.md) · [Latest release](releases/v0.5.2.md) · [Playable systems](WORLDBOUND.md)
+[Home](../README.md) · [Latest release](releases/v0.5.4.md) · [Playable systems](WORLDBOUND.md)
 
 
 
 | Status | Latest completed work | Version |
 | --- | --- | --- |
-| 🟢 Added | Backpack rendering and Equipment routing, direct quest claims, original-sprite alignment, worn-rig repairs and revised expedition generation | [v0.5.1](releases/v0.5.1.md) · [Test report](validation/0.5.1.md) |
+| 🟢 Added | Worn outfits redrawn from their icons with matching sleeves and legs, framed ore and slate tiles, title screen and theme, creature facing fixes, backpack shift-click stashing | [v0.5.4](releases/v0.5.4.md) |
+| 🟢 Added | Baked four-frame animation for creatures and pets, ink-accurate sprite anchoring, boss and small-creature draw sizes | [v0.5.2](releases/v0.5.2.md) · [v0.5.3](releases/v0.5.3.md) |
+| 🟢 Added | Backpack rendering and Equipment routing, direct quest claims, original-sprite alignment, worn-rig repairs and revised expedition generation | [v0.5.1](releases/v0.5.1.md) |
 
 ### Shipped in Worldbound Chapters
 
@@ -48,7 +50,7 @@ The first wave is [playable in v0.4.1](PLAYER-GUIDE.md#v041). [Elaina: Wandering
 
 | Status | Feature | What comes next |
 | --- | --- | --- |
-| 🟡 In Progress | Additional element combinations | Mark enemies with one element, then trigger a second for steam bursts, frozen blooms, and storm-charged tides. |
+| 🟢 Added | Element combinations | Steam bursts (ember + tide), frozen blooms (frost + tide) and storm-charged tides (storm + tide). Shipped in [v0.5.0](releases/v0.5.0.md). |
 | ⚪ Not Started | More charged casts | Give frost, tide, and arcane spells their own held attacks, distinct release cues, and a reason to choose a quick cast. |
 | 🟡 In Progress | Linked ritual networks | Place linked runes for a longer cast with strong visual warnings, material costs, and powerful effects. |
 | ⚪ Not Started | Mage progression | Midgame catalysts, class armor, evolving wands, and late-game spell forms with clear boss gates. |
@@ -69,7 +71,7 @@ The first wave is [playable in v0.4.1](PLAYER-GUIDE.md#v041). [Elaina: Wandering
 | --- | --- | --- |
 | ⚪ Not Started | Lyra's atelier restoration | A longer story about rebuilding her workshop, finding patterns, and unlocking embroidered outfits and furniture. |
 | ⚪ Not Started | Pride collections | More trans-pride capes, clips, hair ribbons, dyes, banners, lanterns, and matching pet accessories. |
-| ⚪ Not Started | Prism Wardrobe expansion | Named appearance presets, favorite outfits, and previews before applying a style. |
+| 🟡 In Progress | Prism Wardrobe expansion | Three saved appearance slots are in. Next: names for presets, favorite outfits, and previews before applying a style. |
 | 🟡 In Progress | Expanded profile-aware dialogue | More character-expression choices, dialogue that respects them, and vanity versions of favorite equipment. |
 
 </details>
@@ -79,11 +81,12 @@ The first wave is [playable in v0.4.1](PLAYER-GUIDE.md#v041). [Elaina: Wandering
 <details>
 <summary><strong>New dimensions and scenarios</strong></summary>
 
-The current Reverie and Hush are **pocket expeditions inside your world**. The full destinations below are future expansions.
+All six destinations are currently **pocket expeditions inside your world**, placed in the sky. The full destinations below are future expansions.
 
 | Status | Place | Ideas to explore |
 | --- | --- | --- |
-| ⚪ Not Started | The Reverie — full dimension | Floating flower islands, crystal orchards, moonlit lakes, seasonal gardens, and an abandoned observatory. Restore paths and discover the mirror's history. |
+| 🟡 In Progress | True dimensions | Each destination becomes its own world file, reached only through its portal, like the Nether. The Reverie is first (single player); the other five and multiplayer come next. |
+| 🟡 In Progress | The Reverie — full dimension | Its own 1600×900 world with flower meadows, floating flower islands, moonlit lakes, Moonprism caves and an abandoned observatory. Next: seasonal gardens, restoring paths and the mirror's history. |
 | ⚪ Not Started | The Hush — horror chapter | An abandoned mining town, forgotten archive, and manor with shifting corridors. Investigate missing explorers, misleading lanterns, false rooms, and occasional jumpscares, with adjustable scare settings. |
 | 🟡 In Progress | Tidepool: full coastal region | Coastal caves, pearl deposits, fishing pools, shell furniture, flooded shrines, and reef encounters. |
 | 🟡 In Progress | Citadel: expanded fortress routes | A ruined fortress overtaken by roots and crystal. Open sealed gardens and reveal routes as bosses fall. |
@@ -104,8 +107,8 @@ The current Reverie and Hush are **pocket expeditions inside your world**. The f
 | 🟡 In Progress | The Unwritten: expanded story mechanics | A late-game Hush fight that reshapes remembered locations and closes the archive's story. |
 | 🔵 Considering | The Drowned Choir | A Tidepool boss built around waves, echoes, and shifting currents. |
 | 🟡 In Progress | The Pale Gardener: expanded encounter | More garden mechanics for the existing Citadel guardian with flower hazards and fragile crystal blooms. |
-| 🟡 In Progress | Further minibosses beyond the first two | An archive caretaker, reef ambusher, haunted armor patrol, and a creature inside abandoned mine machinery. |
-| 🟡 In Progress | Additional biome enemy families | Reef skitterers, vinebound armor, lantern mimics, ash burrowers, and starfallen constructs. |
+| 🟡 In Progress | Further minibosses beyond the first two | Archive Caretaker and Reef Ambusher are in. Next: a haunted armor patrol and a creature inside abandoned mine machinery. |
+| 🟡 In Progress | Additional biome enemy families | Reef Skitterers, Vinebound Armor, Ash Burrowers and Starfallen Constructs are in. Next: lantern mimics. |
 | 🟡 In Progress | More rematches and unique patterns | Optional stronger variants with new patterns and cosmetic rewards. |
 
 </details>
@@ -153,7 +156,7 @@ Switching already preserves each profession's progress. Future skills will build
 | Status | Feature | What comes next |
 | --- | --- | --- |
 | 🟡 In Progress | Richer habitat-specific wildlife behavior | Feeding, idle behavior, and favorite habitats for Dew Foxes, Glass Deer, Mothcats, and Mooncap Sprites. |
-| 🟡 In Progress | Further peaceful species | Tidepool Turtles, lantern fireflies, garden birds, and tiny crystal snails. |
+| 🟢 Added | Further peaceful species | Tidepool Turtles, Lantern Fireflies, Garden Birds and Crystal Snails. Shipped in [v0.5.0](releases/v0.5.0.md). |
 | 🟡 In Progress | Expanded pet habitats and variants | Beds, perches, bowls, habitats, and collectible color variants. |
 | ⚪ Not Started | More companion discoveries | Pets unlocked through friendship quests, exploration, and rare finds. |
 | 🟡 In Progress | More wildlife goals and garden visitors | Observation goals, discovery rewards, and gardens that attract visitors. |
@@ -213,6 +216,9 @@ Switching already preserves each profession's progress. Future skills will build
 
 | Status | Feature | Added in | Guide |
 | --- | --- | --- | --- |
+| 🟢 Added | Outfit redraw, framed ore and slate tiles, title screen, creature facing, backpack shift-click | [v0.5.4](releases/v0.5.4.md) | [Release notes](releases/v0.5.4.md) |
+| 🟢 Added | Baked creature and pet animation, sprite anchoring, boss draw sizes | [v0.5.2](releases/v0.5.2.md) | [Creatures](CREATURES.md) |
+| 🟢 Added | Element reactions, Ritual Focus, infusions, Celestial Loom, spell palettes, four new destinations, Pale Gardener, The Unwritten, talents, wildlife care and Mira | [v0.5.0](releases/v0.5.0.md) | [Worldbound](WORLDBOUND.md) |
 | 🟢 Added | Aetherloom Wand, six casting modes, five learning tomes, spell mastery, charged Emberbloom, Crescent Ward, and Spellbook | [v0.4.1](PLAYER-GUIDE.md#v041) | [Spellcraft guide](PLAYER-GUIDE.md#spellcraft) |
 | 🟢 Added | Lyra, pride ribbon, profile customization, Prism Wardrobe, and eight long hairstyles | [v0.4.0](PLAYER-GUIDE.md#v040) | [Character expression](PLAYER-GUIDE.md#lyra-pride-hairstyles-and-clothing) |
 | 🟢 Added | Twelve quests, custom story data, and five switchable professions with saved progress | [v0.4.0](PLAYER-GUIDE.md#v040) | [Journal and professions](PLAYER-GUIDE.md#journal-stories-and-professions) |

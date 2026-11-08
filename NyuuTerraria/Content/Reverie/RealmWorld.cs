@@ -18,6 +18,8 @@ public class RealmWorld : ModSystem
     private ulong[] lastTravel=new ulong[Main.maxPlayers];
     internal static int RealmAt(Vector2 position)
     {
+        // Inside a dimension world, the whole world is that realm.
+        if(global::NyuuTerraria.Content.Dimensions.DimensionSystem.Current is { Realm: >= 0 } dimension) return dimension.Realm;
         var point=(position/16f).ToPoint();
         var areas=ModContent.GetInstance<RealmWorld>().Areas;
         for(int i=0;i<2;i++) if(areas[i].Width>0 && areas[i].Contains(point)) return i;
@@ -153,6 +155,18 @@ public abstract class RealmKey : ModItem
     public override bool? UseItem(Player player)
     {
         if(player.whoAmI!=Main.myPlayer) return true;
+        // Single player: realms with their own dimension world open that world instead of a sky pocket.
+        if(Main.netMode==NetmodeID.SinglePlayer && global::NyuuTerraria.Content.Dimensions.DimensionSystem.ForRealm(Realm) is { } dimension)
+        {
+            var dimensions=global::NyuuTerraria.Content.Dimensions.DimensionSystem.Current;
+            if(dimensions==dimension) global::NyuuTerraria.Content.Dimensions.DimensionSystem.ReturnHome();
+            else if(dimensions!=null) Main.NewText("Return home before opening another portal.",Color.LightPink);
+            else if(RealmWorld.RealmAt(player.Center)==Realm) ModContent.GetInstance<RealmWorld>().Travel(player,Realm); // leave an old sky pocket
+            else global::NyuuTerraria.Content.Dimensions.DimensionSystem.Enter(dimension);
+            return true;
+        }
+        if(Main.netMode==NetmodeID.SinglePlayer && global::NyuuTerraria.Content.Dimensions.DimensionSystem.Current!=null)
+        {Main.NewText("This portal only opens from your home world.",Color.LightPink);return true;}
         if(Main.netMode==NetmodeID.MultiplayerClient) {var p=Mod.GetPacket();p.Write((byte)0);p.Write((byte)Realm);p.Send();}
         else ModContent.GetInstance<RealmWorld>().Travel(player,Realm);
         return true;

@@ -24,6 +24,8 @@ public abstract class FrontierKey : ModItem
     public override bool CanUseItem(Player p)=>FrontierWorld.Unlocked(Area)&&!p.dead&&!Main.npc.Any(n=>n.active&&n.boss);
     public override bool? UseItem(Player p)
     {
+        if(p.whoAmI==Main.myPlayer&&global::NyuuTerraria.Content.Dimensions.DimensionSystem.Current!=null)
+        {Main.NewText("This portal only opens from your home world.",Color.LightPink);return true;}
         if(p.whoAmI==Main.myPlayer)
         {if(Main.netMode==NetmodeID.MultiplayerClient){var packet=Mod.GetPacket();packet.Write((byte)4);packet.Write((byte)Area);packet.Send();}else if(!ModContent.GetInstance<FrontierWorld>().Travel(p,Area))Main.NewText("No unused space was found for this destination. Existing builds are preserved.",Color.LightPink);}
         return true;
