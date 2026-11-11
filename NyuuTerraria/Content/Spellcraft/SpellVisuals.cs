@@ -166,7 +166,7 @@ public class EmberCharge : ModProjectile
             Projectile.velocity=(Main.MouseWorld-p.Center).SafeNormalize(new Vector2(p.direction,0));
             Projectile.Center=p.Center+Projectile.velocity*48;
             if(Projectile.ai[0]%8==0) Projectile.netUpdate=true;
-            bool pay=Projectile.ai[0]%20!=0 || p.CheckMana(p.HeldItem,Math.Max(1,(int)(2*p.manaCost)),true);
+            int chargeCost=Math.Max(1,(int)(2*p.manaCost));bool pay=Projectile.ai[0]%20!=0 || (p.statMana>=chargeCost && p.CheckMana(p.HeldItem,chargeCost,true)); // 1.4.5 CheckMana can pass on an empty pool
             if(!p.channel || !pay || Projectile.ai[0]>=90)
             {
                 float charge=Math.Clamp(Projectile.ai[0]/90f,0,1);

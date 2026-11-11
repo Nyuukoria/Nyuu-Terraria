@@ -84,7 +84,7 @@ public static class SpellcraftChecks
             int second=Projectile.NewProjectile(p.GetSource_Misc("Test"),ward.Center,new Vector2(-6,0),ProjectileID.Bullet,20,0,0);
             Main.projectile[second].friendly=false;Main.projectile[second].hostile=true;Main.projectile[second].netImportant=false;
             ward.ModProjectile.AI();Check(Main.projectile[second].active,"WARD_RECOVERY_PREVENTS_UNLIMITED_BLOCKS");
-            for(int inv=1;inv<p.inventory.Length;inv++)p.inventory[inv].TurnToAir();p.manaFlower=false;ward.localAI[0]=11;p.statMana=0;ward.ModProjectile.AI();Check(!ward.active&&!p.channel,"WARD_STOPS_WITHOUT_MANA");
+            for(int inv=0;inv<p.inventory.Length;inv++)if(inv!=p.selectedItem)p.inventory[inv].TurnToAir();p.manaFlower=false;ward.localAI[0]=11;p.statMana=0;ward.ModProjectile.AI();Check(!ward.active&&!p.channel,"WARD_STOPS_WITHOUT_MANA");
             data.EfficientWard=false;int cost=data.WardManaCost;data.EfficientWard=true;
             Check(cost==2&&data.WardManaCost==1,"WARD_SIGIL_REDUCES_CONTINUING_COST");
             data.ResetEffects();Check(!data.EfficientWard,"REMOVING_WARD_SIGIL_CLEARS_EFFECT");

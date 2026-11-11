@@ -33,7 +33,11 @@ public class CrescentWard : ModProjectile
             if((int)Projectile.localAI[0]%8==0) Projectile.netUpdate=true;
             if((int)Projectile.localAI[0]%12==0)
             {
-                if(!player.CheckMana(player.HeldItem,Math.Max(1,(int)(player.GetModPlayer<SpellcraftPlayer>().WardManaCost*player.manaCost)),true))
+                int cost=Math.Max(1,(int)(player.GetModPlayer<SpellcraftPlayer>().WardManaCost*player.manaCost));
+                // Terraria 1.4.5's new mana rules can let CheckMana succeed on an empty pool, which kept the
+                // ward up forever at 0 mana. Require the mana to be there (a Mana Flower may drink first).
+                if(player.statMana<cost&&player.manaFlower)player.QuickMana();
+                if(player.statMana<cost||!player.CheckMana(player.HeldItem,cost,true))
                 {player.channel=false;Projectile.Kill();return;}
                 player.manaRegenDelay=Math.Max(player.manaRegenDelay,60);
                 if(Main.netMode==NetmodeID.MultiplayerClient) NetMessage.SendData(MessageID.PlayerMana,number:player.whoAmI);

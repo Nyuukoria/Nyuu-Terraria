@@ -9,7 +9,7 @@
 A cozy-but-dangerous content mod for Terraria: cloud-born magic, six portal destinations,<br>
 nine bosses, a full wardrobe, backpacks, and a guide named Lyra with stories to tell.
 
-![Version](https://img.shields.io/badge/version-0.5.7-8a6fd1?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-0.5.8-8a6fd1?style=for-the-badge)
 ![tModLoader](https://img.shields.io/badge/tModLoader-1.4.5--dev-4f8a5c?style=for-the-badge)
 ![Multiplayer](https://img.shields.io/badge/multiplayer-supported-3f7fae?style=for-the-badge)
 
@@ -133,18 +133,20 @@ Equip a backpack in its own slot on the **Equipment / pets** tab. You can rebind
 
 ---
 
-## 🆕 What's new in v0.5.7
+## 🆕 What's new in v0.5.8
 
 | | Change |
 | --- | --- |
-| 🦋 **Creatures move** | Moths flap, walkers step, serpents ripple, bells swing and spirits float. All 35 creature and pet sheets are animated. |
-| ⚔️ **Weapons and artifacts** | Echo Scythe, Democloud wings and staff, books, sigils, bow and boots rebuilt on Terraria's own items. Your staff designs are cleaned up. |
+| 👗 **Outfits redone** | All seven sets rebuilt on Terraria's own vanity outfits: real coats, dresses, skirts and trousers in Nyuu colours. |
+| 🦋 **Better motion** | Moths fold their wings like Terraria's butterflies, and walkers lift alternate legs. |
+| ⚔️ **Weapons and artifacts** | Echo Scythe, Democloud wings and staff, books, sigils, bow and boots rebuilt on Terraria's own items (v0.5.7). |
+| 🛠️ **Mana fix** | Crescent Ward and Emberbloom no longer keep going at 0 mana. |
 | 🕯️ **The Hush is a dimension** | The Cracked Bell Portal opens its own world (single player): an abandoned mining town, a mine shaft down to a forgotten archive, and a dark manor. |
 | 🌌 **The Reverie too** | Since v0.5.5 the Garden Mirror opens a whole separate Reverie world. |
 | ✨ **Terraria-quality art** | Bars, ores, ore blocks, slates, the Garden Mirror and the decorations are rebuilt on Terraria's own sprites in Nyuu colours. |
 | 🛠️ **Fixes** | Wrong decoration icons, a memory leak on mod reload, a slow title-screen load, and multiplayer Reverie placement. |
 
-📄 Full notes: [v0.5.7](docs/releases/v0.5.7.md) · [v0.5.6](docs/releases/v0.5.6.md) · Older versions: [docs/releases](docs/releases)
+📄 Full notes: [v0.5.8](docs/releases/v0.5.8.md) · [v0.5.7](docs/releases/v0.5.7.md) · [v0.5.6](docs/releases/v0.5.6.md) · Older versions: [docs/releases](docs/releases)
 
 ---
 

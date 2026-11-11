@@ -1,11 +1,12 @@
 # Roadmap
 
-[Home](../README.md) · [Latest release](releases/v0.5.7.md) · [Playable systems](WORLDBOUND.md)
+[Home](../README.md) · [Latest release](releases/v0.5.8.md) · [Playable systems](WORLDBOUND.md)
 
 
 
 | Status | Latest completed work | Version |
 | --- | --- | --- |
+| 🟢 Added | Outfits rebuilt on vanilla vanity, Terraria-style wing folds and leg steps, 0-mana ward/charge fix | [v0.5.8](releases/v0.5.8.md) |
 | 🟢 Added | Real 4-frame motion for all creatures and pets, weapons and artifacts rebuilt or cleaned up | [v0.5.7](releases/v0.5.7.md) |
 | 🟢 Added | The Hush as its own dimension world, Terraria-quality bars, ores, ore blocks, slates and decorations, unload and multiplayer-placement fixes | [v0.5.6](releases/v0.5.6.md) |
 | 🟢 Added | The Reverie as its own dimension world (single player), rebuilt ore, slate, wall and decoration art, Showcase 055 | [v0.5.5](releases/v0.5.5.md) |
